@@ -251,7 +251,7 @@
             
             [self.dataModel loginWithUsername:username
                                      password:password
-                              completionBlock:^(BOOL success, NSError *error) {
+                            completionHandler:^(BOOL success, NSError *error) {
                                   
                                   if (success) {
                                       

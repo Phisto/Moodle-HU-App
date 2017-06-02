@@ -94,7 +94,8 @@
         dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
         dispatch_async(queue, ^{
             
-            [self.dataModel loadSearchResultWithSerachString:searchString completionBlock:^(BOOL success, NSError * _Nullable error, NSArray * _Nullable searchResults) {
+            [self.dataModel loadSearchResultWithSerachString:searchString
+                                           completionHandler:^(BOOL success, NSError * _Nullable error, NSArray * _Nullable searchResults) {
                 
                 dispatch_async(dispatch_get_main_queue(), ^{
                     

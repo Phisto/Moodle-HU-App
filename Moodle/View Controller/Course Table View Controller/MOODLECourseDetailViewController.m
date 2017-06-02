@@ -74,7 +74,8 @@
         // perform web request on background thread ...
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul), ^{
             
-            [self.item.dataModel loadItemContentForItem:self.item completionBlock:^(BOOL success, NSError *error) {
+            [self.item.dataModel loadItemContentForItem:self.item
+                                      completionHandler:^(BOOL success, NSError *error) {
                 
                 if (success) { [self finishedContentLoading]; }
                 else { [self failedToLoadContentWithMessage:error.localizedDescription]; }

@@ -156,7 +156,7 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
 #pragma mark - Asynchronous API
 
 - (void)loadSearchResultWithSerachString:(NSString *)searchString
-                         completionBlock:(void (^)(BOOL success, NSError * _Nullable error, NSArray * _Nullable searchResults))completionHandler {
+                       completionHandler:(void (^)(BOOL success, NSError * _Nullable error, NSArray * _Nullable searchResults))completionHandler {
     
     NSURLResponse * response = nil;
     NSError *requestError = nil;
@@ -199,7 +199,7 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
 
 - (void)loginWithUsername:(NSString *)username
                  password:(NSString *)password
-          completionBlock:(void (^)(BOOL success, NSError * error))completionHandler {
+        completionHandler:(void (^)(BOOL success, NSError * error))completionHandler {
     
     //Create and start task
     [[self.currentSession dataTaskWithRequest:[NSURLRequest moodle_loginRequestWithUsername:username andPassword:password]
@@ -264,7 +264,7 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
 }
 
 - (void)loadItemContentForItem:(MOODLECourse *)item
-               completionBlock:(void (^)(BOOL, NSError * _Nullable error))completionHandler {
+             completionHandler:(void (^)(BOOL, NSError * _Nullable error))completionHandler {
     
     NSURLResponse * response = nil;
     NSError *requestError = nil;

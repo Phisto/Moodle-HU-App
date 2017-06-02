@@ -165,7 +165,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)loginWithUsername:(NSString *)username
                  password:(NSString *)password
-          completionBlock:(void (^)(BOOL success, NSError * _Nullable error))completionHandler;
+        completionHandler:(void (^)(BOOL success, NSError * _Nullable error))completionHandler;
 /**
  
  This method will logout the user.
@@ -182,7 +182,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  */
 - (void)loadItemContentForItem:(MOODLECourse *)item
-               completionBlock:(void (^)(BOOL success, NSError * _Nullable error))completionHandler;
+             completionHandler:(void (^)(BOOL success, NSError * _Nullable error))completionHandler;
 /**
  
  This method will perform a search for MOODLE courses with a given search query.
@@ -193,7 +193,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  */
 - (void)loadSearchResultWithSerachString:(NSString *)searchString
-                         completionBlock:(void (^)(BOOL success, NSError * _Nullable error, NSArray * _Nullable searchResults))completionHandler;
+                       completionHandler:(void (^)(BOOL success, NSError * _Nullable error, NSArray * _Nullable searchResults))completionHandler;
 
 @end
 NS_ASSUME_NONNULL_END
