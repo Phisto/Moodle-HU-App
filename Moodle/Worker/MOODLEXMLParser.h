@@ -76,6 +76,8 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param data The data to parse.
  
+ @param section The section to create the content for.
+ 
  @return YES if the content was loaded correctly, otherwise NO.
  
  */

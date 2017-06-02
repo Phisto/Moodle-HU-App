@@ -1,13 +1,4 @@
 
-/* Class = "UILabel"; text = "SoSe 2017"; ObjectID = "0mH-Zo-KeL"; */
-"0mH-Zo-KeL.text" = "SoSe 2017";
-
-/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "2Ys-2W-JMN"; */
-"2Ys-2W-JMN.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
-
-/* Class = "UILabel"; text = "SoSe 2017/2018"; ObjectID = "33x-WW-ecZ"; */
-"33x-WW-ecZ.text" = "SoSe 2017/2018";
-
 /* Class = "UIViewController"; title = "Kurse"; ObjectID = "38T-EY-Mgi"; */
 "38T-EY-Mgi.title" = "Kurse";
 
@@ -20,23 +11,14 @@
 /* Class = "UINavigationItem"; title = "Einstellungen"; ObjectID = "6qC-Iy-cW6"; */
 "6qC-Iy-cW6.title" = "Einstellungen";
 
-/* Class = "UILabel"; text = "Kursverantwortliche/r: Tom Gueldemann"; ObjectID = "B3S-lY-ma3"; */
-"B3S-lY-ma3.text" = "Kursverantwortliche/r: Tom Gueldemann";
-
 /* Class = "UIBarButtonItem"; title = "Zurück"; ObjectID = "BnC-Ox-YdD"; */
 "BnC-Ox-YdD.title" = "Zurück";
-
-/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "Fd9-iI-8nI"; */
-"Fd9-iI-8nI.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
 
 /* Class = "UITabBarItem"; title = "Kurse"; ObjectID = "GGn-sS-xwv"; */
 "GGn-sS-xwv.title" = "Kurse";
 
 /* Class = "UITabBarItem"; title = "Suche"; ObjectID = "HKB-fY-Taa"; */
 "HKB-fY-Taa.title" = "Suche";
-
-/* Class = "UILabel"; text = "Lorem ipsum dolor sit er elit lamet"; ObjectID = "HYj-eS-zGF"; */
-"HYj-eS-zGF.text" = "Lorem ipsum dolor sit er elit lamet";
 
 /* Class = "UITabBarItem"; title = "Suche"; ObjectID = "I6W-iR-Qtp"; */
 "I6W-iR-Qtp.title" = "Suche";
@@ -59,26 +41,11 @@
 /* Class = "UILabel"; text = "Automatisch einloggen"; ObjectID = "NNk-Qi-LoG"; */
 "NNk-Qi-LoG.text" = "Automatisch einloggen";
 
-/* Class = "UILabel"; text = "Moodle: 53615"; ObjectID = "OOi-w7-cO7"; */
-"OOi-w7-cO7.text" = "Moodle: 53615";
-
 /* Class = "UITextField"; placeholder = "Passwort"; ObjectID = "Oab-7C-PSH"; */
 "Oab-7C-PSH.placeholder" = "Passwort";
 
-/* Class = "UILabel"; text = "Überblick und Organisation"; ObjectID = "Pqd-JM-mXI"; */
-"Pqd-JM-mXI.text" = "Überblick und Organisation";
-
-/* Class = "UILabel"; text = "Ethnologie der Sprache und des Sprechens"; ObjectID = "Pwg-Zj-IKu"; */
-"Pwg-Zj-IKu.text" = "Ethnologie der Sprache und des Sprechens";
-
 /* Class = "UIBarButtonItem"; title = "Zurück"; ObjectID = "QfI-kJ-Gkk"; */
 "QfI-kJ-Gkk.title" = "Zurück";
-
-/* Class = "UILabel"; text = "Wintersemester 2016 / 2017"; ObjectID = "Sr9-sc-hQt"; */
-"Sr9-sc-hQt.text" = "Wintersemester 2016 / 2017";
-
-/* Class = "UILabel"; text = "Title"; ObjectID = "TDW-uv-ed2"; */
-"TDW-uv-ed2.text" = "Title";
 
 /* Class = "UIBarButtonItem"; title = "Zurück"; ObjectID = "XkL-95-OyZ"; */
 "XkL-95-OyZ.title" = "Zurück";
@@ -86,29 +53,11 @@
 /* Class = "UITabBarItem"; title = "Kurse"; ObjectID = "YLg-r6-Xj9"; */
 "YLg-r6-Xj9.title" = "Kurse";
 
-/* Class = "UILabel"; text = "Ethnologie der Sprache und des Sprechens"; ObjectID = "Ygn-1d-pVq"; */
-"Ygn-1d-pVq.text" = "Ethnologie der Sprache und des Sprechens";
-
 /* Class = "UILabel"; text = "Login"; ObjectID = "a0K-Ve-yHQ"; */
 "a0K-Ve-yHQ.text" = "Login";
 
 /* Class = "UILabel"; text = "Verborgene Kurse"; ObjectID = "bG2-ax-f85"; */
 "bG2-ax-f85.text" = "Verborgene Kurse";
-
-/* Class = "UILabel"; text = "Title"; ObjectID = "cdc-Hx-hgd"; */
-"cdc-Hx-hgd.text" = "Title";
-
-/* Class = "UILabel"; text = "Login fehlgeschlagen"; ObjectID = "dml-fH-ICy"; */
-"dml-fH-ICy.text" = "Login fehlgeschlagen";
-
-/* Class = "UILabel"; text = "Keine Kurse mit dem Begriff 'dasdasdasasdaxyxvxv' gefunden."; ObjectID = "eqe-ao-FXy"; */
-"eqe-ao-FXy.text" = "Keine Kurse mit dem Begriff 'dasdasdasasdaxyxvxv' gefunden.";
-
-/* Class = "UILabel"; text = "Moodle: 53615"; ObjectID = "f4G-xh-dck"; */
-"f4G-xh-dck.text" = "Moodle: 53615";
-
-/* Class = "UILabel"; text = "Ethnologie der Sprache und des Sprechens"; ObjectID = "gHF-4S-Oqo"; */
-"gHF-4S-Oqo.text" = "Ethnologie der Sprache und des Sprechens";
 
 /* Class = "UINavigationItem"; title = "Kurssuche"; ObjectID = "gQF-9y-HjW"; */
 "gQF-9y-HjW.title" = "Kurssuche";
@@ -122,23 +71,8 @@
 /* Class = "UIButton"; normalTitle = "Login"; ObjectID = "n4T-VE-Ryw"; */
 "n4T-VE-Ryw.normalTitle" = "Login";
 
-/* Class = "UILabel"; text = "- Kein Inhalt -"; ObjectID = "oFg-Vm-fSe"; */
-"oFg-Vm-fSe.text" = "- Kein Inhalt -";
-
-/* Class = "UILabel"; text = "91 013 Academic English :Reading, Writing, Listening, Speaking-Unicert II (B2) - S.Geyer (SoSe 2017)"; ObjectID = "pZU-tg-4Us"; */
-"pZU-tg-4Us.text" = "91 013 Academic English :Reading, Writing, Listening, Speaking-Unicert II (B2) - S.Geyer (SoSe 2017)";
-
-/* Class = "UILabel"; text = "Ethnologie der Sprache und des Sprechens"; ObjectID = "rAT-vj-3Mw"; */
-"rAT-vj-3Mw.text" = "Ethnologie der Sprache und des Sprechens";
-
 /* Class = "UIBarButtonItem"; title = "Zurück"; ObjectID = "tKf-Gu-RdD"; */
 "tKf-Gu-RdD.title" = "Zurück";
-
-/* Class = "UILabel"; text = "olore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu"; ObjectID = "uvx-6G-UuN"; */
-"uvx-6G-UuN.text" = "olore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu";
-
-/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "yoS-Ya-RGY"; */
-"yoS-Ya-RGY.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
 
 /* Class = "UILabel"; text = "Anmeldedaten merken"; ObjectID = "zr9-FJ-zbd"; */
 "zr9-FJ-zbd.text" = "Anmeldedaten merken";

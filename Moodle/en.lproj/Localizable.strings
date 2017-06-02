@@ -1,51 +1,51 @@
 
 /* Section title for assignment items. */
-"Abgaben" = "Abgaben";
+"Abgaben" = "Assignments";
 
 /* Section title for other items. */
-"Anderes" = "Anderes";
+"Anderes" = "Other";
 
 /* Error message if the server wont respond with 200 http response code. */
-"Bei der Kommunikation mit dem Server, ist ein Fehler aufgetreten." = "Bei der Kommunikation mit dem Server, ist ein Fehler aufgetreten.";
+"Bei der Kommunikation mit dem Server, ist ein Fehler aufgetreten." = "An error occurred while communicating with the server.";
 
 /* Error message if logout failed. */
-"Beim Logout ist ein Fehler aufgetreten." = "Beim Logout ist ein Fehler aufgetreten.";
+"Beim Logout ist ein Fehler aufgetreten." = "An error occurred during logout.";
 
 /* Message if the user tried to login without entering user credentials. */
-"Bitte geben Sie einen Benutzernamen und Passwort ein." = "Bitte geben Sie einen Benutzernamen und Passwort ein.";
+"Bitte geben Sie einen Benutzernamen und Passwort ein." = "Please enter a username and password.";
 
 /* Section title for document items. */
-"Dokumente" = "Dokumente";
+"Dokumente" = "Documents";
 
 /* Button label to favorite moodle course. */
-"Favorisieren" = "Favorisieren";
+"Favorisieren" = "Favour";
 
 /* Message if course search yields no results. */
-"Keine Kurse mit dem Begriff '%@' gefunden." = "Keine Kurse mit dem Begriff '%@' gefunden.";
+"Keine Kurse mit dem Begriff '%@' gefunden." = "No courses with the term '%@' were found.";
 
 /* Label indicating the assoziated department of a moodle course. */
-"Kursbereich: %@" = "Kursbereich: %@";
+"Kursbereich: %@" = "Department: %@";
 
 /* Label indicating the teacher of a moodle course. */
-"Kursverantwortliche/r: %@" = "Kursverantwortliche/r: %@";
+"Kursverantwortliche/r: %@" = "Responsible: %@";
 
 /* Label of the progress indicator during course content loading. */
-"Laden" = "Laden";
+"Laden" = "Loading";
 
 /* Lable of the activity indicator during login request. */
 "Login" = "Login";
 
 /* Message the activity indicator is showing during a course search */
-"Suche" = "Suche";
+"Suche" = "Searching";
 
 /* Error message if the login crdential where wrong. */
-"Ungültiges Login, bitte versuchen Sie es erneut." = "Ungültiges Login, bitte versuchen Sie es erneut.";
+"Ungültiges Login, bitte versuchen Sie es erneut." = "Invalid login, please try again.";
 
 /* Button label to hide moodle course. */
-"Verbergen" = "Verbergen";
+"Verbergen" = "Hide";
 
 /* Label of the button to unhide a moodle course. */
-"Wieder anzeigen" = "Wieder anzeigen";
+"Wieder anzeigen" = "Un-hide";
 
 /* Section title for wiki items. */
 "Wiki" = "Wiki";
