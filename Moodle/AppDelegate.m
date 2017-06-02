@@ -107,6 +107,8 @@ static NSUInteger const kLoginTimeoutTrashold = 60*30*2;
             
             [self.dataModel logoutWithCompletionHandler:^(BOOL success, NSError * _Nullable error) {
                 
+                self.dataModel.loginDate = nil;
+                
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self transitionToLoginViewController];
                 });

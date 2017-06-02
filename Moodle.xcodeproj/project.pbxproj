@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		F46690361EE1C84100748E8C /* MOODLE App Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F46690391EE1C84100748E8C /* Build configuration list for PBXAggregateTarget "MOODLE App Documentation" */;
+			buildPhases = (
+				F466903A1EE1C86800748E8C /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "MOODLE App Documentation";
+			productName = "MOODLE App Documentation";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		F40006201ECE236800FB1F60 /* MOODLEXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F400061F1ECE236800FB1F60 /* MOODLEXMLParser.m */; };
 		F40518441EDAE506008B3BF7 /* MOODLETableViewRowAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F40518431EDAE506008B3BF7 /* MOODLETableViewRowAction.m */; };
@@ -364,6 +378,11 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Simon Gaus";
 				TargetAttributes = {
+					F46690361EE1C84100748E8C = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = N67G6688LK;
+						ProvisioningStyle = Automatic;
+					};
 					F4D49AAB1EC70B8000CA1193 = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = N67G6688LK;
@@ -390,6 +409,7 @@
 			projectRoot = "";
 			targets = (
 				F4D49AAB1EC70B8000CA1193 /* Moodle */,
+				F46690361EE1C84100748E8C /* MOODLE App Documentation */,
 			);
 		};
 /* End PBXProject section */
@@ -408,6 +428,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		F466903A1EE1C86800748E8C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#appledoc Xcode script\n# Start constants\ntarget=\"iphoneos\";\noutputPath=\"~/Documents/XCode/iPhone Apps/UniApps/Moodle\";\n# End constants\n/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--output \"${outputPath}\" \\\n--docset-platform-family \"${target}\" \\\n--ignore \".m\" \\\n--index-desc \"~/Documents/XCode/iPhone Apps/UniApps/Moodle/README.md\" \\\n--logformat xcode \\\n\"${PROJECT_DIR}\"";
+		};
 		F4A81FBB1EDD5DFD00AEAB48 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -483,6 +516,22 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F46690371EE1C84100748E8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = N67G6688LK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F46690381EE1C84100748E8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = N67G6688LK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		F4D49AC11EC70B8000CA1193 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -615,6 +664,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F46690391EE1C84100748E8C /* Build configuration list for PBXAggregateTarget "MOODLE App Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F46690371EE1C84100748E8C /* Debug */,
+				F46690381EE1C84100748E8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F4D49AA71EC70B8000CA1193 /* Build configuration list for PBXProject "Moodle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
