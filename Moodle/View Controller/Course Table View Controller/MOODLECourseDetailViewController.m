@@ -88,7 +88,7 @@
     
     dispatch_async(dispatch_get_main_queue(), ^{
         
-        NSLog(@"message: %@", message);
+        NSLog(@"failedToLoadContentWithMessage: %@", message);
         [self.loadingView removeFromSuperview];
         self.loadingView = nil;
     });
@@ -209,7 +209,7 @@
         loading.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.7f];
         
         UILabel *loadLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 25, 90, 22)];
-        loadLabel.text = @"Laden";
+        loadLabel.text = NSLocalizedString(@"Laden", @"Label of the progress indicator during course content loading.");
         loadLabel.font = [UIFont boldSystemFontOfSize:18.0f];
         loadLabel.textAlignment = NSTextAlignmentCenter;
         loadLabel.textColor = [UIColor colorWithWhite:1.0f alpha:1.0f];

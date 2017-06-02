@@ -1,0 +1,51 @@
+
+/* Section title for assignment items. */
+"Abgaben" = "Abgaben";
+
+/* Section title for other items. */
+"Anderes" = "Anderes";
+
+/* Error message if the server wont respond with 200 http response code. */
+"Bei der Kommunikation mit dem Server, ist ein Fehler aufgetreten." = "Bei der Kommunikation mit dem Server, ist ein Fehler aufgetreten.";
+
+/* Error message if logout failed. */
+"Beim Logout ist ein Fehler aufgetreten." = "Beim Logout ist ein Fehler aufgetreten.";
+
+/* Message if the user tried to login without entering user credentials. */
+"Bitte geben Sie einen Benutzernamen und Passwort ein." = "Bitte geben Sie einen Benutzernamen und Passwort ein.";
+
+/* Section title for document items. */
+"Dokumente" = "Dokumente";
+
+/* Button label to favorite moodle course. */
+"Favorisieren" = "Favorisieren";
+
+/* Message if course search yields no results. */
+"Keine Kurse mit dem Begriff '%@' gefunden." = "Keine Kurse mit dem Begriff '%@' gefunden.";
+
+/* Label indicating the assoziated department of a moodle course. */
+"Kursbereich: %@" = "Kursbereich: %@";
+
+/* Label indicating the teacher of a moodle course. */
+"Kursverantwortliche/r: %@" = "Kursverantwortliche/r: %@";
+
+/* Label of the progress indicator during course content loading. */
+"Laden" = "Laden";
+
+/* Lable of the activity indicator during login request. */
+"Login" = "Login";
+
+/* Message the activity indicator is showing during a course search */
+"Suche" = "Suche";
+
+/* Error message if the login crdential where wrong. */
+"Ungültiges Login, bitte versuchen Sie es erneut." = "Ungültiges Login, bitte versuchen Sie es erneut.";
+
+/* Button label to hide moodle course. */
+"Verbergen" = "Verbergen";
+
+/* Label of the button to unhide a moodle course. */
+"Wieder anzeigen" = "Wieder anzeigen";
+
+/* Section title for wiki items. */
+"Wiki" = "Wiki";

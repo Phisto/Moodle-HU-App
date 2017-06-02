@@ -104,7 +104,6 @@
                     }
                     else {
                         
-                        NSLog(@"error: %@", error);
                         [self searchFailedForSearch:searchString];
                     }
 
@@ -125,7 +124,8 @@
     
     self.hasContent = NO;
     MOODLESearchItem *item = [[MOODLESearchItem alloc] init];
-    item.title = [NSString stringWithFormat:@"Keine Kurse mit dem Begriff '%@' gefunden.", searchString];
+    NSString *locString = NSLocalizedString(@"Keine Kurse mit dem Begriff '%@' gefunden.", @"Message if course search yields no results.");
+    item.title = [NSString stringWithFormat:locString, searchString];
     self.resultArray = @[item];
     self.tableView.hidden = NO;
     [self.tableView reloadData];
@@ -199,7 +199,7 @@
         loading.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.7f];
         
         UILabel *loadLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 25, 90, 22)];
-        loadLabel.text = @"Suche";
+        loadLabel.text = NSLocalizedString(@"Suche", @"Message the activity indicator is showing during a course search");
         loadLabel.font = [UIFont boldSystemFontOfSize:18.0f];
         loadLabel.textAlignment = NSTextAlignmentCenter;
         loadLabel.textColor = [UIColor colorWithWhite:1.0f alpha:1.0f];

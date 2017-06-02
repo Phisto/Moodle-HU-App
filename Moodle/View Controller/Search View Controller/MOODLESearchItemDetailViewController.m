@@ -60,12 +60,12 @@
     
     self.sectionTitleLabel.text = self.item.title;
     self.semesterLabel.text = self.item.semester;
-    self.categoryLabel.text = (self.item.courseCategory) ? [NSString stringWithFormat:@"Kursbereich: %@", self.item.courseCategory] : nil;
+    NSString *locString = NSLocalizedString(@"Kursbereich: %@", @"Label indicating the assoziated department of a moodle course.");
+    self.categoryLabel.text = (self.item.courseCategory) ? [NSString stringWithFormat:locString, self.item.courseCategory] : nil;
     
     self.subscriptionButtonHeightConstraint.constant = (self.item.canSubscribe) ? 44.0f : 0.0f;
     self.subscribeButton.hidden = !self.item.canSubscribe;
-    //self.subscribeButton.titleLabel.hidden = !self.item.canSubscribe;
-    
+
     CGFloat height = self.item.teacher.count*20.0f;
     self.tableViewHeightConstraint.constant = (height > 80.0f) ? 80.0f : height;
     [self.tableView reloadData];
@@ -99,7 +99,8 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:teacherCellIdentifier];
     NSString *item = self.item.teacher[indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"Kursverantwortliche/r: %@", item];
+    NSString *locString = NSLocalizedString(@"Kursverantwortliche/r: %@", @"Label indicating the teacher of a moodle course.");
+    cell.textLabel.text = [NSString stringWithFormat:locString, item];
     return cell;
 }
 

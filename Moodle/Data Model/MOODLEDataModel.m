@@ -178,7 +178,8 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
         
         if (statusCode != 200) {
             
-            NSDictionary *userInfo = @{NSLocalizedDescriptionKey: @"Bei der Kommunikation mit dem Server, ist ein Fehler aufgetreten."};
+            NSString *locString = NSLocalizedString(@"Bei der Kommunikation mit dem Server, ist ein Fehler aufgetreten.", @"Error message if the server wont respond with 200 http response code.");
+            NSDictionary *userInfo = @{NSLocalizedDescriptionKey: locString};
             NSError *newError = [NSError errorWithDomain:@"de.simonsserver.Moodle" code:1990 userInfo:userInfo];
             completionHandler(NO, newError, nil);
             return;
@@ -216,7 +217,8 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
                                     NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
                                     
                                     if (statusCode != 200) {
-                                        NSDictionary *userInfo = @{NSLocalizedDescriptionKey: @"Bei der Kommunikation mit dem Server, ist ein Fehler aufgetreten."};
+                                        NSString *locString = NSLocalizedString(@"Bei der Kommunikation mit dem Server, ist ein Fehler aufgetreten.", @"Error message if the server wont respond with 200 http response code.");
+                                        NSDictionary *userInfo = @{NSLocalizedDescriptionKey: locString};
                                         NSError *newError = [NSError errorWithDomain:@"de.simonsserver.Moodle" code:1990 userInfo:userInfo];
                                         completionHandler(NO, newError);
                                         return;
@@ -227,7 +229,9 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
                                 NSString *receivedDataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
                                 if ([receivedDataString containsString:@"Ungültiges Login, bitte versuchen Sie es erneut."]) {
                                     
-                                    NSDictionary *userInfo = @{NSLocalizedDescriptionKey: @"Ungültiges Login, bitte versuchen Sie es erneut."};
+                                    NSString *locString = NSLocalizedString(@"Ungültiges Login, bitte versuchen Sie es erneut.", @"Error message if the login crdential where wrong.");
+                                    NSDictionary *userInfo = @{NSLocalizedDescriptionKey: locString};
+                                    
                                     NSError *newError = [NSError errorWithDomain:@"de.simonsserver.Moodle" code:1990 userInfo:userInfo];
                                     completionHandler(NO, newError);
                                     return;
@@ -280,7 +284,8 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
         
         if (statusCode != 200) {
             
-            NSDictionary *userInfo = @{NSLocalizedDescriptionKey: @"Bei der Kommunikation mit dem Server, ist ein Fehler aufgetreten."};
+            NSString *locString = NSLocalizedString(@"Bei der Kommunikation mit dem Server, ist ein Fehler aufgetreten.", @"Error message if the server wont respond with 200 http response code.");
+            NSDictionary *userInfo = @{NSLocalizedDescriptionKey: locString};
             NSError *newError = [NSError errorWithDomain:@"de.simonsserver.Moodle" code:1990 userInfo:userInfo];
             completionHandler(NO, newError);
             return;
@@ -323,7 +328,8 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
                                                                     error:&requestError];
         if (!data) {
             
-            NSLog(@"Logout: %@", (requestError) ? requestError.localizedDescription : @"Beim Logout ist ein Fehler aufgetreten.");
+            NSString *locString = NSLocalizedString(@"Beim Logout ist ein Fehler aufgetreten.", @"Error message if logout failed.");
+            NSLog(@"Logout: %@", (requestError) ? requestError.localizedDescription : locString);
             [self resetData];
             completionHandler(NO, (requestError) ? requestError : nil);
             return;
@@ -336,7 +342,8 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
             
             if (statusCode != 200) {
                 
-                NSDictionary *userInfo = @{NSLocalizedDescriptionKey: @"Beim Logout ist ein Fehler aufgetreten."};
+                NSString *locString = NSLocalizedString(@"Beim Logout ist ein Fehler aufgetreten.", @"Error message if logout failed.");
+                NSDictionary *userInfo = @{NSLocalizedDescriptionKey: locString};
                 NSError *newError = [NSError errorWithDomain:@"de.simonsserver.Moodle" code:1990 userInfo:userInfo];
                 [self resetData];
                 completionHandler(NO, newError);

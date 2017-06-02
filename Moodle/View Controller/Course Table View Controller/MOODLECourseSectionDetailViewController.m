@@ -67,10 +67,10 @@
 
     NSMutableArray *titles = [NSMutableArray array];
     NSMutableArray *array = [NSMutableArray array];
-    if (doc) { [array addObject:doc]; [titles addObject:@"Dokumente"]; }
-    if (assign) { [array addObject:assign]; [titles addObject:@"Abgaben"]; }
-    if (wiki) { [array addObject:wiki]; [titles addObject:@"Wiki"]; }
-    if (other) { [array addObject:other]; [titles addObject:@"Anderes"]; }
+    if (doc) { [array addObject:doc]; [titles addObject:NSLocalizedString(@"Dokumente", @"Section title for document items.")]; }
+    if (assign) { [array addObject:assign]; [titles addObject:NSLocalizedString(@"Abgaben", @"Section title for assignment items.")]; }
+    if (wiki) { [array addObject:wiki]; [titles addObject:NSLocalizedString(@"Wiki", @"Section title for wiki items.")]; }
+    if (other) { [array addObject:other]; [titles addObject:NSLocalizedString(@"Anderes", @"Section title for other items.")]; }
     _tableViewSegments = [array copy];
     _tableViewSegmentTitles = [titles copy];
 }
@@ -229,14 +229,6 @@
 
 - (UIImage *)imageForItem:(MOODLECourseSectionItem *)item {
     
-    /*
-     MoodleItemTypeWiki,
-     MoodleItemTypeURL,
-     MoodleItemTypeForum,
-     MoodleItemTypeGlossary,
-     MoodleItemTypeAssignment,
-     MoodleItemTypeComment
-     */
     MoodleItemType itemType = item.itemType;
     
     UIImage *image = nil;

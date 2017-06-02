@@ -236,7 +236,8 @@
     
     if ( [username isEqualToString:@""] || [password isEqualToString:@""]) {
         
-        [self showFailureWithMessage:@"Bitte geben Sie einen Benutzernamen und Passwort ein."];
+        NSString *locString = NSLocalizedString(@"Bitte geben Sie einen Benutzernamen und Passwort ein.", @"Message if the user tried to login without entering user credentials.");
+        [self showFailureWithMessage:locString];
         self.usernameTextField.enabled = YES;
         self.passwordTextField.enabled = YES;
     }
@@ -347,7 +348,7 @@
         loading.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.7f];
         
         UILabel *loadLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 25, 90, 22)];
-        loadLabel.text = @"Login";
+        loadLabel.text = NSLocalizedString(@"Login", @"Lable of the activity indicator during login request.");
         loadLabel.font = [UIFont boldSystemFontOfSize:18.0f];
         loadLabel.textAlignment = NSTextAlignmentCenter;
         loadLabel.textColor = [UIColor colorWithWhite:1.0f alpha:1.0f];

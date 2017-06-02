@@ -200,7 +200,7 @@
     MOODLECourse *item = self.dataModel.courseArray[indexPath.row];
     
     MOODLETableViewRowAction *hideAction = [MOODLETableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault
-                                                                                  title:@"Verbergen"
+                                                                                  title:NSLocalizedString(@"Verbergen", @"Button label to hide moodle course.")
                                                                                    icon:[UIImage imageNamed:@"hide_icon"]
                                                                                 handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
                                                                                     
@@ -217,7 +217,7 @@
                                                  alpha:1.0f];
     
     MOODLETableViewRowAction *favoriteAction = [MOODLETableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault
-                                                                                      title:@"Favorisieren"
+                                                                                      title:NSLocalizedString(@"Favorisieren", @"Button label to favorite moodle course.")
                                                                                        icon:(item.isFavourite) ? [UIImage imageNamed:@"starred_on"] : [UIImage imageNamed:@"starred_off"]
                                                                                     handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
 

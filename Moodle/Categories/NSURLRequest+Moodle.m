@@ -44,6 +44,7 @@
     NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    request.cachePolicy = NSURLRequestReloadIgnoringCacheData;
     [request setURL:[NSURL URLWithString:@"https://moodle.hu-berlin.de/login/index.php"]];
     [request setHTTPMethod:@"POST"];
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
@@ -63,6 +64,7 @@
     NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    request.cachePolicy = NSURLRequestReloadIgnoringCacheData;
     [request setURL:[NSURL URLWithString:@"https://moodle.hu-berlin.de/course/search.php"]];
     [request setHTTPMethod:@"POST"];
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
@@ -82,6 +84,7 @@
     NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    request.cachePolicy = NSURLRequestReloadIgnoringCacheData;
     [request setURL:[NSURL URLWithString:@"https://moodle.hu-berlin.de/login/logout.php"]];
     [request setHTTPMethod:@"POST"];
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];

@@ -11,7 +11,7 @@
 			isa = PBXAggregateTarget;
 			buildConfigurationList = F46690391EE1C84100748E8C /* Build configuration list for PBXAggregateTarget "MOODLE App Documentation" */;
 			buildPhases = (
-				F466903A1EE1C86800748E8C /* ShellScript */,
+				F466903A1EE1C86800748E8C /* Build Documentation */,
 			);
 			dependencies = (
 			);
@@ -33,6 +33,7 @@
 		F438529A1EC93A7E005BC780 /* MOODLECourseSectionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43852981EC93A7E005BC780 /* MOODLECourseSectionDetailViewController.m */; };
 		F43D50291EE17A4200BF534E /* MOODLEProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43D50281EE17A4200BF534E /* MOODLEProgressViewController.m */; };
 		F45DE6761ED1FEDD0077BC61 /* MOODLECommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F45DE6751ED1FEDD0077BC61 /* MOODLECommentTableViewCell.m */; };
+		F466904A1EE1FED500748E8C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F46690461EE1FED500748E8C /* Localizable.strings */; };
 		F46BE03B1EC9E9B60060F934 /* MOODLEDocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46BE03A1EC9E9B60060F934 /* MOODLEDocumentViewController.m */; };
 		F4D49AB11EC70B8000CA1193 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D49AB01EC70B8000CA1193 /* main.m */; };
 		F4D49AB41EC70B8000CA1193 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D49AB31EC70B8000CA1193 /* AppDelegate.m */; };
@@ -82,13 +83,20 @@
 		F43D50281EE17A4200BF534E /* MOODLEProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOODLEProgressViewController.m; sourceTree = "<group>"; };
 		F45DE6741ED1FEDD0077BC61 /* MOODLECommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOODLECommentTableViewCell.h; sourceTree = "<group>"; };
 		F45DE6751ED1FEDD0077BC61 /* MOODLECommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOODLECommentTableViewCell.m; sourceTree = "<group>"; };
+		F46690471EE1FED500748E8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F46690481EE1FED500748E8C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F46690491EE1FED500748E8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F46690501EE205D000748E8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F46690511EE205D300748E8C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F46690521EE205E200748E8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		F46690531EE205EC00748E8C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		F46BE0391EC9E9B60060F934 /* MOODLEDocumentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOODLEDocumentViewController.h; sourceTree = "<group>"; };
 		F46BE03A1EC9E9B60060F934 /* MOODLEDocumentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOODLEDocumentViewController.m; sourceTree = "<group>"; };
 		F48FF8621ECEEE7100E9BFC8 /* Moodle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Moodle.entitlements; sourceTree = "<group>"; };
 		F4D49AAC1EC70B8000CA1193 /* Moodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D49AB01EC70B8000CA1193 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F4D49AB21EC70B8000CA1193 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F4D49AB31EC70B8000CA1193 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F4D49AB21EC70B8000CA1193 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F4D49AB31EC70B8000CA1193 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F4D49AB91EC70B8000CA1193 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F4D49ABB1EC70B8000CA1193 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4D49ABE1EC70B8000CA1193 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -227,16 +235,17 @@
 				F4D49AB21EC70B8000CA1193 /* AppDelegate.h */,
 				F4D49AB31EC70B8000CA1193 /* AppDelegate.m */,
 				F4D49AEF1EC8B14700CA1193 /* View Controller */,
-				F4D49ABB1EC70B8000CA1193 /* Assets.xcassets */,
-				F4D49AB81EC70B8000CA1193 /* Main.storyboard */,
-				F4D49ABD1EC70B8000CA1193 /* LaunchScreen.storyboard */,
-				F48FF8621ECEEE7100E9BFC8 /* Moodle.entitlements */,
-				F4D49AC01EC70B8000CA1193 /* Info.plist */,
 				F4D49AAF1EC70B8000CA1193 /* Supporting Files */,
 				F4372A3B1EDF70AE005A1427 /* Data Model */,
 				F4A81FB31EDCA8D100AEAB48 /* Table View */,
 				F4D49AEA1EC8AFAE00CA1193 /* Categories */,
 				F40006211ECE237000FB1F60 /* Worker */,
+				F4D49AB81EC70B8000CA1193 /* Main.storyboard */,
+				F4D49ABD1EC70B8000CA1193 /* LaunchScreen.storyboard */,
+				F4D49ABB1EC70B8000CA1193 /* Assets.xcassets */,
+				F48FF8621ECEEE7100E9BFC8 /* Moodle.entitlements */,
+				F46690461EE1FED500748E8C /* Localizable.strings */,
+				F4D49AC01EC70B8000CA1193 /* Info.plist */,
 				F4D49AE61EC88F1700CA1193 /* Keychain Wrapper */,
 				F4D49ACF1EC790AD00CA1193 /* Hpple */,
 			);
@@ -358,7 +367,8 @@
 				F4D49AA81EC70B8000CA1193 /* Sources */,
 				F4D49AA91EC70B8000CA1193 /* Frameworks */,
 				F4D49AAA1EC70B8000CA1193 /* Resources */,
-				F4A81FBB1EDD5DFD00AEAB48 /* ShellScript */,
+				F4A81FBB1EDD5DFD00AEAB48 /* Increment Build Number */,
+				F466904B1EE2033300748E8C /* Update Localized Files */,
 			);
 			buildRules = (
 			);
@@ -397,11 +407,12 @@
 			};
 			buildConfigurationList = F4D49AA71EC70B8000CA1193 /* Build configuration list for PBXProject "Moodle" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = Germany;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = F4D49AA31EC70B8000CA1193;
 			productRefGroup = F4D49AAD1EC70B8000CA1193 /* Products */;
@@ -420,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4D49ABF1EC70B8000CA1193 /* LaunchScreen.storyboard in Resources */,
+				F466904A1EE1FED500748E8C /* Localizable.strings in Resources */,
 				F4D49ABC1EC70B8000CA1193 /* Assets.xcassets in Resources */,
 				F4D49ABA1EC70B8000CA1193 /* Main.storyboard in Resources */,
 			);
@@ -428,26 +440,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		F466903A1EE1C86800748E8C /* ShellScript */ = {
+		F466903A1EE1C86800748E8C /* Build Documentation */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Build Documentation";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#appledoc Xcode script\n# Start constants\ntarget=\"iphoneos\";\noutputPath=\"~/Documents/XCode/iPhone Apps/UniApps/Moodle\";\n# End constants\n/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--output \"${outputPath}\" \\\n--docset-platform-family \"${target}\" \\\n--ignore \".m\" \\\n--index-desc \"~/Documents/XCode/iPhone Apps/UniApps/Moodle/README.md\" \\\n--logformat xcode \\\n\"${PROJECT_DIR}\"";
+			shellScript = "#appledoc Xcode script\n# Start constants\ntarget=\"iphoneos\";\noutputPath=\"~/Documents/XCode/iPhone Apps/UniApps/Moodle/Docs\";\n# End constants\n/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--output \"${outputPath}\" \\\n--docset-platform-family \"${target}\" \\\n--ignore \".m\" \\\n--index-desc \"~/Documents/XCode/iPhone Apps/UniApps/Moodle/README.md\" \\\n--logformat xcode \\\n\"${PROJECT_DIR}\"";
 		};
-		F4A81FBB1EDD5DFD00AEAB48 /* ShellScript */ = {
+		F466904B1EE2033300748E8C /* Update Localized Files */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Update Localized Files";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which bartycrouch > /dev/null; then\n# Incrementally update all Storyboards/XIBs strings files\nbartycrouch interfaces -p \"$PROJECT_DIR\"\n\n# Add new keys to Localizable.strings files from NSLocalizedString in code\nbartycrouch code -p \"$PROJECT_DIR\" -l \"$PROJECT_DIR\" -a -s\nelse\necho \"warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch\"\nfi";
+		};
+		F4A81FBB1EDD5DFD00AEAB48 /* Increment Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Increment Build Number";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,10 +525,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		F46690461EE1FED500748E8C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F46690471EE1FED500748E8C /* en */,
+				F46690481EE1FED500748E8C /* de */,
+				F46690491EE1FED500748E8C /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		F4D49AB81EC70B8000CA1193 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F4D49AB91EC70B8000CA1193 /* Base */,
+				F46690521EE205E200748E8C /* en */,
+				F46690531EE205EC00748E8C /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -509,6 +549,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				F4D49ABE1EC70B8000CA1193 /* Base */,
+				F46690501EE205D000748E8C /* en */,
+				F46690511EE205D300748E8C /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -537,6 +579,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_OPTIMIZATION = time;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -587,6 +630,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_OPTIMIZATION = time;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -671,6 +715,7 @@
 				F46690381EE1C84100748E8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F4D49AA71EC70B8000CA1193 /* Build configuration list for PBXProject "Moodle" */ = {
 			isa = XCConfigurationList;

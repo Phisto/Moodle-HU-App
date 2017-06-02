@@ -108,7 +108,7 @@
 - (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewRowAction *unhideAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault
-                                                                            title:@"Wieder anzeigen"
+                                                                            title:NSLocalizedString(@"Wieder anzeigen", @"Label of the button to unhide a moodle course.")
                                                                           handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
                                                                               
                                                                               //[self.dataModel setItemUnhiddenWithTitle:self.dataModel.hiddedCourseIdentifier[indexPath.row]];

@@ -734,19 +734,7 @@
     MoodleItemType itemType = MoodleItemTypeOther;
     NSArray<NSString *> *partArray = [string componentsSeparatedByString:@" "];
     if (partArray.count == 3) {
-        
-        /*
-         #define kResourceIdentifier @"modtype_resource"
-         #define kWikiIdentifier @"modtype_ouwiki"
-         #define kLabelIdentifier @"modtype_label"
-         #define kAssignmentIdentifier @"modtype_assign"
-         #define kURLIdentifier @"modtype_url"
-         #define kForumIdentifier @"modtype_forum"
-         #define kGlossaryIdentifier @"modtype_glossary"
-         #define kGalleryIdentifier @"modtype_lightboxgallery"
-         #define kFolderIdentifier @"modtype_folder"
-         */
-        
+
         
         NSString *identifier = partArray.lastObject;
         
