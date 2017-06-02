@@ -1,0 +1,58 @@
+/*
+ *  MOODLECourse.m
+ *  MOODLE
+ *
+ *  Copyright © 2017 Simon Gaus <simon.cay.gaus@gmail.com>
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU Lesser General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU Lesser General Public License for more details.
+ *
+ *  You should have received a copy of the GNU Lesser General Public License
+ *  along with this programm.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+#import "MOODLECourse.h"
+
+#import "MOODLEDataModel.h"
+
+
+
+///-----------------------
+/// @name IMPLEMENTATION
+///-----------------------
+
+
+
+@implementation MOODLECourse
+#pragma mark - Custom Setter
+
+- (void)setIsHidden:(BOOL)isHidden {
+    
+    if (_isHidden != isHidden) {
+        
+        [self.dataModel setItem:self isHidden:isHidden];
+        
+        _isHidden = isHidden;
+    }
+}
+
+- (void)setIsFavourite:(BOOL)isFavourite {
+    
+    if (_isFavourite != isFavourite) {
+        
+        [self.dataModel setItem:self isFavorit:isFavourite];
+        
+        _isFavourite = isFavourite;
+    }
+}
+
+#pragma mark -
+@end
