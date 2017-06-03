@@ -46,10 +46,6 @@
 
 #define kSemesterArray @[@"(SoSe ", @"(WiSe ", @" SoSe ", @" WiSe "]
 
-#define kHTMLStart @"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\"http://www.w3.org/TR/html4/strict.dtd\"><HTML><HEAD><TITLE></TITLE></HEAD><BODY>"
-#define kHTMLEnd @"</BODY></HTML>"
-
-
 @interface MOODLEXMLParser (/* Private */)
 
 @property (nonatomic, strong) NSNumberFormatter *numberFormatter;
@@ -171,7 +167,7 @@
                     NSString *summary = [summaryElement content];
                     if (summary.length > 5) {
                         
-                        item.courseDescription = [NSString stringWithFormat:@"%@%@%@", kHTMLStart, summary, kHTMLEnd];
+                        item.courseDescription = summary;
                     }
                     
                     // get teacher
@@ -263,9 +259,9 @@
                 
                 TFHppleElement *sectionNameElement = sectionElement.children[0];
                 
-                // section title
-                NSString *name = nil;
-                NSString *urlString = nil;
+                // section title (we set defaults to silence memory warnings, as if this code fails it doesent matter anyways)
+                NSString *name = @"no name";
+                NSString *urlString = @"no url";
                 
                 // element is node < div class='sectionname' (or 'sectionname accesshide' or 'section-title')>
                 if (sectionNameElement.hasChildren) {
@@ -277,11 +273,10 @@
                     
                     name = [(maybeSectionNameElement.raw) ? maybeSectionNameElement : sectionNameElement content];
                     urlString = [(maybeSectionNameElement.raw) ? maybeSectionNameElement : sectionNameElement objectForKey:@"href"];
-
                 }
                 
                 BOOL canLoadContent = !([urlString containsString:@"&section="]);
-    
+                
                 NSURL *sectionURL = [NSURL URLWithString:urlString];
                 NSString *sectionSummary = [self sectionSummary:sectionElement.children[1]];
                 
@@ -338,9 +333,9 @@
                 
                 TFHppleElement *sectionNameElement = sectionElement.children[0];
                 
-                // section title
-                NSString *name = nil;
-                NSString *urlString = nil;
+                // section title (we set defaults to silence memory warnings, as if this code fails it doesent matter anyways)
+                NSString *name = @"no name";
+                NSString *urlString = @"no url";
                 
                 // element is node < div class='sectionname' (or 'sectionname accesshide' or 'section-title')>
                 if (sectionNameElement.hasChildren) {
@@ -356,6 +351,7 @@
                 }
                 
                 NSURL *sectionURL = [NSURL URLWithString:urlString];
+                
                 NSString *sectionSummary = [self sectionSummary:sectionElement.children[1]];
                 
                 MOODLECourseSection *section = [[MOODLECourseSection alloc] init];
@@ -515,7 +511,7 @@
         // add proper html markup
         else {
 
-            summary = [NSString stringWithFormat:@"%@%@%@", kHTMLStart, summary, kHTMLEnd];
+            summary = summary;
         }
     }
     return summary;
@@ -630,42 +626,6 @@
             break;
         }
     }
-    
-    /*
-    ///!!!: we are using query not .childred because the node hierarchy is quite deep... check performance
-    NSString *queryString = @"//div[@class='activityinstance']/a";
-    NSArray<TFHppleElement *> *nodesArray = [element searchWithXPathQuery:queryString];
-    TFHppleElement *itemElement = nodesArray.firstObject;
-    if (itemElement.hasChildren) {
-        
-        
-        // get type
-        item = [[MOODLECourseSectionItem alloc] init];
-        item.itemType = [self itemTypeFromString:[element objectForKey:@"class"]];
-        
-        // get url
-        NSString *urlString = [itemElement objectForKey:@"href"];
-        item.resourceURL = [NSURL URLWithString:urlString];
-        
-        // get title
-        NSArray<TFHppleElement *> *children = itemElement.children;
-        NSString *ressourceTitle = @"- Kein Titel -";
-        if (children.count == 2) {
-            
-            TFHppleElement *titleNode = itemElement.children[1];
-            ressourceTitle = [[titleNode firstChild] content];
-            
-            // get doc type if item type is MoodleItemTypeDocument
-            if (item.itemType == MoodleItemTypeDocument) {
-                
-                TFHppleElement *docIconElement = itemElement.children[0];
-                NSString *url = [docIconElement objectForKey:@"src"];
-                item.documentType = [self documentTypeFromString:url];
-            }
-        }
-        item.resourceTitle = ressourceTitle;
-    }
-    */
     
     return item;
 }
