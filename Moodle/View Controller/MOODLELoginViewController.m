@@ -149,7 +149,7 @@
 
 - (void)evaluateImageViewVisibility {
     
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.4f animations:^{
         
         self.imageView.hidden = (self.imageView.frame.size.height < 60.0f);
         [self.view layoutIfNeeded];

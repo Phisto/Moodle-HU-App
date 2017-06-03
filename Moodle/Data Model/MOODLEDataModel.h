@@ -154,7 +154,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  
- This method will login a user with the given credentials.
+ @brief This method will login a user with the given credentials.
  
  @param username The username to use.
  
@@ -168,13 +168,13 @@ NS_ASSUME_NONNULL_BEGIN
         completionHandler:(void (^)(BOOL success, NSError * _Nullable error))completionHandler;
 /**
  
- This method will logout the user.
+ @brief This method will logout the user.
  
  */
 - (void)logoutWithCompletionHandler:(void (^)(BOOL success, NSError * _Nullable error))completionHandler;
 /**
  
- This method load the content of a given MOODLE course.
+ @brief This method load the content of a given MOODLE course.
  
  @param item The item.
  
@@ -185,7 +185,7 @@ NS_ASSUME_NONNULL_BEGIN
              completionHandler:(void (^)(BOOL success, NSError * _Nullable error))completionHandler;
 /**
  
- This method will perform a search for MOODLE courses with a given search query.
+ @brief This method will perform a search for MOODLE courses with a given search query.
  
  @param searchString The search query string.
  

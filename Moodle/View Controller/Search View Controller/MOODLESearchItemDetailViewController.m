@@ -19,12 +19,16 @@
  *
  */
 
+/* Header */
 #import "MOODLESearchItemDetailViewController.h"
 
+/* Data Model */
 #import "MOODLESearchItem.h"
+
+/* View Controller */
 #import "MOODLEDocumentViewController.h"
 
-@interface MOODLESearchItemDetailViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface MOODLESearchItemDetailViewController (/* Private */)<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) IBOutlet UILabel *sectionTitleLabel;
 @property (nonatomic, strong) IBOutlet UILabel *semesterLabel;
@@ -47,11 +51,14 @@
 
 
 @implementation MOODLESearchItemDetailViewController
+#pragma mark - View Controller Methodes
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
 
 - (void)viewWillAppear:(BOOL)animated {
     
@@ -70,28 +77,22 @@
     self.tableViewHeightConstraint.constant = (height > 80.0f) ? 80.0f : height;
     [self.tableView reloadData];
     
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithData: [self.item.courseDescription dataUsingEncoding:NSUnicodeStringEncoding]
-                                                                                          options: @{ NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType }
-                                                                               documentAttributes: nil
-                                                                                            error: nil];
-    
+    NSMutableAttributedString *attributedString = self.item.attributedCourseDescription;
     [attributedString addAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:17.0f]} range:NSMakeRange(0, attributedString.length)];
-    [attributedString addAttributes:@{NSStrokeColorAttributeName: [UIColor blackColor]} range:NSMakeRange(0, attributedString.length)];
-    [attributedString addAttributes:@{NSForegroundColorAttributeName: [UIColor blackColor]} range:NSMakeRange(0, attributedString.length)];
     
-    
-    [self.textView setAttributedText:attributedString];
+    self.textView.attributedText = attributedString;
     [self.textView layoutIfNeeded];
-    [self.textView setContentOffset:CGPointMake(0, 0)];
-    
+    self.textView.contentOffset = CGPointMake(0.0f, 0.0f);
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidAppear:(BOOL)animated {
+    
+    [self.textView layoutIfNeeded];
 }
+
 
 #pragma mark - Table View
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -104,14 +105,16 @@
     return cell;
 }
 
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return self.item.teacher.count;
 }
 
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
@@ -123,4 +126,6 @@
     }
 }
 
+
+#pragma mark -
 @end

@@ -19,18 +19,24 @@
  *
  */
 
+
+/* Header */
 #import "MOODLECourseSectionDetailViewController.h"
 
-#import "MOODLECourseSectionItemTableViewCell.h"
-
+/* View Controller */
 #import "MOODLEDocumentViewController.h"
 
+/* Table View */
 #import "MOODLECommentTableViewCell.h"
+#import "MOODLECourseSectionItemTableViewCell.h"
 
+/* Data Model */
 #import "MOODLECourseSection.h"
 #import "MOODLECourseSectionItem.h"
 
-@interface MOODLECourseSectionDetailViewController () <UITableViewDelegate, UITableViewDataSource>
+
+
+@interface MOODLECourseSectionDetailViewController (/* Private */) <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) IBOutlet UILabel *sectionTitleLabel;
 @property (nonatomic, strong) IBOutlet UITextView *textView;
@@ -43,6 +49,8 @@
 @property (nonatomic, strong) IBOutlet NSLayoutConstraint *seperatorHeigthOneContraint;
 @property (nonatomic, strong) IBOutlet NSLayoutConstraint *seperatorHeigthTwoContraint;
 
+@property (nonatomic, strong) IBOutlet UITextView *heightCalculationTextView;
+
 @end
 
 
@@ -54,6 +62,8 @@
 
 
 @implementation MOODLECourseSectionDetailViewController
+#pragma mark - View Controller Methodes
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -74,6 +84,7 @@
     _tableViewSegments = [array copy];
     _tableViewSegmentTitles = [titles copy];
 }
+
 
 - (void)viewWillAppear:(BOOL)animated {
     
@@ -98,6 +109,16 @@
     // reload table view
     [self.tableView reloadData];
 }
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark - Layout Methodes
+
 
 - (void)calculateAndSetContrainsts:(CGFloat)probableTextHeight {
     
@@ -144,12 +165,9 @@
     self.tableView.hidden = !(self.section.hasDocuments || self.section.hasOhterItems || self.section.hasAssignment || self.section.hasWiki);
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - Table View Methodes
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -181,15 +199,18 @@
     }
 }
 
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
     return self.tableViewSegmentTitles.count;
 }
 
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return self.tableViewSegments[section].count;
 }
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -212,6 +233,7 @@
     return 44.0f;
 }
 
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
     UITableViewCell *headerCell = [tableView dequeueReusableCellWithIdentifier:@"headerCell"];
@@ -220,12 +242,15 @@
     return headerCell;
 }
 
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     
     return 22.0f;
 }
 
-#pragma mark -
+
+#pragma mark - Helper Methoes
+
 
 - (UIImage *)imageForItem:(MOODLECourseSectionItem *)item {
     
@@ -274,6 +299,7 @@
     return image;
 }
 
+
 - (UIImage *)imageForDocumentType:(MoodleDocumentType)documentType {
     
     UIImage *image = [UIImage imageNamed:@"other_file_icon"];;
@@ -298,16 +324,28 @@
     return image;
 }
 
+
 - (CGFloat)textViewHeightForAttributedText:(NSAttributedString*)text andWidth:(CGFloat)width {
     
-    UITextView *calculationView = [[UITextView alloc] init];
-    [calculationView setAttributedText:text];
-    CGSize size = [calculationView sizeThatFits:CGSizeMake(width, FLT_MAX)];
+    [self.heightCalculationTextView setAttributedText:text];
+    CGSize size = [self.heightCalculationTextView sizeThatFits:CGSizeMake(width, FLT_MAX)];
 
     return size.height+10.0f;
 }
 
+
+- (UITextView *)heightCalculationTextView {
+    
+    if (!_heightCalculationTextView) {
+        
+        _heightCalculationTextView = [[UITextView alloc] init];
+    }
+    return _heightCalculationTextView;
+}
+
+
 #pragma mark - Navigation
+
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -326,5 +364,5 @@
 }
 
 
-
+#pragma mark -
 @end

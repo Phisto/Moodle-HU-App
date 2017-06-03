@@ -30,6 +30,7 @@
 #import "MOODLECourseSectionDetailViewController.h"
 #import "MOODLECourseSectionTableViewCell.h"
 
+
 @interface MOODLECourseDetailViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) IBOutlet UILabel *courseTitleLabel;

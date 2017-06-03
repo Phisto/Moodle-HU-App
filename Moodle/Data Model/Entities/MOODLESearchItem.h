@@ -48,6 +48,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong, nullable) NSString *courseDescription;
 /**
+ The attributed course description of the search item.
+ */
+@property (nonatomic, readonly, nullable) NSMutableAttributedString *attributedCourseDescription;
+/**
  The semester of the search item.
  */
 @property (nonatomic, strong, nullable) NSString *semester;

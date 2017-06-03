@@ -19,7 +19,24 @@
  *
  */
 
+@import UIKit;
+
+/* Header */
 #import "MOODLESearchItem.h"
+
+
+
+///-----------------------
+/// @name CATEGORIES
+///-----------------------
+
+
+
+@interface MOODLESearchItem (/* Private */)
+
+@property (nonatomic, strong) NSMutableAttributedString *attributedCourseDescription;
+
+@end
 
 
 
@@ -35,6 +52,19 @@
 - (BOOL)canSubscribe {
     
     return ((self.guestSubscribe || self.selfSubscribe ) && self.courseURL);
+}
+
+- (NSMutableAttributedString *)attributedCourseDescription {
+    
+    if (!_attributedCourseDescription) {
+        
+        _attributedCourseDescription = [[NSMutableAttributedString alloc] initWithString:(self.courseDescription) ? self.courseDescription : @""
+                                                                               attributes:@{
+                                                                                            NSDocumentTypeDocumentAttribute:
+                                                                                                NSHTMLTextDocumentType
+                                                                                            }];
+    }
+    return _attributedCourseDescription;
 }
 
 #pragma mark -
