@@ -52,8 +52,6 @@ static NSString * const kDocIconURLPDF = @"pdf-24";
 static NSString * const kDocIconURLWordDocument = @"document-24";
 static NSString * const kDocIconURLAudio = @"mp3-24";
 
-#define kSemesterArray @[@"(SoSe ", @"(WiSe ", @" SoSe ", @" WiSe "]
-
 
 
 ///-----------------------
@@ -66,6 +64,8 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
 
 @property (nonatomic, strong) NSNumberFormatter *numberFormatter;
 
+@property (nonatomic, strong) NSArray<NSString *> *semesterArray;
+
 @end
 
 
@@ -77,6 +77,8 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
 
 
 @implementation MOODLEXMLParser
+#pragma mark - API Methodes
+
 
 - (nullable NSString *)sessionKeyFromData:(NSData *)data {
     
@@ -102,6 +104,7 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
     }
     return sessionKey;
 }
+
 
 - (nullable NSArray<MOODLESearchItem *> *)searchResultsFromData:(NSData *)data {
     
@@ -224,6 +227,7 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
     return [mutableSearchResults copy];
 }
 
+
 - (NSArray<MOODLECourse *> *)createCourseItemsFromData:(NSData *)data {
     
     TFHpple *courseParser = [TFHpple hppleWithHTMLData:data];
@@ -260,6 +264,7 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
     
     return [courses copy];
 }
+
 
 - (NSArray<MOODLECourseSection *> *)createCourseSectionsFromData:(NSData *)data {
     
@@ -390,6 +395,7 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
     return sections;
 }
 
+
 - (BOOL)createContentForCourseSections:(MOODLECourseSection *)section fromData:(NSData *)data {
     
     NSArray *sectionNodes = [self singleSectionCourseSectionNodesFromData:data];
@@ -443,6 +449,7 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
     return section.hasContenLoaded;
 }
 
+
 #pragma mark - Helper Methodes
 
 
@@ -465,6 +472,7 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
     
     return nil;
 }
+
 
 - (nullable NSArray<TFHppleElement *> *)singleSectionCourseSectionNodesFromData:(NSData *)data {
     
@@ -646,6 +654,7 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
     return item;
 }
 
+
 - (void)setSemesterAndMoodleNameFromString:(NSString *)string forCourse:(MOODLECourse *)course {
     
     /*
@@ -660,7 +669,7 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
      2017-05-17 12:52:58.201 Moodle[8018:2550318] moodleID: 5210204 (WS 12/13)
      */
     
-    for (NSString *sem in kSemesterArray) {
+    for (NSString *sem in self.semesterArray) {
         
         if ([string containsString:sem]) {
             
@@ -704,6 +713,7 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
         course.semester = @"-";
     }
 }
+
 
 - (MoodleItemType)itemTypeFromString:(NSString *)string {
     
@@ -761,6 +771,7 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
     return itemType;
 }
 
+
 - (MoodleDocumentType)documentTypeFromString:(NSString *)string {
     
     MoodleDocumentType documentType = MoodleDocumentTypeOther;
@@ -794,7 +805,9 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
     return documentType;
 }
 
+
 #pragma mark - Lazy/Getter
+
 
 - (NSNumberFormatter *)numberFormatter {
     
@@ -805,6 +818,16 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
     }
     return _numberFormatter;
 }
+
+
+- (NSArray<NSString *> *)semesterArray {
+    
+    if (!_semesterArray) {
+        _semesterArray = @[@"(SoSe ", @"(WiSe ", @" SoSe ", @" WiSe "];
+    }
+    return _semesterArray;
+}
+
 
 #pragma mark -
 @end
