@@ -120,7 +120,7 @@ static const UInt8 kKeychainItemIdentifier[]    = "com.apple.dts.KeychainUI\0";
         NSMutableDictionary *tmpDictionary =
         [self dictionaryToSecItemFormat:_keychainData];
         // Delete the keychain item in preparation for resetting the values:
-        OSStatus errorcode = SecItemDelete((__bridge CFDictionaryRef)tmpDictionary);
+        OSStatus errorcode __unused = SecItemDelete((__bridge CFDictionaryRef)tmpDictionary);
         NSAssert(errorcode == noErr, @"Problem deleting current keychain item." );
     }
     
@@ -230,7 +230,7 @@ static const UInt8 kKeychainItemIdentifier[]    = "com.apple.dts.KeychainUI\0";
         [tempCheck removeObjectForKey:(__bridge id)kSecClass];
         
         // You can update only a single keychain item at a time.
-        OSStatus errorcode = SecItemUpdate(
+        OSStatus errorcode __unused = SecItemUpdate(
                                            (__bridge CFDictionaryRef)updateItem,
                                            (__bridge CFDictionaryRef)tempCheck);
         NSAssert(errorcode == noErr, @"Couldn't update the Keychain Item." );
@@ -241,7 +241,7 @@ static const UInt8 kKeychainItemIdentifier[]    = "com.apple.dts.KeychainUI\0";
         // The new value was added to the keychainData dictionary in the mySetObject routine,
         // and the other values were added to the keychainData dictionary previously.
         // No pointer to the newly-added items is needed, so pass NULL for the second parameter:
-        OSStatus errorcode = SecItemAdd(
+        OSStatus errorcode __unused = SecItemAdd(
                                         (__bridge CFDictionaryRef)[self dictionaryToSecItemFormat:_keychainData],
                                         NULL);
         NSAssert(errorcode == noErr, @"Couldn't add the Keychain Item." );
