@@ -28,23 +28,39 @@
 
 #import "TFHpple.h"
 
-#define kResourceIdentifier @"modtype_resource"
-#define kWikiIdentifier @"modtype_ouwiki"
-#define kLabelIdentifier @"modtype_label"
-#define kAssignmentIdentifier @"modtype_assign"
-#define kURLIdentifier @"modtype_url"
-#define kForumIdentifier @"modtype_forum"
-#define kGlossaryIdentifier @"modtype_glossary"
-#define kGalleryIdentifier @"modtype_lightboxgallery"
-#define kFolderIdentifier @"modtype_folder"
-#define kPageIdentifier @"modtype_page"
 
-#define kDocIconURLPowerPoint @"powerpoint-24"
-#define kDocIconURLPDF @"pdf-24"
-#define kDocIconURLWordDocument @"document-24"
-#define kDocIconURLAudio @"mp3-24"
+
+///-----------------------
+/// @name CONSTANTS
+///-----------------------
+
+
+
+static NSString * const kResourceIdentifier = @"modtype_resource";
+static NSString * const kWikiIdentifier = @"modtype_ouwiki";
+static NSString * const kLabelIdentifier = @"modtype_label";
+static NSString * const kAssignmentIdentifier = @"modtype_assign";
+static NSString * const kURLIdentifier = @"modtype_url";
+static NSString * const kForumIdentifier = @"modtype_forum";
+static NSString * const kGlossaryIdentifier = @"modtype_glossary";
+static NSString * const kGalleryIdentifier = @"modtype_lightboxgallery";
+static NSString * const kFolderIdentifier = @"modtype_folder";
+static NSString * const kPageIdentifier = @"modtype_page";
+
+static NSString * const kDocIconURLPowerPoint = @"powerpoint-24";
+static NSString * const kDocIconURLPDF = @"pdf-24";
+static NSString * const kDocIconURLWordDocument = @"document-24";
+static NSString * const kDocIconURLAudio = @"mp3-24";
 
 #define kSemesterArray @[@"(SoSe ", @"(WiSe ", @" SoSe ", @" WiSe "]
+
+
+
+///-----------------------
+/// @name CATEGORIES
+///-----------------------
+
+
 
 @interface MOODLEXMLParser (/* Private */)
 
