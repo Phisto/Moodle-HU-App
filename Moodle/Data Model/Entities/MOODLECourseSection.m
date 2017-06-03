@@ -28,6 +28,20 @@
 
 
 ///-----------------------
+/// @name CATEGORIES
+///-----------------------
+
+
+
+@interface MOODLECourseSection (/* Private */)
+
+@property (nonatomic, strong) NSMutableAttributedString *attributedSectionDescription;
+
+@end
+
+
+
+///-----------------------
 /// @name IMPLEMENTATION
 ///-----------------------
 
@@ -74,10 +88,17 @@
 
 - (NSMutableAttributedString *)attributedSectionDescription {
     
-    return [[NSMutableAttributedString alloc] initWithData:[self.sectionDescription dataUsingEncoding:NSUnicodeStringEncoding]
-                                                   options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType }
-                                        documentAttributes:nil
-                                                     error:nil];
+    if (!_attributedSectionDescription) {
+        
+        _attributedSectionDescription = [[NSMutableAttributedString alloc] initWithString:(self.sectionDescription) ? self.sectionDescription : @""
+                                                                               attributes:@{
+                                                                                            NSDocumentTypeDocumentAttribute:
+                                                                                                NSHTMLTextDocumentType
+                                                                                            }];
+    }
+    
+    
+    return _attributedSectionDescription;
 }
 
 #pragma mark -

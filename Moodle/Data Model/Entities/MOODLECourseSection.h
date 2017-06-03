@@ -44,7 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  The description of the section.
  */
-@property (nonatomic, strong) NSString *sectionDescription;
+@property (nonatomic, strong, nullable) NSString *sectionDescription;
 /**
  The attributed description of the section.
  */
