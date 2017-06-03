@@ -85,11 +85,6 @@
     self.textView.contentOffset = CGPointMake(0.0f, 0.0f);
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    
-    [self.textView layoutIfNeeded];
-}
-
 
 #pragma mark - Table View
 
