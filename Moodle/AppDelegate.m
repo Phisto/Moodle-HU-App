@@ -1,29 +1,11 @@
 /*
  *  AppDelegate.m
- *  MOODLE
+ *  Moodle
  *
- *  Copyright © 2017 Simon Gaus <simon.cay.gaus@gmail.com>
- *
- *  This program is free software; you can redistribute it and/or modify
- *  it under the terms of the GNU Lesser General Public License as published by
- *  the Free Software Foundation; either version 2 of the License, or
- *  (at your option) any later version.
- *
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU Lesser General Public License for more details.
- *
- *  You should have received a copy of the GNU Lesser General Public License
- *  along with this programm.  If not, see <http://www.gnu.org/licenses/>.
+ *  Created by Simon Gaus on 03.06.17.
+ *  Copyright © 2017 Simon Gaus. All rights reserved.
  *
  */
-
-
-
-///--------------------
-/// @name IMPORTS
-///--------------------
 
 
 
@@ -46,7 +28,9 @@
 
 
 
-static NSUInteger const kLoginTimeoutTrashold = 60*30*2;
+// As I dont know when the moodle session will invalidate,
+// just assumed that a session will invalidate after two houres
+static NSUInteger const kLoginTimeoutTrashold = 3600;
 
 
 
@@ -58,7 +42,7 @@ static NSUInteger const kLoginTimeoutTrashold = 60*30*2;
 @interface AppDelegate (/* Private */)
 
 @property (nonatomic, strong) NSUserDefaults *defaults;
-@property (nonatomic, readonly) MOODLEDataModel *dataModel;
+@property (nonatomic, strong) MOODLEDataModel *dataModel;
 
 @end
 
@@ -96,19 +80,30 @@ static NSUInteger const kLoginTimeoutTrashold = 60*30*2;
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
 
+    // check if the usere already logged in &
+    // if its more than 2 houres ago transition to the login view controller
+    // because we dont know if the session is still valid we attemp to logout first
+    ///???: this possibly can be skipped if its very long time since the user logged in ?
     if ([self dataModel].loginDate && [[NSDate date] timeIntervalSinceDate:[self dataModel].loginDate] > kLoginTimeoutTrashold) {
         
+        // display an undetermined progress indicator while logout
+        // to signal to the user that the session is over
+        // use a new view controller not just a hud progress indicator
         [self transitionToProgressViewController];
         
+        // logout on background
         dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
         dispatch_async(queue, ^{
             
-            sleep(5);
-            
             [self.dataModel logoutWithCompletionHandler:^(BOOL success, NSError * _Nullable error) {
                 
+                // its not important if the loggout was successful
+                // as this is just for safety (and may be performed while the user is logged out and subsequently fail here)
+                
+                // there realy is no login date now ...
                 self.dataModel.loginDate = nil;
                 
+                // update ui on main thread
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self transitionToLoginViewController];
                 });
@@ -137,7 +132,6 @@ static NSUInteger const kLoginTimeoutTrashold = 60*30*2;
     UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     MOODLETabBarController *controller = [mainStoryBoard instantiateViewControllerWithIdentifier:MOODLETabBarControllerIdentifier];
     [self changeRootViewController:controller];
-    
 }
 
 
@@ -160,14 +154,14 @@ static NSUInteger const kLoginTimeoutTrashold = 60*30*2;
 
 - (void)changeRootViewController:(UIViewController*)viewController {
 
-    // taken from https://gist.github.com/gimenete/53704124583b5df3b407
+    // source taken from https://gist.github.com/gimenete/53704124583b5df3b407
     
-    // if there is noo rootview controller just set it
+    // if there is no rootview controller just set it without animation
     if (!self.window.rootViewController) {
         self.window.rootViewController = viewController;
         return;
     }
-    // if the controller already is rootview controller do nothing ...
+    // if the controller already is the rootview controller do nothing ...
     if ([self.window.rootViewController class] != [viewController class]) {
         
         UIView *snapShot = [self.window snapshotViewAfterScreenUpdates:YES];
@@ -186,7 +180,7 @@ static NSUInteger const kLoginTimeoutTrashold = 60*30*2;
 }
 
 
-#pragma mark - Lazy/Getter
+#pragma mark - Lazy/Getter/Inject
 
 
 - (NSUserDefaults *)defaults {
@@ -201,7 +195,12 @@ static NSUInteger const kLoginTimeoutTrashold = 60*30*2;
 
 - (MOODLEDataModel *)dataModel {
     
-    return [MOODLEDataModel sharedDataModel];
+    if (!_dataModel) {
+        
+        _dataModel = [MOODLEDataModel sharedDataModel];
+    }
+    
+    return _dataModel;
 }
 
 
