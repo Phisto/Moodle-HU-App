@@ -12,6 +12,7 @@
 @implementation UIColor (Moodle)
 #pragma mark - Custom Colors
 
+
 + (instancetype)moodle_unhideActionColor {
     
     return [UIColor colorWithRed:(231.0f/255.0f)
@@ -19,6 +20,7 @@
                             blue:(60.0f/255.0f)
                            alpha:1.0f];
 }
+
 
 + (instancetype)moodle_hideActionColor {
     
@@ -38,7 +40,6 @@
 }
 
 
-
 + (instancetype)moodle_blueColor {
     
     return [UIColor colorWithRed:(3.0f/255.0f)
@@ -47,12 +48,6 @@
                            alpha:1.0f];
 }
 
-/*
-+ (instancetype)moodle_beigeColor {
-    
-    
-}
- */
 
 #pragma mark -
 @end
