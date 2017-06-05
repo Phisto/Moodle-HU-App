@@ -6,6 +6,7 @@
  *  Copyright © 2017 Simon Gaus. All rights reserved.
  *
  */
+
 @import UIKit;
 
 
@@ -29,7 +30,7 @@ static NSString *MOODLEDidLoginNotification = @"MOODLEDidLoginNotification";
 
 /**
  
- The `MOODLELoginViewController` is responsible for presenting login form to the user.
+ The `MOODLELoginViewController` is responsible for presenting a login form to the user.
  
  */
 

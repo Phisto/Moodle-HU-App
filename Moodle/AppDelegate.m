@@ -59,7 +59,6 @@ static NSUInteger const kLoginTimeoutTrashold = 3600;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
 
     // register to notification so we transition to the course view controler after login (embeded in tab bar controller, hence the name ...)
     [[NSNotificationCenter defaultCenter] addObserver:self
