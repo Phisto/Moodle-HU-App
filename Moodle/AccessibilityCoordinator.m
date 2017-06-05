@@ -47,7 +47,7 @@ typedef void (^CompletionHandler) (void);
 
     UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, message);
     
-    // call completion block if UIAccessibilityAnnouncementDidFinishNotification didnt fired
+    // call completion block after timeout if UIAccessibilityAnnouncementDidFinishNotification did not fire...
     [self performSelector:@selector(timedOut)
                withObject:nil
                afterDelay:timeout];

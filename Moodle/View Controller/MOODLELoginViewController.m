@@ -20,9 +20,22 @@
 /* Custom Views */
 #import "SGLabeledSwitch.h"
 
+
+///-----------------------
+/// @name CONSTANTS
+///-----------------------
+
+
+
+static NSInteger const kUsernameTextFieldTag = 101;
+static NSInteger const kPasswordTextFieldTag = 102;
+
+
+
 ///-----------------------
 /// @name CATEGORIES
 ///-----------------------
+
 
 
 #pragma mark - Private Category
@@ -156,51 +169,6 @@
 }
 
 
-#pragma mark - Keyboard Related Methodes
-
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    
-    // dismiss focus on the textfield when return key is hit
-    [textField resignFirstResponder];
-    return YES;
-}
-
-
-- (void)dismissKeyboard {
-    
-    // dismiss focus on the textfields keyboards gets dissmissed
-    [self.usernameTextField resignFirstResponder];
-    [self.passwordTextField resignFirstResponder];
-}
-
-
-- (void)keyboardWillShow:(NSNotification*)notification {
-    
-    // the keyborad will appear so we hide the banner
-    // and resize the image view so the text fields will go up.
-    [UIView animateWithDuration:0.2f animations:^{
-        
-        self.imageView.hidden = YES;
-        self.imageHeightConstraint.constant = 35.0f;
-        [self.view layoutIfNeeded];
-    }];
-}
-
-
-- (void)keyboardWillHide:(NSNotification*)notification {
-    
-    // the keyborad will disappear so we show the banner
-    // and resize the image view to its original frame
-    [UIView animateWithDuration:0.2f animations:^{
-        
-        self.imageView.hidden = NO;
-        self.imageHeightConstraint.constant = 156.0f;
-        [self.view layoutIfNeeded];
-    }];
-}
-
-
 #pragma mark - IBAction Methodes
 
 
@@ -227,19 +195,15 @@
             
             // need to wait a bit so the message will be spoken by voiceover,
             // otherwise the login button action annonuncment will 'override'
-            // our failure announcment. (the values 4 is guessed and depends on the user settings)
+            // our failure announcment. (the values 2 is guessed and depends on the user settings)
             [self performSelector:@selector(showFailureWithMessage:)
                        withObject:locString
-                       afterDelay:4.0f];
+                       afterDelay:2.0f];
         }
         else {
             
             [self showFailureWithMessage:locString];
         }
-        
-        
-        self.usernameTextField.enabled = YES;
-        self.passwordTextField.enabled = YES;
     }
     else {
         
@@ -318,7 +282,21 @@
                                                                       @"Error message if loggin failed and no error is provided.");
                                     }
                                     
-                                    [self showFailureWithMessage:locString];
+                                    if (self.accessibility_accessibilityIsActiv) {
+                                        
+                                        // need to wait a bit so the message will be spoken by voiceover,
+                                        // otherwise the login button action annonuncment will 'override'
+                                        // our failure announcment. (the values 2 is guessed and depends on the user settings)
+                                        [self performSelector:@selector(showFailureWithMessage:)
+                                                   withObject:locString
+                                                   afterDelay:2.0f];
+                                    }
+                                    else {
+                                        
+                                        [self showFailureWithMessage:locString];
+                                    }
+                                    
+                                    
                                 }
                             }];
         });
@@ -354,6 +332,9 @@
         ///???: This is questionable, as it takes away choice from the user ?
         self.passwordTextField.text = @"";
         
+        self.usernameTextField.enabled = YES;
+        self.passwordTextField.enabled = YES;
+        
         self.errorLabel.text = message;
         self.errorLabel.hidden = NO;
         
@@ -365,24 +346,6 @@
 
 - (void)slowlyHideErrorMessage {
     
-    // hide error message set first responder
-    [UIView animateWithDuration:0.5f
-                     animations:^{ self.errorLabel.alpha = 0; }
-                     completion: ^(BOOL finished) {
-                         
-                         self.errorLabel.hidden = finished;
-                         self.errorLabel.alpha = 1;
-                         
-                         self.usernameTextField.enabled = YES;
-                         self.passwordTextField.enabled = YES;
-                         
-                         // 'select' the user textfield to try again
-                         // if nothing is selected
-                         if (!self.usernameTextField.isFirstResponder && !self.passwordTextField.isFirstResponder) {
-                             [self.usernameTextField becomeFirstResponder];
-                         }
-                     }];
-    
     if (self.accessibility_accessibilityIsActiv) {
         
         AccessibilityCoordinator *coord = [[AccessibilityCoordinator alloc] init];
@@ -390,11 +353,103 @@
                                             timeout:15
                                   completionHandler:^{
                                       
+                                      // hide error message set first responder
+                                      [UIView animateWithDuration:0.5f
+                                                       animations:^{ self.errorLabel.alpha = 0; }
+                                                       completion: ^(BOOL finished) {
+                                                           
+                                                           self.errorLabel.hidden = finished;
+                                                           self.errorLabel.alpha = 1;
+                                                           
+                                                           self.usernameTextField.enabled = YES;
+                                                           self.passwordTextField.enabled = YES;
+                                                       }];
+                                      
                                       // 'select' the user textfield for trying again
                                       [self accessibility_highlightElement:self.usernameTextField];
                                   }];
         self.accessibility_cord = coord;
     }
+    
+    else {
+        
+        // hide error message set first responder
+        [UIView animateWithDuration:0.5f
+                         animations:^{ self.errorLabel.alpha = 0; }
+                         completion: ^(BOOL finished) {
+                             
+                             self.errorLabel.hidden = finished;
+                             self.errorLabel.alpha = 1;
+                             
+                             self.usernameTextField.enabled = YES;
+                             self.passwordTextField.enabled = YES;
+                             
+                             // 'select' the user textfield to try again
+                             // if nothing is selected
+                             if (!self.usernameTextField.isFirstResponder && !self.passwordTextField.isFirstResponder) {
+                                 [self.usernameTextField becomeFirstResponder];
+                             }
+                         }];
+    }
+}
+
+
+#pragma mark - Keyboard Related Methodes
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    // dismiss focus on the textfield when return key is hit
+    [textField resignFirstResponder];
+    
+    // highlite a reasonable element else random element will be selected
+    if ([self accessibility_accessibilityIsActiv]) {
+        
+        if (textField.tag == kUsernameTextFieldTag) {
+            
+            [self accessibility_highlightElement:self.passwordTextField];
+        }
+        else if (textField.tag == kPasswordTextFieldTag) {
+            
+            [self accessibility_highlightElement:self.loginButton];
+        }
+    }
+    
+    return YES;
+}
+
+
+- (void)dismissKeyboard {
+    
+    // dismiss focus on the textfields when user keyboard gets dissmissed
+    [self.usernameTextField resignFirstResponder];
+    [self.passwordTextField resignFirstResponder];
+}
+
+
+- (void)keyboardWillShow:(NSNotification*)notification {
+    
+    // the keyborad will appear so we hide the banner
+    // and resize the image view so the text fields will go up.
+    [UIView animateWithDuration:0.2f animations:^{
+        
+        self.imageView.hidden = YES;
+        self.imageHeightConstraint.constant = 35.0f;
+        [self.view layoutIfNeeded];
+    }];
+}
+
+
+- (void)keyboardWillHide:(NSNotification*)notification {
+    
+    // the keyborad will disappear so we show the banner
+    // and resize the image view to its original frame
+    [UIView animateWithDuration:0.2f animations:^{
+        
+        self.imageView.hidden = NO;
+        self.imageHeightConstraint.constant = 156.0f;
+        [self.view layoutIfNeeded];
+    }];
 }
 
 
