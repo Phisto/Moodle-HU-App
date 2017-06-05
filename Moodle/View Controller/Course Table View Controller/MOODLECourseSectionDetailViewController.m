@@ -60,6 +60,10 @@
     // set up shadow nav bar
     [self setupNavigationBar];
     
+    // table view inset
+    self.tableView.contentInset = UIEdgeInsetsMake(22.0f, 0.0f, 0.0f, 0.0f);
+    
+    
     NSArray *doc = self.section.documentItemArray;
     NSArray *assign = self.section.assignmentsItemArray;
     NSArray *wiki = self.section.wikisItemArray;
@@ -67,10 +71,22 @@
 
     NSMutableArray *titles = [NSMutableArray array];
     NSMutableArray *array = [NSMutableArray array];
-    if (doc) { [array addObject:doc]; [titles addObject:NSLocalizedString(@"Dokumente", @"Section title for document items.")]; }
-    if (assign) { [array addObject:assign]; [titles addObject:NSLocalizedString(@"Abgaben", @"Section title for assignment items.")]; }
-    if (wiki) { [array addObject:wiki]; [titles addObject:NSLocalizedString(@"Wiki", @"Section title for wiki items.")]; }
-    if (other) { [array addObject:other]; [titles addObject:NSLocalizedString(@"Anderes", @"Section title for other items.")]; }
+    if (doc) {
+        [array addObject:doc];
+        [titles addObject:NSLocalizedString(@"Dokumente", @"Section title for document items.")];
+    }
+    if (assign) {
+        [array addObject:assign];
+        [titles addObject:NSLocalizedString(@"Abgaben", @"Section title for assignment items.")];
+    }
+    if (wiki) {
+        [array addObject:wiki];
+        [titles addObject:NSLocalizedString(@"Wiki", @"Section title for wiki items.")];
+    }
+    if (other) {
+        [array addObject:other];
+        [titles addObject:NSLocalizedString(@"Anderes", @"Section title for other items.")];
+    }
     _tableViewSegments = [array copy];
     _tableViewSegmentTitles = [titles copy];
 }

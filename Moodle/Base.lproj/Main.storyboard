@@ -543,7 +543,14 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                             </textView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="3j3-OH-7LG">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DPn-sV-A9v" userLabel="horizontal line">
+                                <rect key="frame" x="0.0" y="222" width="375" height="0.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="ZkY-Dm-odk"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="3j3-OH-7LG">
                                 <rect key="frame" x="0.0" y="223" width="375" height="380"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -606,10 +613,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MOODLECommentTableViewCellIdentifier" rowHeight="80" id="YYK-Au-heP" customClass="MOODLECommentTableViewCell">
-                                        <rect key="frame" x="0.0" y="121" width="375" height="80"/>
+                                        <rect key="frame" x="0.0" y="121" width="375" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="YYK-Au-heP" id="iL1-JX-J1o">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yoS-Ya-RGY">
@@ -641,9 +648,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="DPn-sV-A9v" firstAttribute="leading" secondItem="3j3-OH-7LG" secondAttribute="leading" id="3s5-UA-A13"/>
                             <constraint firstAttribute="trailing" secondItem="3j3-OH-7LG" secondAttribute="trailing" id="Jdr-Db-SpF"/>
+                            <constraint firstItem="DPn-sV-A9v" firstAttribute="trailing" secondItem="3j3-OH-7LG" secondAttribute="trailing" id="Nbz-vu-AKB"/>
                             <constraint firstItem="fAZ-O7-1kM" firstAttribute="top" secondItem="3j3-OH-7LG" secondAttribute="bottom" id="SXR-gy-2ii"/>
                             <constraint firstItem="3j3-OH-7LG" firstAttribute="leading" secondItem="AhB-IG-Df8" secondAttribute="leading" id="SYp-eH-rUn"/>
+                            <constraint firstItem="3j3-OH-7LG" firstAttribute="top" secondItem="DPn-sV-A9v" secondAttribute="bottom" id="ZXd-bI-Nmf"/>
                             <constraint firstItem="6c4-0t-wWQ" firstAttribute="top" secondItem="uce-3H-3Ox" secondAttribute="bottom" id="a0T-TT-Iuc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Fd9-iI-8nI" secondAttribute="trailing" id="nMq-iM-qpL"/>
                             <constraint firstAttribute="trailing" secondItem="6c4-0t-wWQ" secondAttribute="trailing" id="rZu-Rv-tZO"/>

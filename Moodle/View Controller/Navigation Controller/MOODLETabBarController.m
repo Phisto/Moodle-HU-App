@@ -45,11 +45,17 @@
     // center icons  & hide title
     for(UITabBarItem * tabBarItem in self.tabBar.items){
         tabBarItem.title = @"";
-        tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+        tabBarItem.imageInsets = UIEdgeInsetsMake(6.0f, 0.0f, -6.0f, 0.0f);
     }
     
     // set status bar appearance
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+}
+
+
+- (BOOL)shouldAutorotate {
+    
+    return NO;
 }
 
 
