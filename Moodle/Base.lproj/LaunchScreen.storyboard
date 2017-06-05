@@ -22,10 +22,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moodle_banner" translatesAutoresizingMaskIntoConstraints="NO" id="fzq-6D-KS6">
-                                <rect key="frame" x="31" y="20" width="308" height="156"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moodle_banner" translatesAutoresizingMaskIntoConstraints="NO" id="fzq-6D-KS6">
+                                <rect key="frame" x="31" y="40" width="308" height="123"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="156" id="5EH-WK-3Ql"/>
+                                    <constraint firstAttribute="height" constant="123" id="5EH-WK-3Ql"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -36,7 +36,7 @@
                         </accessibility>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="fzq-6D-KS6" secondAttribute="trailing" constant="20" id="NOP-gj-JfR"/>
-                            <constraint firstItem="fzq-6D-KS6" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="ORY-dg-csh"/>
+                            <constraint firstItem="fzq-6D-KS6" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="20" id="ORY-dg-csh"/>
                             <constraint firstItem="fzq-6D-KS6" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="15" id="zhE-0T-y5K"/>
                         </constraints>
                     </view>
@@ -47,6 +47,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="moodle_banner" width="381" height="184"/>
+        <image name="moodle_banner" width="254" height="122"/>
     </resources>
 </document>
