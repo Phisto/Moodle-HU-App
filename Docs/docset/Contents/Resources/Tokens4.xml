@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MOODLECourse.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLECourse</TokenIdentifier>
+			<Abstract type="html">A MOODLECourse object represents a MOODLE course.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+            
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/setCourseTitle:</TokenIdentifier>
+			<Abstract type="html">The title of the course.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *courseTitle</Declaration>
+			
+			
+			<Anchor>//api/name/courseTitle</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/courseTitle</TokenIdentifier>
+			<Abstract type="html">The title of the course.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *courseTitle</Declaration>
+			
+			
+			<Anchor>//api/name/courseTitle</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourse/courseTitle</TokenIdentifier>
+			<Abstract type="html">The title of the course.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *courseTitle</Declaration>
+			
+			
+			<Anchor>//api/name/courseTitle</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/setMoodleTitle:</TokenIdentifier>
+			<Abstract type="html">The MOODLE title of the course.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *moodleTitle</Declaration>
+			
+			
+			<Anchor>//api/name/moodleTitle</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/moodleTitle</TokenIdentifier>
+			<Abstract type="html">The MOODLE title of the course.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *moodleTitle</Declaration>
+			
+			
+			<Anchor>//api/name/moodleTitle</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourse/moodleTitle</TokenIdentifier>
+			<Abstract type="html">The MOODLE title of the course.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *moodleTitle</Declaration>
+			
+			
+			<Anchor>//api/name/moodleTitle</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/setUrl:</TokenIdentifier>
+			<Abstract type="html">The url of the course.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSURL *url</Declaration>
+			
+			
+			<Anchor>//api/name/url</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/url</TokenIdentifier>
+			<Abstract type="html">The url of the course.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSURL *url</Declaration>
+			
+			
+			<Anchor>//api/name/url</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourse/url</TokenIdentifier>
+			<Abstract type="html">The url of the course.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSURL *url</Declaration>
+			
+			
+			<Anchor>//api/name/url</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/setMoodleCourseID:</TokenIdentifier>
+			<Abstract type="html">The MOODLE ID of the course.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSInteger moodleCourseID</Declaration>
+			
+			
+			<Anchor>//api/name/moodleCourseID</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/moodleCourseID</TokenIdentifier>
+			<Abstract type="html">The MOODLE ID of the course.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSInteger moodleCourseID</Declaration>
+			
+			
+			<Anchor>//api/name/moodleCourseID</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourse/moodleCourseID</TokenIdentifier>
+			<Abstract type="html">The MOODLE ID of the course.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSInteger moodleCourseID</Declaration>
+			
+			
+			<Anchor>//api/name/moodleCourseID</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/setSemester:</TokenIdentifier>
+			<Abstract type="html">The semester of the course.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *semester</Declaration>
+			
+			
+			<Anchor>//api/name/semester</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/semester</TokenIdentifier>
+			<Abstract type="html">The semester of the course.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *semester</Declaration>
+			
+			
+			<Anchor>//api/name/semester</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourse/semester</TokenIdentifier>
+			<Abstract type="html">The semester of the course.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *semester</Declaration>
+			
+			
+			<Anchor>//api/name/semester</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/setCourseSections:</TokenIdentifier>
+			<Abstract type="html">An array of course sections.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray&lt;MOODLECourseSection*&gt; *courseSections</Declaration>
+			
+			
+			<Anchor>//api/name/courseSections</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/courseSections</TokenIdentifier>
+			<Abstract type="html">An array of course sections.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray&lt;MOODLECourseSection*&gt; *courseSections</Declaration>
+			
+			
+			<Anchor>//api/name/courseSections</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourse/courseSections</TokenIdentifier>
+			<Abstract type="html">An array of course sections.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray&lt;MOODLECourseSection*&gt; *courseSections</Declaration>
+			
+			
+			<Anchor>//api/name/courseSections</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/setDataModel:</TokenIdentifier>
+			<Abstract type="html">The data model in which the course is stored in.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) MOODLEDataModel *dataModel</Declaration>
+			
+			
+			<Anchor>//api/name/dataModel</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/dataModel</TokenIdentifier>
+			<Abstract type="html">The data model in which the course is stored in.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) MOODLEDataModel *dataModel</Declaration>
+			
+			
+			<Anchor>//api/name/dataModel</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourse/dataModel</TokenIdentifier>
+			<Abstract type="html">The data model in which the course is stored in.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) MOODLEDataModel *dataModel</Declaration>
+			
+			
+			<Anchor>//api/name/dataModel</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/setIsFavourite:</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the course is flagged as favorit.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL isFavourite</Declaration>
+			
+			
+			<Anchor>//api/name/isFavourite</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/isFavourite</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the course is flagged as favorit.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL isFavourite</Declaration>
+			
+			
+			<Anchor>//api/name/isFavourite</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourse/isFavourite</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the course is flagged as favorit.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL isFavourite</Declaration>
+			
+			
+			<Anchor>//api/name/isFavourite</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/setIsHidden:</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the course is flagged as hidden.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL isHidden</Declaration>
+			
+			
+			<Anchor>//api/name/isHidden</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/isHidden</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the course is flagged as hidden.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL isHidden</Declaration>
+			
+			
+			<Anchor>//api/name/isHidden</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourse/isHidden</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the course is flagged as hidden.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL isHidden</Declaration>
+			
+			
+			<Anchor>//api/name/isHidden</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/setOrderingWeight:</TokenIdentifier>
+			<Abstract type="html">Integer indicating the priority (e.g. how far at the top) with which the ourse will be displayed in a table view.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSInteger orderingWeight</Declaration>
+			
+			
+			<Anchor>//api/name/orderingWeight</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/orderingWeight</TokenIdentifier>
+			<Abstract type="html">Integer indicating the priority (e.g. how far at the top) with which the ourse will be displayed in a table view.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSInteger orderingWeight</Declaration>
+			
+			
+			<Anchor>//api/name/orderingWeight</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourse/orderingWeight</TokenIdentifier>
+			<Abstract type="html">Integer indicating the priority (e.g. how far at the top) with which the ourse will be displayed in a table view.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSInteger orderingWeight</Declaration>
+			
+			
+			<Anchor>//api/name/orderingWeight</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

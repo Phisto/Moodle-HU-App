@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSURLSession+SynchronousTask.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSURLSession(SynchronousTask)</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSURLSession+SynchronuosTask.h</DeclaredIn>
+            
+			
+			<NodeRef refid="26"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSURLSession/moodle_sendSynchronousRequest:returningResponse:error:</TokenIdentifier>
+			<Abstract type="html">Performs a synchronous requests.</Abstract>
+			<DeclaredIn>NSURLSession+SynchronuosTask.h</DeclaredIn>
+			
+			<Declaration>- (nullable NSData *)moodle_sendSynchronousRequest:(NSURLRequest *)request returningResponse:(__autoreleasing NSURLResponse *_Nullable *_Nullable)responsePtr error:(__autoreleasing NSError **)errorPtr</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>request</Name>
+					<Abstract type="html">The request to perform.</Abstract>
+				</Parameter><Parameter>
+					<Name>responsePtr</Name>
+					<Abstract type="html">An object that provides response metadata, such as HTTP headers and status code. If you are making an HTTP or HTTPS request, the returned object is actually an NSHTTPURLResponse object..</Abstract>
+				</Parameter><Parameter>
+					<Name>errorPtr</Name>
+					<Abstract type="html">An error object that indicates why the request failed, or nil if the request was successful.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The respons data of the request or nil.</Abstract></ReturnValue>
+			<Anchor>//api/name/moodle_sendSynchronousRequest:returningResponse:error:</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

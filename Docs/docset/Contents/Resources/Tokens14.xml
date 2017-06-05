@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MOODLEDataModel.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLEDataModel</TokenIdentifier>
+			<Abstract type="html">The MOODLEDataModel class represents the data model for the MOODLE app.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+            
+			
+			<NodeRef refid="14"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MOODLEDataModel/new</TokenIdentifier>
+			<Abstract type="html">UNAVAILABLE. This class is a singleton class to access the singleton use +sharedDataModel.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)new</Declaration>
+			
+			<ReturnValue><Abstract type="html">Allocates a new instance of the receiving class, sends it an init message, and returns the initialized object.</Abstract></ReturnValue>
+			<Anchor>//api/name/new</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/init</TokenIdentifier>
+			<Abstract type="html">UNAVAILABLE. This class is a singleton class to access the singleton use +sharedDataModel.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)init</Declaration>
+			
+			<ReturnValue><Abstract type="html">An initialized object, or nil if an object could not be created for some reason that would not result in an exception.</Abstract></ReturnValue>
+			<Anchor>//api/name/init</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/setCourseArray:</TokenIdentifier>
+			<Abstract type="html">A mutable array of MOODLE courses.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSMutableArray&lt;MOODLECourse*&gt; *courseArray</Declaration>
+			
+			
+			<Anchor>//api/name/courseArray</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/courseArray</TokenIdentifier>
+			<Abstract type="html">A mutable array of MOODLE courses.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSMutableArray&lt;MOODLECourse*&gt; *courseArray</Declaration>
+			
+			
+			<Anchor>//api/name/courseArray</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEDataModel/courseArray</TokenIdentifier>
+			<Abstract type="html">A mutable array of MOODLE courses.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSMutableArray&lt;MOODLECourse*&gt; *courseArray</Declaration>
+			
+			
+			<Anchor>//api/name/courseArray</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/setHiddenCourses:</TokenIdentifier>
+			<Abstract type="html">A mutable array of MOODLE courses that are hidden.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSMutableArray&lt;MOODLECourse*&gt; *hiddenCourses</Declaration>
+			
+			
+			<Anchor>//api/name/hiddenCourses</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/hiddenCourses</TokenIdentifier>
+			<Abstract type="html">A mutable array of MOODLE courses that are hidden.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSMutableArray&lt;MOODLECourse*&gt; *hiddenCourses</Declaration>
+			
+			
+			<Anchor>//api/name/hiddenCourses</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEDataModel/hiddenCourses</TokenIdentifier>
+			<Abstract type="html">A mutable array of MOODLE courses that are hidden.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSMutableArray&lt;MOODLECourse*&gt; *hiddenCourses</Declaration>
+			
+			
+			<Anchor>//api/name/hiddenCourses</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/setHasUserCredentials:</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the app has stored user credentials in the keychain.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL hasUserCredentials</Declaration>
+			
+			
+			<Anchor>//api/name/hasUserCredentials</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/hasUserCredentials</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the app has stored user credentials in the keychain.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL hasUserCredentials</Declaration>
+			
+			
+			<Anchor>//api/name/hasUserCredentials</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEDataModel/hasUserCredentials</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the app has stored user credentials in the keychain.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL hasUserCredentials</Declaration>
+			
+			
+			<Anchor>//api/name/hasUserCredentials</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/setShouldRememberCredentials:</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the app should store the user credentials in the keychain.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL shouldRememberCredentials</Declaration>
+			
+			
+			<Anchor>//api/name/shouldRememberCredentials</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/shouldRememberCredentials</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the app should store the user credentials in the keychain.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL shouldRememberCredentials</Declaration>
+			
+			
+			<Anchor>//api/name/shouldRememberCredentials</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEDataModel/shouldRememberCredentials</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the app should store the user credentials in the keychain.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL shouldRememberCredentials</Declaration>
+			
+			
+			<Anchor>//api/name/shouldRememberCredentials</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/setShouldAutoLogin:</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the app should auto login.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL shouldAutoLogin</Declaration>
+			
+			
+			<Anchor>//api/name/shouldAutoLogin</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/shouldAutoLogin</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the app should auto login.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL shouldAutoLogin</Declaration>
+			
+			
+			<Anchor>//api/name/shouldAutoLogin</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEDataModel/shouldAutoLogin</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the app should auto login.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL shouldAutoLogin</Declaration>
+			
+			
+			<Anchor>//api/name/shouldAutoLogin</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/setUserName:</TokenIdentifier>
+			<Abstract type="html">The stored username.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *userName</Declaration>
+			
+			
+			<Anchor>//api/name/userName</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/userName</TokenIdentifier>
+			<Abstract type="html">The stored username.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *userName</Declaration>
+			
+			
+			<Anchor>//api/name/userName</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEDataModel/userName</TokenIdentifier>
+			<Abstract type="html">The stored username.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *userName</Declaration>
+			
+			
+			<Anchor>//api/name/userName</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/setUserPassword:</TokenIdentifier>
+			<Abstract type="html">Thes stored password.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *userPassword</Declaration>
+			
+			
+			<Anchor>//api/name/userPassword</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/userPassword</TokenIdentifier>
+			<Abstract type="html">Thes stored password.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *userPassword</Declaration>
+			
+			
+			<Anchor>//api/name/userPassword</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEDataModel/userPassword</TokenIdentifier>
+			<Abstract type="html">Thes stored password.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *userPassword</Declaration>
+			
+			
+			<Anchor>//api/name/userPassword</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/setLoginDate:</TokenIdentifier>
+			<Abstract type="html">The date of the login.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, nullable) NSDate *loginDate</Declaration>
+			
+			
+			<Anchor>//api/name/loginDate</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/loginDate</TokenIdentifier>
+			<Abstract type="html">The date of the login.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, nullable) NSDate *loginDate</Declaration>
+			
+			
+			<Anchor>//api/name/loginDate</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEDataModel/loginDate</TokenIdentifier>
+			<Abstract type="html">The date of the login.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, nullable) NSDate *loginDate</Declaration>
+			
+			
+			<Anchor>//api/name/loginDate</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/saveUserCredentials:andPassword:</TokenIdentifier>
+			<Abstract type="html">This method will store the given user credentials in the devices keychain. The password will be stored encrypted and only accessible to the app.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>- (void)saveUserCredentials:(NSString *)username andPassword:(NSString *)password</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>username</Name>
+					<Abstract type="html">The username to store.</Abstract>
+				</Parameter><Parameter>
+					<Name>password</Name>
+					<Abstract type="html">The password to store.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/saveUserCredentials:andPassword:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/deleteUserCredentials</TokenIdentifier>
+			<Abstract type="html">This method will delete the stored the user credentials in the devices keychain.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>- (void)deleteUserCredentials</Declaration>
+			
+			
+			<Anchor>//api/name/deleteUserCredentials</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/setItem:isHidden:</TokenIdentifier>
+			<Abstract type="html">This method will set the isHidden flag of the given item to a persistent store.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>- (void)setItem:(MOODLECourse *)item isHidden:(BOOL)hidden</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>item</Name>
+					<Abstract type="html">The item to hide/unhide.</Abstract>
+				</Parameter><Parameter>
+					<Name>hidden</Name>
+					<Abstract type="html">Weather the item is hidden or not.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setItem:isHidden:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/setItem:isFavorit:</TokenIdentifier>
+			<Abstract type="html">This method will set the isFavourite flag of the given item to a persistent store.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>- (void)setItem:(MOODLECourse *)item isFavorit:(BOOL)favorit</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>item</Name>
+					<Abstract type="html">The item to flag.</Abstract>
+				</Parameter><Parameter>
+					<Name>favorit</Name>
+					<Abstract type="html">Boolean indicating if the item is a favorit or not.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setItem:isFavorit:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/updateCourseItemsOrderingWeight</TokenIdentifier>
+			<Abstract type="html">This method will save the current MOODLE course order to disk, so it can be restored the next time the app is loaded.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>- (void)updateCourseItemsOrderingWeight</Declaration>
+			
+			
+			<Anchor>//api/name/updateCourseItemsOrderingWeight</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/loginWithUsername:password:completionHandler:</TokenIdentifier>
+			<Abstract type="html">This method will login a user with the given credentials.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>- (void)loginWithUsername:(NSString *)username password:(NSString *)password completionHandler:(void ( ^ ) ( BOOL success , NSError *_Nullable error ))completionHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>username</Name>
+					<Abstract type="html">The username to use.</Abstract>
+				</Parameter><Parameter>
+					<Name>password</Name>
+					<Abstract type="html">The password to use.</Abstract>
+				</Parameter><Parameter>
+					<Name>completionHandler</Name>
+					<Abstract type="html">The completion handler to call when the login is complete. This handler is executed on the main thread.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/loginWithUsername:password:completionHandler:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/logoutWithCompletionHandler:</TokenIdentifier>
+			<Abstract type="html">This method will logout the user.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>- (void)logoutWithCompletionHandler:(void ( ^ ) ( BOOL success , NSError *_Nullable error ))completionHandler</Declaration>
+			
+			
+			<Anchor>//api/name/logoutWithCompletionHandler:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/loadItemContentForItem:completionHandler:</TokenIdentifier>
+			<Abstract type="html">This method load the content of a given MOODLE course.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>- (void)loadItemContentForItem:(MOODLECourse *)item completionHandler:(void ( ^ ) ( BOOL success , NSError *_Nullable error ))completionHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>item</Name>
+					<Abstract type="html">The item.</Abstract>
+				</Parameter><Parameter>
+					<Name>completionHandler</Name>
+					<Abstract type="html">The completion handler to call when content loading is complete. This handler is executed on the main thread.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/loadItemContentForItem:completionHandler:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/loadSearchResultWithSerachString:completionHandler:</TokenIdentifier>
+			<Abstract type="html">This method will perform a search for MOODLE courses with a given search query.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>- (void)loadSearchResultWithSerachString:(NSString *)searchString completionHandler:(void ( ^ ) ( BOOL success , NSError *_Nullable error , NSArray *_Nullable searchResults ))completionHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>searchString</Name>
+					<Abstract type="html">The search query string.</Abstract>
+				</Parameter><Parameter>
+					<Name>completionHandler</Name>
+					<Abstract type="html">The completion handler to call when searching is complete. This handler is executed on the main thread.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/loadSearchResultWithSerachString:completionHandler:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

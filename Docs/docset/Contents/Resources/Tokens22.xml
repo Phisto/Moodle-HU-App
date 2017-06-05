@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MOODLETabBarController.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLETabBarController</TokenIdentifier>
+			<Abstract type="html">The MOODLETabBarController is a custom tab bar controller. It does change some behaviour andd appereance of the standart tab bar controller.</Abstract>
+			<DeclaredIn>MOODLETabBarController.h</DeclaredIn>
+            
+			
+			<NodeRef refid="22"/>
+		</Token>
+		
+		
+        
+        
+	</File>
+</Tokens>

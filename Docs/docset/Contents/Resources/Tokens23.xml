@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MOODLETableViewRowAction.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLETableViewRowAction</TokenIdentifier>
+			<Abstract type="html">A MOODLETableViewRowAction object defines a single action to present when the user swipes horizontally in a table row.</Abstract>
+			<DeclaredIn>MOODLETableViewRowAction.h</DeclaredIn>
+            
+			
+			<NodeRef refid="23"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLETableViewRowAction/setFont:</TokenIdentifier>
+			<Abstract type="html">The font of the button label.</Abstract>
+			<DeclaredIn>MOODLETableViewRowAction.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIFont *font</Declaration>
+			
+			
+			<Anchor>//api/name/font</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLETableViewRowAction/font</TokenIdentifier>
+			<Abstract type="html">The font of the button label.</Abstract>
+			<DeclaredIn>MOODLETableViewRowAction.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIFont *font</Declaration>
+			
+			
+			<Anchor>//api/name/font</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLETableViewRowAction/font</TokenIdentifier>
+			<Abstract type="html">The font of the button label.</Abstract>
+			<DeclaredIn>MOODLETableViewRowAction.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIFont *font</Declaration>
+			
+			
+			<Anchor>//api/name/font</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLETableViewRowAction/setIconAndLabelColor:</TokenIdentifier>
+			<Abstract type="html">The color of the button label and icon.</Abstract>
+			<DeclaredIn>MOODLETableViewRowAction.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *iconAndLabelColor</Declaration>
+			
+			
+			<Anchor>//api/name/iconAndLabelColor</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLETableViewRowAction/iconAndLabelColor</TokenIdentifier>
+			<Abstract type="html">The color of the button label and icon.</Abstract>
+			<DeclaredIn>MOODLETableViewRowAction.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *iconAndLabelColor</Declaration>
+			
+			
+			<Anchor>//api/name/iconAndLabelColor</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLETableViewRowAction/iconAndLabelColor</TokenIdentifier>
+			<Abstract type="html">The color of the button label and icon.</Abstract>
+			<DeclaredIn>MOODLETableViewRowAction.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *iconAndLabelColor</Declaration>
+			
+			
+			<Anchor>//api/name/iconAndLabelColor</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MOODLETableViewRowAction/rowActionWithStyle:title:icon:handler:</TokenIdentifier>
+			<Abstract type="html">Creates and returns a new table view row action object.
+The style and handler block you specify cannot be changed later.</Abstract>
+			<DeclaredIn>MOODLETableViewRowAction.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)rowActionWithStyle:(UITableViewRowActionStyle)style title:(nullable NSString *)title icon:(nullable UIImage *)icon handler:(void ( ^ ) ( UITableViewRowAction *action , NSIndexPath *indexPath ))handler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>style</Name>
+					<Abstract type="html">The style characteristics to apply to the button. You use this value to apply default appearance characteristics to the button. For a list of possible style values, see UITableViewRowActionStyle.</Abstract>
+				</Parameter><Parameter>
+					<Name>title</Name>
+					<Abstract type="html">The string to display in the button.</Abstract>
+				</Parameter><Parameter>
+					<Name>icon</Name>
+					<Abstract type="html">The image to display in the button.</Abstract>
+				</Parameter><Parameter>
+					<Name>handler</Name>
+					<Abstract type="html">The block to execute when the user taps the button associated with this action.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new table row action object that you can return from your table view’s delegate method.</Abstract></ReturnValue>
+			<Anchor>//api/name/rowActionWithStyle:title:icon:handler:</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MOODLECourseDetailViewController.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLECourseDetailViewController</TokenIdentifier>
+			<Abstract type="html">The MOODLECourseDetailViewController is responsible for presenting a MOODLECourse object to the user.</Abstract>
+			<DeclaredIn>MOODLECourseDetailViewController.h</DeclaredIn>
+            
+			
+			<NodeRef refid="5"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseDetailViewController/setItem:</TokenIdentifier>
+			<Abstract type="html">The MOODLECourse to present.</Abstract>
+			<DeclaredIn>MOODLECourseDetailViewController.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) MOODLECourse *item</Declaration>
+			
+			
+			<Anchor>//api/name/item</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseDetailViewController/item</TokenIdentifier>
+			<Abstract type="html">The MOODLECourse to present.</Abstract>
+			<DeclaredIn>MOODLECourseDetailViewController.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) MOODLECourse *item</Declaration>
+			
+			
+			<Anchor>//api/name/item</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseDetailViewController/item</TokenIdentifier>
+			<Abstract type="html">The MOODLECourse to present.</Abstract>
+			<DeclaredIn>MOODLECourseDetailViewController.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) MOODLECourse *item</Declaration>
+			
+			
+			<Anchor>//api/name/item</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

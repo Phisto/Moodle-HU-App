@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>MOODLEDataModel Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">Moodle </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">-</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/courseArray">courseArray</option>
+		
+		<option value="//api/name/hasUserCredentials">hasUserCredentials</option>
+		
+		<option value="//api/name/hiddenCourses">hiddenCourses</option>
+		
+		<option value="//api/name/loginDate">loginDate</option>
+		
+		<option value="//api/name/shouldAutoLogin">shouldAutoLogin</option>
+		
+		<option value="//api/name/shouldRememberCredentials">shouldRememberCredentials</option>
+		
+		<option value="//api/name/userName">userName</option>
+		
+		<option value="//api/name/userPassword">userPassword</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/new">+ new</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/deleteUserCredentials">- deleteUserCredentials</option>
+		
+		<option value="//api/name/init">- init</option>
+		
+		<option value="//api/name/loadItemContentForItem:completionHandler:">- loadItemContentForItem:completionHandler:</option>
+		
+		<option value="//api/name/loadSearchResultWithSerachString:completionHandler:">- loadSearchResultWithSerachString:completionHandler:</option>
+		
+		<option value="//api/name/loginWithUsername:password:completionHandler:">- loginWithUsername:password:completionHandler:</option>
+		
+		<option value="//api/name/logoutWithCompletionHandler:">- logoutWithCompletionHandler:</option>
+		
+		<option value="//api/name/saveUserCredentials:andPassword:">- saveUserCredentials:andPassword:</option>
+		
+		<option value="//api/name/setItem:isFavorit:">- setItem:isFavorit:</option>
+		
+		<option value="//api/name/setItem:isHidden:">- setItem:isHidden:</option>
+		
+		<option value="//api/name/updateCourseItemsOrderingWeight">- updateCourseItemsOrderingWeight</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">MOODLEDataModel Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>MOODLEDataModel.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The MOODLEDataModel class represents the data model for the MOODLE app.</p>
+
+<h2>Discussion</h2>
+
+<p>The apps data is only accessible through this class and every manipulation on the data is made through this class.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Data Model Life Cycle" name="task_Data Model Life Cycle"></a>
+						<h2 class="task-title">Data Model Life Cycle</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/new" title="new"></a>
+	<h3 class="method-title"><code><a href="#//api/name/new">+&nbsp;new</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>UNAVAILABLE. This class is a singleton class to access the singleton use <code>+sharedDataModel</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)new</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Allocates a new instance of the receiving class, sends it an <a href="#//api/name/init">init</a> message, and returns the initialized object.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/init" title="init"></a>
+	<h3 class="method-title"><code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>UNAVAILABLE. This class is a singleton class to access the singleton use <code>+sharedDataModel</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An initialized object, or nil if an object could not be created for some reason that would not result in an exception.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Data" name="task_Data"></a>
+						<h2 class="task-title">Data</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/courseArray" title="courseArray"></a>
+	<h3 class="method-title"><code><a href="#//api/name/courseArray">&nbsp;&nbsp;courseArray</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A mutable array of MOODLE courses.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSMutableArray&lt;MOODLECourse*&gt; *courseArray</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hiddenCourses" title="hiddenCourses"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hiddenCourses">&nbsp;&nbsp;hiddenCourses</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A mutable array of MOODLE courses that are hidden.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSMutableArray&lt;MOODLECourse*&gt; *hiddenCourses</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Login" name="task_Login"></a>
+						<h2 class="task-title">Login</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/hasUserCredentials" title="hasUserCredentials"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hasUserCredentials">&nbsp;&nbsp;hasUserCredentials</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Boolean indicating if the app has stored user credentials in the keychain.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) BOOL hasUserCredentials</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/shouldRememberCredentials" title="shouldRememberCredentials"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shouldRememberCredentials">&nbsp;&nbsp;shouldRememberCredentials</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Boolean indicating if the app should store the user credentials in the keychain.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) BOOL shouldRememberCredentials</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/shouldAutoLogin" title="shouldAutoLogin"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shouldAutoLogin">&nbsp;&nbsp;shouldAutoLogin</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Boolean indicating if the app should auto login.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) BOOL shouldAutoLogin</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/userName" title="userName"></a>
+	<h3 class="method-title"><code><a href="#//api/name/userName">&nbsp;&nbsp;userName</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The stored username.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *userName</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/userPassword" title="userPassword"></a>
+	<h3 class="method-title"><code><a href="#//api/name/userPassword">&nbsp;&nbsp;userPassword</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Thes stored password.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *userPassword</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loginDate" title="loginDate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loginDate">&nbsp;&nbsp;loginDate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The date of the login.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, nullable) NSDate *loginDate</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/saveUserCredentials:andPassword:" title="saveUserCredentials:andPassword:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/saveUserCredentials:andPassword:">&ndash;&nbsp;saveUserCredentials:andPassword:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method will store the given user credentials in the devices keychain. The password will be stored encrypted and only accessible to the app.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)saveUserCredentials:(NSString *)<em>username</em> andPassword:(NSString *)<em>password</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>username</code></th>
+						<td><p>The username to store.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>password</code></th>
+						<td><p>The password to store.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteUserCredentials" title="deleteUserCredentials"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteUserCredentials">&ndash;&nbsp;deleteUserCredentials</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method will delete the stored the user credentials in the devices keychain.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)deleteUserCredentials</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Hide/Favorite" name="task_Hide/Favorite"></a>
+						<h2 class="task-title">Hide/Favorite</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/setItem:isHidden:" title="setItem:isHidden:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setItem:isHidden:">&ndash;&nbsp;setItem:isHidden:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method will set the isHidden flag of the given item to a persistent store.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setItem:(MOODLECourse *)<em>item</em> isHidden:(BOOL)<em>hidden</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>item</code></th>
+						<td><p>The item to hide/unhide.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>hidden</code></th>
+						<td><p>Weather the item is hidden or not.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setItem:isFavorit:" title="setItem:isFavorit:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setItem:isFavorit:">&ndash;&nbsp;setItem:isFavorit:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method will set the isFavourite flag of the given item to a persistent store.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setItem:(MOODLECourse *)<em>item</em> isFavorit:(BOOL)<em>favorit</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>item</code></th>
+						<td><p>The item to flag.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>favorit</code></th>
+						<td><p>Boolean indicating if the item is a favorit or not.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateCourseItemsOrderingWeight" title="updateCourseItemsOrderingWeight"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateCourseItemsOrderingWeight">&ndash;&nbsp;updateCourseItemsOrderingWeight</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method will save the current MOODLE course order to disk, so it can be restored the next time the app is loaded.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateCourseItemsOrderingWeight</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Data Loading" name="task_Data Loading"></a>
+						<h2 class="task-title">Data Loading</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/loginWithUsername:password:completionHandler:" title="loginWithUsername:password:completionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loginWithUsername:password:completionHandler:">&ndash;&nbsp;loginWithUsername:password:completionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method will login a user with the given credentials.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)loginWithUsername:(NSString *)<em>username</em> password:(NSString *)<em>password</em> completionHandler:(void ( ^ ) ( BOOL success , NSError *_Nullable error ))<em>completionHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>username</code></th>
+						<td><p>The username to use.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>password</code></th>
+						<td><p>The password to use.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionHandler</code></th>
+						<td><p>The completion handler to call when the login is complete. This handler is executed on the main thread.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logoutWithCompletionHandler:" title="logoutWithCompletionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logoutWithCompletionHandler:">&ndash;&nbsp;logoutWithCompletionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method will logout the user.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)logoutWithCompletionHandler:(void ( ^ ) ( BOOL success , NSError *_Nullable error ))<em>completionHandler</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadItemContentForItem:completionHandler:" title="loadItemContentForItem:completionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadItemContentForItem:completionHandler:">&ndash;&nbsp;loadItemContentForItem:completionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method load the content of a given MOODLE course.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)loadItemContentForItem:(MOODLECourse *)<em>item</em> completionHandler:(void ( ^ ) ( BOOL success , NSError *_Nullable error ))<em>completionHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>item</code></th>
+						<td><p>The item.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionHandler</code></th>
+						<td><p>The completion handler to call when content loading is complete. This handler is executed on the main thread.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadSearchResultWithSerachString:completionHandler:" title="loadSearchResultWithSerachString:completionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadSearchResultWithSerachString:completionHandler:">&ndash;&nbsp;loadSearchResultWithSerachString:completionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method will perform a search for MOODLE courses with a given search query.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)loadSearchResultWithSerachString:(NSString *)<em>searchString</em> completionHandler:(void ( ^ ) ( BOOL success , NSError *_Nullable error , NSArray *_Nullable searchResults ))<em>completionHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>searchString</code></th>
+						<td><p>The search query string.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionHandler</code></th>
+						<td><p>The completion handler to call when searching is complete. This handler is executed on the main thread.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 -. All rights reserved. Updated: 2017-06-02</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
