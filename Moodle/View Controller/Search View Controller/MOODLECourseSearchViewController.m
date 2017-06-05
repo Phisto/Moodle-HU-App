@@ -18,7 +18,7 @@
 
 @interface MOODLECourseSearchViewController ()<UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 
-@property (nonatomic, readonly) MOODLEDataModel *dataModel;
+@property (nonatomic, strong) MOODLEDataModel *dataModel;
 
 @property (nonatomic, readwrite) BOOL hasContent;
 
@@ -174,7 +174,11 @@
 
 - (MOODLEDataModel *)dataModel {
     
-    return [MOODLEDataModel sharedDataModel];
+    if (!_dataModel) {
+        
+        _dataModel = [MOODLEDataModel sharedDataModel];
+    }
+    return _dataModel;
 }
 
 - (UIView *)loadingView {

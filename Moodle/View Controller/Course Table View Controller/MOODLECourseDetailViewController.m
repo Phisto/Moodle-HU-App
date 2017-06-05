@@ -40,16 +40,22 @@
 
 
 @implementation MOODLECourseDetailViewController
+#pragma mark - View Controller Methodes
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+
 - (void)viewWillAppear:(BOOL)animated {
     
     // call super
     [super viewWillAppear:animated];
+    
+    // set nav bar shadow
+    [self setupNavigationBar];
     
     self.courseTitleLabel.text = self.item.courseTitle;
     self.moodleTitleLabel.text = [NSString stringWithFormat:@"Moodle: %@", self.item.moodleTitle];
@@ -74,6 +80,10 @@
     else { [self showTableView]; }
 }
 
+
+#pragma mark - Helper Methodes
+
+
 - (void)failedToLoadContentWithMessage:(NSString *)message {
     
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -83,6 +93,7 @@
         self.loadingView = nil;
     });
 }
+
 
 - (void)finishedContentLoading {
     
@@ -94,6 +105,7 @@
     });
 }
 
+
 - (void)showTableView {
     
     self.tableView.delegate = self;
@@ -104,14 +116,26 @@
     [self.view setNeedsDisplay];
 }
 
-#pragma mark - Table View Delegate Methodes
+
+- (void)setupNavigationBar {
+    
+    UINavigationBar *navBar = self.navigationController.navigationBar;
+    navBar.layer.shadowColor = [UIColor blackColor].CGColor;
+    navBar.layer.shadowOffset = CGSizeMake(0.0f, 2.0f);
+    navBar.layer.shadowOpacity = 0.22f;
+    navBar.layer.shadowRadius = 2.0f;
+}
+
+
+
+#pragma mark - Table View Methodes
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return self.item.courseSections.count;
 }
 
-#pragma mark - Table View Data Source Methodes
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
@@ -166,10 +190,12 @@
     return returnCell;
 }
 
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     return 80.0f;
 }
+
 
 #pragma mark - Navigation Methodes
 
@@ -186,7 +212,9 @@
     }
 }
 
+
 #pragma mark - Lazy/Getter
+
 
 - (UIView *)loadingView {
     
@@ -221,6 +249,7 @@
     }
     return _loadingView;
 }
+
 
 #pragma mark -
 @end

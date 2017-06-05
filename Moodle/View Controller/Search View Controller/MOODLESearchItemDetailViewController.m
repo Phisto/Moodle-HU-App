@@ -42,12 +42,6 @@
 #pragma mark - View Controller Methodes
 
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-
 - (void)viewWillAppear:(BOOL)animated {
     
     // call super
@@ -71,6 +65,19 @@
     self.textView.attributedText = attributedString;
     [self.textView layoutIfNeeded];
     self.textView.contentOffset = CGPointMake(0.0f, 0.0f);
+}
+
+
+#pragma mark - Layout Methodes
+
+
+-(void)setupNavigationBar {
+    
+    UINavigationBar *navBar = self.navigationController.navigationBar;
+    navBar.layer.shadowColor = [UIColor blackColor].CGColor;
+    navBar.layer.shadowOffset = CGSizeMake(0.0f, 2.0f);
+    navBar.layer.shadowOpacity = 0.22f;
+    navBar.layer.shadowRadius = 2.0f;
 }
 
 

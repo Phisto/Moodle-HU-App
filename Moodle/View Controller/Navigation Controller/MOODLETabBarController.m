@@ -40,7 +40,6 @@
 
     // Navigation bar appearance
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-    
 
     // Tab bar appearance
     // center icons  & hide title

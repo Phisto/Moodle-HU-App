@@ -25,6 +25,8 @@
 
 
 @implementation MOODLEProgressViewController
+#pragma mark - View Controller Methodes
+
 
 - (void)viewDidAppear:(BOOL)animated {
     
@@ -43,4 +45,5 @@
     [self.activityIndicator stopAnimating];
 }
 
+#pragma mark -
 @end

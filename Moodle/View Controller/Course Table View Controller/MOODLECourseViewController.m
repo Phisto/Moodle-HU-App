@@ -40,9 +40,13 @@
 
 @implementation MOODLECourseViewController
 
+
 - (void)viewDidLoad {
+    // call super
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    // set up shadow under nav bar
+    [self setupNavigationBar];
     
     // add long press gesture recognizer
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self
@@ -50,14 +54,16 @@
     [self.tableView addGestureRecognizer:longPress];
 }
 
+
 - (void)viewDidAppear:(BOOL)animated {
     
     // call super
     [super viewDidAppear:animated];
-
+    
     // reload data
     [self.tableView reloadData];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -65,7 +71,21 @@
 }
 
 
+#pragma mark -
+
+
+- (void)setupNavigationBar {
+    
+    UINavigationBar *navBar = self.navigationController.navigationBar;
+    navBar.layer.shadowColor = [UIColor blackColor].CGColor;
+    navBar.layer.shadowOffset = CGSizeMake(0.0f, 2.0f);
+    navBar.layer.shadowOpacity = 0.22f;
+    navBar.layer.shadowRadius = 2.0f;
+}
+
+
 #pragma mark - Table View Reordering Methodes
+
 
 - (IBAction)longPressGestureRecognized:(id)sender {
     
@@ -165,6 +185,7 @@
     }
 }
 
+
 - (UIView *)customSnapshotFromView:(UIView *)inputView {
     
     // Make an image from the input view.
@@ -184,8 +205,10 @@
     return snapshot;
 }
 
+
 #pragma mark - Table View Methodes
- 
+
+
 - (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     MOODLECourse *item = self.dataModel.courseArray[indexPath.row];
@@ -222,6 +245,7 @@
     return @[hideAction, favoriteAction];
 }
 
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
     MOODLECourse *item = self.dataModel.courseArray[indexPath.row];;
@@ -234,19 +258,28 @@
     return cell;
 }
 
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return self.dataModel.courseArray.count;
 }
 
+
 #pragma mark - Lazy/Getter Methodes
+
 
 - (MOODLEDataModel *)dataModel {
     
-    return [MOODLEDataModel sharedDataModel];
+    if (!_dataModel) {
+        
+        _dataModel = [MOODLEDataModel sharedDataModel];
+    }
+    return _dataModel;
 }
 
+
 #pragma mark - Navigation
+
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -261,6 +294,7 @@
         controller.item = item;
     }
 }
+
 
 #pragma mark -
 @end
