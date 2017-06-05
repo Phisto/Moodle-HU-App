@@ -20,6 +20,9 @@
 #import "MOODLECourseTableViewCell.h"
 #import "MOODLETableViewRowAction.h"
 
+/* Colors */
+#import "UIColor+Moodle.h"
+
 @interface MOODLECourseViewController (/* Private */)
 
 @property (nonatomic, strong) MOODLEDataModel *dataModel;
@@ -199,10 +202,7 @@
                                                                                 }];
     
     hideAction.font = [UIFont preferredFontForTextStyle:UIFontTextStyleFootnote];
-    hideAction.backgroundColor = [UIColor colorWithRed:(231.0f/255.0f)
-                                                 green:(76.0f/255.0f)
-                                                  blue:(60.0f/255.0f)
-                                                 alpha:1.0f];
+    hideAction.backgroundColor = [UIColor moodle_hideActionColor];
     
     MOODLETableViewRowAction *favoriteAction = [MOODLETableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault
                                                                                       title:NSLocalizedString(@"Favorisieren", @"Button label to favorite moodle course.")
@@ -217,10 +217,7 @@
                                                                                     }];
     favoriteAction.iconAndLabelColor = [UIColor blackColor];
     favoriteAction.font = [UIFont preferredFontForTextStyle:UIFontTextStyleFootnote];
-    favoriteAction.backgroundColor = [UIColor colorWithRed:(189.0f/255.0f)
-                                                     green:(195.0f/255.0f)
-                                                      blue:(199.0f/255.0f)
-                                                     alpha:1.0f];
+    favoriteAction.backgroundColor = [UIColor moodle_favoriteActionColor];
 
     return @[hideAction, favoriteAction];
 }
@@ -233,10 +230,7 @@
     cell.courseTitleLabel.text = item.courseTitle;
     cell.moodleTitleLabel.text = [NSString stringWithFormat:@"Moodle: %@", item.moodleTitle];
     cell.semesterLabel.text = item.semester;
-    cell.backgroundColor = (item.isFavourite) ? [UIColor colorWithRed:(3.0f/255.0f)
-                                                                green:(102.0f/255.0f)
-                                                                 blue:(148.0f/255.0f)
-                                                                alpha:0.2f] : [UIColor whiteColor];
+    cell.backgroundColor = (item.isFavourite) ? [[UIColor moodle_blueColor] colorWithAlphaComponent:0.2f] : [UIColor whiteColor];
     return cell;
 }
 

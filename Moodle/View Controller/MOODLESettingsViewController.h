@@ -10,15 +10,15 @@
 @import UIKit;
 
 
-
 /**
  
- The `MOODLESettingsViewController` is responsible for presenting the settings to the user.
+ The `MOODLESettingsViewController` is responsible for presenting the app settings to the user. 
+ Here he can manage and unhide Moodle courses he previously set hidden.
  
  */
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MOODLESettingsViewController : UIViewController
+@interface MOODLESettingsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 @end
 NS_ASSUME_NONNULL_END

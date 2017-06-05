@@ -17,7 +17,11 @@
 /* Other */
 #import "MOODLETableViewRowAction.h"
 
-@interface MOODLESettingsViewController (/* Private */) <UITableViewDelegate, UITableViewDataSource>
+/* Colors */
+#import "UIColor+Moodle.h"
+
+
+@interface MOODLESettingsViewController (/* Private */)
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) IBOutlet UISwitch *autoLoginSwitch;
@@ -99,17 +103,16 @@
                                                                             title:NSLocalizedString(@"Wieder anzeigen", @"Label of the button to unhide a moodle course.")
                                                                           handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
                                                                               
-                                                                              //[self.dataModel setItemUnhiddenWithTitle:self.dataModel.hiddedCourseIdentifier[indexPath.row]];
                                                                               self.dataModel.hiddenCourses[indexPath.row].isHidden = NO;
                                                                               
-                                                                              [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
+                                                                              [self.tableView deleteRowsAtIndexPaths:@[indexPath]
+                                                                                                    withRowAnimation:UITableViewRowAnimationRight];
+                                                                              
+                                                                              // hide the table view if there are no hidden courses
                                                                               [self calculateIfTableViewIsHidden];
                                                                           }];
     
-    unhideAction.backgroundColor = [UIColor colorWithRed:(231.0f/255.0f)
-                                                 green:(76.0f/255.0f)
-                                                  blue:(60.0f/255.0f)
-                                                 alpha:1.0f];
+    unhideAction.backgroundColor = [UIColor moodle_unhideActionColor];
     
     return @[unhideAction];
 }
@@ -126,8 +129,13 @@
 
 - (MOODLEDataModel *)dataModel {
     
-    return [MOODLEDataModel sharedDataModel];
+    if (!_dataModel) {
+        
+        _dataModel = [MOODLEDataModel sharedDataModel];
+    }
+    return _dataModel;
 }
+
 
 
 #pragma mark -

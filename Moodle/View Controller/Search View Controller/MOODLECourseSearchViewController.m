@@ -185,13 +185,13 @@
         
         loading.layer.cornerRadius = 15;
         loading.opaque = NO;
-        loading.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.7f];
+        loading.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.7f];
         
         UILabel *loadLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 25, 90, 22)];
         loadLabel.text = NSLocalizedString(@"Suche", @"Message the activity indicator is showing during a course search");
         loadLabel.font = [UIFont boldSystemFontOfSize:18.0f];
         loadLabel.textAlignment = NSTextAlignmentCenter;
-        loadLabel.textColor = [UIColor colorWithWhite:1.0f alpha:1.0f];
+        loadLabel.textColor = [UIColor whiteColor];
         loadLabel.backgroundColor = [UIColor clearColor];
         [loadLabel setCenter:CGPointMake(loading.frame.size.width/2.0f, loading.frame.size.height*0.8f)];
         
@@ -202,8 +202,7 @@
         [spinning startAnimating];
         [spinning setCenter:CGPointMake(loading.frame.size.width/2.0f, loading.frame.size.height*0.45f)];
         [loading addSubview:spinning];
-        
-        //loading.frame = CGRectMake(100, 200, 120, 120);
+
         [loading setCenter:CGPointMake(self.view.frame.size.width/2.0f, self.view.frame.size.height/2.0f)];
         
         _loadingView = loading;

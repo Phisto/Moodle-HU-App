@@ -421,7 +421,7 @@ static NSInteger const kPasswordTextFieldTag = 102;
 
 - (void)dismissKeyboard {
     
-    // dismiss focus on the textfields when user keyboard gets dissmissed
+    // dismiss focus on the textfields when user taps on 'background'
     [self.usernameTextField resignFirstResponder];
     [self.passwordTextField resignFirstResponder];
 }
@@ -464,13 +464,13 @@ static NSInteger const kPasswordTextFieldTag = 102;
         
         loading.layer.cornerRadius = 15;
         loading.opaque = NO;
-        loading.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.7f];
+        loading.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.7f];
         
         UILabel *loadLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 25, 90, 22)];
         loadLabel.text = NSLocalizedString(@"Login", @"Lable of the activity indicator during login request.");
         loadLabel.font = [UIFont boldSystemFontOfSize:18.0f];
         loadLabel.textAlignment = NSTextAlignmentCenter;
-        loadLabel.textColor = [UIColor colorWithWhite:1.0f alpha:1.0f];
+        loadLabel.textColor = [UIColor whiteColor];
         loadLabel.backgroundColor = [UIColor clearColor];
         [loadLabel setCenter:CGPointMake(loading.frame.size.width/2.0f, loading.frame.size.height*0.8f)];
         
