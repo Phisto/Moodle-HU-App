@@ -23,8 +23,8 @@
 /* Class = "UITabBarItem"; title = "Suche"; ObjectID = "I6W-iR-Qtp"; */
 "I6W-iR-Qtp.title" = "Suche";
 
-/* Class = "UILabel"; text = "Nach 120 Minuten bitte erneut einloggen."; ObjectID = "ICm-EU-cXP"; */
-"ICm-EU-cXP.text" = "Nach 120 Minuten bitte erneut einloggen.";
+/* Class = "UILabel"; text = "Bitte erneut einloggen"; ObjectID = "ICm-EU-cXP"; */
+"ICm-EU-cXP.text" = "Bitte erneut einloggen";
 
 /* Class = "UIBarButtonItem"; title = "Zurück"; ObjectID = "JEc-0Q-rTV"; */
 "JEc-0Q-rTV.title" = "Zurück";
@@ -37,9 +37,6 @@
 
 /* Class = "UILabel"; text = "Moodle"; ObjectID = "Mvi-Ng-5SB"; */
 "Mvi-Ng-5SB.text" = "Moodle";
-
-/* Class = "UILabel"; text = "Automatisch einloggen"; ObjectID = "NNk-Qi-LoG"; */
-"NNk-Qi-LoG.text" = "Automatisch einloggen";
 
 /* Class = "UITextField"; placeholder = "Passwort"; ObjectID = "Oab-7C-PSH"; */
 "Oab-7C-PSH.placeholder" = "Passwort";
@@ -74,5 +71,8 @@
 /* Class = "UIBarButtonItem"; title = "Zurück"; ObjectID = "tKf-Gu-RdD"; */
 "tKf-Gu-RdD.title" = "Zurück";
 
-/* Class = "UILabel"; text = "Anmeldedaten merken"; ObjectID = "zr9-FJ-zbd"; */
-"zr9-FJ-zbd.text" = "Anmeldedaten merken";
+/* Class = "UITextField"; accessibilityLabel = "Passwort"; ObjectID = "Oab-7C-PSH"; */
+"Oab-7C-PSH.accessibilityLabel" = "Passwort Eingabe";
+
+/* Class = "UITextField"; accessibilityLabel = "Benutzername"; ObjectID = "MRq-42-EaO"; */
+"MRq-42-EaO.accessibilityLabel" = "Benutzername Eingabe";

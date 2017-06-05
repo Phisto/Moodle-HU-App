@@ -5,6 +5,12 @@
 /* Section title for other items. */
 "Anderes" = "Anderes";
 
+/* Label of the switch to toggle saving of username and password */
+"Anmeldedaten merken" = "Anmeldedaten merken";
+
+/* Label of the switch to toggle if autologin is enabled */
+"Automatisch einloggen" = "Automatisch einloggen";
+
 /* Error message if the server wont respond with 200 http response code. */
 "Bei der Kommunikation mit dem Server, ist ein Fehler aufgetreten." = "Bei der Kommunikation mit dem Server, ist ein Fehler aufgetreten.";
 
@@ -34,6 +40,9 @@
 
 /* Lable of the activity indicator during login request. */
 "Login" = "Login";
+
+/* Voice over message aftter successfull login. */
+"Login erfolgreich" = "Login erfolgreich";
 
 /* Message the activity indicator is showing during a course search */
 "Suche" = "Suche";

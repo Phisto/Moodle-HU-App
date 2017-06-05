@@ -20,27 +20,24 @@
  */
 
 
-
-///--------------------
-/// @name IMPORTS
-///--------------------
-
-
-
 /* Header */
 #import "MOODLELoginViewController.h"
 
 /* Data Model */
 #import "MOODLEDataModel.h"
 
+/* Accessibility */
+#import "AccessibilityCoordinator.h"
 
+/* Custom Views */
+#import "SGLabeledSwitch.h"
 
 ///-----------------------
 /// @name CATEGORIES
 ///-----------------------
 
 
-
+#pragma mark - Private Category
 @interface MOODLELoginViewController (/* Private */) <UITextFieldDelegate>
 
 // UI
@@ -49,18 +46,29 @@
 @property (nonatomic, strong) IBOutlet UITextField *passwordTextField;
 @property (nonatomic, strong) IBOutlet UILabel *errorLabel;
 @property (nonatomic, strong) IBOutlet UIButton *loginButton;
-@property (nonatomic, strong) IBOutlet UISwitch *saveCredentialsSwitch;
-@property (nonatomic, strong) IBOutlet UISwitch *autoLoginSwitch;
-@property (nonatomic, strong) UIView *loadingView;
 
+@property (nonatomic, strong) IBOutlet SGLabeledSwitch *saveCredentialsSwitch;
+@property (nonatomic, strong) IBOutlet SGLabeledSwitch *autoLoginSwitch;
+
+@property (nonatomic, strong) UIView *loadingView;
 // Contraints
 @property (nonatomic, strong) IBOutlet NSLayoutConstraint *bottomConstraint;
-
 // Navigation
 @property (nonatomic, strong) UITapGestureRecognizer *tapGestureRecognizer;
-
 // Model
 @property (nonatomic, strong) MOODLEDataModel *dataModel;
+
+@property (nonatomic, strong) AccessibilityCoordinator *accessibility_cord;
+
+@end
+
+
+#pragma mark - Accessibility Category
+@interface MOODLELoginViewController (Accessibility)
+
+- (BOOL)accessibility_accessibilityIsActiv;
+//- (void)accessibility_setSwitchesAccessibilityFrames;
+- (void)accessibility_highlightElement:(id)element;
 
 @end
 
@@ -103,8 +111,10 @@
                                                object:nil];
     
     // set option switches
-    self.saveCredentialsSwitch.on = self.dataModel.shouldRememberCredentials;
-    self.autoLoginSwitch.on = self.dataModel.shouldAutoLogin;
+    self.saveCredentialsSwitch.text = NSLocalizedString(@"Anmeldedaten merken", @"Label of the switch to toggle saving of username and password");
+    self.saveCredentialsSwitch.value = self.dataModel.shouldRememberCredentials;
+    self.autoLoginSwitch.text = NSLocalizedString(@"Automatisch einloggen", @"Label of the switch to toggle if autologin is enabled");
+    self.autoLoginSwitch.value = self.dataModel.shouldAutoLogin;
     
     // set contraints
     CGFloat heights = self.view.bounds.size.height;
@@ -113,7 +123,12 @@
     // hide/show hu_logo based on screen size
     [self evaluateImageViewVisibility];
     
-    if (self.dataModel.shouldRememberCredentials && self.dataModel.hasUserCredentials) [self populateUserCredentials];
+    
+    if (self.dataModel.shouldRememberCredentials && self.dataModel.hasUserCredentials) {
+        
+        [self populateUserCredentials];
+    }
+    
     if (self.dataModel.shouldAutoLogin && self.dataModel.hasUserCredentials) {
     
         [self loginWithUsername:self.dataModel.userName
@@ -145,6 +160,13 @@
 
 
 #pragma mark - Layout Methodes
+
+
+- (void)viewDidLayoutSubviews {
+    
+    [self.autoLoginSwitch setNeedsLayout];
+    [self.saveCredentialsSwitch setNeedsLayout];
+}
 
 
 - (void)evaluateImageViewVisibility {
@@ -237,13 +259,29 @@
     if ( [username isEqualToString:@""] || [password isEqualToString:@""]) {
         
         NSString *locString = NSLocalizedString(@"Bitte geben Sie einen Benutzernamen und Passwort ein.", @"Message if the user tried to login without entering user credentials.");
-        [self showFailureWithMessage:locString];
+        
+        if (self.accessibility_accessibilityIsActiv) {
+            
+            // need to wait a bit so the message will be spoken by voiceover,
+            // otherwise the login button action annonuncment will 'override'
+            // our failure announcment.
+            [self performSelector:@selector(showFailureWithMessage:)
+                       withObject:locString
+                       afterDelay:4];
+        }
+        else {
+            
+            [self showFailureWithMessage:locString];
+        }
+
+        
         self.usernameTextField.enabled = YES;
         self.passwordTextField.enabled = YES;
     }
     else {
         
         [self.view addSubview:self.loadingView];
+        [self accessibility_highlightElement:self.loadingView];
         
         // perform web request on background thread ...
         dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
@@ -266,18 +304,47 @@
                                           }
                                       }
                                       
-                                      dispatch_async(dispatch_get_main_queue(), ^{
+                                      if (self.accessibility_accessibilityIsActiv) {
                                           
-                                          [self.loadingView removeFromSuperview];
-                                          self.loadingView = nil;
+                                          AccessibilityCoordinator *coord = [[AccessibilityCoordinator alloc] init];
+                                          [coord accessibility_informUserViaVoiceOver:NSLocalizedString(@"Login erfolgreich", @"Voice over message aftter successfull login.")
+                                                                              timeout:15
+                                                                    completionHandler:^{
+                                                                        
+                                                                        dispatch_async(dispatch_get_main_queue(), ^{
+                                                                            
+                                                                            [self.loadingView removeFromSuperview];
+                                                                            self.loadingView = nil;
+                                                                            
+                                                                            [[NSNotificationCenter defaultCenter] postNotificationName:MOODLEDidLoginNotification
+                                                                                                                                object:nil];
+                                                                        });
+                                                                    }];
+                                          self.accessibility_cord = coord;
+                                      }
+                                      else {
                                           
-                                          [[NSNotificationCenter defaultCenter] postNotificationName:MOODLEDidLoginNotification
-                                                                                              object:nil];
-                                      });
+                                          dispatch_async(dispatch_get_main_queue(), ^{
+                                              
+                                              [self.loadingView removeFromSuperview];
+                                              self.loadingView = nil;
+                                              
+                                              [[NSNotificationCenter defaultCenter] postNotificationName:MOODLEDidLoginNotification
+                                                                                                  object:nil];
+                                          });
+                                      }
                                   }
                                   else {
                                       
-                                      if (error) [self showFailureWithMessage:error.localizedDescription];
+                                      NSString *locString = (error)
+                                                                    ?
+                                                                    error.localizedDescription
+                                                                    :
+                                                                    NSLocalizedString(
+                                                                                      @"Bei der Kommunikation mit dem Server, ist ein Fehler aufgetreten.",
+                                                                                      @"Error message if the server wont respond with 200 http response code."
+                                                                                      );
+                                      [self showFailureWithMessage:locString];
                                   }
                               }];
         });
@@ -287,13 +354,13 @@
 
 - (IBAction)shouldSaveCredentialsChanged:(id)sender {
     
-    self.dataModel.shouldRememberCredentials = [(UISwitch *)sender isOn];
+    self.dataModel.shouldRememberCredentials = [(SGLabeledSwitch *)sender value];
 }
 
 
 - (IBAction)shouldAutoLoginChanged:(id)sender {
     
-    self.dataModel.shouldAutoLogin = [(UISwitch *)sender isOn];
+    self.dataModel.shouldAutoLogin = [(SGLabeledSwitch *)sender value];
 }
 
 
@@ -314,7 +381,7 @@
         self.errorLabel.text = message;
         self.errorLabel.hidden = NO;
         
-        [self performSelector:@selector(slowlyHideErrorMessage) withObject:nil afterDelay:2.0f];
+        [self performSelector:@selector(slowlyHideErrorMessage) withObject:nil afterDelay:(self.accessibility_accessibilityIsActiv) ? 0.0f : 2.0f];
     });
 }
 
@@ -331,6 +398,18 @@
                          self.usernameTextField.enabled = YES;
                          self.passwordTextField.enabled = YES;
                      }];
+
+    if (self.accessibility_accessibilityIsActiv) {
+        
+        AccessibilityCoordinator *coord = [[AccessibilityCoordinator alloc] init];
+        [coord accessibility_informUserViaVoiceOver:self.errorLabel.text
+                                            timeout:15
+                                  completionHandler:^{
+                                      
+                                      [self accessibility_highlightElement:self.usernameTextField];
+                                  }];
+        self.accessibility_cord = coord;
+    }
 }
 
 
@@ -388,4 +467,36 @@ static inline CGFloat MOODLEPixelAlignedValue(CGFloat value) {
 
 
 #pragma mark -
+@end
+
+
+
+#pragma mark - ACCESSIBILITY
+///-----------------------
+/// @name ACCESSIBILITY
+///-----------------------
+
+
+
+@implementation MOODLELoginViewController (Accessibility)
+
+
+- (BOOL)accessibility_accessibilityIsActiv {
+    
+    return UIAccessibilityIsVoiceOverRunning();
+}
+
+
+- (void)accessibility_highlightElement:(id)element {
+    
+    UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification,  element);
+}
+
+
+- (void)accessibility_informUserViaVoiceOver:(NSString *)message {
+    
+    UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, message);
+}
+
+
 @end
