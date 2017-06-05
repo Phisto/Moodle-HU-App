@@ -35,9 +35,6 @@
 /* Class = "UITextField"; placeholder = "Benutzername"; ObjectID = "MRq-42-EaO"; */
 "MRq-42-EaO.placeholder" = "Username";
 
-/* Class = "UILabel"; text = "Moodle"; ObjectID = "Mvi-Ng-5SB"; */
-"Mvi-Ng-5SB.text" = "Moodle";
-
 /* Class = "UITextField"; placeholder = "Passwort"; ObjectID = "Oab-7C-PSH"; */
 "Oab-7C-PSH.placeholder" = "Password";
 

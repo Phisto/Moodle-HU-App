@@ -29,20 +29,18 @@
 @interface MOODLELoginViewController (/* Private */) <UITextFieldDelegate>
 
 // UI
-@property (nonatomic, strong) IBOutlet UIImageView *imageView;
+@property (nonatomic, strong) IBOutlet UIImageView *imageView; // for displaying hu logo
 @property (nonatomic, strong) IBOutlet UITextField *usernameTextField;
 @property (nonatomic, strong) IBOutlet UITextField *passwordTextField;
 @property (nonatomic, strong) IBOutlet UILabel *errorLabel;
 @property (nonatomic, strong) IBOutlet UIButton *loginButton;
-
 @property (nonatomic, strong) IBOutlet SGLabeledSwitch *saveCredentialsSwitch;
 @property (nonatomic, strong) IBOutlet SGLabeledSwitch *autoLoginSwitch;
-
 @property (nonatomic, strong) UIView *loadingView;
 // Contraints
-@property (nonatomic, strong) IBOutlet NSLayoutConstraint *bottomConstraint;
+@property (nonatomic, strong) IBOutlet NSLayoutConstraint *imageHeightConstraint;
 // Navigation
-@property (nonatomic, strong) UITapGestureRecognizer *tapGestureRecognizer;
+@property (nonatomic, strong) UITapGestureRecognizer *tapGestureRecognizer; // for dismissing keyboard
 // Model
 @property (nonatomic, strong) MOODLEDataModel *dataModel;
 
@@ -55,7 +53,6 @@
 @interface MOODLELoginViewController (Accessibility)
 
 - (BOOL)accessibility_accessibilityIsActiv;
-//- (void)accessibility_setSwitchesAccessibilityFrames;
 - (void)accessibility_highlightElement:(id)element;
 
 @end
@@ -104,21 +101,13 @@
     self.autoLoginSwitch.text = NSLocalizedString(@"Automatisch einloggen", @"Label of the switch to toggle if autologin is enabled");
     self.autoLoginSwitch.value = self.dataModel.shouldAutoLogin;
     
-    // set contraints
-    CGFloat heights = self.view.bounds.size.height;
-    self.bottomConstraint.constant = MOODLEPixelAlignedValue(heights/4.0f); // pixel alligne value
-    
-    // hide/show hu_logo based on screen size
-    [self evaluateImageViewVisibility];
-    
-    
     if (self.dataModel.shouldRememberCredentials && self.dataModel.hasUserCredentials) {
         
         [self populateUserCredentials];
     }
     
     if (self.dataModel.shouldAutoLogin && self.dataModel.hasUserCredentials) {
-    
+        
         [self loginWithUsername:self.dataModel.userName
                     andPassword:self.dataModel.userPassword];
     }
@@ -157,16 +146,6 @@
 }
 
 
-- (void)evaluateImageViewVisibility {
-    
-    [UIView animateWithDuration:0.4f animations:^{
-        
-        self.imageView.hidden = (self.imageView.frame.size.height < 60.0f);
-        [self.view layoutIfNeeded];
-    }];
-}
-
-
 #pragma mark - Keychain Related Methodes
 
 
@@ -181,6 +160,8 @@
 
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    // dismiss focus on the textfield when return key is hit
     [textField resignFirstResponder];
     return YES;
 }
@@ -188,42 +169,35 @@
 
 - (void)dismissKeyboard {
     
+    // dismiss focus on the textfields keyboards gets dissmissed
     [self.usernameTextField resignFirstResponder];
     [self.passwordTextField resignFirstResponder];
 }
 
 
 - (void)keyboardWillShow:(NSNotification*)notification {
-    NSDictionary *info = [notification userInfo];
-    CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
     
-    if (self.bottomConstraint.constant < kbSize.height) {
+    // the keyborad will appear so we hide the banner
+    // and resize the image view so the text fields will go up.
+    [UIView animateWithDuration:0.2f animations:^{
         
-        [UIView animateWithDuration:0.3 animations:^{
-            
-            // we dont need to pixel alligne value, kbSize.height will be alligned
-            self.bottomConstraint.constant = kbSize.height;
-            [self.view layoutIfNeeded];
-        }];
-    }
-    
-    // hide/show hu_logo
-    [self evaluateImageViewVisibility];
+        self.imageView.hidden = YES;
+        self.imageHeightConstraint.constant = 35.0f;
+        [self.view layoutIfNeeded];
+    }];
 }
 
 
 - (void)keyboardWillHide:(NSNotification*)notification {
     
-    [UIView animateWithDuration:0.3 animations:^{
+    // the keyborad will disappear so we show the banner
+    // and resize the image view to its original frame
+    [UIView animateWithDuration:0.2f animations:^{
         
-        // set contraints
-        CGFloat heights = self.view.bounds.size.height;
-        self.bottomConstraint.constant = MOODLEPixelAlignedValue(heights/4.0f); // pixel alligne value
+        self.imageView.hidden = NO;
+        self.imageHeightConstraint.constant = 156.0f;
         [self.view layoutIfNeeded];
     }];
-    
-    // hide/show hu_logo
-    [self evaluateImageViewVisibility];
 }
 
 
@@ -241,6 +215,7 @@
 
 - (void)loginWithUsername:(NSString *)username andPassword:(NSString *)password {
     
+    // prevent user interaction during loggin process
     self.usernameTextField.enabled = NO;
     self.passwordTextField.enabled = NO;
     
@@ -252,23 +227,25 @@
             
             // need to wait a bit so the message will be spoken by voiceover,
             // otherwise the login button action annonuncment will 'override'
-            // our failure announcment.
+            // our failure announcment. (the values 4 is guessed and depends on the user settings)
             [self performSelector:@selector(showFailureWithMessage:)
                        withObject:locString
-                       afterDelay:4];
+                       afterDelay:4.0f];
         }
         else {
             
             [self showFailureWithMessage:locString];
         }
-
+        
         
         self.usernameTextField.enabled = YES;
         self.passwordTextField.enabled = YES;
     }
     else {
         
+        // display indetermined progress indicator
         [self.view addSubview:self.loadingView];
+        // set focus to indicator so voiceover will inform user of the process
         [self accessibility_highlightElement:self.loadingView];
         
         // perform web request on background thread ...
@@ -278,63 +255,72 @@
             [self.dataModel loginWithUsername:username
                                      password:password
                             completionHandler:^(BOOL success, NSError *error) {
-                                  
-                                  if (success) {
-                                      
-                                      if (self.dataModel.shouldRememberCredentials) {
-                                          
-                                          [self.dataModel saveUserCredentials:username andPassword:password];
-                                      }
-                                      else {
-                                          
-                                          if (self.dataModel.hasUserCredentials) {
-                                              [self.dataModel deleteUserCredentials];
-                                          }
-                                      }
-                                      
-                                      if (self.accessibility_accessibilityIsActiv) {
-                                          
-                                          AccessibilityCoordinator *coord = [[AccessibilityCoordinator alloc] init];
-                                          [coord accessibility_informUserViaVoiceOver:NSLocalizedString(@"Login erfolgreich", @"Voice over message aftter successfull login.")
-                                                                              timeout:15
-                                                                    completionHandler:^{
-                                                                        
-                                                                        dispatch_async(dispatch_get_main_queue(), ^{
-                                                                            
-                                                                            [self.loadingView removeFromSuperview];
-                                                                            self.loadingView = nil;
-                                                                            
-                                                                            [[NSNotificationCenter defaultCenter] postNotificationName:MOODLEDidLoginNotification
-                                                                                                                                object:nil];
-                                                                        });
-                                                                    }];
-                                          self.accessibility_cord = coord;
-                                      }
-                                      else {
-                                          
-                                          dispatch_async(dispatch_get_main_queue(), ^{
-                                              
-                                              [self.loadingView removeFromSuperview];
-                                              self.loadingView = nil;
-                                              
-                                              [[NSNotificationCenter defaultCenter] postNotificationName:MOODLEDidLoginNotification
-                                                                                                  object:nil];
-                                          });
-                                      }
-                                  }
-                                  else {
-                                      
-                                      NSString *locString = (error)
-                                                                    ?
-                                                                    error.localizedDescription
-                                                                    :
-                                                                    NSLocalizedString(
-                                                                                      @"Bei der Kommunikation mit dem Server, ist ein Fehler aufgetreten.",
-                                                                                      @"Error message if the server wont respond with 200 http response code."
-                                                                                      );
-                                      [self showFailureWithMessage:locString];
-                                  }
-                              }];
+                                
+                                if (success) {
+                                    
+                                    // now make changes to the userdefaults
+                                    // corresponding to the current settings
+                                    if (self.dataModel.shouldRememberCredentials) {
+                                        
+                                        [self.dataModel saveUserCredentials:username andPassword:password];
+                                    }
+                                    else {
+                                        
+                                        if (self.dataModel.hasUserCredentials) {
+                                            [self.dataModel deleteUserCredentials];
+                                        }
+                                    }
+                                    
+                                    if (self.accessibility_accessibilityIsActiv) {
+                                        
+                                        AccessibilityCoordinator *coord = [[AccessibilityCoordinator alloc] init];
+                                        [coord accessibility_informUserViaVoiceOver:NSLocalizedString(@"Login erfolgreich", @"Voice over message aftter successfull login.")
+                                                                            timeout:15.0f // call this method after 15 seconds event when the method failes (VoiceOver seems to be tricky at times)
+                                                                  completionHandler:^{
+                                                                      
+                                                                      // update ui on main thread
+                                                                      dispatch_async(dispatch_get_main_queue(), ^{
+                                                                          
+                                                                          // remove activity indicator
+                                                                          [self.loadingView removeFromSuperview];
+                                                                          self.loadingView = nil;
+                                                                          
+                                                                          // this will make the app delegate change the root view controller
+                                                                          // from loggin to course controller
+                                                                          [[NSNotificationCenter defaultCenter] postNotificationName:MOODLEDidLoginNotification
+                                                                                                                              object:nil];
+                                                                      });
+                                                                  }];
+                                        // we need to store strong reference
+                                        ///!!!: This works but is lazy, find a more beautiful way please me!
+                                        self.accessibility_cord = coord;
+                                    }
+                                    else {
+                                        
+                                        // update ui on main thread
+                                        dispatch_async(dispatch_get_main_queue(), ^{
+                                            
+                                            // remove activity indicator
+                                            [self.loadingView removeFromSuperview];
+                                            self.loadingView = nil;
+                                            // this will make the app delegate change the root view controller
+                                            // from loggin to course controller
+                                            [[NSNotificationCenter defaultCenter] postNotificationName:MOODLEDidLoginNotification
+                                                                                                object:nil];
+                                        });
+                                    }
+                                }
+                                else {
+                                    
+                                    NSString *locString = error.localizedDescription;
+                                    if (!locString) {
+                                        locString = NSLocalizedString(@"Bei der Kommunikation mit dem Server, ist ein Fehler aufgetreten.",
+                                                                      @"Error message if loggin failed and no error is provided.");
+                                    }
+                                    
+                                    [self showFailureWithMessage:locString];
+                                }
+                            }];
         });
     }
 }
@@ -359,16 +345,19 @@
     
     // make sure ui updates will be made on the main thread
     dispatch_async(dispatch_get_main_queue(), ^{
-
+        
+        // remove activity indicator
         [self.loadingView removeFromSuperview];
         self.loadingView = nil;
         
-        self.usernameTextField.text = @"";
+        // only reset password field as it is not visble
+        ///???: This is questionable, as it takes away choice from the user ?
         self.passwordTextField.text = @"";
         
         self.errorLabel.text = message;
         self.errorLabel.hidden = NO;
         
+        // If accessibilty is active we dont need to show the message for 2.0f seconds
         [self performSelector:@selector(slowlyHideErrorMessage) withObject:nil afterDelay:(self.accessibility_accessibilityIsActiv) ? 0.0f : 2.0f];
     });
 }
@@ -376,6 +365,7 @@
 
 - (void)slowlyHideErrorMessage {
     
+    // hide error message set first responder
     [UIView animateWithDuration:0.5f
                      animations:^{ self.errorLabel.alpha = 0; }
                      completion: ^(BOOL finished) {
@@ -385,8 +375,14 @@
                          
                          self.usernameTextField.enabled = YES;
                          self.passwordTextField.enabled = YES;
+                         
+                         // 'select' the user textfield to try again
+                         // if nothing is selected
+                         if (!self.usernameTextField.isFirstResponder && !self.passwordTextField.isFirstResponder) {
+                             [self.usernameTextField becomeFirstResponder];
+                         }
                      }];
-
+    
     if (self.accessibility_accessibilityIsActiv) {
         
         AccessibilityCoordinator *coord = [[AccessibilityCoordinator alloc] init];
@@ -394,6 +390,7 @@
                                             timeout:15
                                   completionHandler:^{
                                       
+                                      // 'select' the user textfield for trying again
                                       [self accessibility_highlightElement:self.usernameTextField];
                                   }];
         self.accessibility_cord = coord;
@@ -430,7 +427,6 @@
         [spinning setCenter:CGPointMake(loading.frame.size.width/2.0f, loading.frame.size.height*0.45f)];
         [loading addSubview:spinning];
         
-        //loading.frame = CGRectMake(100, 200, 120, 120);
         [loading setCenter:CGPointMake(self.view.frame.size.width/2.0f, self.view.frame.size.height/2.0f)];
         
         _loadingView = loading;
@@ -441,16 +437,11 @@
 
 - (MOODLEDataModel *)dataModel {
     
-    return [MOODLEDataModel sharedDataModel];
-}
-
-
-#pragma mark - Funktions
-
-
-static inline CGFloat MOODLEPixelAlignedValue(CGFloat value) {
-    
-    return (value < 0.5f) ? 0.5f : floor(value * 2) / 2;
+    if (!_dataModel) {
+        
+        _dataModel = [MOODLEDataModel sharedDataModel];
+    }
+    return _dataModel;
 }
 
 
@@ -486,5 +477,5 @@ static inline CGFloat MOODLEPixelAlignedValue(CGFloat value) {
     UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, message);
 }
 
-
+#pragma mark -
 @end

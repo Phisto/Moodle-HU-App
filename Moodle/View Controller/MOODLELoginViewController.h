@@ -22,7 +22,7 @@
  */
 static NSString *MOODLELoginViewControllerIdentifier = @"MOODLELoginViewControllerIdentifier";
 /**
- The notification that is posted when logged in successfuly.
+ The notification that is posted when successfully logged in.
  */
 static NSString *MOODLEDidLoginNotification = @"MOODLEDidLoginNotification";
 
