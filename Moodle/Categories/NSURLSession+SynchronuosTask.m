@@ -9,8 +9,6 @@
 
 #import "NSURLSession+SynchronuosTask.h"
 
-
-
 ///-----------------------
 /// @name IMPLEMENTATION
 ///-----------------------
@@ -18,6 +16,8 @@
 
 
 @implementation NSURLSession (SynchronousTask)
+#pragma mark - Synchronus Request
+
 
 - (NSData *)moodle_sendSynchronousRequest:(NSURLRequest *)request
                         returningResponse:(__autoreleasing NSURLResponse **)responsePtr
@@ -48,4 +48,6 @@
     return result;
 }
 
+
+#pragma mark -
 @end

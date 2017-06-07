@@ -9,10 +9,7 @@
 
 @import UIKit;
 
-/* Header */
 #import "MOODLESearchItem.h"
-
-
 
 ///-----------------------
 /// @name CATEGORIES
@@ -37,10 +34,12 @@
 @implementation MOODLESearchItem
 #pragma mark - Getter
 
+
 - (BOOL)canSubscribe {
     
     return ((self.guestSubscribe || self.selfSubscribe ) && self.courseURL);
 }
+
 
 - (NSMutableAttributedString *)attributedCourseDescription {
     
@@ -54,6 +53,7 @@
     }
     return _attributedCourseDescription;
 }
+
 
 #pragma mark -
 @end

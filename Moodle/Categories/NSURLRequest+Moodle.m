@@ -7,11 +7,7 @@
  *
  */
 
-
-/* Header */
 #import "NSURLRequest+Moodle.h"
-
-
 
 ///-----------------------
 /// @name IMPLEMENTATION
@@ -20,7 +16,8 @@
 
 
 @implementation NSURLRequest (Moodle)
-#pragma mark - Inititalization
+#pragma mark - Object Creation
+
 
 + (instancetype)moodle_loginRequestWithUsername:(NSString *)username andPassword:(NSString *)password {
     
@@ -41,6 +38,7 @@
     
     return [request copy];
 }
+
 
 + (instancetype)moodle_searchRequestWithSearchString:(NSString *)searchString {
     
@@ -63,6 +61,7 @@
     
 }
 
+
 + (instancetype)moodle_logoutRequestWithSessionKey:(NSString *)sessionKey {
     
     NSString *post = @"sesskey=%@";
@@ -81,6 +80,7 @@
     
     return [request copy];
 }
+
 
 #pragma mark -
 @end

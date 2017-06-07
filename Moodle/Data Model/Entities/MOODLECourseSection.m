@@ -7,13 +7,9 @@
  *
  */
 
-/* Frameworks */
 @import UIKit;
 
-/* Header */
 #import "MOODLECourseSection.h"
-
-
 
 ///-----------------------
 /// @name CATEGORIES
@@ -37,6 +33,7 @@
 
 @implementation MOODLECourseSection
 #pragma mark - Getter
+
 
 - (BOOL)hasContent {
     
@@ -88,6 +85,7 @@
     
     return _attributedSectionDescription;
 }
+
 
 #pragma mark -
 @end

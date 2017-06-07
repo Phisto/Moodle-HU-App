@@ -16,8 +16,15 @@
 /* View Controller */
 #import "MOODLEDocumentViewController.h"
 
-@interface MOODLESearchItemDetailViewController (/* Private */)<UITableViewDelegate, UITableViewDataSource>
+///-----------------------
+/// @name CATEGORIES
+///-----------------------
 
+
+
+@interface MOODLESearchItemDetailViewController (/* Private */)
+
+// UI
 @property (nonatomic, strong) IBOutlet UILabel *sectionTitleLabel;
 @property (nonatomic, strong) IBOutlet UILabel *semesterLabel;
 @property (nonatomic, strong) IBOutlet UILabel *categoryLabel;
@@ -25,6 +32,7 @@
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) IBOutlet UIButton *subscribeButton;
 
+// Constraints
 @property (nonatomic, strong) IBOutlet NSLayoutConstraint *subscriptionButtonHeightConstraint;
 @property (nonatomic, strong) IBOutlet NSLayoutConstraint *tableViewHeightConstraint;
 
@@ -71,7 +79,7 @@
 #pragma mark - Layout Methodes
 
 
--(void)setupNavigationBar {
+- (void)setupNavigationBar {
     
     UINavigationBar *navBar = self.navigationController.navigationBar;
     navBar.layer.shadowColor = [UIColor blackColor].CGColor;
@@ -81,7 +89,7 @@
 }
 
 
-#pragma mark - Table View
+#pragma mark - Table View Methodes
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

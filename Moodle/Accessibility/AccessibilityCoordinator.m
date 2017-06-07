@@ -9,7 +9,21 @@
 
 #import "AccessibilityCoordinator.h"
 
+///------------------------
+/// @name TYPEDEFS
+///------------------------
+
+
+
 typedef void (^CompletionHandler) (void);
+
+
+
+///------------------------
+/// @name CATEGORIES
+///------------------------
+
+
 
 @interface AccessibilityCoordinator (/* Private */)
 
@@ -18,8 +32,16 @@ typedef void (^CompletionHandler) (void);
 @end
 
 
+
+///------------------------
+/// @name IMPLEMENTATION
+///------------------------
+
+
+
 @implementation AccessibilityCoordinator
-#pragma mark -
+#pragma mark - Objet Life Cycle
+
 
 - (instancetype)init {
     
@@ -34,10 +56,15 @@ typedef void (^CompletionHandler) (void);
     return self;
 }
 
+
 - (void)dealloc {
     
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+
+
+#pragma mark - Synchronisation Methodes
+
 
 - (void)accessibility_informUserViaVoiceOver:(NSString *)message
                                      timeout:(NSTimeInterval)timeout
@@ -53,11 +80,13 @@ typedef void (^CompletionHandler) (void);
                afterDelay:timeout];
 }
 
+
 - (void)timedOut {
     
     self.completion();
     self.completion = nil;
 }
+
 
 - (void)voiceOverFinished {
     
@@ -66,6 +95,7 @@ typedef void (^CompletionHandler) (void);
     if (self.completion) self.completion();
     self.completion = nil;
 }
+
 
 #pragma mark -
 @end

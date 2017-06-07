@@ -272,7 +272,7 @@ static NSInteger const kPasswordTextFieldTag = 102;
                                                                       });
                                                                   }];
                                         // we need to store strong reference
-                                        ///!!!: This works but is lazy, find a more beautiful way please me!
+                                        ///!!!: This works but is lazy, find a more beautiful way please me
                                         self.accessibility_cord = coord;
                                     }
                                     else {
@@ -335,6 +335,8 @@ static NSInteger const kPasswordTextFieldTag = 102;
 #pragma mark - Failure Methodes
 
 
+///!!!: This is questionable as it takes away choice from the user ?
+///     self.passwordTextField.text = @"";
 - (void)showFailureWithMessage:(NSString *)message {
     
     // make sure ui updates will be made on the main thread
@@ -345,7 +347,6 @@ static NSInteger const kPasswordTextFieldTag = 102;
         self.loadingView = nil;
         
         // only reset password field as it is not visble
-        ///???: This is questionable, as it takes away choice from the user ?
         self.passwordTextField.text = @"";
         
         self.usernameTextField.enabled = YES;

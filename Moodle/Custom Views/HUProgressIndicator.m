@@ -32,7 +32,7 @@ static NSString * const kBigBezierPathData = @"bezierdata_w120_h120";
 @property (nonatomic, readwrite) NSInteger maxCount;
 @property (nonatomic, readwrite) BOOL forward;
 
-@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, strong) dispatch_source_t timer;
 @property (nonatomic, strong) NSArray<UIBezierPath *> *bezierPathArray;
 
 @end
@@ -118,6 +118,11 @@ static NSString * const kBigBezierPathData = @"bezierdata_w120_h120";
 }
 
 
+- (void)dealloc {
+
+    self.timer = nil;
+}
+
 #pragma mark - Drawing Methodes
 
 
@@ -159,29 +164,48 @@ static NSString * const kBigBezierPathData = @"bezierdata_w120_h120";
 #pragma mark - Animation Methodes
 
 
+///!!!: Refactor when quiting iOS 9.x support
 - (void)startAnimating {
     
     
     // if we are already animating
     if (self.animating) {
-        [self.timer invalidate];
+        
         self.timer = nil;
     }
     
     self.hidden = NO;
     
     self.animating = YES;
+    
+    /*
     self.timer = [NSTimer scheduledTimerWithTimeInterval:0.015f
-                                                  target:self
-                                                selector:@selector(customDrawShape)
-                                                userInfo:nil
-                                                 repeats:YES];
+                                                 repeats:YES
+                                                   block:^(NSTimer * _Nonnull timer) {
+     
+                                                       [weakSelf customDrawShape];
+                                                   }];
+    */
+    
+    // i use this to prevent a retain cycle
+    // when just using a nstimer the timer will hold
+    // a strong reference to self and dealloc will
+    // newer be called to invalidate the timer,
+    // hence the timer will never stop
+    typeof(self) __weak weakSelf = self;
+    
+    self.timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_main_queue());
+    dispatch_source_set_timer(self.timer, DISPATCH_TIME_NOW, 0.015f * NSEC_PER_SEC, 0 * NSEC_PER_SEC);
+    dispatch_source_set_event_handler(self.timer, ^{
+        
+        [weakSelf customDrawShape];
+    });
+    dispatch_resume(self.timer);
 }
 
 
 - (void)stopAnimating {
     
-    [self.timer invalidate];
     self.timer = nil;
     
     if (self.hidesWhenStopped) {

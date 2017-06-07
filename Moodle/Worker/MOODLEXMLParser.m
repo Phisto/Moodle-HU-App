@@ -18,11 +18,11 @@
 /* Parser */
 #import "TFHpple.h"
 
-
-
 ///-----------------------
 /// @name CONSTANTS
 ///-----------------------
+
+
 
 /* Resource Identifier */
 static NSString * const kResourceIdentifier = @"modtype_resource";
@@ -765,13 +765,6 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
     
     MoodleDocumentType documentType = MoodleDocumentTypeOther;
     
-    /*
-     #define kDocIconURLPowerPoint @"powerpoint-24"
-     #define kDocIconURLPDF @"pdf-24"
-     #define kDocIconURLWordDocument @"document-24"
-     #define kDocIconURLAudio @"mp3-24"
-     */
-    
     NSString *identifier = [string lastPathComponent];
     
     if ([identifier isEqualToString:kDocIconURLPDF]) {
@@ -820,11 +813,3 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
 
 #pragma mark -
 @end
-
-
-
-
-
-
-
-

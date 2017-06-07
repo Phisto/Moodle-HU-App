@@ -15,6 +15,10 @@
 #import "MOODLESearchItemDetailViewController.h"
 #import "MOODLESettingsViewController.h"
 
+///-----------------------
+/// @name IMPLEMENTATION
+///-----------------------
+
 
 
 @implementation MOODLETabBarController

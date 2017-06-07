@@ -9,9 +9,8 @@
 
 #import "MOODLECourse.h"
 
+/* Data Model */
 #import "MOODLEDataModel.h"
-
-
 
 ///-----------------------
 /// @name IMPLEMENTATION
@@ -22,6 +21,8 @@
 @implementation MOODLECourse
 #pragma mark - Custom Setter
 
+
+///!!!: This is somehow ugly, dont use setter for something else
 - (void)setIsHidden:(BOOL)isHidden {
     
     if (_isHidden != isHidden) {
@@ -32,6 +33,8 @@
     }
 }
 
+
+///!!!: This is somehow ugly, dont use setter for something else
 - (void)setIsFavourite:(BOOL)isFavourite {
     
     if (_isFavourite != isFavourite) {
@@ -41,6 +44,7 @@
         _isFavourite = isFavourite;
     }
 }
+
 
 #pragma mark -
 @end

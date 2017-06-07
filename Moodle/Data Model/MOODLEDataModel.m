@@ -27,6 +27,12 @@
 #import "TFHpple.h"
 #import "KeychainWrapper.h"
 
+///-----------------------
+/// @name CONSTANTS
+///-----------------------
+
+
+
 static NSString * const UserDefaultsFirstLoginKey = @"UserDefaultsFirstLoginKey";
 static NSString * const UserDefaultsShouldRememberCredentialsKey = @"UserDefaultsShouldRememberCredentialsKey";
 static NSString * const UserDefaultsShouldAutoLoginKey = @"UserDefaultsShouldAutoLoginKey";
@@ -36,16 +42,37 @@ static NSString * const UserDefaultsDeletedArrayKey = @"UserDefaultsDeletedArray
 static NSString * const UserDefaultsOrderingWeightsArrayKey = @"UserDefaultsOrderingWeightsArrayKey";
 static NSString * const UserDefaultsLoginDateKey = @"UserDefaultsLoginDateKey";
 
+
+
+///-----------------------
+/// @name TYPEDEFS
+///-----------------------
+
+
+
+/// For convenience
 typedef void (^CompletionBlock)(BOOL success, NSError *error);
+
+
+
+///-----------------------
+/// @name CATEGORIES
+///-----------------------
+
+
 
 @interface MOODLEDataModel (/* Private */)
 
+// Worker
 @property (nonatomic, strong) MOODLEXMLParser *xmlParser;
 @property (nonatomic, strong) KeychainWrapper *keyChainWrapper;
+
+// Other
 @property (nonatomic, strong) NSString *sessionKey;
 @property (nonatomic, strong) NSUserDefaults *defaults;
 @property (nonatomic, strong) NSURLSession *currentSession;
 
+// Arrays
 @property (nonatomic, strong) NSMutableArray<NSString *> *hiddedCourseIdentifier;
 @property (nonatomic, strong) NSMutableArray<NSString *> *favouriteIdentifier;
 @property (nonatomic, strong) NSMutableDictionary *orderingWeightDictionaries; // @{item.title: 100}
@@ -63,6 +90,7 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
 @implementation MOODLEDataModel
 #pragma mark - Object Life Cycle
 
+
 + (instancetype)sharedDataModel {
     
     static MOODLEDataModel *sharedDataModel = nil;
@@ -73,6 +101,7 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
     return sharedDataModel;
 
 }
+
 
 - (instancetype)init_private {
     
@@ -111,11 +140,13 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
     return self;
 }
 
+
 - (instancetype)init {
     
     NSAssert(false,@"Unavailable, use `+sharedDataModel` instead.");
     return nil;
 }
+
 
 + (instancetype)new {
     
@@ -123,11 +154,7 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
     return nil;
 }
 
-/**
- 
- Calling this method will reset the data model to the same state as after initialization.
- 
- */
+
 - (void)resetData {
     
     // reate parser
@@ -141,7 +168,9 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
     self.hiddenCourses = [NSMutableArray array];
 }
 
+
 #pragma mark - Asynchronous API
+
 
 - (void)loadSearchResultWithSerachString:(NSString *)searchString
                        completionHandler:(void (^)(BOOL success, NSError * _Nullable error, NSArray * _Nullable searchResults))completionHandler {
@@ -184,6 +213,7 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
         completionHandler(NO, nil, nil);
     }
 }
+
 
 - (void)loginWithUsername:(NSString *)username
                  password:(NSString *)password
@@ -251,6 +281,7 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
                             }] resume];
 }
 
+
 - (void)loadItemContentForItem:(MOODLECourse *)item
              completionHandler:(void (^)(BOOL, NSError * _Nullable error))completionHandler {
     
@@ -305,6 +336,7 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
     completionHandler(YES, nil);
 }
 
+
 - (void)logoutWithCompletionHandler:(void (^)(BOOL success, NSError * _Nullable error))completionHandler {
     
     if (self.sessionKey) {
@@ -350,7 +382,9 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
     }
 }
 
+
 #pragma mark - Sort Methodes
+
 
 - (NSMutableArray<MOODLECourse *> *)sortCourseItems:(NSArray<MOODLECourse *> *)items {
     
@@ -403,7 +437,9 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
     return itemArray;
 }
 
-#pragma mark - 
+
+#pragma mark -  Ordering/Hide Methodes
+
 
 - (void)updateCourseItemsOrderingWeight {
     
@@ -417,6 +453,7 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
     self.orderingWeightDictionaries = newDict;
     [self.defaults setObject:newDict forKey:UserDefaultsOrderingWeightsArrayKey];
 }
+
 
 - (void)setItem:(MOODLECourse *)item isHidden:(BOOL)hidden {
     
@@ -442,6 +479,7 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
     [self updateCourseItemsOrderingWeight];
 }
 
+
 - (void)setItem:(MOODLECourse *)item isFavorit:(BOOL)favorit {
     
     if (favorit) {
@@ -455,7 +493,9 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
     }
 }
 
+
 #pragma mark - User Credential Methodes
+
 
 - (void)saveUserCredentials:(NSString *)username andPassword:(NSString *)password {
 
@@ -467,6 +507,7 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
     self.hasUserCredentials = YES;
 }
 
+
 - (void)deleteUserCredentials {
     
     [self.keyChainWrapper mySetObject:@"-" forKey:(NSString *)kSecAttrAccount];
@@ -477,7 +518,9 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
     self.hasUserCredentials = NO;
 }
 
-#pragma mark - Custom Setter
+
+#pragma mark - User Defaults Setter
+
 
 - (void)setHasUserCredentials:(BOOL)hasUserCredentials {
     
@@ -489,6 +532,7 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
     }
 }
 
+
 - (void)setShouldRememberCredentials:(BOOL)shouldRememberCredentials {
     
     if (_shouldRememberCredentials != shouldRememberCredentials) {
@@ -498,6 +542,7 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
         _shouldRememberCredentials = shouldRememberCredentials;
     }
 }
+
 
 - (void)setShouldAutoLogin:(BOOL)shouldAutoLogin {
     
@@ -509,25 +554,9 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
     }
 }
 
+
 #pragma mark - Lazy/Getter
 
-- (NSString *)userName {
-    
-    if (!_userName) {
-     
-        _userName = [self.keyChainWrapper myObjectForKey:(NSString *)kSecAttrAccount];
-    }
-    return _userName;
-}
-
-- (NSString *)userPassword {
-    
-    if (!_userPassword) {
-        
-        _userPassword = [self.keyChainWrapper myObjectForKey:(NSString *)kSecValueData];
-    }
-    return _userPassword;
-}
 
 - (KeychainWrapper *)keyChainWrapper {
     
@@ -538,6 +567,7 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
     return _keyChainWrapper;
 }
 
+
 - (NSUserDefaults *)defaults {
     
     if (!_defaults) {
@@ -546,6 +576,33 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
     }
     return _defaults;
 }
+
+
+#pragma mark - Lazy/Getter (Keychain)
+
+
+- (NSString *)userName {
+    
+    if (!_userName) {
+        
+        _userName = [self.keyChainWrapper myObjectForKey:(NSString *)kSecAttrAccount];
+    }
+    return _userName;
+}
+
+
+- (NSString *)userPassword {
+    
+    if (!_userPassword) {
+        
+        _userPassword = [self.keyChainWrapper myObjectForKey:(NSString *)kSecValueData];
+    }
+    return _userPassword;
+}
+
+
+#pragma mark - Lazy/Getter (User Defaults)
+
 
 - (NSMutableArray<NSString *> *)favouriteIdentifier {
     
@@ -560,6 +617,7 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
     return _favouriteIdentifier;
 }
 
+
 - (NSMutableArray<NSString *> *)hiddedCourseIdentifier {
     
     if (!_hiddedCourseIdentifier) {
@@ -573,6 +631,7 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
     return _hiddedCourseIdentifier;
 }
 
+
 - (NSMutableDictionary *)orderingWeightDictionaries {
     
     if (!_orderingWeightDictionaries) {
@@ -585,6 +644,7 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
     }
     return _orderingWeightDictionaries;
 }
+
 
 #pragma mark -
 @end

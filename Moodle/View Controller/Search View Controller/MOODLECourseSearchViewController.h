@@ -17,6 +17,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MOODLECourseSearchViewController : UIViewController
+@interface MOODLECourseSearchViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 @end
 NS_ASSUME_NONNULL_END

@@ -9,30 +9,42 @@
 
 #import "MOODLECourseSearchViewController.h"
 
-#import "NSURLRequest+Moodle.h"
+/* Data Model */
 #import "MOODLEDataModel.h"
 #import "MOODLESearchItem.h"
+
+/* View Controller */
 #import "MOODLETabBarController.h"
 #import "MOODLESearchItemDetailViewController.h"
-#import "MOODLESearchResultTableViewCell.h"
-#import "MOODLEActivityView.h"
-
-@interface MOODLECourseSearchViewController ()<UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
-
-@property (nonatomic, strong) MOODLEDataModel *dataModel;
-
-@property (nonatomic, readwrite) BOOL hasContent;
-
-@property (nonatomic, strong) MOODLEActivityView *loadingView;
-
-@property (nonatomic, strong) IBOutlet UISearchBar *searchBar;
 
 /* Table View */
+#import "MOODLESearchResultTableViewCell.h"
+
+/* Custom Views */
+#import "MOODLEActivityView.h"
+
+///-----------------------
+/// @name CATEGORIES
+///-----------------------
+
+
+
+@interface MOODLECourseSearchViewController (/* Private */)
+
+// UI
+@property (nonatomic, strong) MOODLEActivityView *loadingView;
+@property (nonatomic, strong) IBOutlet UISearchBar *searchBar;
+
+// Table View
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray<MOODLESearchItem *> *resultArray;
+@property (nonatomic, readwrite) BOOL hasContent;
 
-/* Navigation */
+// Navigation
 @property (nonatomic, strong) UITapGestureRecognizer *tapGestureRecognizer;
+
+// Data Model
+@property (nonatomic, strong) MOODLEDataModel *dataModel;
 
 @end
 
@@ -45,6 +57,8 @@
 
 
 @implementation MOODLECourseSearchViewController
+#pragma mark - View Controller Methodes
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -58,18 +72,33 @@
     [self.view addGestureRecognizer:self.tapGestureRecognizer];
 }
 
--(void)dismissKeyboard {
-    
-    [self.searchBar resignFirstResponder];
-}
 
 - (void)viewDidAppear:(BOOL)animated {
     
     // call super
     [super viewDidAppear:animated];
-
+    
     [self.searchBar resignFirstResponder];
 }
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark - Keyboard Methodes
+
+
+- (void)dismissKeyboard {
+    
+    [self.searchBar resignFirstResponder];
+}
+
+
+#pragma mark - Search Related Methodes
+
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [searchBar resignFirstResponder];
@@ -107,6 +136,7 @@
     }
 }
 
+
 - (void)searchFailedForSearch:(NSString *)searchString {
     
     [self.loadingView removeFromSuperview];
@@ -123,6 +153,7 @@
     self.searchBar.userInteractionEnabled = YES;
 }
 
+
 - (void)searchSucceededWithResult:(NSArray *)resutlArray {
     
     [self.loadingView removeFromSuperview];
@@ -137,17 +168,15 @@
     self.searchBar.userInteractionEnabled = YES;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - Table View Methodes
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return self.resultArray.count;
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
@@ -171,7 +200,9 @@
     return cell;
 }
 
+
 #pragma mark - Lazy/Getter
+
 
 - (MOODLEDataModel *)dataModel {
     
@@ -181,6 +212,7 @@
     }
     return _dataModel;
 }
+
 
 - (MOODLEActivityView *)loadingView {
     
@@ -197,6 +229,7 @@
 
 #pragma mark - Navigation
 
+
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
@@ -211,4 +244,5 @@
 }
 
 
+#pragma mark -
 @end

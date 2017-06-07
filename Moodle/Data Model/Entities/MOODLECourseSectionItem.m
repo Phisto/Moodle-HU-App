@@ -7,16 +7,7 @@
  *
  */
 
-/* Header */
 #import "MOODLECourseSectionItem.h"
-
-
-
-///-----------------------
-/// @name IMPLEMENTATION
-///-----------------------
-
-
 
 @implementation MOODLECourseSectionItem
 @end

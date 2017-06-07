@@ -76,7 +76,9 @@
 @implementation SGLabeledSwitch
 #pragma mark - Synthesize
 
+
 @synthesize selected = _selected;
+
 
 #pragma mark - Object Life Cycle
 
@@ -230,6 +232,9 @@
 }
 
 
+#pragma mark - IBDesignable Methodes
+
+
 - (void)prepareForInterfaceBuilder {
     
     CGFloat selfHeigh = self.frame.size.height;
@@ -270,13 +275,11 @@
 
 
 #pragma mark - Setter (Switch Properties)
-/*
-BOOL value;
-UIColor *onTint;
-UIColor *thumbTint;
-BOOL rightSwitch;
-*/
-
+// BOOL value;
+// UIColor *onTint;
+// UIColor *thumbTint;
+// BOOL rightSwitch;
+ 
 
 - (void)setValue:(BOOL)value {
     
@@ -319,15 +322,14 @@ BOOL rightSwitch;
 
 
 #pragma mark - Setter (Label Properties)
-/*
- NSString *text;
- UIColor *textColor;
- NSInteger lines;
- CGFloat textPadding;
- NSTextAlignment textAlignment;
- CGFloat fontSize;
- UIFont *font;
-*/
+// NSString *text;
+// UIColor *textColor;
+// NSInteger lines;
+// CGFloat textPadding;
+// NSTextAlignment textAlignment;
+// CGFloat fontSize;
+// UIFont *font;
+
 
 - (void)setText:(NSString *)text {
     

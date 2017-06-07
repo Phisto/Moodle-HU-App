@@ -9,6 +9,12 @@
 
 #import "MOODLETableViewRowAction.h"
 
+///-----------------------
+/// @name CATEGORIES
+///-----------------------
+
+
+
 @interface MOODLETableViewRowAction (/* Private */)
 
 @property (nonatomic, strong) UIImage *actionIcon;
@@ -25,6 +31,7 @@
 
 @implementation MOODLETableViewRowAction
 
+
 + (instancetype)rowActionWithStyle:(UITableViewRowActionStyle)style title:(nullable NSString *)title icon:(nullable UIImage*)icon handler:(void (^)(UITableViewRowAction *action, NSIndexPath *indexPath))handler {
     
     if (title.length) title = [@"\n\n" stringByAppendingString:title]; // move title under centerline; icon will go above
@@ -35,7 +42,8 @@
     return action;
 }
 
-//!!!: Private API Use - Not allowed in Apple Store.
+
+///!!!: Private API Use - Possibly not allowed in Apple Store.
 - (void)_setButton:(UIButton*)button {
     
     if (self.font) button.titleLabel.font = self.font;
@@ -50,5 +58,6 @@
         button.imageEdgeInsets = UIEdgeInsetsMake(-(titleSize.height/2.0f), 0.0f, 0.0f, -titleSize.width);
     }
 }
+
 
 @end

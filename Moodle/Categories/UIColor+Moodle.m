@@ -9,6 +9,12 @@
 
 #import "UIColor+Moodle.h"
 
+///-----------------------
+/// @name IMPLEMENTATION
+///-----------------------
+
+
+
 @implementation UIColor (Moodle)
 #pragma mark - Custom Colors
 

@@ -9,11 +9,28 @@
 
 #import "MOODLEActivityView.h"
 
+/* Custom Views */
 #import "HUProgressIndicator.h"
+
+///-----------------------
+/// @name CONSTANTS
+///-----------------------
+
+
 
 static NSString * const kBlurryBackgroundImageName = @"blurry_bg";
 
+
+
+///-----------------------
+/// @name IMPLEMENTATION
+///-----------------------
+
+
+
 @implementation MOODLEActivityView
+#pragma mark - Object Creation
+
 
 + (instancetype)activityViewWithText:(NSString *)text {
     
@@ -61,6 +78,7 @@ static NSString * const kBlurryBackgroundImageName = @"blurry_bg";
     return view;
 }
 
+
 - (instancetype)initWithFrame:(CGRect)frame {
     
     self = [super initWithFrame:frame];
@@ -81,4 +99,6 @@ static NSString * const kBlurryBackgroundImageName = @"blurry_bg";
     return self;
 }
 
+
+#pragma mark -
 @end
