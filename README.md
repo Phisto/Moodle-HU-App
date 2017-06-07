@@ -1,28 +1,27 @@
 # Overview
 
-The Moodle App was written to access the Moodle Platform of the 'Humboldt-Universität zu Berlin'.
-
+The "insert name" App was written to access the Moodle™ instance of the 'Humboldt-Universität zu Berlin'.
 
 ## Usage
 
-Install
-
-
-## Hpple
-
-The Moodle App uses Hpple to parse HTML data.
-
+will follow
 
 ## Credits
 
 will follow
 
-### TO DO
+## Hpple
 
-Save cookie / reload course content after 1h or so / 
+The "insert name" App uses Hpple to parse HTML data.
 
 ### License
 
-Core Audio Converter is released under the GNU General Public License (GPL). 
+The "insert name" App is released under the GNU General Public License (GPL). 
 
 See <http://www.gnu.org/licenses/> for details.
+
+## Trademark
+
+The word Moodle™ is a registered trademark. 
+
+See: https://docs.moodle.org/dev/License
