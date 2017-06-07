@@ -59,6 +59,14 @@
 }
 
 
+- (BOOL)shouldAutorotate {
+    return NO;
+}
+
+
+#pragma mark - Layout Methodes
+
+
 - (void)calculateIfTableViewIsHidden {
     
     if (self.dataModel.hiddenCourses.count == 0) {
@@ -74,14 +82,12 @@
 }
 
 
+#pragma mark - IBAction Methodes
+
+
 - (IBAction)shouldAutoLoginChanged:(id)sender {
     
     self.dataModel.shouldAutoLogin = [(UISwitch *)sender isOn];
-}
-
-
-- (BOOL)shouldAutorotate {
-    return NO;
 }
 
 

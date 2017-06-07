@@ -22,7 +22,7 @@
 
 
 
-@interface MOODLEDocumentViewController ()<UIWebViewDelegate>
+@interface MOODLEDocumentViewController (/* Private */)
 
 // UI
 @property (nonatomic, strong) IBOutlet UIWebView *webView;
@@ -77,7 +77,8 @@
     [super viewWillDisappear:animated];
     
     // show bottom bar
-    [UIView animateWithDuration:.4 animations:^{
+    [UIView animateWithDuration:0.4f
+                     animations:^{
         
         //self.tabBarController.tabBar.hidden = NO;
         self.tabBarController.tabBar.alpha = 1.0;
@@ -85,13 +86,17 @@
     
     // stop
     [self.webView stopLoading];
-
+    
+    if (self.isMovingFromParentViewController) {
+        [self.webView loadHTMLString:@"" baseURL:nil];
+    }
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    [self.webView reload];
 }
 
 

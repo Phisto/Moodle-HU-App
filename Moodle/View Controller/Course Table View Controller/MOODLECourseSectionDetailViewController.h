@@ -19,7 +19,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MOODLECourseSectionDetailViewController : UIViewController
+@interface MOODLECourseSectionDetailViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 #pragma mark - Properties
 ///--------------------
 /// @name Properties

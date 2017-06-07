@@ -9,20 +9,11 @@
 
 #import "MOODLETabBarController.h"
 
+/* View Controller */
 #import "MOODLECourseViewController.h"
 #import "MOODLECourseDetailViewController.h"
 #import "MOODLESearchItemDetailViewController.h"
 #import "MOODLESettingsViewController.h"
-
-@interface MOODLETabBarController ()<UISplitViewControllerDelegate>
-
-@end
-
-
-
-///-----------------------
-/// @name IMPLEMENTATION
-///-----------------------
 
 
 

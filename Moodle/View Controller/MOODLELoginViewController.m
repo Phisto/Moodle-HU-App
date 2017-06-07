@@ -57,7 +57,7 @@ static NSInteger const kPasswordTextFieldTag = 102;
 @property (nonatomic, strong) UITapGestureRecognizer *tapGestureRecognizer; // for dismissing keyboard
 // Model
 @property (nonatomic, strong) MOODLEDataModel *dataModel;
-
+// Accessibility
 @property (nonatomic, strong) AccessibilityCoordinator *accessibility_cord;
 
 @end
@@ -87,7 +87,7 @@ static NSInteger const kPasswordTextFieldTag = 102;
     // call super
     [super viewDidLoad];
     
-    // Add tap gesture recogniszer (for dismissing keyboard)
+    // Add tap gesture recognizer (for dismissing keyboard)
     self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                         action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:self.tapGestureRecognizer];
@@ -526,6 +526,7 @@ static NSInteger const kPasswordTextFieldTag = 102;
     
     UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, message);
 }
+
 
 #pragma mark -
 @end

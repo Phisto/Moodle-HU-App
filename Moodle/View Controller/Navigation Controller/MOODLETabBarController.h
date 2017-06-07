@@ -9,8 +9,6 @@
 
 @import UIKit;
 
-
-
 ///-----------------------
 /// @name CONSTANTS
 ///-----------------------
@@ -32,6 +30,6 @@ static NSString *MOODLETabBarControllerIdentifier = @"MOODLETabBarControllerIden
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MOODLETabBarController : UITabBarController
+@interface MOODLETabBarController : UITabBarController <UISplitViewControllerDelegate>
 @end
 NS_ASSUME_NONNULL_END

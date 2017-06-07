@@ -7,9 +7,10 @@
  *
  */
 
+#import "MOODLECourseViewController.h"
+
 /* Controller */
 #import "MOODLETabBarController.h"
-#import "MOODLECourseViewController.h"
 #import "MOODLECourseDetailViewController.h"
 
 /* Data Model */
@@ -22,6 +23,12 @@
 
 /* Colors */
 #import "UIColor+Moodle.h"
+
+///-----------------------
+/// @name CATEGORIES
+///-----------------------
+
+
 
 @interface MOODLECourseViewController (/* Private */)
 
@@ -39,6 +46,7 @@
 
 
 @implementation MOODLECourseViewController
+#pragma mark - View Controller Methodes
 
 
 - (void)viewDidLoad {
@@ -91,7 +99,7 @@
 }
 
 
-#pragma mark -
+#pragma mark - Navigation Bar Methodes
 
 
 - (void)setupNavigationBar {

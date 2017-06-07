@@ -21,7 +21,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MOODLEDocumentViewController : UIViewController
+@interface MOODLEDocumentViewController : UIViewController <UIWebViewDelegate>
 #pragma mark - Properties
 ///--------------------
 /// @name Properties

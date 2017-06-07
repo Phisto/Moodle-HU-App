@@ -23,7 +23,13 @@
 /* Custom Views */
 #import "MOODLEActivityView.h"
 
-@interface MOODLECourseDetailViewController (/* Private */) <UITableViewDelegate, UITableViewDataSource>
+///-----------------------
+/// @name CATEGORIES
+///-----------------------
+
+
+
+@interface MOODLECourseDetailViewController (/* Private */)
 
 // UI
 @property (nonatomic, strong) IBOutlet UILabel *courseTitleLabel;
@@ -44,12 +50,6 @@
 
 @implementation MOODLECourseDetailViewController
 #pragma mark - View Controller Methodes
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -74,13 +74,32 @@
             
             [self.item.dataModel loadItemContentForItem:self.item
                                       completionHandler:^(BOOL success, NSError *error) {
-                
-                if (success) { [self finishedContentLoading]; }
-                else { [self failedToLoadContentWithMessage:error.localizedDescription]; }
-            }];
+                                          
+                                          if (success) { [self finishedContentLoading]; }
+                                          else { [self failedToLoadContentWithMessage:error.localizedDescription]; }
+                                      }];
         });
     }
     else { [self showTableView]; }
+}
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark - Navigation Bar Methodes
+
+
+- (void)setupNavigationBar {
+    
+    UINavigationBar *navBar = self.navigationController.navigationBar;
+    navBar.layer.shadowColor = [UIColor blackColor].CGColor;
+    navBar.layer.shadowOffset = CGSizeMake(0.0f, 2.0f);
+    navBar.layer.shadowOpacity = 0.22f;
+    navBar.layer.shadowRadius = 2.0f;
 }
 
 
@@ -118,17 +137,6 @@
     
     [self.view setNeedsDisplay];
 }
-
-
-- (void)setupNavigationBar {
-    
-    UINavigationBar *navBar = self.navigationController.navigationBar;
-    navBar.layer.shadowColor = [UIColor blackColor].CGColor;
-    navBar.layer.shadowOffset = CGSizeMake(0.0f, 2.0f);
-    navBar.layer.shadowOpacity = 0.22f;
-    navBar.layer.shadowRadius = 2.0f;
-}
-
 
 
 #pragma mark - Table View Methodes
@@ -201,6 +209,7 @@
 
 
 #pragma mark - Navigation Methodes
+
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

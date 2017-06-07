@@ -11,12 +11,16 @@
 
 #import "HUProgressIndicator.h"
 
+///-----------------------
+/// @name CAEGORIES
+///-----------------------
+
+
+
 @interface MOODLEProgressViewController (/* Private */)
 
-//@property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicator;
-
+// UI
 @property (nonatomic, strong) IBOutlet HUProgressIndicator *activityIndicatorHU;
-
 @property (nonatomic, strong) IBOutlet UILabel *reloginLabel;
 
 @end
@@ -41,6 +45,7 @@
     self.reloginLabel.hidden = !self.shouldShowReloginLabel;
 }
 
+
 - (void)viewDidDisappear:(BOOL)animated {
     
     // call super
@@ -48,6 +53,7 @@
     
     [self.activityIndicatorHU stopAnimating];
 }
+
 
 #pragma mark -
 @end
