@@ -38,7 +38,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong) UIColor *iconAndLabelColor;
 
-#pragma mark - Methodes
+
+
+#pragma mark - Object Life Cycle
 ///----------------------
 /// @name Inititalization
 ///----------------------

@@ -9,8 +9,6 @@
 
 @import Foundation;
 
-
-
 /*
  
  This category is a convenient categorie to perform synchronous requests via `NSURLSession` object.

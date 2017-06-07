@@ -23,7 +23,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MOODLEDataModel : NSObject
-#pragma mark - Login
+#pragma mark - Data Model Life Cycle
 ///----------------------------
 /// @name Data Model Life Cycle
 ///----------------------------
@@ -44,6 +44,8 @@ NS_ASSUME_NONNULL_BEGIN
 */
 - (instancetype)init NS_UNAVAILABLE;
 
+
+
 #pragma mark - Data
 ///--------------------
 /// @name Data
@@ -57,6 +59,8 @@ NS_ASSUME_NONNULL_BEGIN
  A mutable array of MOODLE courses that are hidden.
  */
 @property (nonatomic, strong) NSMutableArray<MOODLECourse *> *hiddenCourses;
+
+
 
 #pragma mark - Login
 ///---------------------
@@ -104,6 +108,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)deleteUserCredentials;
 
+
+
 #pragma mark - Hide/Favorit
 ///----------------------
 /// @name Hide/Favorite
@@ -134,6 +140,8 @@ NS_ASSUME_NONNULL_BEGIN
  
  */
 - (void)updateCourseItemsOrderingWeight;
+
+
 
 #pragma mark - Data loading
 ///----------------------

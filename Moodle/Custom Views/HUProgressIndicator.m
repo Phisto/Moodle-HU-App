@@ -1,28 +1,49 @@
-//
-//  HUProgressIndicator.m
-//  HUProgressIndicator
-//
-//  Created by Simon Gaus on 05.06.17.
-//  Copyright © 2017 Simon Gaus. All rights reserved.
-//
+/*
+ *  HUProgressIndicator.m
+ *  Moodle
+ *
+ *  Created by Simon Gaus on 03.06.17.
+ *  Copyright © 2017 Simon Gaus. All rights reserved.
+ *
+ */
 
 #import "HUProgressIndicator.h"
 
+///-----------------------
+/// @name CONSTANTS
+///-----------------------
+
+
+
 static NSString * const kSmallBezierPathData = @"bezierdata_w80_h80";
 static NSString * const kBigBezierPathData = @"bezierdata_w120_h120";
+
+
+
+///-----------------------
+/// @name CATEGORIES
+///-----------------------
+
+
 
 @interface HUProgressIndicator (/* Private */)
 
 @property (nonatomic, readwrite) NSInteger count;
 @property (nonatomic, readwrite) NSInteger maxCount;
-
-@property (nonatomic, strong) NSTimer *timer;
-
 @property (nonatomic, readwrite) BOOL forward;
 
+@property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, strong) NSArray<UIBezierPath *> *bezierPathArray;
 
 @end
+
+
+
+///-----------------------
+/// @name IMPLEMENTATION
+///-----------------------
+
+
 
 @implementation HUProgressIndicator
 #pragma mark - View Class Methodes
@@ -84,6 +105,20 @@ static NSString * const kBigBezierPathData = @"bezierdata_w120_h120";
     }
     return self;
 }
+
+
+- (void)awakeFromNib {
+    
+    // call super
+    [super awakeFromNib];
+
+    if (self.animating) {
+        [self startAnimating];
+    }
+}
+
+
+#pragma mark - Drawing Methodes
 
 
 - (void)drawRect:(CGRect)rect {

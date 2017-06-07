@@ -12,13 +12,21 @@
 #import "MOODLEDocumentViewController.h"
 
 /* Custom View */
-#import "HUProgressIndicator.h"
+#import "MOODLEActivityView.h"
+
+
+
+///-----------------------
+/// @name CATEGORIES
+///-----------------------
+
+
 
 @interface MOODLEDocumentViewController ()<UIWebViewDelegate>
 
 // UI
 @property (nonatomic, strong) IBOutlet UIWebView *webView;
-@property (nonatomic, strong) UIView *loadingView;
+@property (nonatomic, strong) MOODLEActivityView *loadingView;
 
 @end
 
@@ -106,41 +114,13 @@
 #pragma mark - Lazy
 
 
-- (UIView *)loadingView {
+- (MOODLEActivityView *)loadingView {
     
     if (!_loadingView) {
-        
-        UIView *loading = [[UIView alloc] initWithFrame:CGRectMake(100, 200, 120, 120)];
-        
-        
-        UIImageView *imgView = [[UIImageView alloc] initWithFrame:loading.bounds];
-        imgView.image = [UIImage imageNamed:@"blurry_bg"];
-        [loading addSubview:imgView];
-        
-        
-        UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
-        UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
-        [blurEffectView setFrame:loading.bounds];
-        
-        
-        [loading addSubview:blurEffectView];
-        
-        loading.clipsToBounds = YES;
-        loading.layer.cornerRadius = 15;
-        //loading.opaque = NO;
-        //loading.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.8f];
-        
-        
-        HUProgressIndicator *spinning = [[HUProgressIndicator alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
-        spinning.backgroundColor = [UIColor clearColor];
-        spinning.color = [UIColor blackColor];
-        [spinning setCenter:CGPointMake(loading.frame.size.width/2.0f, loading.frame.size.height/2)];
-        [loading addSubview:spinning];
-        [spinning startAnimating];
-        
-        [loading setCenter:CGPointMake(self.view.frame.size.width/2.0f, self.view.frame.size.height/2.0f)];
-        
-        _loadingView = loading;
+
+        MOODLEActivityView *view = [MOODLEActivityView activityView];
+        view.center = CGPointMake(self.view.center.x, self.view.center.y-self.navigationController.navigationBar.frame.size.height);
+        _loadingView = view;
     }
     return _loadingView;
 }

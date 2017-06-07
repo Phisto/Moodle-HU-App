@@ -19,7 +19,7 @@
 
 /* Custom Views */
 #import "SGLabeledSwitch.h"
-#import "HUProgressIndicator.h"
+#import "MOODLEActivityView.h"
 
 
 ///-----------------------
@@ -50,7 +50,7 @@ static NSInteger const kPasswordTextFieldTag = 102;
 @property (nonatomic, strong) IBOutlet UIButton *loginButton;
 @property (nonatomic, strong) IBOutlet SGLabeledSwitch *saveCredentialsSwitch;
 @property (nonatomic, strong) IBOutlet SGLabeledSwitch *autoLoginSwitch;
-@property (nonatomic, strong) UIView *loadingView;
+@property (nonatomic, strong) MOODLEActivityView *loadingView;
 // Contraints
 @property (nonatomic, strong) IBOutlet NSLayoutConstraint *imageHeightConstraint;
 // Navigation
@@ -279,7 +279,7 @@ static NSInteger const kPasswordTextFieldTag = 102;
                                         
                                         // update ui on main thread
                                         dispatch_async(dispatch_get_main_queue(), ^{
-                                            
+
                                             // remove activity indicator
                                             [self.loadingView removeFromSuperview];
                                             self.loadingView = nil;
@@ -476,47 +476,10 @@ static NSInteger const kPasswordTextFieldTag = 102;
     
     if (!_loadingView) {
         
-        UIView *loading = [[UIView alloc] initWithFrame:CGRectMake(100, 200, 120, 120)];
-        
-        
-        UIImageView *imgView = [[UIImageView alloc] initWithFrame:loading.bounds];
-        imgView.image = [UIImage imageNamed:@"blurry_bg"];
-        [loading addSubview:imgView];
-        
-        
-        UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
-        UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
-        [blurEffectView setFrame:loading.bounds];
-        
-        
-        [loading addSubview:blurEffectView];
-        
-        loading.clipsToBounds = YES;
-        loading.layer.cornerRadius = 15;
-        //loading.opaque = NO;
-        //loading.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.8f];
-        
-        UILabel *loadLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 25, 90, 22)];
-        loadLabel.text = NSLocalizedString(@"Login", @"Lable of the activity indicator during login request.");
-        loadLabel.font = [UIFont systemFontOfSize:18.0f];
-        loadLabel.textAlignment = NSTextAlignmentCenter;
-        loadLabel.textColor = [UIColor blackColor];
-        loadLabel.backgroundColor = [UIColor clearColor];
-        [loadLabel setCenter:CGPointMake(loading.frame.size.width/2.0f, loading.frame.size.height*0.88f)];
-        
-        [loading addSubview:loadLabel];
-        
-        
-        HUProgressIndicator *spinning = [[HUProgressIndicator alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
-        spinning.backgroundColor = [UIColor clearColor];
-        spinning.color = [UIColor blackColor];
-        [spinning setCenter:CGPointMake(loading.frame.size.width/2.0f, loading.frame.size.height*0.45f)];
-        [loading addSubview:spinning];
-        [spinning startAnimating];
-        
-        [loading setCenter:CGPointMake(self.view.frame.size.width/2.0f, self.view.frame.size.height/2.0f)];
-        
-        _loadingView = loading;
+        NSString *locString = NSLocalizedString(@"Login", @"Lable of the activity indicator during login request.");
+        MOODLEActivityView *view = [MOODLEActivityView activityViewWithText:locString];
+        view.center = self.view.center;
+        _loadingView = view;
     }
     return _loadingView;
 }

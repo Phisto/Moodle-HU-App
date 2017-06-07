@@ -7,9 +7,6 @@
  *
  */
 
-
-
-/* Header */
 #import "AppDelegate.h"
 
 /* Data Model */
@@ -179,7 +176,7 @@ static NSUInteger const kLoginTimeoutTrashold = 3600;
 }
 
 
-#pragma mark - Lazy/Getter/Inject
+#pragma mark - Lazy/Getter/Injected
 
 
 - (NSUserDefaults *)defaults {

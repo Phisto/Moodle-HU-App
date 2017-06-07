@@ -226,7 +226,7 @@
 				F4D198831EE2C8F400BF64F2 /* AccessibilityCoordinator.h */,
 				F4D198841EE2C8F400BF64F2 /* AccessibilityCoordinator.m */,
 			);
-			name = Accessibility;
+			path = Accessibility;
 			sourceTree = "<group>";
 		};
 		F47F4F011EE4D6D40047B330 /* Custom Controlls */ = {
@@ -256,7 +256,7 @@
 				F4C841621EE8437800B0EEC5 /* MOODLEActivityView.h */,
 				F4C841631EE8437800B0EEC5 /* MOODLEActivityView.m */,
 			);
-			name = "Custom Views";
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 		F4D49AA31EC70B8000CA1193 = {
@@ -310,7 +310,7 @@
 				F45778A31EE78E8D0000B130 /* bezierdata_w120_h120.archive */,
 				F4D49AB01EC70B8000CA1193 /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		F4D49ACF1EC790AD00CA1193 /* Hpple */ = {

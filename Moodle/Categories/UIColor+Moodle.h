@@ -11,13 +11,17 @@
 
 /**
  
- A convenient UIColor category, to give easy access to custom colors spezific to the Moodle app.
+ A convenient UIColor category to give easy access to custom colors spezific to the Moodle app.
  
  */
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIColor (Moodle)
+#pragma mark - Methodes
+///---------------------------
+/// @name Custom Colors
+///---------------------------
 
 /**
  The blue color used for the Moodle app.

@@ -11,11 +11,11 @@
 
 /**
  
- The MOODLEDocumentViewController is responsible for presenting MOODLE course section ressources.
+ The MOODLEDocumentViewController is responsible for presenting MOODLE course section resources.
  
  ##Overview
  All resources are displayed via an UIWebView. 
- It may be better do use different kind of views to diplay different kind of ressources.
+ It may be better do use different kind of views to diplay different kind of resources.
  
  */
 

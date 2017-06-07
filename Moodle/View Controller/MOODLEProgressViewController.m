@@ -13,7 +13,7 @@
 
 @interface MOODLEProgressViewController (/* Private */)
 
-@property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicator;
+//@property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @property (nonatomic, strong) IBOutlet HUProgressIndicator *activityIndicatorHU;
 
@@ -39,7 +39,6 @@
     [super viewDidAppear:animated];
     
     self.reloginLabel.hidden = !self.shouldShowReloginLabel;
-    [self.activityIndicator startAnimating];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -47,7 +46,7 @@
     // call super
     [super viewDidDisappear:animated];
     
-    [self.activityIndicator stopAnimating];
+    [self.activityIndicatorHU stopAnimating];
 }
 
 #pragma mark -
