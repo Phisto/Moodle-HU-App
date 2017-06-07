@@ -28,9 +28,18 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 #import "TFHppleElement.h"
+
+/**
+ 
+ A nice Objective-C wrapper on the XPathQuery library (libxml2) for parsing HTML.
+ 
+ ## Credits
+ Hpple was created by Geoffrey Grosenbach, Topfunky Corporation and PeepCode Screencasts.
+ 
+ */
 
 @interface TFHpple : NSObject 
 

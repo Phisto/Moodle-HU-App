@@ -27,34 +27,52 @@
 //  OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-
+@import Foundation;
 
 @interface TFHppleElement : NSObject
+#pragma mark - Properties
+///---------------------------
+/// @name Properties
+///---------------------------
 
-- (id) initWithNode:(NSDictionary *) theNode isXML:(BOOL)isDataXML withEncoding:(NSString *)theEncoding;
++ (TFHppleElement *)hppleElementWithNode:(NSDictionary *) theNode isXML:(BOOL)isDataXML withEncoding:(NSString *)theEncoding;
 
-+ (TFHppleElement *) hppleElementWithNode:(NSDictionary *) theNode isXML:(BOOL)isDataXML withEncoding:(NSString *)theEncoding;
+- (id)initWithNode:(NSDictionary *) theNode isXML:(BOOL)isDataXML withEncoding:(NSString *)theEncoding;
 
+/**
+ Returns this tag's HTML content.
+ */
 @property (nonatomic, copy, readonly) NSString *raw;
-// Returns this tag's innerHTML content.
+/**
+ Returns this tag's innerHTML content.
+ */
 @property (nonatomic, copy, readonly) NSString *content;
 
-// Returns the name of the current tag, such as "h3".
+/**
+ Returns the name of the current tag, such as "h3".
+ */
 @property (nonatomic, copy, readonly) NSString *tagName;
 
-// Returns tag attributes with name as key and content as value.
-//   href  = 'http://peepcode.com'
-//   class = 'highlight'
+/**
+ Returns tag attributes with name as key and content as value.
+ 
+ href  = 'http://peepcode.com'
+ class = 'highlight'
+ */
 @property (nonatomic, strong, readonly) NSDictionary *attributes;
 
-// Returns the children of a given node
+/**
+ Returns the children of a given node.
+ */
 @property (nonatomic, strong, readonly) NSArray *children;
 
-// Returns the first child of a given node
+/**
+ Returns the first child of a given node.
+ */
 @property (nonatomic, strong, readonly) TFHppleElement *firstChild;
-
-// the parent of a node
+/**
+ The parent of a node.
+ */
 @property (nonatomic, unsafe_unretained, readonly) TFHppleElement *parent;
 
 // Returns YES if the node has any child
