@@ -167,7 +167,7 @@ static NSString * const kBigBezierPathData = @"bezierdata_w120_h120";
     CAShapeLayer *shapeLayer = (CAShapeLayer *)self.layer;
     NSInteger counter = self.count;
     NSInteger maxIndex = self.maxCount-1;
-    BOOL test = YES;
+    BOOL reverse = YES;
     
     UIBezierPath *currentPath = [[UIBezierPath alloc] init];
     
@@ -175,19 +175,18 @@ static NSString * const kBigBezierPathData = @"bezierdata_w120_h120";
         
         for (NSInteger i = 0 ; i <= counter ; i++) {
             
-            [currentPath appendPath:self.bezierPathArray[(test) ? i : (maxIndex-i)]];
-            test = !test;
+            [currentPath appendPath:self.bezierPathArray[( (reverse) ? (maxIndex-i) : i )]];
+            reverse = !reverse;
         }
         
         shapeLayer.path = currentPath.CGPath;
-        test = !test;
     }
     else {
         
         for (NSInteger i = maxIndex ; i >= counter ; i--) {
             
-            [currentPath appendPath:self.bezierPathArray[(test) ? i : (maxIndex-i)]];
-            test = !test;
+            [currentPath appendPath:self.bezierPathArray[( (reverse) ? (maxIndex-i) : i )]];
+            reverse = !reverse;
         }
         
         shapeLayer.path = currentPath.CGPath;

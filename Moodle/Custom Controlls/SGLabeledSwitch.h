@@ -60,11 +60,11 @@ IB_DESIGNABLE
 /**
  The color used to tint the appearance of the switch when it is turned on.
  */
-@property (nonatomic, strong) IBInspectable UIColor *onTint;
+@property (nullable, nonatomic, strong) IBInspectable UIColor *onTint;
 /**
  The color used to tint the appearance of the thumb.
  */
-@property (nonatomic, strong) IBInspectable UIColor *thumbTint;
+@property (nullable, nonatomic, strong) IBInspectable UIColor *thumbTint;
 /**
  Boolean indication if the switch should be on the right side.
  */
