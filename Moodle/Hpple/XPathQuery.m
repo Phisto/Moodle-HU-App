@@ -1,10 +1,10 @@
-//
-//  XPathQuery.m
-//  FuelFinder
-//
-//  Created by Matt Gallagher on 4/08/08.
-//  Copyright 2008 __MyCompanyName__. All rights reserved.
-//
+/*
+ *  XPathQuery.m
+ *  Moodle
+ *
+ *  Created by Matt Gallagher on 4/08/08.
+ *  See: http://www.cocoawithlove.com/2008/10/using-libxml2-for-parsing-and-xpath.html
+ */
 
 #import "XPathQuery.h"
 
@@ -30,6 +30,13 @@ NSDictionary *DictionaryForNode(xmlNodePtr currentNode, NSMutableDictionary *par
     if (nodeContent != NULL) {
         NSString *currentNodeContent = [NSString stringWithCString:(const char *)nodeContent
                                                           encoding:NSUTF8StringEncoding];
+        
+        // manually added merge request
+        // https://github.com/Diveinedu-CN/hpple/commit/19ace06eeb6af2e1ba7633a3c8696ed9ac4eee17#comments
+        if (currentNodeContent == nil) {
+            currentNodeContent = @"";
+        }
+        
         if ([resultForNode[@"nodeName"] isEqual:@"text"] && parentResult) {
             if (parentContent) {
                 NSCharacterSet *charactersToTrim = [NSCharacterSet whitespaceAndNewlineCharacterSet];
