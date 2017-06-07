@@ -1,6 +1,6 @@
 # Overview
 
-The "insert name" App was written to access the Moodle™ instance of the 'Humboldt-Universität zu Berlin'.
+The "insert name" app was written to access the Moodle™ instance of the 'Humboldt-Universität zu Berlin'.
 
 ## Usage
 
@@ -12,11 +12,11 @@ will follow
 
 ## Hpple
 
-The "insert name" App uses Hpple to parse HTML data.
+The "insert name" app uses Hpple to parse HTML data.
 
 ### License
 
-The "insert name" App is released under the GNU General Public License (GPL). 
+The "insert name" app is released under the GNU General Public License (GPL). 
 
 See <http://www.gnu.org/licenses/> for details.
 
