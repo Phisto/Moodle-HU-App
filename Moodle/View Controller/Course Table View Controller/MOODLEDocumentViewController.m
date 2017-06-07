@@ -11,7 +11,8 @@
 
 #import "MOODLEDocumentViewController.h"
 
-
+/* Custom View */
+#import "HUProgressIndicator.h"
 
 @interface MOODLEDocumentViewController ()<UIWebViewDelegate>
 
@@ -111,15 +112,31 @@
         
         UIView *loading = [[UIView alloc] initWithFrame:CGRectMake(100, 200, 120, 120)];
         
-        loading.layer.cornerRadius = 15;
-        loading.opaque = NO;
-        loading.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.7f];
         
-        UIActivityIndicatorView *spinning = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-        spinning.frame = CGRectMake(42, 54, 37, 37);
-        [spinning startAnimating];
-        [spinning setCenter:CGPointMake(loading.frame.size.width/2.0f, loading.frame.size.height/2.0f)];
+        UIImageView *imgView = [[UIImageView alloc] initWithFrame:loading.bounds];
+        imgView.image = [UIImage imageNamed:@"blurry_bg"];
+        [loading addSubview:imgView];
+        
+        
+        UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
+        UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+        [blurEffectView setFrame:loading.bounds];
+        
+        
+        [loading addSubview:blurEffectView];
+        
+        loading.clipsToBounds = YES;
+        loading.layer.cornerRadius = 15;
+        //loading.opaque = NO;
+        //loading.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.8f];
+        
+        
+        HUProgressIndicator *spinning = [[HUProgressIndicator alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
+        spinning.backgroundColor = [UIColor clearColor];
+        spinning.color = [UIColor blackColor];
+        [spinning setCenter:CGPointMake(loading.frame.size.width/2.0f, loading.frame.size.height/2)];
         [loading addSubview:spinning];
+        [spinning startAnimating];
         
         [loading setCenter:CGPointMake(self.view.frame.size.width/2.0f, self.view.frame.size.height/2.0f)];
         

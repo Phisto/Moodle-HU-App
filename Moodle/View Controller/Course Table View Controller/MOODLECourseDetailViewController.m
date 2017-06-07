@@ -9,15 +9,19 @@
 
 #import "MOODLECourseDetailViewController.h"
 
+/* View Controller */
+#import "MOODLECourseSectionDetailViewController.h"
+
 /* Data Model */
 #import "MOODLEDataModel.h"
 #import "MOODLECourse.h"
 #import "MOODLECourseSection.h"
 
-
-#import "MOODLECourseSectionDetailViewController.h"
+/* Table View */
 #import "MOODLECourseSectionTableViewCell.h"
 
+/* Custom Views */
+#import "HUProgressIndicator.h"
 
 @interface MOODLECourseDetailViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -222,27 +226,42 @@
         
         UIView *loading = [[UIView alloc] initWithFrame:CGRectMake(100, 200, 120, 120)];
         
+        
+        UIImageView *imgView = [[UIImageView alloc] initWithFrame:loading.bounds];
+        imgView.image = [UIImage imageNamed:@"blurry_bg"];
+        [loading addSubview:imgView];
+        
+        
+        UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
+        UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+        [blurEffectView setFrame:loading.bounds];
+        
+        
+        [loading addSubview:blurEffectView];
+        
+        loading.clipsToBounds = YES;
         loading.layer.cornerRadius = 15;
-        loading.opaque = NO;
-        loading.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.7f];
+        //loading.opaque = NO;
+        //loading.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.8f];
         
         UILabel *loadLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 25, 90, 22)];
         loadLabel.text = NSLocalizedString(@"Laden", @"Label of the progress indicator during course content loading.");
-        loadLabel.font = [UIFont boldSystemFontOfSize:18.0f];
+        loadLabel.font = [UIFont systemFontOfSize:18.0f];
         loadLabel.textAlignment = NSTextAlignmentCenter;
-        loadLabel.textColor = [UIColor whiteColor];
+        loadLabel.textColor = [UIColor blackColor];
         loadLabel.backgroundColor = [UIColor clearColor];
-        [loadLabel setCenter:CGPointMake(loading.frame.size.width/2.0f, loading.frame.size.height*0.8f)];
+        [loadLabel setCenter:CGPointMake(loading.frame.size.width/2.0f, loading.frame.size.height*0.88f)];
         
         [loading addSubview:loadLabel];
         
-        UIActivityIndicatorView *spinning = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-        spinning.frame = CGRectMake(42, 54, 37, 37);
-        [spinning startAnimating];
+        
+        HUProgressIndicator *spinning = [[HUProgressIndicator alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
+        spinning.backgroundColor = [UIColor clearColor];
+        spinning.color = [UIColor blackColor];
         [spinning setCenter:CGPointMake(loading.frame.size.width/2.0f, loading.frame.size.height*0.45f)];
         [loading addSubview:spinning];
+        [spinning startAnimating];
         
-        //loading.frame = CGRectMake(100, 200, 120, 120);
         [loading setCenter:CGPointMake(self.view.frame.size.width/2.0f, self.view.frame.size.height/2.0f)];
         
         _loadingView = loading;

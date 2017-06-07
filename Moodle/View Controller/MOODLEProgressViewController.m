@@ -9,9 +9,14 @@
 
 #import "MOODLEProgressViewController.h"
 
+#import "HUProgressIndicator.h"
+
 @interface MOODLEProgressViewController (/* Private */)
 
 @property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicator;
+
+@property (nonatomic, strong) IBOutlet HUProgressIndicator *activityIndicatorHU;
+
 @property (nonatomic, strong) IBOutlet UILabel *reloginLabel;
 
 @end

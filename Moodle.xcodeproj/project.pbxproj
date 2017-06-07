@@ -33,10 +33,14 @@
 		F438529A1EC93A7E005BC780 /* MOODLECourseSectionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43852981EC93A7E005BC780 /* MOODLECourseSectionDetailViewController.m */; };
 		F43D50291EE17A4200BF534E /* MOODLEProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43D50281EE17A4200BF534E /* MOODLEProgressViewController.m */; };
 		F451B6181EE59E9D00BE056E /* UIColor+Moodle.m in Sources */ = {isa = PBXBuildFile; fileRef = F451B6171EE59E9D00BE056E /* UIColor+Moodle.m */; };
+		F45778A41EE78E8D0000B130 /* HUProgressIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = F45778A11EE78E8D0000B130 /* HUProgressIndicator.m */; };
+		F45778A51EE78E8D0000B130 /* bezierdata_w80_h80.archive in Resources */ = {isa = PBXBuildFile; fileRef = F45778A21EE78E8D0000B130 /* bezierdata_w80_h80.archive */; };
+		F45778A61EE78E8D0000B130 /* bezierdata_w120_h120.archive in Resources */ = {isa = PBXBuildFile; fileRef = F45778A31EE78E8D0000B130 /* bezierdata_w120_h120.archive */; };
 		F45DE6761ED1FEDD0077BC61 /* MOODLECommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F45DE6751ED1FEDD0077BC61 /* MOODLECommentTableViewCell.m */; };
 		F466904A1EE1FED500748E8C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F46690461EE1FED500748E8C /* Localizable.strings */; };
 		F46BE03B1EC9E9B60060F934 /* MOODLEDocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46BE03A1EC9E9B60060F934 /* MOODLEDocumentViewController.m */; };
 		F47F4F071EE4D7480047B330 /* SGLabeledSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = F47F4F051EE4D7480047B330 /* SGLabeledSwitch.m */; };
+		F4C841641EE8437800B0EEC5 /* MOODLEActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C841631EE8437800B0EEC5 /* MOODLEActivityView.m */; };
 		F4D198851EE2C8F400BF64F2 /* AccessibilityCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D198841EE2C8F400BF64F2 /* AccessibilityCoordinator.m */; };
 		F4D49AB11EC70B8000CA1193 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D49AB01EC70B8000CA1193 /* main.m */; };
 		F4D49AB41EC70B8000CA1193 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D49AB31EC70B8000CA1193 /* AppDelegate.m */; };
@@ -86,6 +90,10 @@
 		F43D50281EE17A4200BF534E /* MOODLEProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOODLEProgressViewController.m; sourceTree = "<group>"; };
 		F451B6161EE59E9D00BE056E /* UIColor+Moodle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Moodle.h"; sourceTree = "<group>"; };
 		F451B6171EE59E9D00BE056E /* UIColor+Moodle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Moodle.m"; sourceTree = "<group>"; };
+		F45778A01EE78E8D0000B130 /* HUProgressIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUProgressIndicator.h; sourceTree = "<group>"; };
+		F45778A11EE78E8D0000B130 /* HUProgressIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUProgressIndicator.m; sourceTree = "<group>"; };
+		F45778A21EE78E8D0000B130 /* bezierdata_w80_h80.archive */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = bezierdata_w80_h80.archive; sourceTree = "<group>"; };
+		F45778A31EE78E8D0000B130 /* bezierdata_w120_h120.archive */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = bezierdata_w120_h120.archive; sourceTree = "<group>"; };
 		F45DE6741ED1FEDD0077BC61 /* MOODLECommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOODLECommentTableViewCell.h; sourceTree = "<group>"; };
 		F45DE6751ED1FEDD0077BC61 /* MOODLECommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOODLECommentTableViewCell.m; sourceTree = "<group>"; };
 		F46690471EE1FED500748E8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -100,6 +108,8 @@
 		F47F4F051EE4D7480047B330 /* SGLabeledSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SGLabeledSwitch.m; path = "Custom Controlls/SGLabeledSwitch.m"; sourceTree = "<group>"; };
 		F47F4F061EE4D7480047B330 /* SGLabeledSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SGLabeledSwitch.h; path = "Custom Controlls/SGLabeledSwitch.h"; sourceTree = "<group>"; };
 		F48FF8621ECEEE7100E9BFC8 /* Moodle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Moodle.entitlements; sourceTree = "<group>"; };
+		F4C841621EE8437800B0EEC5 /* MOODLEActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOODLEActivityView.h; sourceTree = "<group>"; };
+		F4C841631EE8437800B0EEC5 /* MOODLEActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOODLEActivityView.m; sourceTree = "<group>"; };
 		F4D198831EE2C8F400BF64F2 /* AccessibilityCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessibilityCoordinator.h; sourceTree = "<group>"; };
 		F4D198841EE2C8F400BF64F2 /* AccessibilityCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessibilityCoordinator.m; sourceTree = "<group>"; };
 		F4D49AAC1EC70B8000CA1193 /* Moodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -238,6 +248,17 @@
 			path = "Table View";
 			sourceTree = "<group>";
 		};
+		F4C841611EE8435000B0EEC5 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				F45778A01EE78E8D0000B130 /* HUProgressIndicator.h */,
+				F45778A11EE78E8D0000B130 /* HUProgressIndicator.m */,
+				F4C841621EE8437800B0EEC5 /* MOODLEActivityView.h */,
+				F4C841631EE8437800B0EEC5 /* MOODLEActivityView.m */,
+			);
+			name = "Custom Views";
+			sourceTree = "<group>";
+		};
 		F4D49AA31EC70B8000CA1193 = {
 			isa = PBXGroup;
 			children = (
@@ -262,11 +283,11 @@
 				F4D49AB21EC70B8000CA1193 /* AppDelegate.h */,
 				F4D49AB31EC70B8000CA1193 /* AppDelegate.m */,
 				F4D49AEF1EC8B14700CA1193 /* View Controller */,
-				F4D49AAF1EC70B8000CA1193 /* Supporting Files */,
 				F4372A3B1EDF70AE005A1427 /* Data Model */,
 				F4A81FB31EDCA8D100AEAB48 /* Table View */,
 				F4D49AEA1EC8AFAE00CA1193 /* Categories */,
 				F40006211ECE237000FB1F60 /* Worker */,
+				F4C841611EE8435000B0EEC5 /* Custom Views */,
 				F47F4F011EE4D6D40047B330 /* Custom Controlls */,
 				F451B6191EE5A50900BE056E /* Accessibility */,
 				F4D49AB81EC70B8000CA1193 /* Main.storyboard */,
@@ -275,6 +296,7 @@
 				F48FF8621ECEEE7100E9BFC8 /* Moodle.entitlements */,
 				F46690461EE1FED500748E8C /* Localizable.strings */,
 				F4D49AC01EC70B8000CA1193 /* Info.plist */,
+				F4D49AAF1EC70B8000CA1193 /* Supporting Files */,
 				F4D49AE61EC88F1700CA1193 /* Keychain Wrapper */,
 				F4D49ACF1EC790AD00CA1193 /* Hpple */,
 			);
@@ -284,6 +306,8 @@
 		F4D49AAF1EC70B8000CA1193 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F45778A21EE78E8D0000B130 /* bezierdata_w80_h80.archive */,
+				F45778A31EE78E8D0000B130 /* bezierdata_w120_h120.archive */,
 				F4D49AB01EC70B8000CA1193 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -463,8 +487,10 @@
 			files = (
 				F4D49ABF1EC70B8000CA1193 /* LaunchScreen.storyboard in Resources */,
 				F466904A1EE1FED500748E8C /* Localizable.strings in Resources */,
+				F45778A61EE78E8D0000B130 /* bezierdata_w120_h120.archive in Resources */,
 				F4D49ABC1EC70B8000CA1193 /* Assets.xcassets in Resources */,
 				F4D49ABA1EC70B8000CA1193 /* Main.storyboard in Resources */,
+				F45778A51EE78E8D0000B130 /* bezierdata_w80_h80.archive in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +553,7 @@
 				F4D49AD71EC790BE00CA1193 /* TFHppleElement.m in Sources */,
 				F4D49AE91EC8AF1300CA1193 /* MOODLECourseSection.m in Sources */,
 				F43852961EC922D7005BC780 /* MOODLECourseSectionItem.m in Sources */,
+				F4C841641EE8437800B0EEC5 /* MOODLEActivityView.m in Sources */,
 				F451B6181EE59E9D00BE056E /* UIColor+Moodle.m in Sources */,
 				F45DE6761ED1FEDD0077BC61 /* MOODLECommentTableViewCell.m in Sources */,
 				F4D49AF21EC8B16600CA1193 /* MOODLECourseDetailViewController.m in Sources */,
@@ -553,6 +580,7 @@
 				F43D50291EE17A4200BF534E /* MOODLEProgressViewController.m in Sources */,
 				F4D49ACE1EC7761200CA1193 /* MOODLECourseViewController.m in Sources */,
 				F4D49AF51EC8C12D00CA1193 /* MOODLECourseSearchViewController.m in Sources */,
+				F45778A41EE78E8D0000B130 /* HUProgressIndicator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -711,6 +739,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				DEVELOPMENT_TEAM = N67G6688LK;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Moodle/Frameworks",
+				);
 				GCC_OPTIMIZATION_LEVEL = 3;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = Moodle/Info.plist;
@@ -728,6 +760,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				DEVELOPMENT_TEAM = N67G6688LK;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Moodle/Frameworks",
+				);
 				GCC_OPTIMIZATION_LEVEL = 3;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = Moodle/Info.plist;

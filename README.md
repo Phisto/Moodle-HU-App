@@ -1,4 +1,4 @@
-## Overview
+# Overview
 
 The Moodle App was written to access the Moodle Platform of the 'Humboldt-Universität zu Berlin'.
 
@@ -8,7 +8,7 @@ The Moodle App was written to access the Moodle Platform of the 'Humboldt-Univer
 Install
 
 
-##Hpple
+## Hpple
 
 The Moodle App uses Hpple to parse HTML data.
 
@@ -17,7 +17,11 @@ The Moodle App uses Hpple to parse HTML data.
 
 will follow
 
-##License
+### TO DO
+
+Save cookie / reload course content after 1h or so / 
+
+### License
 
 Core Audio Converter is released under the GNU General Public License (GPL). 
 

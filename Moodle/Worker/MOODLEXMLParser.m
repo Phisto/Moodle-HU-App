@@ -9,11 +9,13 @@
 
 #import "MOODLEXMLParser.h"
 
+/* Entities */
 #import "MOODLECourse.h"
 #import "MOODLECourseSection.h"
 #import "MOODLECourseSectionItem.h"
 #import "MOODLESearchItem.h"
 
+/* Parser */
 #import "TFHpple.h"
 
 
@@ -22,8 +24,7 @@
 /// @name CONSTANTS
 ///-----------------------
 
-
-
+/* Resource Identifier */
 static NSString * const kResourceIdentifier = @"modtype_resource";
 static NSString * const kWikiIdentifier = @"modtype_ouwiki";
 static NSString * const kLabelIdentifier = @"modtype_label";
@@ -35,6 +36,7 @@ static NSString * const kGalleryIdentifier = @"modtype_lightboxgallery";
 static NSString * const kFolderIdentifier = @"modtype_folder";
 static NSString * const kPageIdentifier = @"modtype_page";
 
+/* Document Type Identifier */
 static NSString * const kDocIconURLPowerPoint = @"powerpoint-24";
 static NSString * const kDocIconURLPDF = @"pdf-24";
 static NSString * const kDocIconURLWordDocument = @"document-24";
@@ -51,7 +53,6 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
 @interface MOODLEXMLParser (/* Private */)
 
 @property (nonatomic, strong) NSNumberFormatter *numberFormatter;
-
 @property (nonatomic, strong) NSArray<NSString *> *semesterArray;
 
 @end

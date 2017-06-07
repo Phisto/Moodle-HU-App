@@ -19,6 +19,7 @@
 
 /* Custom Views */
 #import "SGLabeledSwitch.h"
+#import "HUProgressIndicator.h"
 
 
 ///-----------------------
@@ -90,6 +91,19 @@ static NSInteger const kPasswordTextFieldTag = 102;
     self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                         action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:self.tapGestureRecognizer];
+    
+    /*
+    NSLog(@"Cookies before login");
+    NSLog(@"\n\n\n");
+    
+    NSArray *cookies = [NSHTTPCookieStorage sharedHTTPCookieStorage].cookies;
+    for (NSHTTPCookie *plaetzchen in cookies) {
+        
+        NSLog(@"cookies:%@", plaetzchen);
+    }
+    
+    NSLog(@"\n\n\n");
+    */
 }
 
 
@@ -248,6 +262,8 @@ static NSInteger const kPasswordTextFieldTag = 102;
                                                                           // remove activity indicator
                                                                           [self.loadingView removeFromSuperview];
                                                                           self.loadingView = nil;
+                                                                          
+                                                                          
                                                                           
                                                                           // this will make the app delegate change the root view controller
                                                                           // from loggin to course controller
@@ -462,25 +478,41 @@ static NSInteger const kPasswordTextFieldTag = 102;
         
         UIView *loading = [[UIView alloc] initWithFrame:CGRectMake(100, 200, 120, 120)];
         
+        
+        UIImageView *imgView = [[UIImageView alloc] initWithFrame:loading.bounds];
+        imgView.image = [UIImage imageNamed:@"blurry_bg"];
+        [loading addSubview:imgView];
+        
+        
+        UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
+        UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+        [blurEffectView setFrame:loading.bounds];
+        
+        
+        [loading addSubview:blurEffectView];
+        
+        loading.clipsToBounds = YES;
         loading.layer.cornerRadius = 15;
-        loading.opaque = NO;
-        loading.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.7f];
+        //loading.opaque = NO;
+        //loading.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.8f];
         
         UILabel *loadLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 25, 90, 22)];
         loadLabel.text = NSLocalizedString(@"Login", @"Lable of the activity indicator during login request.");
-        loadLabel.font = [UIFont boldSystemFontOfSize:18.0f];
+        loadLabel.font = [UIFont systemFontOfSize:18.0f];
         loadLabel.textAlignment = NSTextAlignmentCenter;
-        loadLabel.textColor = [UIColor whiteColor];
+        loadLabel.textColor = [UIColor blackColor];
         loadLabel.backgroundColor = [UIColor clearColor];
-        [loadLabel setCenter:CGPointMake(loading.frame.size.width/2.0f, loading.frame.size.height*0.8f)];
+        [loadLabel setCenter:CGPointMake(loading.frame.size.width/2.0f, loading.frame.size.height*0.88f)];
         
         [loading addSubview:loadLabel];
         
-        UIActivityIndicatorView *spinning = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-        spinning.frame = CGRectMake(42, 54, 37, 37);
-        [spinning startAnimating];
+        
+        HUProgressIndicator *spinning = [[HUProgressIndicator alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
+        spinning.backgroundColor = [UIColor clearColor];
+        spinning.color = [UIColor blackColor];
         [spinning setCenter:CGPointMake(loading.frame.size.width/2.0f, loading.frame.size.height*0.45f)];
         [loading addSubview:spinning];
+        [spinning startAnimating];
         
         [loading setCenter:CGPointMake(self.view.frame.size.width/2.0f, self.view.frame.size.height/2.0f)];
         

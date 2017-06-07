@@ -52,6 +52,26 @@
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self
                                                                                             action:@selector(longPressGestureRecognized:)];
     [self.tableView addGestureRecognizer:longPress];
+    
+    
+    NSArray *cookies = [NSHTTPCookieStorage sharedHTTPCookieStorage].cookies;
+    for (NSHTTPCookie *plaetzchen in cookies) {
+        
+        if ([plaetzchen.name isEqualToString:@"MoodleSession"]) {
+            
+            NSLog(@"\n\n\n");
+            NSLog(@"MOODLE COOKIE");
+            
+            NSLog(@"name:%@", plaetzchen.name);
+            NSLog(@"comment:%@", plaetzchen.comment);
+            NSLog(@"commentURL:%@", plaetzchen.commentURL);
+            NSLog(@"domain:%@", plaetzchen.domain);
+            NSLog(@"expiresDate:%@", plaetzchen.expiresDate);
+            NSLog(@"properties:%@", plaetzchen.properties);
+            NSLog(@"value:%@", plaetzchen.value);
+        }
+        NSLog(@"\n\n\n");
+    }
 }
 
 
