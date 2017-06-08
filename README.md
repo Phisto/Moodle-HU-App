@@ -3,6 +3,8 @@
 This application is not an official app. 
 **It is NOT supported, maintained or otherwise associated with the 'Humboldt-Universität zu Berlin' or Moodle Pty Ltd.**
 
+**Do not contact their support for help.**
+
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
