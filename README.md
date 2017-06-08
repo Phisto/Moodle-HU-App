@@ -9,7 +9,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 ## Overview
 
-This app was written to access a user account on the Moodle™ instance of the 'Humboldt-Universität zu Berlin'.
+I wrote this app to access a user account on the Moodle™ instance of the 'Humboldt-Universität zu Berlin'.
 
 ### Screnshots
 
@@ -27,7 +27,16 @@ Document                   |  Course Search
 ![](http://simonsapps.de/hu_moodle_screenshots/dokument.png)  |  ![](http://simonsapps.de/hu_moodle_screenshots/suche.png)
 
 
+## Install
 
+1. Install [Xcode](https://developer.apple.com/xcode/)
+1. Download the source code or `git clone https://github.com/Phisto/Moodle-HU-App.git`
+1. Open "Moodle.xcodeproj" in Xcode
+1. Go to Xcode's Preferences > Accounts and add your Apple ID
+1. In Xcode's sidebar select "Moodle" and go to General > Identity. Append a word at the end of the *Bundle Identifier* e.g. de.simonsserver.Moodle*.name* so it's unique. Select your Apple ID in Signing > Team
+1. Connect your iPhone using USB and select it in Xcode's Product menu > Destination
+1. Press CMD+R or Product > Run to install the HU-Moodle app
+1. If you install using a free (non-developer) account, make sure to rebuild Dash every 7 days, otherwise it will quit at launch when your certificate expires
 
 ## Device Compatibility
 
