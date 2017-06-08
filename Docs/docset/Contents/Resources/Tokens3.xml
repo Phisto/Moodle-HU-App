@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MOODLECommentTableViewCell.html">
+	<File path="Classes/HUProgressIndicator.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MOODLECommentTableViewCell</TokenIdentifier>
-			<Abstract type="html">This class is a custom UITableViewCell subclass, which is designed to show a comment inside a text view.</Abstract>
-			<DeclaredIn>MOODLECommentTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/HUProgressIndicator</TokenIdentifier>
+			<Abstract type="html">A view that shows that a task is in progress.</Abstract>
+			<DeclaredIn>HUProgressIndicator.h</DeclaredIn>
             
 			
 			<NodeRef refid="3"/>
@@ -13,38 +13,170 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLECommentTableViewCell/setTextView:</TokenIdentifier>
-			<Abstract type="html">The text view to display the comment.</Abstract>
-			<DeclaredIn>MOODLECommentTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/HUProgressIndicator/setStyle:</TokenIdentifier>
+			<Abstract type="html">A Boolean value indicating whether the activity indicator is currently running its animation.</Abstract>
+			<DeclaredIn>HUProgressIndicator.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) IBOutlet UITextView *textView</Declaration>
+			<Declaration>@property (nonatomic, readwrite) IBInspectable HUProgressIndicatorStyle style</Declaration>
 			
 			
-			<Anchor>//api/name/textView</Anchor>
+			<Anchor>//api/name/style</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLECommentTableViewCell/textView</TokenIdentifier>
-			<Abstract type="html">The text view to display the comment.</Abstract>
-			<DeclaredIn>MOODLECommentTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/HUProgressIndicator/style</TokenIdentifier>
+			<Abstract type="html">A Boolean value indicating whether the activity indicator is currently running its animation.</Abstract>
+			<DeclaredIn>HUProgressIndicator.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) IBOutlet UITextView *textView</Declaration>
+			<Declaration>@property (nonatomic, readwrite) IBInspectable HUProgressIndicatorStyle style</Declaration>
 			
 			
-			<Anchor>//api/name/textView</Anchor>
+			<Anchor>//api/name/style</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MOODLECommentTableViewCell/textView</TokenIdentifier>
-			<Abstract type="html">The text view to display the comment.</Abstract>
-			<DeclaredIn>MOODLECommentTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/HUProgressIndicator/style</TokenIdentifier>
+			<Abstract type="html">A Boolean value indicating whether the activity indicator is currently running its animation.</Abstract>
+			<DeclaredIn>HUProgressIndicator.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) IBOutlet UITextView *textView</Declaration>
+			<Declaration>@property (nonatomic, readwrite) IBInspectable HUProgressIndicatorStyle style</Declaration>
 			
 			
-			<Anchor>//api/name/textView</Anchor>
+			<Anchor>//api/name/style</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HUProgressIndicator/setAnimating:</TokenIdentifier>
+			<Abstract type="html">A Boolean value indicating whether the activity indicator is currently running its animation.</Abstract>
+			<DeclaredIn>HUProgressIndicator.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite, getter=isAnimating) IBInspectable BOOL animating</Declaration>
+			
+			
+			<Anchor>//api/name/animating</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HUProgressIndicator/isAnimating</TokenIdentifier>
+			<Abstract type="html">A Boolean value indicating whether the activity indicator is currently running its animation.</Abstract>
+			<DeclaredIn>HUProgressIndicator.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite, getter=isAnimating) IBInspectable BOOL animating</Declaration>
+			
+			
+			<Anchor>//api/name/animating</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HUProgressIndicator/animating</TokenIdentifier>
+			<Abstract type="html">A Boolean value indicating whether the activity indicator is currently running its animation.</Abstract>
+			<DeclaredIn>HUProgressIndicator.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite, getter=isAnimating) IBInspectable BOOL animating</Declaration>
+			
+			
+			<Anchor>//api/name/animating</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HUProgressIndicator/setHidesWhenStopped:</TokenIdentifier>
+			<Abstract type="html">A Boolean value that controls whether the receiver is hidden when the animation is stopped.</Abstract>
+			<DeclaredIn>HUProgressIndicator.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) IBInspectable BOOL hidesWhenStopped</Declaration>
+			
+			
+			<Anchor>//api/name/hidesWhenStopped</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HUProgressIndicator/hidesWhenStopped</TokenIdentifier>
+			<Abstract type="html">A Boolean value that controls whether the receiver is hidden when the animation is stopped.</Abstract>
+			<DeclaredIn>HUProgressIndicator.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) IBInspectable BOOL hidesWhenStopped</Declaration>
+			
+			
+			<Anchor>//api/name/hidesWhenStopped</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HUProgressIndicator/hidesWhenStopped</TokenIdentifier>
+			<Abstract type="html">A Boolean value that controls whether the receiver is hidden when the animation is stopped.</Abstract>
+			<DeclaredIn>HUProgressIndicator.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) IBInspectable BOOL hidesWhenStopped</Declaration>
+			
+			
+			<Anchor>//api/name/hidesWhenStopped</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HUProgressIndicator/setColor:</TokenIdentifier>
+			<Abstract type="html">The color of the activity indicator.</Abstract>
+			<DeclaredIn>HUProgressIndicator.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBInspectable UIColor *color</Declaration>
+			
+			
+			<Anchor>//api/name/color</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HUProgressIndicator/color</TokenIdentifier>
+			<Abstract type="html">The color of the activity indicator.</Abstract>
+			<DeclaredIn>HUProgressIndicator.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBInspectable UIColor *color</Declaration>
+			
+			
+			<Anchor>//api/name/color</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/HUProgressIndicator/color</TokenIdentifier>
+			<Abstract type="html">The color of the activity indicator.</Abstract>
+			<DeclaredIn>HUProgressIndicator.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBInspectable UIColor *color</Declaration>
+			
+			
+			<Anchor>//api/name/color</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HUProgressIndicator/startAnimating</TokenIdentifier>
+			<Abstract type="html">Starts the animation of the progress indicator.</Abstract>
+			<DeclaredIn>HUProgressIndicator.h</DeclaredIn>
+			
+			<Declaration>- (void)startAnimating</Declaration>
+			
+			
+			<Anchor>//api/name/startAnimating</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/HUProgressIndicator/stopAnimating</TokenIdentifier>
+			<Abstract type="html">Stops the animation of the progress indicator.</Abstract>
+			<DeclaredIn>HUProgressIndicator.h</DeclaredIn>
+			
+			<Declaration>- (void)stopAnimating</Declaration>
+			
+			
+			<Anchor>//api/name/stopAnimating</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		

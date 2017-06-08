@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/AppDelegate.html">
+	<File path="Classes/AccessibilityCoordinator.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/AppDelegate</TokenIdentifier>
-			<Abstract type="html">The delegate of the app object.</Abstract>
-			<DeclaredIn>AppDelegate.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/AccessibilityCoordinator</TokenIdentifier>
+			<Abstract type="html">The AccessibilityCoordinatorclass is a convenient class to solve VoiceOver timing problems.</Abstract>
+			<DeclaredIn>AccessibilityCoordinator.h</DeclaredIn>
             
 			
 			<NodeRef refid="1"/>
@@ -13,38 +13,25 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AppDelegate/setWindow:</TokenIdentifier>
-			<Abstract type="html">The window object of the app.</Abstract>
-			<DeclaredIn>AppDelegate.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AccessibilityCoordinator/accessibility_informUserViaVoiceOver:timeout:completionHandler:</TokenIdentifier>
+			<Abstract type="html">This method will announce a given message via VoicOver and than execute a completion handler.</Abstract>
+			<DeclaredIn>AccessibilityCoordinator.h</DeclaredIn>
 			
-			<Declaration>@property (strong, nonatomic) UIWindow *window</Declaration>
+			<Declaration>- (void)accessibility_informUserViaVoiceOver:(NSString *)message timeout:(NSTimeInterval)timeout completionHandler:(void ( ^ ) ( void ))completionHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>message</Name>
+					<Abstract type="html">The message to announce.</Abstract>
+				</Parameter><Parameter>
+					<Name>timeout</Name>
+					<Abstract type="html">The max time after which the completion handler should be executed, even if VoiceOver did not finish reading the message.</Abstract>
+				</Parameter><Parameter>
+					<Name>completionHandler</Name>
+					<Abstract type="html">The completion handler to execute. The completion handler does not take any arguments.</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			
-			<Anchor>//api/name/window</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AppDelegate/window</TokenIdentifier>
-			<Abstract type="html">The window object of the app.</Abstract>
-			<DeclaredIn>AppDelegate.h</DeclaredIn>
-			
-			<Declaration>@property (strong, nonatomic) UIWindow *window</Declaration>
-			
-			
-			<Anchor>//api/name/window</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AppDelegate/window</TokenIdentifier>
-			<Abstract type="html">The window object of the app.</Abstract>
-			<DeclaredIn>AppDelegate.h</DeclaredIn>
-			
-			<Declaration>@property (strong, nonatomic) UIWindow *window</Declaration>
-			
-			
-			<Anchor>//api/name/window</Anchor>
+			<Anchor>//api/name/accessibility_informUserViaVoiceOver:timeout:completionHandler:</Anchor>
             <NodeRef refid="1"/>
 		</Token>
 		

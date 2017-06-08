@@ -1,16 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/KeychainWrapper.html">
+	<File path="Classes/AppDelegate.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/KeychainWrapper</TokenIdentifier>
-			<Abstract type="html">The KeychainWrapper class is a wrapper class to easily access the phones keychain.</Abstract>
-			<DeclaredIn>KeychainWrapper.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/AppDelegate</TokenIdentifier>
+			<Abstract type="html">The delegate of the app object.</Abstract>
+			<DeclaredIn>AppDelegate.h</DeclaredIn>
             
 			
 			<NodeRef refid="2"/>
 		</Token>
 		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AppDelegate/setWindow:</TokenIdentifier>
+			<Abstract type="html">The window object of the app.</Abstract>
+			<DeclaredIn>AppDelegate.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIWindow *window</Declaration>
+			
+			
+			<Anchor>//api/name/window</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AppDelegate/window</TokenIdentifier>
+			<Abstract type="html">The window object of the app.</Abstract>
+			<DeclaredIn>AppDelegate.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIWindow *window</Declaration>
+			
+			
+			<Anchor>//api/name/window</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/AppDelegate/window</TokenIdentifier>
+			<Abstract type="html">The window object of the app.</Abstract>
+			<DeclaredIn>AppDelegate.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIWindow *window</Declaration>
+			
+			
+			<Anchor>//api/name/window</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
 		
         
         

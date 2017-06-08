@@ -1,117 +1,416 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/MoodleItemType.html">
+	<File path="Classes/SGLabeledSwitch.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/MoodleItemType</TokenIdentifier>
-			<Abstract type="html">These constants defines the different types of course section resources.</Abstract>
-			<DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/SGLabeledSwitch</TokenIdentifier>
+			<Abstract type="html">## Overview</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
             
 			
 			<NodeRef refid="28"/>
 		</Token>
 		
 		
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/MoodleItemTypeDocument</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>MoodleItemTypeDocument</Declaration>
-            
-            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
-            
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SGLabeledSwitch/setValue:</TokenIdentifier>
+			<Abstract type="html">A Boolean value that determines the off/on state of the switch.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) IBInspectable BOOL value</Declaration>
+			
+			
+			<Anchor>//api/name/value</Anchor>
             <NodeRef refid="28"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/MoodleItemTypeWiki</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>MoodleItemTypeWiki</Declaration>
-            
-            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SGLabeledSwitch/value</TokenIdentifier>
+			<Abstract type="html">A Boolean value that determines the off/on state of the switch.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) IBInspectable BOOL value</Declaration>
+			
+			
+			<Anchor>//api/name/value</Anchor>
             <NodeRef refid="28"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/MoodleItemTypeComment</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>MoodleItemTypeComment</Declaration>
-            
-            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SGLabeledSwitch/value</TokenIdentifier>
+			<Abstract type="html">A Boolean value that determines the off/on state of the switch.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) IBInspectable BOOL value</Declaration>
+			
+			
+			<Anchor>//api/name/value</Anchor>
             <NodeRef refid="28"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/MoodleItemTypeAssignment</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>MoodleItemTypeAssignment</Declaration>
-            
-            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SGLabeledSwitch/setOnTint:</TokenIdentifier>
+			<Abstract type="html">The color used to tint the appearance of the switch when it is turned on.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nullable, nonatomic, strong) IBInspectable UIColor *onTint</Declaration>
+			
+			
+			<Anchor>//api/name/onTint</Anchor>
             <NodeRef refid="28"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/MoodleItemTypeURL</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>MoodleItemTypeURL</Declaration>
-            
-            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SGLabeledSwitch/onTint</TokenIdentifier>
+			<Abstract type="html">The color used to tint the appearance of the switch when it is turned on.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nullable, nonatomic, strong) IBInspectable UIColor *onTint</Declaration>
+			
+			
+			<Anchor>//api/name/onTint</Anchor>
             <NodeRef refid="28"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/MoodleItemTypeForum</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>MoodleItemTypeForum</Declaration>
-            
-            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SGLabeledSwitch/onTint</TokenIdentifier>
+			<Abstract type="html">The color used to tint the appearance of the switch when it is turned on.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nullable, nonatomic, strong) IBInspectable UIColor *onTint</Declaration>
+			
+			
+			<Anchor>//api/name/onTint</Anchor>
             <NodeRef refid="28"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/MoodleItemTypeGlossary</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>MoodleItemTypeGlossary</Declaration>
-            
-            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SGLabeledSwitch/setThumbTint:</TokenIdentifier>
+			<Abstract type="html">The color used to tint the appearance of the thumb.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nullable, nonatomic, strong) IBInspectable UIColor *thumbTint</Declaration>
+			
+			
+			<Anchor>//api/name/thumbTint</Anchor>
             <NodeRef refid="28"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/MoodleItemTypeGallery</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>MoodleItemTypeGallery</Declaration>
-            
-            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SGLabeledSwitch/thumbTint</TokenIdentifier>
+			<Abstract type="html">The color used to tint the appearance of the thumb.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nullable, nonatomic, strong) IBInspectable UIColor *thumbTint</Declaration>
+			
+			
+			<Anchor>//api/name/thumbTint</Anchor>
             <NodeRef refid="28"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/MoodleItemTypeFolder</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>MoodleItemTypeFolder</Declaration>
-            
-            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SGLabeledSwitch/thumbTint</TokenIdentifier>
+			<Abstract type="html">The color used to tint the appearance of the thumb.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nullable, nonatomic, strong) IBInspectable UIColor *thumbTint</Declaration>
+			
+			
+			<Anchor>//api/name/thumbTint</Anchor>
             <NodeRef refid="28"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/MoodleItemTypeOther</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>MoodleItemTypeOther</Declaration>
-            
-            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SGLabeledSwitch/setRightSwitch:</TokenIdentifier>
+			<Abstract type="html">Boolean indication if the switch should be on the right side.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) IBInspectable BOOL rightSwitch</Declaration>
+			
+			
+			<Anchor>//api/name/rightSwitch</Anchor>
             <NodeRef refid="28"/>
-        </Token>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SGLabeledSwitch/rightSwitch</TokenIdentifier>
+			<Abstract type="html">Boolean indication if the switch should be on the right side.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) IBInspectable BOOL rightSwitch</Declaration>
+			
+			
+			<Anchor>//api/name/rightSwitch</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SGLabeledSwitch/rightSwitch</TokenIdentifier>
+			<Abstract type="html">Boolean indication if the switch should be on the right side.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) IBInspectable BOOL rightSwitch</Declaration>
+			
+			
+			<Anchor>//api/name/rightSwitch</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SGLabeledSwitch/setText:</TokenIdentifier>
+			<Abstract type="html">The current text that is displayed by the label.
+This property is &apos;Label&apos; by default.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBInspectable NSString *text</Declaration>
+			
+			
+			<Anchor>//api/name/text</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SGLabeledSwitch/text</TokenIdentifier>
+			<Abstract type="html">The current text that is displayed by the label.
+This property is &apos;Label&apos; by default.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBInspectable NSString *text</Declaration>
+			
+			
+			<Anchor>//api/name/text</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SGLabeledSwitch/text</TokenIdentifier>
+			<Abstract type="html">The current text that is displayed by the label.
+This property is &apos;Label&apos; by default.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBInspectable NSString *text</Declaration>
+			
+			
+			<Anchor>//api/name/text</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SGLabeledSwitch/setTextColor:</TokenIdentifier>
+			<Abstract type="html">The color of the text.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBInspectable UIColor *textColor</Declaration>
+			
+			
+			<Anchor>//api/name/textColor</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SGLabeledSwitch/textColor</TokenIdentifier>
+			<Abstract type="html">The color of the text.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBInspectable UIColor *textColor</Declaration>
+			
+			
+			<Anchor>//api/name/textColor</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SGLabeledSwitch/textColor</TokenIdentifier>
+			<Abstract type="html">The color of the text.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBInspectable UIColor *textColor</Declaration>
+			
+			
+			<Anchor>//api/name/textColor</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SGLabeledSwitch/setLines:</TokenIdentifier>
+			<Abstract type="html">The maximum number of lines to use for rendering text. Default is 1.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) IBInspectable NSInteger lines</Declaration>
+			
+			
+			<Anchor>//api/name/lines</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SGLabeledSwitch/lines</TokenIdentifier>
+			<Abstract type="html">The maximum number of lines to use for rendering text. Default is 1.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) IBInspectable NSInteger lines</Declaration>
+			
+			
+			<Anchor>//api/name/lines</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SGLabeledSwitch/lines</TokenIdentifier>
+			<Abstract type="html">The maximum number of lines to use for rendering text. Default is 1.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) IBInspectable NSInteger lines</Declaration>
+			
+			
+			<Anchor>//api/name/lines</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SGLabeledSwitch/setTextPadding:</TokenIdentifier>
+			<Abstract type="html">The space between switch and label in points.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) IBInspectable CGFloat textPadding</Declaration>
+			
+			
+			<Anchor>//api/name/textPadding</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SGLabeledSwitch/textPadding</TokenIdentifier>
+			<Abstract type="html">The space between switch and label in points.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) IBInspectable CGFloat textPadding</Declaration>
+			
+			
+			<Anchor>//api/name/textPadding</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SGLabeledSwitch/textPadding</TokenIdentifier>
+			<Abstract type="html">The space between switch and label in points.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) IBInspectable CGFloat textPadding</Declaration>
+			
+			
+			<Anchor>//api/name/textPadding</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SGLabeledSwitch/setFontSize:</TokenIdentifier>
+			<Abstract type="html">The font size to use for the label.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) IBInspectable CGFloat fontSize</Declaration>
+			
+			
+			<Anchor>//api/name/fontSize</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SGLabeledSwitch/fontSize</TokenIdentifier>
+			<Abstract type="html">The font size to use for the label.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) IBInspectable CGFloat fontSize</Declaration>
+			
+			
+			<Anchor>//api/name/fontSize</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SGLabeledSwitch/fontSize</TokenIdentifier>
+			<Abstract type="html">The font size to use for the label.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) IBInspectable CGFloat fontSize</Declaration>
+			
+			
+			<Anchor>//api/name/fontSize</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SGLabeledSwitch/setTextAlignment:</TokenIdentifier>
+			<Abstract type="html">The technique to use for aligning the text.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) IBInspectable NSTextAlignment textAlignment</Declaration>
+			
+			
+			<Anchor>//api/name/textAlignment</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SGLabeledSwitch/textAlignment</TokenIdentifier>
+			<Abstract type="html">The technique to use for aligning the text.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) IBInspectable NSTextAlignment textAlignment</Declaration>
+			
+			
+			<Anchor>//api/name/textAlignment</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SGLabeledSwitch/textAlignment</TokenIdentifier>
+			<Abstract type="html">The technique to use for aligning the text.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) IBInspectable NSTextAlignment textAlignment</Declaration>
+			
+			
+			<Anchor>//api/name/textAlignment</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SGLabeledSwitch/setFont:</TokenIdentifier>
+			<Abstract type="html">The font of the text.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBInspectable UIFont *font</Declaration>
+			
+			
+			<Anchor>//api/name/font</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SGLabeledSwitch/font</TokenIdentifier>
+			<Abstract type="html">The font of the text.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBInspectable UIFont *font</Declaration>
+			
+			
+			<Anchor>//api/name/font</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SGLabeledSwitch/font</TokenIdentifier>
+			<Abstract type="html">The font of the text.</Abstract>
+			<DeclaredIn>SGLabeledSwitch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBInspectable UIFont *font</Declaration>
+			
+			
+			<Anchor>//api/name/font</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
         
         
 	</File>

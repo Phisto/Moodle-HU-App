@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MOODLESearchResultTableViewCell.html">
+	<File path="Classes/MOODLEProgressViewController.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MOODLESearchResultTableViewCell</TokenIdentifier>
-			<Abstract type="html">This class is a custom UITableViewCell subclass, which is designed to show all relevant information about a MOODLE search result.</Abstract>
-			<DeclaredIn>MOODLESearchResultTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLEProgressViewController</TokenIdentifier>
+			<Abstract type="html">The MOODLESettingsViewController is responsible for showing a undetermined progress indicator to the user.</Abstract>
+			<DeclaredIn>MOODLEProgressViewController.h</DeclaredIn>
             
 			
 			<NodeRef refid="20"/>
@@ -13,74 +13,38 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLESearchResultTableViewCell/setTitleLabel:</TokenIdentifier>
-			<Abstract type="html">The label to display the search result title.</Abstract>
-			<DeclaredIn>MOODLESearchResultTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEProgressViewController/setShouldShowReloginLabel:</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the re-login label should be visible.</Abstract>
+			<DeclaredIn>MOODLEProgressViewController.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *titleLabel</Declaration>
+			<Declaration>@property (nonatomic, readwrite) BOOL shouldShowReloginLabel</Declaration>
 			
 			
-			<Anchor>//api/name/titleLabel</Anchor>
+			<Anchor>//api/name/shouldShowReloginLabel</Anchor>
             <NodeRef refid="20"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLESearchResultTableViewCell/titleLabel</TokenIdentifier>
-			<Abstract type="html">The label to display the search result title.</Abstract>
-			<DeclaredIn>MOODLESearchResultTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEProgressViewController/shouldShowReloginLabel</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the re-login label should be visible.</Abstract>
+			<DeclaredIn>MOODLEProgressViewController.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *titleLabel</Declaration>
+			<Declaration>@property (nonatomic, readwrite) BOOL shouldShowReloginLabel</Declaration>
 			
 			
-			<Anchor>//api/name/titleLabel</Anchor>
+			<Anchor>//api/name/shouldShowReloginLabel</Anchor>
             <NodeRef refid="20"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MOODLESearchResultTableViewCell/titleLabel</TokenIdentifier>
-			<Abstract type="html">The label to display the search result title.</Abstract>
-			<DeclaredIn>MOODLESearchResultTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEProgressViewController/shouldShowReloginLabel</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the re-login label should be visible.</Abstract>
+			<DeclaredIn>MOODLEProgressViewController.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *titleLabel</Declaration>
-			
-			
-			<Anchor>//api/name/titleLabel</Anchor>
-            <NodeRef refid="20"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLESearchResultTableViewCell/setSubscribeImageIcon:</TokenIdentifier>
-			<Abstract type="html">The image view to indicate if the user can subsribe to the course.</Abstract>
-			<DeclaredIn>MOODLESearchResultTableViewCell.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) IBOutlet UIImageView *subscribeImageIcon</Declaration>
+			<Declaration>@property (nonatomic, readwrite) BOOL shouldShowReloginLabel</Declaration>
 			
 			
-			<Anchor>//api/name/subscribeImageIcon</Anchor>
-            <NodeRef refid="20"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLESearchResultTableViewCell/subscribeImageIcon</TokenIdentifier>
-			<Abstract type="html">The image view to indicate if the user can subsribe to the course.</Abstract>
-			<DeclaredIn>MOODLESearchResultTableViewCell.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) IBOutlet UIImageView *subscribeImageIcon</Declaration>
-			
-			
-			<Anchor>//api/name/subscribeImageIcon</Anchor>
-            <NodeRef refid="20"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MOODLESearchResultTableViewCell/subscribeImageIcon</TokenIdentifier>
-			<Abstract type="html">The image view to indicate if the user can subsribe to the course.</Abstract>
-			<DeclaredIn>MOODLESearchResultTableViewCell.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) IBOutlet UIImageView *subscribeImageIcon</Declaration>
-			
-			
-			<Anchor>//api/name/subscribeImageIcon</Anchor>
+			<Anchor>//api/name/shouldShowReloginLabel</Anchor>
             <NodeRef refid="20"/>
 		</Token>
 		

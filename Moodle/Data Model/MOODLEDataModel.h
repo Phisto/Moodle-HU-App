@@ -166,6 +166,8 @@ NS_ASSUME_NONNULL_BEGIN
  
  @brief This method will logout the user.
  
+ @param completionHandler The completion handler to call when content loggout is complete.
+ 
  */
 - (void)logoutWithCompletionHandler:(void (^)(BOOL success, NSError * _Nullable error))completionHandler;
 /**

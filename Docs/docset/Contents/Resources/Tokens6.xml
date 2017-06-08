@@ -1,16 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MOODLECourseSearchViewController.html">
+	<File path="Classes/MOODLECommentTableViewCell.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MOODLECourseSearchViewController</TokenIdentifier>
-			<Abstract type="html">The MOODLECourseSearchViewController is responsible for presenting a search bar to search for MOODLE courses and displaying the results.</Abstract>
-			<DeclaredIn>MOODLECourseSearchViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLECommentTableViewCell</TokenIdentifier>
+			<Abstract type="html">This class is a custom UITableViewCell subclass, which is designed to show a comment inside a text view.</Abstract>
+			<DeclaredIn>MOODLECommentTableViewCell.h</DeclaredIn>
             
 			
 			<NodeRef refid="6"/>
 		</Token>
 		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECommentTableViewCell/setTextView:</TokenIdentifier>
+			<Abstract type="html">The text view to display the comment.</Abstract>
+			<DeclaredIn>MOODLECommentTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UITextView *textView</Declaration>
+			
+			
+			<Anchor>//api/name/textView</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECommentTableViewCell/textView</TokenIdentifier>
+			<Abstract type="html">The text view to display the comment.</Abstract>
+			<DeclaredIn>MOODLECommentTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UITextView *textView</Declaration>
+			
+			
+			<Anchor>//api/name/textView</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECommentTableViewCell/textView</TokenIdentifier>
+			<Abstract type="html">The text view to display the comment.</Abstract>
+			<DeclaredIn>MOODLECommentTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UITextView *textView</Declaration>
+			
+			
+			<Anchor>//api/name/textView</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
 		
         
         

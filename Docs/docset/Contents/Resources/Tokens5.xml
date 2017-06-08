@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MOODLECourseDetailViewController.html">
+	<File path="Classes/MOODLEActivityView.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MOODLECourseDetailViewController</TokenIdentifier>
-			<Abstract type="html">The MOODLECourseDetailViewController is responsible for presenting a MOODLECourse object to the user.</Abstract>
-			<DeclaredIn>MOODLECourseDetailViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLEActivityView</TokenIdentifier>
+			<Abstract type="html">This is a convenient UIView to display a darkish translucent
+hud view with an undetermined progress indicator and an optional label.</Abstract>
+			<DeclaredIn>MOODLEActivityView.h</DeclaredIn>
             
 			
 			<NodeRef refid="5"/>
@@ -13,38 +14,31 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseDetailViewController/setItem:</TokenIdentifier>
-			<Abstract type="html">The MOODLECourse to present.</Abstract>
-			<DeclaredIn>MOODLECourseDetailViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/MOODLEActivityView/activityViewWithText:</TokenIdentifier>
+			<Abstract type="html">Creates and returns a configured labeled activity view.</Abstract>
+			<DeclaredIn>MOODLEActivityView.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) MOODLECourse *item</Declaration>
-			
-			
-			<Anchor>//api/name/item</Anchor>
+			<Declaration>+ (instancetype)activityViewWithText:(NSString *)text</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>text</Name>
+					<Abstract type="html">The text of the label.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A labeled activit view.</Abstract></ReturnValue>
+			<Anchor>//api/name/activityViewWithText:</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseDetailViewController/item</TokenIdentifier>
-			<Abstract type="html">The MOODLECourse to present.</Abstract>
-			<DeclaredIn>MOODLECourseDetailViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/MOODLEActivityView/activityView</TokenIdentifier>
+			<Abstract type="html">Creates and returns a configured activity view.</Abstract>
+			<DeclaredIn>MOODLEActivityView.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) MOODLECourse *item</Declaration>
+			<Declaration>+ (instancetype)activityView</Declaration>
 			
-			
-			<Anchor>//api/name/item</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseDetailViewController/item</TokenIdentifier>
-			<Abstract type="html">The MOODLECourse to present.</Abstract>
-			<DeclaredIn>MOODLECourseDetailViewController.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) MOODLECourse *item</Declaration>
-			
-			
-			<Anchor>//api/name/item</Anchor>
+			<ReturnValue><Abstract type="html">An unlabeled activit view.</Abstract></ReturnValue>
+			<Anchor>//api/name/activityView</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		

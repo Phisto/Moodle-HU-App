@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/MoodleDocumentType.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/MoodleDocumentType</TokenIdentifier>
+			<Abstract type="html">These constants defines the different MoodleItemTypeDocument subytypes.</Abstract>
+			<DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
+            
+			
+			<NodeRef refid="35"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/MoodleDocumentTypePDF</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>MoodleDocumentTypePDF</Declaration>
+            
+            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
+            
+            <NodeRef refid="35"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/MoodleDocumentTypePPT</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>MoodleDocumentTypePPT</Declaration>
+            
+            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
+            
+            <NodeRef refid="35"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/MoodleDocumentTypeWordDocument</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>MoodleDocumentTypeWordDocument</Declaration>
+            
+            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
+            
+            <NodeRef refid="35"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/MoodleDocumentTypeAudioFile</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>MoodleDocumentTypeAudioFile</Declaration>
+            
+            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
+            
+            <NodeRef refid="35"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/MoodleDocumentTypeOther</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>MoodleDocumentTypeOther</Declaration>
+            
+            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
+            
+            <NodeRef refid="35"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

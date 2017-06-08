@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/HUProgressIndicatorStyle.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/HUProgressIndicatorStyle</TokenIdentifier>
+			<Abstract type="html">The style of the indicator. This will determin the size of the indicator.</Abstract>
+			<DeclaredIn>HUProgressIndicator.h</DeclaredIn>
+            
+			
+			<NodeRef refid="34"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/HUProgressIndicatorStyleDefault</TokenIdentifier>
+            <Abstract type="html">The default style.</Abstract>
+            <Declaration>HUProgressIndicatorStyleDefault</Declaration>
+            
+            <DeclaredIn>HUProgressIndicator.h</DeclaredIn>
+            
+            <NodeRef refid="34"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/HUProgressIndicatorStyleSmall</TokenIdentifier>
+            <Abstract type="html">The style for a small indicator (width: 80 heigth: 80). The default style.</Abstract>
+            <Declaration>HUProgressIndicatorStyleSmall</Declaration>
+            
+            <DeclaredIn>HUProgressIndicator.h</DeclaredIn>
+            
+            <NodeRef refid="34"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/HUProgressIndicatorStyleLarge</TokenIdentifier>
+            <Abstract type="html">The style for a large indicator (width: 120 heigth: 120). The default style.</Abstract>
+            <Declaration>HUProgressIndicatorStyleLarge</Declaration>
+            
+            <DeclaredIn>HUProgressIndicator.h</DeclaredIn>
+            
+            <NodeRef refid="34"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

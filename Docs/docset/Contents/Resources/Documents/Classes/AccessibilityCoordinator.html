@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>AccessibilityCoordinator Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">Moodle </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">-</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/accessibility_informUserViaVoiceOver:timeout:completionHandler:">- accessibility_informUserViaVoiceOver:timeout:completionHandler:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">AccessibilityCoordinator Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>AccessibilityCoordinator.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The <code>AccessibilityCoordinator</code>class is a convenient class to solve VoiceOver timing problems.</p>
+
+<h2>Discussion</h2>
+
+<p>I created this class to takle a specific VoiceOver timing problem:</p>
+
+<ol>
+<li>The user activates a button, for example a login button, VoiceOver will read this activation to the user.</li>
+<li>The action does inform the user of success or failure (the result) via VoiceOver.</li>
+<li>If the action returns quickly and tries to inform the user while VoiceOver is still reading the button activation,
+ this message will be ommited by VoiceOver and the user will stay uninformed about the result.</li>
+</ol>
+
+
+<p>This class offers a way to inform the user via VoicOver and than execute code inside a completion handler.</p>
+
+<h2>Notes</h2>
+
+<p>The class will wait for an UIAccessibilityAnnouncementDidFinishNotification and then execute the completion handler.
+There seem to be situations in which this notification wont be fired, so there is a timeout after which
+the completion handler will be called even if the notification was not fired.</p>
+
+<p>See marcelnijman&rsquo;s comment under the accepted answer:
+<a href="https://stackoverflow.com/questions/12354828/uiaccessibilityannouncementnotification-asynch-isssue">https://stackoverflow.com/questions/12354828/uiaccessibilityannouncementnotification-asynch-isssue</a></p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/accessibility_informUserViaVoiceOver:timeout:completionHandler:" title="accessibility_informUserViaVoiceOver:timeout:completionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/accessibility_informUserViaVoiceOver:timeout:completionHandler:">&ndash;&nbsp;accessibility_informUserViaVoiceOver:timeout:completionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method will announce a given message via VoicOver and than execute a completion handler.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)accessibility_informUserViaVoiceOver:(NSString *)<em>message</em> timeout:(NSTimeInterval)<em>timeout</em> completionHandler:(void ( ^ ) ( void ))<em>completionHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>message</code></th>
+						<td><p>The message to announce.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>timeout</code></th>
+						<td><p>The max time after which the completion handler should be executed, even if VoiceOver did not finish reading the message.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionHandler</code></th>
+						<td><p>The completion handler to execute. The completion handler does not take any arguments.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AccessibilityCoordinator.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 -. All rights reserved. Updated: 2017-06-08</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

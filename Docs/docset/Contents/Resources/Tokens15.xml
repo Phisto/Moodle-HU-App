@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MOODLEDocumentViewController.html">
+	<File path="Classes/MOODLECourseTableViewCell.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MOODLEDocumentViewController</TokenIdentifier>
-			<Abstract type="html">The MOODLEDocumentViewController is responsible for presenting MOODLE course section ressources.</Abstract>
-			<DeclaredIn>MOODLEDocumentViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLECourseTableViewCell</TokenIdentifier>
+			<Abstract type="html">This class is a custom UITableViewCell subclass, which is designed to show all relevant information about a MOODLE course.</Abstract>
+			<DeclaredIn>MOODLECourseTableViewCell.h</DeclaredIn>
             
 			
 			<NodeRef refid="15"/>
@@ -13,74 +13,110 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDocumentViewController/setIsAudio:</TokenIdentifier>
-			<Abstract type="html">Boolean indicating if the ressource needs to play audio.</Abstract>
-			<DeclaredIn>MOODLEDocumentViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseTableViewCell/setCourseTitleLabel:</TokenIdentifier>
+			<Abstract type="html">The label to display the course title.</Abstract>
+			<DeclaredIn>MOODLECourseTableViewCell.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readwrite) BOOL isAudio</Declaration>
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *courseTitleLabel</Declaration>
 			
 			
-			<Anchor>//api/name/isAudio</Anchor>
+			<Anchor>//api/name/courseTitleLabel</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDocumentViewController/isAudio</TokenIdentifier>
-			<Abstract type="html">Boolean indicating if the ressource needs to play audio.</Abstract>
-			<DeclaredIn>MOODLEDocumentViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseTableViewCell/courseTitleLabel</TokenIdentifier>
+			<Abstract type="html">The label to display the course title.</Abstract>
+			<DeclaredIn>MOODLECourseTableViewCell.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readwrite) BOOL isAudio</Declaration>
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *courseTitleLabel</Declaration>
 			
 			
-			<Anchor>//api/name/isAudio</Anchor>
+			<Anchor>//api/name/courseTitleLabel</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MOODLEDocumentViewController/isAudio</TokenIdentifier>
-			<Abstract type="html">Boolean indicating if the ressource needs to play audio.</Abstract>
-			<DeclaredIn>MOODLEDocumentViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseTableViewCell/courseTitleLabel</TokenIdentifier>
+			<Abstract type="html">The label to display the course title.</Abstract>
+			<DeclaredIn>MOODLECourseTableViewCell.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readwrite) BOOL isAudio</Declaration>
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *courseTitleLabel</Declaration>
 			
 			
-			<Anchor>//api/name/isAudio</Anchor>
+			<Anchor>//api/name/courseTitleLabel</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDocumentViewController/setResourceURL:</TokenIdentifier>
-			<Abstract type="html">The url to the ressource.</Abstract>
-			<DeclaredIn>MOODLEDocumentViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseTableViewCell/setMoodleTitleLabel:</TokenIdentifier>
+			<Abstract type="html">The label to display the course moodle title.</Abstract>
+			<DeclaredIn>MOODLECourseTableViewCell.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSURL *resourceURL</Declaration>
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *moodleTitleLabel</Declaration>
 			
 			
-			<Anchor>//api/name/resourceURL</Anchor>
+			<Anchor>//api/name/moodleTitleLabel</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDocumentViewController/resourceURL</TokenIdentifier>
-			<Abstract type="html">The url to the ressource.</Abstract>
-			<DeclaredIn>MOODLEDocumentViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseTableViewCell/moodleTitleLabel</TokenIdentifier>
+			<Abstract type="html">The label to display the course moodle title.</Abstract>
+			<DeclaredIn>MOODLECourseTableViewCell.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSURL *resourceURL</Declaration>
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *moodleTitleLabel</Declaration>
 			
 			
-			<Anchor>//api/name/resourceURL</Anchor>
+			<Anchor>//api/name/moodleTitleLabel</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MOODLEDocumentViewController/resourceURL</TokenIdentifier>
-			<Abstract type="html">The url to the ressource.</Abstract>
-			<DeclaredIn>MOODLEDocumentViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseTableViewCell/moodleTitleLabel</TokenIdentifier>
+			<Abstract type="html">The label to display the course moodle title.</Abstract>
+			<DeclaredIn>MOODLECourseTableViewCell.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSURL *resourceURL</Declaration>
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *moodleTitleLabel</Declaration>
 			
 			
-			<Anchor>//api/name/resourceURL</Anchor>
+			<Anchor>//api/name/moodleTitleLabel</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseTableViewCell/setSemesterLabel:</TokenIdentifier>
+			<Abstract type="html">The label to display the course semester.</Abstract>
+			<DeclaredIn>MOODLECourseTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *semesterLabel</Declaration>
+			
+			
+			<Anchor>//api/name/semesterLabel</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseTableViewCell/semesterLabel</TokenIdentifier>
+			<Abstract type="html">The label to display the course semester.</Abstract>
+			<DeclaredIn>MOODLECourseTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *semesterLabel</Declaration>
+			
+			
+			<Anchor>//api/name/semesterLabel</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseTableViewCell/semesterLabel</TokenIdentifier>
+			<Abstract type="html">The label to display the course semester.</Abstract>
+			<DeclaredIn>MOODLECourseTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *semesterLabel</Declaration>
+			
+			
+			<Anchor>//api/name/semesterLabel</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		
