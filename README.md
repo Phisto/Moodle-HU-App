@@ -12,7 +12,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 This app was written to access a user account on the Moodle™ instance of the 'Humboldt-Universität zu Berlin'.
 
 
-### Credits
+## Credits
 
 #### Icons
 
@@ -26,20 +26,20 @@ This app was written to access a user account on the Moodle™ instance of the '
 
 * Forum icon made by [Vectors Market](http://www.flaticon.com/authors/vectors-market) from [flaticon](www.flaticon.com).
 
-####Frameworks
+#### Frameworks
 
 * KeychainWrapper created by Tim Mitra. Source: https://developer.apple.com/library/content/documentation/Security/Conceptual/keychainServConcepts/iPhoneTasks/iPhoneTasks.html
 
 * Hpple created by Geoffrey Grosenbach. Source: https://github.com/topfunky/hpple
 
 
-### License
+## License
 
-The "insert name" app is released under the GNU General Public License (GPL). 
+The app is released under the GNU General Public License (GPL). 
 
 See <http://www.gnu.org/licenses/> for details.
 
-### Trademark
+## Trademark
 
 The word Moodle™ is a registered trademark. 
 
