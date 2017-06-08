@@ -11,6 +11,31 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 This app was written to access a user account on the Moodle™ instance of the 'Humboldt-Universität zu Berlin'.
 
+### Screnshots
+
+Login                      |  My Courses
+:-------------------------:|:-------------------------:
+![](http://simonsapps.de/hu_moodle_screenshots/login.png)  |  ![](http://simonsapps.de/hu_moodle_screenshots/kurse.png)
+
+
+Course Detail              |  Course Section
+:-------------------------:|:-------------------------:
+![](http://simonsapps.de/hu_moodle_screenshots/kurs_detail.png)  |  ![](http://simonsapps.de/hu_moodle_screenshots/kurs_sektion.png)
+
+Document                   |  Course Search
+:-------------------------:|:-------------------------:
+![](http://simonsapps.de/hu_moodle_screenshots/dokument.png)  |  ![](http://simonsapps.de/hu_moodle_screenshots/suche.png)
+
+
+
+
+## Device Compatibility
+
+* iPhone: iPhone 4s and above
+
+* iPad: The iPad is not supported
+
+* OS: iOS 9.3 and above
 
 ## Credits
 
