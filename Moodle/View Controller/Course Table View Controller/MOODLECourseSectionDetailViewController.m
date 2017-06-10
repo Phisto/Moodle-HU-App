@@ -49,6 +49,14 @@
 
 
 
+@interface MOODLECourseSectionDetailViewController (Accessibility)
+
+- (NSString *)accessibility_titleForItem:(MOODLECourseSectionItem *)item;
+
+@end
+
+
+
 ///-----------------------
 /// @name IMPLEMENTATION
 ///-----------------------
@@ -208,6 +216,11 @@
         [attributedString addAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:13.0f]} range:NSMakeRange(0, attributedString.length)];
         
         cell.textView.attributedText = attributedString;
+        
+        // accessibility
+        NSString *locString = NSLocalizedString(@"Kommentar", @"prefix for a comment course section item");
+        cell.accessibilityLabel = locString;
+        
         return cell;
         
     } else {
@@ -216,6 +229,9 @@
         
         cell.itemLabel.text = doc.resourceTitle;
         cell.fileIconImageView.image = [self imageForItem:doc];
+        
+        // accessibility
+        cell.accessibilityLabel = [NSString stringWithFormat:@"%@\n%@", [self accessibility_titleForItem:doc], doc.resourceTitle];
         
         return cell;
     }
@@ -261,13 +277,12 @@
     UITableViewCell *headerCell = [tableView dequeueReusableCellWithIdentifier:@"headerCell"];
     headerCell.textLabel.text = self.tableViewSegmentTitles[section];
     headerCell.textLabel.textColor = [UIColor darkGrayColor];
-    return headerCell;
-}
-
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     
-    return 22.0f;
+    // accessibility
+    headerCell.isAccessibilityElement = NO;
+    headerCell.accessibilityElementsHidden = YES;
+    
+    return headerCell;
 }
 
 
@@ -369,11 +384,8 @@
 #pragma mark - Navigation
 
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller
-    
+
     if ([segue.identifier isEqualToString:@"toDocumentSegue"]) {
         
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
@@ -383,6 +395,95 @@
         destViewController.resourceURL = item.resourceURL;
         if (item.itemType == MoodleItemTypeDocument) destViewController.isAudio = (item.documentType == MoodleDocumentTypeAudioFile);
     }
+}
+
+
+#pragma mark -
+@end
+
+
+
+#pragma mark - ACCESSIBILITY
+///-----------------------
+/// @name ACCESSIBILITY
+///-----------------------
+
+
+
+@implementation MOODLECourseSectionDetailViewController (Accessibility)
+
+
+- (NSString *)accessibility_titleForItem:(MOODLECourseSectionItem *)item {
+    
+    MoodleItemType itemType = item.itemType;
+    
+    NSString *title = @"";
+    
+    switch (itemType) {
+        case MoodleItemTypeDocument:
+            title = [self accessibility_titleFromDocumentType:item.documentType];
+            break;
+            
+        case MoodleItemTypeURL:
+            title = NSLocalizedString(@"Link", @"voice over item type title Link");
+            break;
+            
+        case MoodleItemTypeForum:
+            title = @""; // the title of the forum is forum so we dont need to describe it ...
+            break;
+            
+        case MoodleItemTypeGlossary:
+            title = @""; // the title of the glossary is glossary so we dont need to describe it ...
+            break;
+            
+        case MoodleItemTypeAssignment:
+            title = NSLocalizedString(@"Abgabe", @"voice over item type title");
+            break;
+            
+        case MoodleItemTypeGallery:
+            title = NSLocalizedString(@"Gallerie", @"voice over item type title");
+            break;
+            
+        case MoodleItemTypeFolder:
+            title = NSLocalizedString(@"Ordner", @"voice over item type title");
+            break;
+            
+        default:
+            title = NSLocalizedString(@"Anderes Item", @"voice over item type title");
+            break;
+    }
+    
+    return title;
+}
+
+
+- (NSString *)accessibility_titleFromDocumentType:(MoodleDocumentType)documentType {
+    
+    NSString *title = nil;
+    
+    switch (documentType) {
+        case MoodleDocumentTypePDF:
+            title = NSLocalizedString(@"PDF Datei", @"voice over document type title PDF");
+            break;
+            
+        case MoodleDocumentTypePPT:
+            title = NSLocalizedString(@"PowerPoint Datei", @"voice over document type title PPT");
+            break;
+            
+        case MoodleDocumentTypeWordDocument:
+            title = NSLocalizedString(@"Word Datei", @"voice over document type title WORD");
+            break;
+            
+        case MoodleDocumentTypeAudioFile:
+            title = NSLocalizedString(@"Audio Datei", @"voice over document type title Audio");
+            break;
+            
+        default:
+            title = NSLocalizedString(@"Andere Datei", @"voice over document type title other document");
+            break;
+    }
+    
+    return title;
 }
 
 

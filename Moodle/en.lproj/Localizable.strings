@@ -1,4 +1,16 @@
 
+/* Appended to accessibility label if course section has an assignment. */
+" und Abgabe" = " and assignment";
+
+/* Appended to accessibility label. */
+" vorhanden" = " available";
+
+/* LinguisticList formatter two items */
+"%@ und %@" = "%@ and %@";
+
+/* Appended to accessibility label if course section has documents 1. */
+", Dokumente" = ", documents";
+
 /* Section title for assignment items. */
 "Abgaben" = "Assignments";
 
@@ -17,6 +29,9 @@
 /* Error message if logout failed. */
 "Beim Logout ist ein Fehler aufgetreten." = "An error occurred during logout.";
 
+/* Appended to accessibility label if course section has a description. */
+"Beschreibung" = "Description";
+
 /* Message if the user tried to login without entering user credentials. */
 "Bitte geben Sie einen Benutzernamen und Passwort ein." = "Please enter a username and password.";
 
@@ -31,6 +46,9 @@
 
 /* Message if course search yields no results. */
 "Keine Kurse mit dem Begriff '%@' gefunden." = "No courses with the term '%@' were found.";
+
+/* voice over action to read komment title */
+"Kommentar vorlesen" = "Kommentar vorlesen";
 
 /* Label indicating the assoziated department of a moodle course. */
 "Kursbereich: %@" = "Department: %@";
@@ -50,6 +68,9 @@
 /* Message the activity indicator is showing during a course search */
 "Suche" = "Searching";
 
+/* Appended to accessibility label if course section has documents 1. */
+"und Dokumente" = " and documents";
+
 /* Error message if the login crdential where wrong. */
 "Ungültiges Login, bitte versuchen Sie es erneut." = "Invalid login, please try again.";
 
@@ -61,3 +82,39 @@
 
 /* Section title for wiki items. */
 "Wiki" = "Wiki";
+
+/* table view cell selection hint */
+"Zum aktivieren doppel tippen" = "Zum aktivieren doppel tippen";
+
+/* Appended to accessibility label if course section has an assignment. */
+"Abgabe" = "";
+
+/* voice over document type title other document */
+"Andere Datei" = "";
+
+/* voice over item type title */
+"Anderes Item" = "";
+
+/* voice over document type title Audio */
+"Audio Datei" = "";
+
+/* voice over item type title */
+"Gallerie" = "";
+
+/* prefix for a comment course section item */
+"Kommentar" = "";
+
+/* voice over item type title Link */
+"Link" = "";
+
+/* voice over item type title */
+"Ordner" = "";
+
+/* voice over document type title PDF */
+"PDF Datei" = "";
+
+/* voice over document type title PPT */
+"PowerPoint Datei" = "";
+
+/* voice over document type title WORD */
+"Word Datei" = "";

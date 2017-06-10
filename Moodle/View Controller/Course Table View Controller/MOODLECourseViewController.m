@@ -263,6 +263,11 @@
     cell.moodleTitleLabel.text = [NSString stringWithFormat:@"Moodle: %@", item.moodleTitle];
     cell.semesterLabel.text = item.semester;
     cell.backgroundColor = (item.isFavourite) ? [[UIColor moodle_blueColor] colorWithAlphaComponent:0.2f] : [UIColor whiteColor];
+    
+    // accessibility
+    // dont read moodle course id and speack with a pause
+    cell.accessibilityLabel = [NSString stringWithFormat:@"%@\n%@", item.courseTitle, item.semester];
+    
     return cell;
 }
 

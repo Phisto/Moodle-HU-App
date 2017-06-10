@@ -11,3 +11,23 @@
 
 @implementation MOODLESearchResultTableViewCell
 @end
+
+
+
+#pragma mark - ACCESSIBILITY
+///-----------------------
+/// @name ACCESSIBILITY
+///-----------------------
+
+
+
+@implementation MOODLESearchResultTableViewCell (Accessibility)
+
+
+- (NSString *)accessibilityHint {
+    
+    return NSLocalizedString(@"Zum aktivieren doppel tippen", @"table view cell selection hint");
+}
+
+
+@end

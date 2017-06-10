@@ -30,7 +30,7 @@
     
     // UISplitViewController delegate
     // Do any additional setup after loading the view.
-    ((UISplitViewController *)[self viewControllers][0]).delegate = self;
+    ((UISplitViewController *)[self viewControllers].firstObject).delegate = self;
     ((UISplitViewController *)[self viewControllers][1]).delegate = self;
 
     // Navigation bar appearance
@@ -39,6 +39,7 @@
     // Tab bar appearance
     // center icons  & hide title
     for(UITabBarItem * tabBarItem in self.tabBar.items){
+        tabBarItem.accessibilityLabel = tabBarItem.title;
         tabBarItem.title = @"";
         tabBarItem.imageInsets = UIEdgeInsetsMake(6.0f, 0.0f, -6.0f, 0.0f);
     }

@@ -28,6 +28,7 @@
 		F42860CD1ED0AF8800D498EC /* MOODLESearchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F42860CC1ED0AF8800D498EC /* MOODLESearchItem.m */; };
 		F42860D11ED0DC0B00D498EC /* MOODLESearchItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F42860D01ED0DC0B00D498EC /* MOODLESearchItemDetailViewController.m */; };
 		F42860D41ED1EFB000D498EC /* MOODLESearchResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F42860D31ED1EFB000D498EC /* MOODLESearchResultTableViewCell.m */; };
+		F4327CE31EEAFFE400AA4A7B /* MOODLELinguisticListFormater.m in Sources */ = {isa = PBXBuildFile; fileRef = F4327CE21EEAFFE400AA4A7B /* MOODLELinguisticListFormater.m */; };
 		F43852921EC90AEC005BC780 /* MOODLECourseSectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F43852911EC90AEC005BC780 /* MOODLECourseSectionTableViewCell.m */; };
 		F43852961EC922D7005BC780 /* MOODLECourseSectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F43852951EC922D7005BC780 /* MOODLECourseSectionItem.m */; };
 		F438529A1EC93A7E005BC780 /* MOODLECourseSectionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43852981EC93A7E005BC780 /* MOODLECourseSectionDetailViewController.m */; };
@@ -80,6 +81,8 @@
 		F42860D01ED0DC0B00D498EC /* MOODLESearchItemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOODLESearchItemDetailViewController.m; sourceTree = "<group>"; };
 		F42860D21ED1EFB000D498EC /* MOODLESearchResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOODLESearchResultTableViewCell.h; sourceTree = "<group>"; };
 		F42860D31ED1EFB000D498EC /* MOODLESearchResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOODLESearchResultTableViewCell.m; sourceTree = "<group>"; };
+		F4327CE11EEAFFE400AA4A7B /* MOODLELinguisticListFormater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOODLELinguisticListFormater.h; sourceTree = "<group>"; };
+		F4327CE21EEAFFE400AA4A7B /* MOODLELinguisticListFormater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOODLELinguisticListFormater.m; sourceTree = "<group>"; };
 		F43852901EC90AEC005BC780 /* MOODLECourseSectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOODLECourseSectionTableViewCell.h; sourceTree = "<group>"; };
 		F43852911EC90AEC005BC780 /* MOODLECourseSectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOODLECourseSectionTableViewCell.m; sourceTree = "<group>"; };
 		F43852941EC922D7005BC780 /* MOODLECourseSectionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOODLECourseSectionItem.h; sourceTree = "<group>"; };
@@ -225,6 +228,8 @@
 			children = (
 				F4D198831EE2C8F400BF64F2 /* AccessibilityCoordinator.h */,
 				F4D198841EE2C8F400BF64F2 /* AccessibilityCoordinator.m */,
+				F4327CE11EEAFFE400AA4A7B /* MOODLELinguisticListFormater.h */,
+				F4327CE21EEAFFE400AA4A7B /* MOODLELinguisticListFormater.m */,
 			);
 			path = Accessibility;
 			sourceTree = "<group>";
@@ -546,6 +551,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4327CE31EEAFFE400AA4A7B /* MOODLELinguisticListFormater.m in Sources */,
 				F4D49AF81EC8C17E00CA1193 /* MOODLETabBarController.m in Sources */,
 				F47F4F071EE4D7480047B330 /* SGLabeledSwitch.m in Sources */,
 				F46BE03B1EC9E9B60060F934 /* MOODLEDocumentViewController.m in Sources */,

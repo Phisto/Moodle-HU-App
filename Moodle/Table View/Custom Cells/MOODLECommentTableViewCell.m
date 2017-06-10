@@ -11,3 +11,34 @@
 
 @implementation MOODLECommentTableViewCell
 @end
+
+
+
+#pragma mark - ACCESSIBILITY
+///-----------------------
+/// @name ACCESSIBILITY
+///-----------------------
+
+
+
+@implementation MOODLECommentTableViewCell (Accessibility)
+
+- (NSArray<UIAccessibilityCustomAction *> *)accessibilityCustomActions {
+    
+    NSString *locString = NSLocalizedString(@"Kommentar vorlesen", @"voice over action to read komment title");
+    return @[[[UIAccessibilityCustomAction alloc] initWithName:locString
+                                                        target:self
+                                                      selector:@selector(readComment)]];
+}
+
+- (void)readComment {
+    
+    [self accessibility_informUserViaVoiceOver:self.textView.text];
+}
+
+- (void)accessibility_informUserViaVoiceOver:(NSString *)message {
+    
+    UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, message);
+}
+
+@end

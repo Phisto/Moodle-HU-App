@@ -23,6 +23,9 @@
 /* Custom Views */
 #import "MOODLEActivityView.h"
 
+/* Accessibilility */
+#import "MOODLELinguisticListFormater.h"
+
 ///-----------------------
 /// @name CATEGORIES
 ///-----------------------
@@ -157,13 +160,17 @@
     if (section.hasContent) {
         
         MOODLECourseSectionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MOODLECourseSectionTableViewCellIdentifier];
-        cell.sectionTitleLabel.text = section.sectionTitle;
         
         cell.noContentLabel.hidden = YES;
+        
+        MOODLELinguisticListFormater *listFormatter = [MOODLELinguisticListFormater new];
         
         if (section.hasDescription) {
             
             cell.descriptionImageView.image = [UIImage imageNamed:@"comment_icon_heigh"];
+            
+            NSString *locString = NSLocalizedString(@"Beschreibung", @"Appended to accessibility label if course section has a description.");
+            [listFormatter addItemToList:locString];
             
         } else {
             
@@ -174,6 +181,9 @@
             
             cell.dokumentImageView.image = [UIImage imageNamed:@"doc_icon_heigh"];
             
+            NSString *locString = NSLocalizedString(@"Dokumente", @"Appended to accessibility label if course section has documents 1.");
+            [listFormatter addItemToList:locString];
+            
         } else {
             
             cell.dokumentImageView.image = [UIImage imageNamed:@"doc_icon_low"];
@@ -183,10 +193,25 @@
             
             
             cell.assignmentImageView.image = [UIImage imageNamed:@"assign_icon_blue"];
+            
+            NSString *locString = NSLocalizedString(@"Abgabe", @"Appended to accessibility label if course section has an assignment.");
+            [listFormatter addItemToList:locString];
+            
         } else {
             
             cell.assignmentImageView.image = [UIImage imageNamed:@"assign_icon_grey"];
         }
+        
+        
+        // accessibility
+        NSString *accesibility_label = section.sectionTitle;
+        accesibility_label = [accesibility_label stringByAppendingString:@"\n "]; // make pause after title
+        accesibility_label = [accesibility_label stringByAppendingString:listFormatter.list];
+        NSString *locString = NSLocalizedString(@" vorhanden", @"Appended to accessibility label.");
+        cell.accessibilityLabel = [accesibility_label stringByAppendingString:locString];;
+        
+        
+        cell.sectionTitleLabel.text = section.sectionTitle;
         
         returnCell = cell;
         
@@ -196,6 +221,9 @@
         static NSString *noContentCell = @"noContentCell";
         returnCell = [tableView dequeueReusableCellWithIdentifier:noContentCell];
         returnCell.textLabel.text = section.sectionTitle;
+        
+        // accessibility
+        returnCell.accessibilityLabel = section.sectionTitle;
     }
 
     return returnCell;
@@ -211,10 +239,8 @@
 #pragma mark - Navigation Methodes
 
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
     if ([segue.identifier isEqualToString:@"toSectionDetail"]) {
 
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
