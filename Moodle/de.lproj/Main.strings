@@ -1,10 +1,4 @@
 
-/* Class = "UIViewController"; title = "Kurse"; ObjectID = "38T-EY-Mgi"; */
-"38T-EY-Mgi.title" = "Kurse";
-
-/* Class = "UINavigationItem"; title = "Meine Kurse"; ObjectID = "4HE-dM-oUi"; */
-"4HE-dM-oUi.title" = "Meine Kurse";
-
 /* Class = "UISearchBar"; placeholder = "Kurssuche"; ObjectID = "6Cz-Mq-5qy"; */
 "6Cz-Mq-5qy.placeholder" = "Kurssuche";
 
@@ -13,12 +7,6 @@
 
 /* Class = "UIBarButtonItem"; title = "Zurück"; ObjectID = "BnC-Ox-YdD"; */
 "BnC-Ox-YdD.title" = "Zurück";
-
-/* Class = "UITabBarItem"; title = "Kurse"; ObjectID = "GGn-sS-xwv"; */
-"GGn-sS-xwv.title" = "Kurse";
-
-/* Class = "UITabBarItem"; title = "Suche"; ObjectID = "HKB-fY-Taa"; */
-"HKB-fY-Taa.title" = "Suche";
 
 /* Class = "UITabBarItem"; title = "Suche"; ObjectID = "I6W-iR-Qtp"; */
 "I6W-iR-Qtp.title" = "Suche";
@@ -38,15 +26,6 @@
 /* Class = "UITextField"; placeholder = "Passwort"; ObjectID = "Oab-7C-PSH"; */
 "Oab-7C-PSH.placeholder" = "Passwort";
 
-/* Class = "UIBarButtonItem"; title = "Zurück"; ObjectID = "QfI-kJ-Gkk"; */
-"QfI-kJ-Gkk.title" = "Zurück";
-
-/* Class = "UIBarButtonItem"; title = "Zurück"; ObjectID = "XkL-95-OyZ"; */
-"XkL-95-OyZ.title" = "Zurück";
-
-/* Class = "UITabBarItem"; title = "Kurse"; ObjectID = "YLg-r6-Xj9"; */
-"YLg-r6-Xj9.title" = "Kurse";
-
 /* Class = "UILabel"; text = "Login"; ObjectID = "a0K-Ve-yHQ"; */
 "a0K-Ve-yHQ.text" = "Login";
 
@@ -65,11 +44,29 @@
 /* Class = "UIButton"; normalTitle = "Login"; ObjectID = "n4T-VE-Ryw"; */
 "n4T-VE-Ryw.normalTitle" = "Login";
 
-/* Class = "UIBarButtonItem"; title = "Zurück"; ObjectID = "tKf-Gu-RdD"; */
-"tKf-Gu-RdD.title" = "Zurück";
-
 /* Class = "UITextField"; accessibilityLabel = "Passwort"; ObjectID = "Oab-7C-PSH"; */
 "Oab-7C-PSH.accessibilityLabel" = "Passwort Eingabe";
 
 /* Class = "UITextField"; accessibilityLabel = "Benutzername"; ObjectID = "MRq-42-EaO"; */
 "MRq-42-EaO.accessibilityLabel" = "Benutzername Eingabe";
+
+/* Class = "UINavigationItem"; title = "Meine Kurse"; ObjectID = "Vg2-Aj-RNB"; */
+"Vg2-Aj-RNB.title" = "Meine Kurse";
+
+/* Class = "UIBarButtonItem"; title = "Zurück"; ObjectID = "QfI-kJ-Gkk"; */
+"QfI-kJ-Gkk.title" = "Zurück";
+
+/* Class = "UIBarButtonItem"; title = "Zurück"; ObjectID = "XkL-95-OyZ"; */
+"XkL-95-OyZ.title" = "Zurück";
+
+/* Class = "UINavigationItem"; title = "Kurseinschreibung"; ObjectID = "NRT-85-uBj"; */
+"NRT-85-uBj.title" = "Kurseinschreibung";
+
+/* Class = "UITabBarItem"; title = "Kurse"; ObjectID = "h5O-Jn-8Vl"; */
+"h5O-Jn-8Vl.title" = "Kurse";
+
+/* Class = "UIBarButtonItem"; title = "Zurück"; ObjectID = "8T3-3V-qwa"; */
+"8T3-3V-qwa.title" = "Zurück";
+
+/* Class = "UINavigationItem"; title = "Suchergebniss"; ObjectID = "xXz-l1-y1t"; */
+"xXz-l1-y1t.title" = "Suchergebniss";

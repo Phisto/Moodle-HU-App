@@ -23,6 +23,10 @@
 /* Custom Views */
 #import "MOODLEActivityView.h"
 
+/* Custom Animator */
+#import "MOODLEPushSegueAnimator.h"
+#import "MOODLEPushSegue.h"
+
 ///-----------------------
 /// @name CATEGORIES
 ///-----------------------
@@ -201,6 +205,15 @@
 }
 
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    MOODLESearchItemDetailViewController *newViewController = (MOODLESearchItemDetailViewController *)[storyboard instantiateViewControllerWithIdentifier:@"MOODLESearchItemDetailViewController"];
+    MOODLESearchItem *item = self.resultArray[indexPath.row];
+    newViewController.item = item;
+    [self.navigationController pushViewController:newViewController animated:YES];
+}
+
 #pragma mark - Lazy/Getter
 
 
@@ -225,24 +238,6 @@
     }
     return _loadingView;
 }
-
-
-#pragma mark - Navigation
-
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    if ([segue.identifier isEqualToString:@"showSearchDetail"]) {
-        
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        MOODLESearchItemDetailViewController *destViewController = (MOODLESearchItemDetailViewController *)[[segue destinationViewController] topViewController];
-        MOODLESearchItem *item = self.resultArray[indexPath.row];
-        destViewController.item = item;
-    }
-}
-
 
 #pragma mark -
 @end

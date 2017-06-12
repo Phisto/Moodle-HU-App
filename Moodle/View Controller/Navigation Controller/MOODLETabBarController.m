@@ -26,12 +26,9 @@
 
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
     
-    // UISplitViewController delegate
-    // Do any additional setup after loading the view.
-    ((UISplitViewController *)[self viewControllers].firstObject).delegate = self;
-    ((UISplitViewController *)[self viewControllers][1]).delegate = self;
+    // call super
+    [super viewDidLoad];
 
     // Navigation bar appearance
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
@@ -52,30 +49,6 @@
 - (BOOL)shouldAutorotate {
     
     return NO;
-}
-
-
-#pragma mark - Split View Controller Delegate Methodes
-
-
-- (BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController
-                                                                               ontoPrimaryViewController:(UIViewController *)primaryViewController {
-    
-    BOOL val1 = [secondaryViewController isKindOfClass:[UINavigationController class]];
-    
-    BOOL val2_1 = [[(UINavigationController *)secondaryViewController topViewController] isKindOfClass:[MOODLECourseDetailViewController class]];
-    BOOL val2_2 = [[(UINavigationController *)secondaryViewController topViewController] isKindOfClass:[MOODLESearchItemDetailViewController class]];
-
-    BOOL val3_1 = ([(MOODLECourseDetailViewController *)[(UINavigationController *)secondaryViewController topViewController] item] == nil);
-    BOOL val3_2 = ([(MOODLESearchItemDetailViewController *)[(UINavigationController *)secondaryViewController topViewController] item] == nil);
-    
-    
-    if (val1 && ((val2_1 && val3_1) || (val2_2 && val3_2))) {
-        // Return YES to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
-        return YES;
-    } else {
-        return NO;
-    }
 }
 
 

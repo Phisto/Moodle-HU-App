@@ -19,6 +19,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MOODLECourseViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface MOODLECourseViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 @end
 NS_ASSUME_NONNULL_END

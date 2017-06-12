@@ -55,6 +55,7 @@
     // call super
     [super viewWillAppear:animated];
     
+    
     self.sectionTitleLabel.text = self.item.title;
     self.semesterLabel.text = self.item.semester;
     NSString *locString = NSLocalizedString(@"Kursbereich: %@", @"Label indicating the assoziated department of a moodle course.");
@@ -109,19 +110,16 @@
     return self.item.teacher.count;
 }
 
+#pragma mark - IBActions
 
-#pragma mark - Navigation
 
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)subscribe:(id)sender {
     
-    if ([segue.identifier isEqualToString:@"toSubscribeSegue"]) {
-
-        MOODLEDocumentViewController *destViewController = (MOODLEDocumentViewController *)segue.destinationViewController;
-        destViewController.resourceURL = self.item.courseURL;
-    }
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    
+    MOODLEDocumentViewController *newViewController = (MOODLEDocumentViewController *)[storyboard instantiateViewControllerWithIdentifier:@"subscriptViewController"];
+    newViewController.resourceURL = self.item.courseURL;
+    [self.navigationController pushViewController:newViewController animated:YES];
 }
 
 

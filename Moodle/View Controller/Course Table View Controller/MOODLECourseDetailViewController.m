@@ -38,8 +38,9 @@
 @property (nonatomic, strong) IBOutlet UILabel *courseTitleLabel;
 @property (nonatomic, strong) IBOutlet UILabel *moodleTitleLabel;
 @property (nonatomic, strong) IBOutlet UILabel *semesterLabel;
-@property (nonatomic, strong) MOODLEActivityView *loadingView;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) MOODLEActivityView *loadingView;
 
 @end
 
@@ -236,18 +237,13 @@
 }
 
 
-#pragma mark - Navigation Methodes
-
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
-    if ([segue.identifier isEqualToString:@"toSectionDetail"]) {
-
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        UINavigationController *destNavController = segue.destinationViewController;
-        MOODLECourseSectionDetailViewController *destViewController = destNavController.viewControllers[0];
-        destViewController.section = [self.item.courseSections objectAtIndex:indexPath.row];
-    }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    
+    MOODLECourseSectionDetailViewController *newViewController = (MOODLECourseSectionDetailViewController *)[storyboard instantiateViewControllerWithIdentifier:@"courseSectionViewController"];
+    newViewController.section = self.item.courseSections[indexPath.row];
+    [self.navigationController pushViewController:newViewController animated:YES];
 }
 
 

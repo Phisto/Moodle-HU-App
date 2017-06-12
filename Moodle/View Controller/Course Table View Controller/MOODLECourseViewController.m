@@ -33,7 +33,6 @@
 @interface MOODLECourseViewController (/* Private */)
 
 @property (nonatomic, strong) MOODLEDataModel *dataModel;
-@property (nonnull, strong) IBOutlet UITableView *tableView;
 
 @end
 
@@ -60,16 +59,6 @@
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self
                                                                                             action:@selector(longPressGestureRecognized:)];
     [self.tableView addGestureRecognizer:longPress];
-}
-
-
-- (void)viewDidAppear:(BOOL)animated {
-    
-    // call super
-    [super viewDidAppear:animated];
-    
-    // reload data
-    [self.tableView reloadData];
 }
 
 
@@ -278,6 +267,23 @@
 }
 
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 76.0f;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    
+    MOODLECourseDetailViewController *newViewController = (MOODLECourseDetailViewController *)[storyboard instantiateViewControllerWithIdentifier:@"courseDetailViewController"];
+    MOODLECourse *item = self.dataModel.courseArray[indexPath.row];
+    newViewController.item = item;
+    [self.navigationController pushViewController:newViewController animated:YES];
+}
+
+
 #pragma mark - Lazy/Getter Methodes
 
 
@@ -288,24 +294,6 @@
         _dataModel = [MOODLEDataModel sharedDataModel];
     }
     return _dataModel;
-}
-
-
-#pragma mark - Navigation
-
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        MOODLECourse *item = self.dataModel.courseArray[indexPath.row];
-        MOODLECourseDetailViewController *controller = (MOODLECourseDetailViewController *)[[segue destinationViewController] topViewController];
-        controller.item = item;
-    }
 }
 
 

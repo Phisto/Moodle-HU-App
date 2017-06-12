@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitte erneut einloggen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICm-EU-cXP">
-                                <rect key="frame" x="16" y="414" width="343" height="50"/>
+                                <rect key="frame" x="16" y="414.5" width="343" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="lBF-d8-3vv"/>
                                 </constraints>
@@ -32,7 +32,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4jy-m5-wUV" customClass="HUProgressIndicator">
-                                <rect key="frame" x="127" y="273" width="120" height="120"/>
+                                <rect key="frame" x="127.5" y="273.5" width="120" height="120"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="ACq-5o-BFV"/>
@@ -63,7 +63,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8hN-fF-Yro" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1255" y="546"/>
+            <point key="canvasLocation" x="-1212" y="878"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -239,118 +239,108 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1255.2" y="1428.9355322338831"/>
+            <point key="canvasLocation" x="-1212" y="1692"/>
         </scene>
-        <!--Master View Controller Kurse-->
-        <scene sceneID="xtE-Ny-RCi">
+        <!--Meine Kurse-->
+        <scene sceneID="Hhv-kX-UwC">
             <objects>
-                <viewController title="Kurse" automaticallyAdjustsScrollViewInsets="NO" id="38T-EY-Mgi" userLabel="Master View Controller Kurse" customClass="MOODLECourseViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uGu-6L-b6S"/>
-                        <viewControllerLayoutGuide type="bottom" id="1Dp-Eh-3PN"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="qdH-bj-CbX">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                <tableViewController id="4jX-St-VTE" customClass="MOODLECourseViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bsq-xe-bNF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="76" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="74C-tW-aTk">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MOODLECourseTableViewCellIdentifier" rowHeight="76" id="xeu-Ls-EQ3" customClass="MOODLECourseTableViewCell">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="76"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xeu-Ls-EQ3" id="2a5-SV-vNK">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ethnologie der Sprache und des Sprechens #bc-ignore!" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHF-4S-Oqo">
-                                                    <rect key="frame" x="23" y="8" width="329" height="21"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moodle: 53615 #bc-ignore!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOi-w7-cO7">
-                                                    <rect key="frame" x="23" y="56" width="198" height="16"/>
-                                                    <accessibility key="accessibilityConfiguration">
-                                                        <bool key="isElement" value="NO"/>
-                                                    </accessibility>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="198" id="j2c-AE-C1V"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                                    <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SoSe 2017/2018 #bc-ignore!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33x-WW-ecZ">
-                                                    <rect key="frame" x="251" y="56" width="101" height="16"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="101" id="fYv-Tz-791"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                                    <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="gHF-4S-Oqo" secondAttribute="trailing" constant="15" id="3Oa-Sd-GQa"/>
-                                                <constraint firstAttribute="leadingMargin" secondItem="OOi-w7-cO7" secondAttribute="leading" constant="-15" id="8lI-ya-P7C"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="33x-WW-ecZ" secondAttribute="bottom" constant="-4.5" id="NOQ-zK-0fr"/>
-                                                <constraint firstItem="gHF-4S-Oqo" firstAttribute="top" secondItem="2a5-SV-vNK" secondAttribute="topMargin" id="YMK-0D-mhU"/>
-                                                <constraint firstAttribute="leadingMargin" secondItem="gHF-4S-Oqo" secondAttribute="leading" constant="-15" id="f1S-04-9Kw"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="OOi-w7-cO7" secondAttribute="bottom" constant="-4.5" id="suU-HN-kUR"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="33x-WW-ecZ" secondAttribute="trailing" constant="15" id="wRg-dU-ban"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <connections>
-                                            <outlet property="courseTitleLabel" destination="gHF-4S-Oqo" id="rsq-By-HuQ"/>
-                                            <outlet property="moodleTitleLabel" destination="OOi-w7-cO7" id="Ixd-be-tp3"/>
-                                            <outlet property="semesterLabel" destination="33x-WW-ecZ" id="rtf-1b-bqM"/>
-                                            <segue destination="sie-03-Aha" kind="showDetail" identifier="showDetail" id="uxF-29-mHe"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="38T-EY-Mgi" id="vlK-sE-Wcb"/>
-                                    <outlet property="delegate" destination="38T-EY-Mgi" id="DJw-dh-emI"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="74C-tW-aTk" secondAttribute="trailing" id="Ebp-br-559"/>
-                            <constraint firstItem="74C-tW-aTk" firstAttribute="top" secondItem="uGu-6L-b6S" secondAttribute="bottom" id="N8d-Tb-U01"/>
-                            <constraint firstItem="74C-tW-aTk" firstAttribute="leading" secondItem="qdH-bj-CbX" secondAttribute="leading" id="nrs-Ic-H6T"/>
-                            <constraint firstItem="1Dp-Eh-3PN" firstAttribute="top" secondItem="74C-tW-aTk" secondAttribute="bottom" id="oaw-kX-LMm"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Meine Kurse" id="4HE-dM-oUi">
-                        <barButtonItem key="backBarButtonItem" title="Zurück" id="tKf-Gu-RdD"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gNR-mj-LPX">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gNR-mj-LPX" id="JBw-CE-ukB">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MOODLECourseTableViewCellIdentifier" rowHeight="76" id="xeu-Ls-EQ3" customClass="MOODLECourseTableViewCell">
+                                <rect key="frame" x="0.0" y="72" width="375" height="76"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xeu-Ls-EQ3" id="2a5-SV-vNK">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ethnologie der Sprache und des Sprechens #bc-ignore!" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHF-4S-Oqo">
+                                            <rect key="frame" x="23" y="8" width="329" height="42.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moodle: 53615 #bc-ignore!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOi-w7-cO7">
+                                            <rect key="frame" x="23" y="56" width="198" height="16"/>
+                                            <accessibility key="accessibilityConfiguration">
+                                                <bool key="isElement" value="NO"/>
+                                            </accessibility>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="198" id="j2c-AE-C1V"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SoSe 2017/2018 #bc-ignore!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33x-WW-ecZ">
+                                            <rect key="frame" x="251" y="56" width="101" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="101" id="fYv-Tz-791"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="gHF-4S-Oqo" secondAttribute="trailing" constant="15" id="3Oa-Sd-GQa"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="OOi-w7-cO7" secondAttribute="leading" constant="-15" id="8lI-ya-P7C"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="33x-WW-ecZ" secondAttribute="bottom" constant="-4.5" id="NOQ-zK-0fr"/>
+                                        <constraint firstItem="gHF-4S-Oqo" firstAttribute="top" secondItem="2a5-SV-vNK" secondAttribute="topMargin" id="YMK-0D-mhU"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="gHF-4S-Oqo" secondAttribute="leading" constant="-15" id="f1S-04-9Kw"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="OOi-w7-cO7" secondAttribute="bottom" constant="-4.5" id="suU-HN-kUR"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="33x-WW-ecZ" secondAttribute="trailing" constant="15" id="wRg-dU-ban"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="courseTitleLabel" destination="gHF-4S-Oqo" id="rsq-By-HuQ"/>
+                                    <outlet property="moodleTitleLabel" destination="OOi-w7-cO7" id="Ixd-be-tp3"/>
+                                    <outlet property="semesterLabel" destination="33x-WW-ecZ" id="rtf-1b-bqM"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4jX-St-VTE" id="dbE-4Q-9Wc"/>
+                            <outlet property="delegate" destination="4jX-St-VTE" id="KQ9-Tg-znK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Meine Kurse" id="Vg2-Aj-RNB">
+                        <barButtonItem key="backBarButtonItem" title="Zurück" id="8T3-3V-qwa"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="74C-tW-aTk" id="Oao-Cy-fE8"/>
+                        <segue destination="WMH-ez-9zv" kind="show" id="kVU-t8-H77"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SkX-F0-7Ka" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QOg-b3-P8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3537" y="188"/>
+            <point key="canvasLocation" x="2414" y="614"/>
         </scene>
         <!--Detail View Controller Kurse-->
         <scene sceneID="Mas-qn-hej">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="WMH-ez-9zv" userLabel="Detail View Controller Kurse" customClass="MOODLECourseDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="courseDetailViewController" automaticallyAdjustsScrollViewInsets="NO" id="WMH-ez-9zv" userLabel="Detail View Controller Kurse" customClass="MOODLECourseDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BJk-Ou-9JW"/>
                         <viewControllerLayoutGuide type="bottom" id="Wop-OW-BJ9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="l0m-Uw-z8k">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rnS-A0-3fX">
-                                <rect key="frame" x="0.0" y="100" width="375" height="503"/>
+                                <rect key="frame" x="0.0" y="164" width="375" height="454"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -358,7 +348,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vM4-8y-plF" id="02m-bV-X8E">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Überblick und Organisation #bc-ignore!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pqd-JM-mXI">
@@ -426,7 +416,6 @@
                                             <outlet property="dokumentImageView" destination="4lT-bE-a4W" id="zLd-Mq-CDI"/>
                                             <outlet property="noContentLabel" destination="oFg-Vm-fSe" id="Fhz-Ed-KZI"/>
                                             <outlet property="sectionTitleLabel" destination="Pqd-JM-mXI" id="O0F-p9-4Dg"/>
-                                            <segue destination="hEG-Qz-api" kind="showDetail" identifier="toSectionDetail" id="O7x-Fu-Gkg"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="noContentCell" textLabel="cdc-Hx-hgd" rowHeight="80" style="IBUITableViewCellStyleDefault" id="ahW-Cg-iug">
@@ -450,7 +439,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GbA-EW-jhQ" userLabel="Header Container View">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ethnologie der Sprache und des Sprechens #bc-ignore!" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwg-Zj-IKu">
                                         <rect key="frame" x="15" y="8" width="345" height="69"/>
@@ -514,26 +503,27 @@
                         <outlet property="moodleTitleLabel" destination="f4G-xh-dck" id="lD9-XJ-BWH"/>
                         <outlet property="semesterLabel" destination="0mH-Zo-KeL" id="GqN-co-lth"/>
                         <outlet property="tableView" destination="rnS-A0-3fX" id="RLW-7M-C1C"/>
+                        <segue destination="AeB-ys-PzG" kind="show" id="Oqf-zW-vWR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pzV-ul-mmB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4654" y="988"/>
+            <point key="canvasLocation" x="3246" y="614"/>
         </scene>
         <!--Course Section Detail View Controller-->
         <scene sceneID="qif-9r-0jD">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="AeB-ys-PzG" customClass="MOODLECourseSectionDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="courseSectionViewController" automaticallyAdjustsScrollViewInsets="NO" id="AeB-ys-PzG" customClass="MOODLECourseSectionDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uce-3H-3Ox"/>
                         <viewControllerLayoutGuide type="bottom" id="fAZ-O7-1kM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AhB-IG-Df8">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6c4-0t-wWQ" userLabel="Header Container View">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="57"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ethnologie der Sprache und des Sprechens #bc-ignore!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAT-vj-3Mw">
                                         <rect key="frame" x="15" y="5" width="345" height="47"/>
@@ -552,7 +542,7 @@
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fd9-iI-8nI">
-                                <rect key="frame" x="16" y="65" width="343" height="150"/>
+                                <rect key="frame" x="16" y="129" width="343" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="Vol-p4-jBy"/>
                                 </constraints>
@@ -562,14 +552,14 @@
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DPn-sV-A9v" userLabel="horizontal line">
-                                <rect key="frame" x="0.0" y="222" width="375" height="0.5"/>
+                                <rect key="frame" x="0.0" y="286" width="375" height="0.5"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="0.5" id="ZkY-Dm-odk"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="3j3-OH-7LG">
-                                <rect key="frame" x="0.0" y="223" width="375" height="380"/>
+                                <rect key="frame" x="0.0" y="287" width="375" height="331"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -637,7 +627,6 @@
                                         <connections>
                                             <outlet property="fileIconImageView" destination="Tyx-Dw-BhN" id="2uH-4u-MW6"/>
                                             <outlet property="itemLabel" destination="uvx-6G-UuN" id="1Ax-wi-FQs"/>
-                                            <segue destination="ZZv-OK-NVE" kind="showDetail" identifier="toDocumentSegue" id="eKa-vB-mbc"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MOODLECommentTableViewCellIdentifier" rowHeight="80" id="YYK-Au-heP" customClass="MOODLECommentTableViewCell">
@@ -705,16 +694,17 @@
                         <outlet property="tableView" destination="3j3-OH-7LG" id="0NT-4p-iwK"/>
                         <outlet property="textView" destination="Fd9-iI-8nI" id="z4g-F9-vHy"/>
                         <outlet property="textViewHeight" destination="Vol-p4-jBy" id="b2E-Jn-IY6"/>
+                        <segue destination="ZZv-OK-NVE" kind="show" id="NSb-sR-Ip3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8aZ-hM-H1O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6653.6000000000004" y="986.35682158920542"/>
+            <point key="canvasLocation" x="4084" y="614"/>
         </scene>
         <!--Document View Controller-->
         <scene sceneID="kN9-WF-pEQ">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="ZZv-OK-NVE" customClass="MOODLEDocumentViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="courseSectionItemViewController" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="ZZv-OK-NVE" customClass="MOODLEDocumentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qU1-LZ-DvL"/>
                         <viewControllerLayoutGuide type="bottom" id="N3h-wb-idy"/>
@@ -724,7 +714,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mij-EY-19j">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
                             </webView>
@@ -733,7 +723,7 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="mij-EY-19j" secondAttribute="trailing" constant="-16" id="3n9-Bh-idN"/>
                             <constraint firstItem="mij-EY-19j" firstAttribute="bottom" secondItem="AhH-xS-gZg" secondAttribute="bottom" id="7Tn-mV-e16"/>
-                            <constraint firstItem="mij-EY-19j" firstAttribute="top" secondItem="qU1-LZ-DvL" secondAttribute="bottom" constant="-20" id="RLp-HU-ZAa"/>
+                            <constraint firstItem="mij-EY-19j" firstAttribute="top" secondItem="qU1-LZ-DvL" secondAttribute="bottom" id="RLp-HU-ZAa"/>
                             <constraint firstItem="mij-EY-19j" firstAttribute="leading" secondItem="AhH-xS-gZg" secondAttribute="leadingMargin" constant="-16" id="XHB-qW-duS"/>
                         </constraints>
                     </view>
@@ -743,7 +733,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vph-yG-2I7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7661.6000000000004" y="987.25637181409309"/>
+            <point key="canvasLocation" x="4935" y="614"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gsg-Uk-Qq0">
@@ -754,18 +744,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="selectedImageTintColor" red="0.01176470588" green="0.40000000000000002" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="4c2-Va-akc" kind="relationship" relationship="viewControllers" id="et0-VN-jaU"/>
-                        <segue destination="fYN-ak-uv7" kind="relationship" relationship="viewControllers" id="AWe-od-hre"/>
+                        <segue destination="2BP-Cf-FdR" kind="relationship" relationship="viewControllers" id="3Iy-E7-FOX"/>
+                        <segue destination="SbV-IL-Jnk" kind="relationship" relationship="viewControllers" id="TOC-oA-fAc"/>
                         <segue destination="j2Q-0v-0TT" kind="relationship" relationship="viewControllers" id="KCA-3K-F0N"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aI0-Lj-4GG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-55" y="1429"/>
+            <point key="canvasLocation" x="-54" y="1692"/>
         </scene>
         <!--Kurssuche-->
         <scene sceneID="8wV-1a-7bS">
@@ -797,7 +786,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i1I-sD-yzL" id="OiW-xa-K7w">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="91 013 Academic English :Reading, Writing, Listening, Speaking-Unicert II (B2) - S.Geyer (SoSe 2017) #bc-ignore!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZU-tg-4Us">
@@ -826,7 +815,6 @@
                                         <connections>
                                             <outlet property="subscribeImageIcon" destination="UMN-wc-WbR" id="5VU-2M-MRJ"/>
                                             <outlet property="titleLabel" destination="pZU-tg-4Us" id="BUS-RU-DrT"/>
-                                            <segue destination="9zt-k1-AVR" kind="showDetail" identifier="showSearchDetail" id="Gnt-sC-17I"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="noResultCell" textLabel="eqe-ao-FXy" rowHeight="55" style="IBUITableViewCellStyleDefault" id="Wcg-6o-Ria">
@@ -868,87 +856,17 @@
                     <connections>
                         <outlet property="searchBar" destination="6Cz-Mq-5qy" id="vtm-39-SVt"/>
                         <outlet property="tableView" destination="Evb-rZ-u4l" id="nF6-3m-Bmr"/>
+                        <segue destination="EyI-7z-jtv" kind="show" identifier="" id="eCL-kN-OvB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kQR-Rt-CCR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3536.8000000000002" y="1735.6821589205399"/>
-        </scene>
-        <!--Master Navigation Controller Kurse-->
-        <scene sceneID="5W4-k6-4Vh">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H8i-7S-MHa" userLabel="Master Navigation Controller Kurse" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Kurse" image="course_icon_normal" id="GGn-sS-xwv"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="yZF-w4-h7m">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.01176470588" green="0.40000000000000002" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="38T-EY-Mgi" kind="relationship" relationship="rootViewController" id="DdN-hp-hJi"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tCa-tc-LdC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2414" y="188"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="dPA-ys-bPl">
-            <objects>
-                <navigationController id="sie-03-Aha" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Pag-ng-7BI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="WMH-ez-9zv" kind="relationship" relationship="rootViewController" id="W8w-Hg-5iA"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PEx-Zn-o1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3537" y="989"/>
-        </scene>
-        <!--Split View Controller Kurse-->
-        <scene sceneID="h2T-02-9GL">
-            <objects>
-                <splitViewController automaticallyAdjustsScrollViewInsets="NO" id="4c2-Va-akc" userLabel="Split View Controller Kurse" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Kurse" image="course_icon_normal" id="YLg-r6-Xj9"/>
-                    <connections>
-                        <segue destination="H8i-7S-MHa" kind="relationship" relationship="masterViewController" id="7Fj-th-tBB"/>
-                        <segue destination="sie-03-Aha" kind="relationship" relationship="detailViewController" id="Dwc-BA-r7V"/>
-                    </connections>
-                </splitViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6D0-A6-ncF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1390" y="546"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="78U-Ne-EQT">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hEG-Qz-api" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="YmN-HK-OW5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="AeB-ys-PzG" kind="relationship" relationship="rootViewController" id="TSD-cH-GS9"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="U8k-kx-IuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5697" y="988"/>
+            <point key="canvasLocation" x="2414" y="1429"/>
         </scene>
         <!--Search Item Detail View Controller-->
         <scene sceneID="ljL-cT-fq1">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="EyI-7z-jtv" customClass="MOODLESearchItemDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MOODLESearchItemDetailViewController" automaticallyAdjustsScrollViewInsets="NO" id="EyI-7z-jtv" customClass="MOODLESearchItemDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gYW-1S-zzN"/>
                         <viewControllerLayoutGuide type="bottom" id="bNl-Fr-ger"/>
@@ -999,14 +917,14 @@
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Ys-2W-JMN">
-                                <rect key="frame" x="15" y="117" width="345" height="347"/>
+                                <rect key="frame" x="15" y="117" width="345" height="298"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. #bc-ignore!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIK-uM-n0R">
-                                <rect key="frame" x="0.0" y="559" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="510" width="375" height="44"/>
                                 <color key="backgroundColor" red="0.01176470588" green="0.40000000000000002" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="gOx-2D-3Xe"/>
@@ -1016,11 +934,11 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Hfc-wg-cBb" kind="showDetail" identifier="toSubscribeSegue" id="Kg0-x4-1mi"/>
+                                    <action selector="subscribe:" destination="EyI-7z-jtv" eventType="touchUpInside" id="r77-12-z04"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="20" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pb0-xn-BAm">
-                                <rect key="frame" x="0.0" y="479" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="430" width="375" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Wyv-WH-wFy"/>
@@ -1080,26 +998,27 @@
                         <outlet property="tableView" destination="pb0-xn-BAm" id="0KQ-KD-H1L"/>
                         <outlet property="tableViewHeightConstraint" destination="Wyv-WH-wFy" id="M7w-vr-cWw"/>
                         <outlet property="textView" destination="2Ys-2W-JMN" id="dZx-X8-Exe"/>
+                        <segue destination="Hfc-wg-cBb" kind="show" identifier="" id="9xD-qg-7jx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8vw-fo-Nq5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4653.6000000000004" y="2506.5967016491754"/>
+            <point key="canvasLocation" x="3246" y="1429"/>
         </scene>
-        <!--Document View Controller-->
+        <!--Kurseinschreibung-->
         <scene sceneID="H1C-p6-r6f">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="Hfc-wg-cBb" customClass="MOODLEDocumentViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="subscriptViewController" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="Hfc-wg-cBb" customClass="MOODLEDocumentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pon-V6-Odn"/>
                         <viewControllerLayoutGuide type="bottom" id="McD-nI-jVE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fax-eb-ocY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dQs-L1-qXL">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
                             </webView>
@@ -1112,7 +1031,7 @@
                             <constraint firstItem="dQs-L1-qXL" firstAttribute="leading" secondItem="fax-eb-ocY" secondAttribute="leadingMargin" constant="-16" id="dRD-MS-lty"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="NRT-85-uBj">
+                    <navigationItem key="navigationItem" title="Kurseinschreibung" id="NRT-85-uBj">
                         <barButtonItem key="backBarButtonItem" title="Zurück" id="XkL-95-OyZ"/>
                     </navigationItem>
                     <connections>
@@ -1121,7 +1040,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1iI-yI-Oeb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5697" y="2507"/>
+            <point key="canvasLocation" x="4084" y="1429"/>
         </scene>
         <!--Einstellungen-->
         <scene sceneID="Gcy-Gr-ad1">
@@ -1237,21 +1156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTK-wP-5VH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="884" y="2744.9775112443781"/>
-        </scene>
-        <!--Suche-->
-        <scene sceneID="FHn-xN-mmh">
-            <objects>
-                <splitViewController automaticallyAdjustsScrollViewInsets="NO" id="fYN-ak-uv7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Suche" image="search_icon" id="HKB-fY-Taa"/>
-                    <connections>
-                        <segue destination="9zt-k1-AVR" kind="relationship" relationship="detailViewController" id="bLb-03-Bps"/>
-                        <segue destination="SbV-IL-Jnk" kind="relationship" relationship="masterViewController" id="Vmf-Rv-BQj"/>
-                    </connections>
-                </splitViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ors-nW-0Gr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1390" y="2016"/>
+            <point key="canvasLocation" x="2414" y="2211"/>
         </scene>
         <!--Suche-->
         <scene sceneID="ggQ-Pg-qWD">
@@ -1274,25 +1179,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4XG-hx-Ald" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2414" y="1736"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="7pX-0q-coS">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9zt-k1-AVR" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="dGJ-bg-atw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="EyI-7z-jtv" kind="relationship" relationship="rootViewController" id="PI2-Zj-p5P"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tre-T9-Jty" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3537" y="2507"/>
+            <point key="canvasLocation" x="1537" y="1429"/>
         </scene>
         <!--Einstellungen-->
         <scene sceneID="bph-AZ-mcm">
@@ -1315,7 +1202,30 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3x-6g-9BS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-55.200000000000003" y="2744.9775112443781"/>
+            <point key="canvasLocation" x="1537" y="2211"/>
+        </scene>
+        <!--Kurse-->
+        <scene sceneID="kaa-1V-aXj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2BP-Cf-FdR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Kurse" image="course_icon_normal" id="h5O-Jn-8Vl"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="92Z-tl-a4L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.01176470588" green="0.40000000000000002" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4jX-St-VTE" kind="relationship" relationship="rootViewController" id="yY7-ks-o6y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aZ5-m8-sGP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1537" y="614"/>
         </scene>
     </scenes>
     <resources>
@@ -1325,8 +1235,4 @@
         <image name="settings_icon" width="25" height="25"/>
         <image name="subscribe_possible_icon" width="40" height="40"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="uxF-29-mHe"/>
-        <segue reference="Gnt-sC-17I"/>
-    </inferredMetricsTieBreakers>
 </document>

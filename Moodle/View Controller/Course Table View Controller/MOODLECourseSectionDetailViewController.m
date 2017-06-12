@@ -286,6 +286,18 @@
 }
 
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    
+    MOODLEDocumentViewController *newViewController = (MOODLEDocumentViewController *)[storyboard instantiateViewControllerWithIdentifier:@"courseSectionItemViewController"];
+    MOODLECourseSectionItem *item = self.tableViewSegments[indexPath.section][indexPath.row];
+    newViewController.resourceURL = item.resourceURL;
+    if (item.itemType == MoodleItemTypeDocument) newViewController.isAudio = (item.documentType == MoodleDocumentTypeAudioFile);
+    [self.navigationController pushViewController:newViewController animated:YES];
+}
+
+
 #pragma mark - Helper Methoes
 
 
@@ -378,23 +390,6 @@
         _heightCalculationTextView = [[UITextView alloc] init];
     }
     return _heightCalculationTextView;
-}
-
-
-#pragma mark - Navigation
-
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
-    if ([segue.identifier isEqualToString:@"toDocumentSegue"]) {
-        
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        MOODLEDocumentViewController *destViewController = segue.destinationViewController;
-        MOODLECourseSectionItem *item = self.tableViewSegments[indexPath.section][indexPath.row];
-        
-        destViewController.resourceURL = item.resourceURL;
-        if (item.itemType == MoodleItemTypeDocument) destViewController.isAudio = (item.documentType == MoodleDocumentTypeAudioFile);
-    }
 }
 
 
