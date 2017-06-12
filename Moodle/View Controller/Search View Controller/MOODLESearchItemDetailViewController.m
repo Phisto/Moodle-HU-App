@@ -74,10 +74,13 @@
     
     NSMutableAttributedString *attributedString = self.item.attributedCourseDescription;
     [attributedString addAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:17.0f]} range:NSMakeRange(0, attributedString.length)];
-    
     self.textView.attributedText = attributedString;
-    [self.textView layoutIfNeeded];
-    self.textView.contentOffset = CGPointMake(0.0f, 0.0f);
+}
+
+
+- (void)viewDidLayoutSubviews {
+    // set content offset after the text view is properly sized
+    [self.textView setContentOffset:CGPointZero animated:NO];
 }
 
 

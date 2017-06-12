@@ -114,18 +114,20 @@
 
     // set/calculate contraints
     NSMutableAttributedString *attributedString = self.section.attributedSectionDescription;
-    [attributedString addAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:17.0f]} range:NSMakeRange(0, attributedString.length)];
+    [attributedString addAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16.0f]} range:NSMakeRange(0, attributedString.length)];
     CGFloat height = [self textViewHeightForAttributedText:attributedString
                                                   andWidth:self.view.frame.size.width-30.0f];
     [self calculateAndSetContrainsts:height];
-    
-    // set text
     self.textView.attributedText = attributedString;
-    [self.textView layoutIfNeeded];
-    self.textView.contentOffset = CGPointMake(0.0f, 0.0f);
-    
+
     // reload table view
     [self.tableView reloadData];
+}
+
+
+- (void)viewDidLayoutSubviews {
+    // set content offset after the text view is properly sized
+    [self.textView setContentOffset:CGPointZero animated:NO];
 }
 
 
