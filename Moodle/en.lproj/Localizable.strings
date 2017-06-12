@@ -11,14 +11,26 @@
 /* Appended to accessibility label if course section has documents 1. */
 ", Dokumente" = ", documents";
 
+/* Appended to accessibility label if course section has an assignment. */
+"Abgabe" = "Abgabe";
+
 /* Section title for assignment items. */
 "Abgaben" = "Assignments";
+
+/* voice over document type title other document */
+"Andere Datei" = "Andere Datei";
 
 /* Section title for other items. */
 "Anderes" = "Other";
 
+/* voice over item type title */
+"Anderes Item" = "Anderes Item";
+
 /* No comment provided by engineer. */
 "Anmeldedaten merken" = "Save user credentials";
+
+/* voice over document type title Audio */
+"Audio Datei" = "Audio Datei";
 
 /* Label of the switch to toggle if autologin is enabled */
 "Automatisch einloggen" = "Automatically log in";
@@ -44,8 +56,14 @@
 /* Button label to favorite moodle course. */
 "Favorisieren" = "Favour";
 
+/* voice over item type title */
+"Gallerie" = "Gallerie";
+
 /* Message if course search yields no results. */
 "Keine Kurse mit dem Begriff '%@' gefunden." = "No courses with the term '%@' were found.";
+
+/* prefix for a comment course section item */
+"Kommentar" = "Kommentar";
 
 /* voice over action to read komment title */
 "Kommentar vorlesen" = "Kommentar vorlesen";
@@ -59,11 +77,23 @@
 /* Label of the progress indicator during course content loading. */
 "Laden" = "Loading";
 
+/* voice over item type title Link */
+"Link" = "Link";
+
 /* Lable of the activity indicator during login request. */
 "Login" = "Login";
 
 /* Voice over message aftter successfull login. */
 "Login erfolgreich" = "Login successfull";
+
+/* voice over item type title */
+"Ordner" = "Ordner";
+
+/* voice over document type title PDF */
+"PDF Datei" = "PDF Datei";
+
+/* voice over document type title PPT */
+"PowerPoint Datei" = "PowerPoint Datei";
 
 /* Message the activity indicator is showing during a course search */
 "Suche" = "Searching";
@@ -83,38 +113,8 @@
 /* Section title for wiki items. */
 "Wiki" = "Wiki";
 
+/* voice over document type title WORD */
+"Word Datei" = "Word Datei";
+
 /* table view cell selection hint */
 "Zum aktivieren doppel tippen" = "Zum aktivieren doppel tippen";
-
-/* Appended to accessibility label if course section has an assignment. */
-"Abgabe" = "";
-
-/* voice over document type title other document */
-"Andere Datei" = "";
-
-/* voice over item type title */
-"Anderes Item" = "";
-
-/* voice over document type title Audio */
-"Audio Datei" = "";
-
-/* voice over item type title */
-"Gallerie" = "";
-
-/* prefix for a comment course section item */
-"Kommentar" = "";
-
-/* voice over item type title Link */
-"Link" = "";
-
-/* voice over item type title */
-"Ordner" = "";
-
-/* voice over document type title PDF */
-"PDF Datei" = "";
-
-/* voice over document type title PPT */
-"PowerPoint Datei" = "";
-
-/* voice over document type title WORD */
-"Word Datei" = "";

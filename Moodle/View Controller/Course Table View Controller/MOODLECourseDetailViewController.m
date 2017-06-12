@@ -241,7 +241,10 @@
         
         NSString *locString = NSLocalizedString(@"Laden", @"Label of the progress indicator during course content loading.");
         MOODLEActivityView *view = [MOODLEActivityView activityViewWithText:locString];
-        view.center = CGPointMake(self.view.center.x, self.view.center.y-self.navigationController.navigationBar.frame.size.height);
+        view.center = CGPointMake(
+                                  self.tableView.center.x-view.frame.size.width/4.0f,
+                                  self.tableView.center.y-view.frame.size.height/4.0f
+                                  );
         _loadingView = view;
     }
     return _loadingView;

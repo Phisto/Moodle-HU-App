@@ -149,7 +149,6 @@
                 self.seperatorHeigthOneContraint.constant = 0.0f;
                 self.seperatorHeigthTwoContraint.constant = 0.0f;
                 self.textViewHeight.constant = self.view.frame.size.height-(57.0f+self.navigationController.navigationBar.frame.size.height+10.0f);
-                //self.textViewHeight.constant = 300.0f;
             }
             else {
                 
@@ -274,6 +273,12 @@
 }
 
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    
+    return 22.0f;
+}
+
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
@@ -367,6 +372,7 @@
     [self.heightCalculationTextView setAttributedText:text];
     CGSize size = [self.heightCalculationTextView sizeThatFits:CGSizeMake(width, FLT_MAX)];
 
+    // +10 for imprecise calculation
     return size.height+10.0f;
 }
 
