@@ -81,19 +81,6 @@
 }
 
 
-#pragma mark - Layout Methodes
-
-
-- (void)setupNavigationBar {
-    
-    UINavigationBar *navBar = self.navigationController.navigationBar;
-    navBar.layer.shadowColor = [UIColor blackColor].CGColor;
-    navBar.layer.shadowOffset = CGSizeMake(0.0f, 2.0f);
-    navBar.layer.shadowOpacity = 0.22f;
-    navBar.layer.shadowRadius = 2.0f;
-}
-
-
 #pragma mark - Table View Methodes
 
 

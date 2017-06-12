@@ -101,13 +101,6 @@
       "idiom" : "ipad",
       "filename" : "ipad-pro-app-83.5pt@2x.png",
       "scale" : "2x"
-    },
-    {
-      "size" : "29x29",
-      "idiom" : "iphone",
-      "filename" : "ipad-settings-29pt@1x.png",
-      "unassigned" : true,
-      "scale" : "1x"
     }
   ],
   "info" : {

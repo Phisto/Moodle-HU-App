@@ -68,11 +68,9 @@
 
 
 - (void)viewDidLoad {
+    
     // call super
     [super viewDidLoad];
-
-    // set up shadow nav bar
-    [self setupNavigationBar];
     
     // table view inset
     self.tableView.contentInset = UIEdgeInsetsMake(22.0f, 0.0f, 0.0f, 0.0f);
@@ -183,16 +181,6 @@
     
     // set table vie hidden if neccessary
     self.tableView.hidden = !(self.section.hasDocuments || self.section.hasOhterItems || self.section.hasAssignment || self.section.hasWiki);
-}
-
-
-- (void)setupNavigationBar {
-    
-    UINavigationBar *navBar = self.navigationController.navigationBar;
-    navBar.layer.shadowColor = [UIColor blackColor].CGColor;
-    navBar.layer.shadowOffset = CGSizeMake(0.0f, 2.0f);
-    navBar.layer.shadowOpacity = 0.22f;
-    navBar.layer.shadowRadius = 2.0f;
 }
 
 

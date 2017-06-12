@@ -60,9 +60,7 @@
     
     // call super
     [super viewWillAppear:animated];
-    
-    // set nav bar shadow
-    [self setupNavigationBar];
+
     
     self.courseTitleLabel.text = self.item.courseTitle;
     self.moodleTitleLabel.text = [NSString stringWithFormat:@"Moodle: %@", self.item.moodleTitle];
@@ -91,19 +89,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-
-#pragma mark - Navigation Bar Methodes
-
-
-- (void)setupNavigationBar {
-    
-    UINavigationBar *navBar = self.navigationController.navigationBar;
-    navBar.layer.shadowColor = [UIColor blackColor].CGColor;
-    navBar.layer.shadowOffset = CGSizeMake(0.0f, 2.0f);
-    navBar.layer.shadowOpacity = 0.22f;
-    navBar.layer.shadowRadius = 2.0f;
 }
 
 
