@@ -14,6 +14,16 @@
       "idiom" : "iphone",
       "filename" : "chat-2.png",
       "scale" : "3x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "chat-4.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "chat-3.png",
+      "scale" : "2x"
     }
   ],
   "info" : {

@@ -14,6 +14,16 @@
       "idiom" : "iphone",
       "filename" : "log-in-button-with-arrow-2.png",
       "scale" : "3x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "log-in-button-with-arrow-4.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "log-in-button-with-arrow-3.png",
+      "scale" : "2x"
     }
   ],
   "info" : {

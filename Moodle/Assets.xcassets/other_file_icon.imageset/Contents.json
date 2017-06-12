@@ -14,6 +14,16 @@
       "idiom" : "iphone",
       "filename" : "file-2.png",
       "scale" : "3x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "file-4.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "file-3.png",
+      "scale" : "2x"
     }
   ],
   "info" : {

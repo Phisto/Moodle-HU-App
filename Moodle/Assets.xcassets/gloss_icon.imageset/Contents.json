@@ -14,6 +14,16 @@
       "idiom" : "iphone",
       "filename" : "notebook-2.png",
       "scale" : "3x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "notebook-4.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "notebook-3.png",
+      "scale" : "2x"
     }
   ],
   "info" : {
