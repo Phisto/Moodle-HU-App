@@ -30,10 +30,8 @@
 @property (nonatomic, strong) IBOutlet UILabel *categoryLabel;
 @property (nonatomic, strong) IBOutlet UITextView *textView;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) IBOutlet UIButton *subscribeButton;
 
 // Constraints
-@property (nonatomic, strong) IBOutlet NSLayoutConstraint *subscriptionButtonHeightConstraint;
 @property (nonatomic, strong) IBOutlet NSLayoutConstraint *tableViewHeightConstraint;
 
 @end
@@ -55,14 +53,20 @@
     // call super
     [super viewWillAppear:animated];
     
+    if (self.item.canSubscribe) {
+        
+        UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Einschreiben"
+                                                                          style:UIBarButtonItemStylePlain target:self
+                                                                         action:@selector(subscribe:)];
+        self.navigationItem.rightBarButtonItem = anotherButton;
+    }
+    
     
     self.sectionTitleLabel.text = self.item.title;
     self.semesterLabel.text = self.item.semester;
     NSString *locString = NSLocalizedString(@"Kursbereich: %@", @"Label indicating the assoziated department of a moodle course.");
     self.categoryLabel.text = (self.item.courseCategory) ? [NSString stringWithFormat:locString, self.item.courseCategory] : nil;
     
-    self.subscriptionButtonHeightConstraint.constant = (self.item.canSubscribe) ? 44.0f : 0.0f;
-    self.subscribeButton.hidden = !self.item.canSubscribe;
 
     CGFloat height = self.item.teacher.count*20.0f;
     self.tableViewHeightConstraint.constant = (height > 80.0f) ? 80.0f : height;

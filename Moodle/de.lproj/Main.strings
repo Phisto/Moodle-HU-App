@@ -35,9 +35,6 @@
 /* Class = "UINavigationItem"; title = "Kurssuche"; ObjectID = "gQF-9y-HjW"; */
 "gQF-9y-HjW.title" = "Kurssuche";
 
-/* Class = "UIButton"; normalTitle = "Einschreiben"; ObjectID = "iIK-uM-n0R"; */
-"iIK-uM-n0R.normalTitle" = "Einschreiben";
-
 /* Class = "UITabBarItem"; title = "Einstellungen"; ObjectID = "lYj-da-Eig"; */
 "lYj-da-Eig.title" = "Einstellungen";
 
@@ -59,8 +56,8 @@
 /* Class = "UIBarButtonItem"; title = "Zurück"; ObjectID = "XkL-95-OyZ"; */
 "XkL-95-OyZ.title" = "Zurück";
 
-/* Class = "UINavigationItem"; title = "Kurseinschreibung"; ObjectID = "NRT-85-uBj"; */
-"NRT-85-uBj.title" = "Kurseinschreibung";
+/* Class = "UINavigationItem"; title = "Einschreibung"; ObjectID = "NRT-85-uBj"; */
+"NRT-85-uBj.title" = "Einschreibung";
 
 /* Class = "UITabBarItem"; title = "Kurse"; ObjectID = "h5O-Jn-8Vl"; */
 "h5O-Jn-8Vl.title" = "Kurse";
