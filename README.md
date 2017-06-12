@@ -13,7 +13,13 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 I wrote this app to access a user account on the Moodle™ instance of the 'Humboldt-Universität zu Berlin'.
 
-### Screnshots
+## Accessiblity
+
+I have given much attention to support VoiceOver properly. 
+I don't have feedback regarding the VoiceOver behavior of the app, 
+so I dont know if it fits the need of users who utilize this technologie.
+
+### Screenshots
 
 Login                      |  My Courses
 :-------------------------:|:-------------------------:
