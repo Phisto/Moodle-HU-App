@@ -250,16 +250,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gNR-mj-LPX">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gNR-mj-LPX" id="JBw-CE-ukB">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MOODLECourseTableViewCellIdentifier" rowHeight="76" id="xeu-Ls-EQ3" customClass="MOODLECourseTableViewCell">
-                                <rect key="frame" x="0.0" y="72" width="375" height="76"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="76"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xeu-Ls-EQ3" id="2a5-SV-vNK">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
@@ -320,7 +312,7 @@
                         <barButtonItem key="backBarButtonItem" title="Zurück" id="8T3-3V-qwa"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="WMH-ez-9zv" kind="show" id="kVU-t8-H77"/>
+                        <segue destination="WMH-ez-9zv" kind="show" identifier="toCourseDetailView" id="kVU-t8-H77"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QOg-b3-P8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -503,7 +495,7 @@
                         <outlet property="moodleTitleLabel" destination="f4G-xh-dck" id="lD9-XJ-BWH"/>
                         <outlet property="semesterLabel" destination="0mH-Zo-KeL" id="GqN-co-lth"/>
                         <outlet property="tableView" destination="rnS-A0-3fX" id="RLW-7M-C1C"/>
-                        <segue destination="AeB-ys-PzG" kind="show" id="Oqf-zW-vWR"/>
+                        <segue destination="AeB-ys-PzG" kind="show" identifier="toCourseSectionDetailView" id="Oqf-zW-vWR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pzV-ul-mmB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -694,7 +686,7 @@
                         <outlet property="tableView" destination="3j3-OH-7LG" id="0NT-4p-iwK"/>
                         <outlet property="textView" destination="Fd9-iI-8nI" id="z4g-F9-vHy"/>
                         <outlet property="textViewHeight" destination="Vol-p4-jBy" id="b2E-Jn-IY6"/>
-                        <segue destination="ZZv-OK-NVE" kind="show" id="NSb-sR-Ip3"/>
+                        <segue destination="ZZv-OK-NVE" kind="show" identifier="toCourseSectionItemView" id="NSb-sR-Ip3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8aZ-hM-H1O" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -856,7 +848,7 @@
                     <connections>
                         <outlet property="searchBar" destination="6Cz-Mq-5qy" id="vtm-39-SVt"/>
                         <outlet property="tableView" destination="Evb-rZ-u4l" id="nF6-3m-Bmr"/>
-                        <segue destination="EyI-7z-jtv" kind="show" identifier="" id="eCL-kN-OvB"/>
+                        <segue destination="EyI-7z-jtv" kind="show" identifier="toSearchResultDetailView" id="eCL-kN-OvB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kQR-Rt-CCR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -998,7 +990,7 @@
                         <outlet property="tableView" destination="pb0-xn-BAm" id="0KQ-KD-H1L"/>
                         <outlet property="tableViewHeightConstraint" destination="Wyv-WH-wFy" id="M7w-vr-cWw"/>
                         <outlet property="textView" destination="2Ys-2W-JMN" id="dZx-X8-Exe"/>
-                        <segue destination="Hfc-wg-cBb" kind="show" identifier="" id="9xD-qg-7jx"/>
+                        <segue destination="Hfc-wg-cBb" kind="show" identifier="toSubscriptionView" id="9xD-qg-7jx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8vw-fo-Nq5" userLabel="First Responder" sceneMemberID="firstResponder"/>

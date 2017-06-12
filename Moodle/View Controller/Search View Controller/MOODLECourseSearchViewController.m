@@ -23,10 +23,6 @@
 /* Custom Views */
 #import "MOODLEActivityView.h"
 
-/* Custom Animator */
-#import "MOODLEPushSegueAnimator.h"
-#import "MOODLEPushSegue.h"
-
 ///-----------------------
 /// @name CATEGORIES
 ///-----------------------
