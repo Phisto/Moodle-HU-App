@@ -65,6 +65,12 @@
         UIViewController *c = [[UIViewController alloc]init];
         [viewController presentViewController:c animated:NO completion:nil];
         [viewController dismissViewControllerAnimated:NO completion:nil];
+        
+        if ([[UIDevice currentDevice] respondsToSelector:@selector(orientation)]) {
+            
+            NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationMaskPortrait];
+            [[UIDevice currentDevice] setValue:value forKey:@"orientation"];
+        }
     }
 }
 
