@@ -56,12 +56,8 @@
     // call super
     [super viewWillAppear:animated];
 
-    // hide bottom bar
-    [UIView animateWithDuration:.4 animations:^{
-       
-        //self.tabBarController.tabBar.hidden = YES;
-        self.tabBarController.tabBar.alpha = 0.0;
-    }];
+    self.navigationController.hidesBarsOnSwipe = YES;
+
     
     // prepare audio
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
@@ -76,13 +72,7 @@
     // call super
     [super viewWillDisappear:animated];
     
-    // show bottom bar
-    [UIView animateWithDuration:0.4f
-                     animations:^{
-        
-        //self.tabBarController.tabBar.hidden = NO;
-        self.tabBarController.tabBar.alpha = 1.0;
-    }];
+    self.navigationController.hidesBarsOnSwipe = NO;
     
     // stop
     [self.webView stopLoading];
