@@ -16,6 +16,7 @@
 #import "MOODLELoginViewController.h"
 #import "MOODLETabBarController.h"
 #import "MOODLEProgressViewController.h"
+#import "MOODLESettingsViewController.h"
 
 
 
@@ -63,6 +64,12 @@ static NSUInteger const kLoginTimeoutTrashold = 3600;
                                                  name:MOODLEDidLoginNotification
                                                object:nil];
     
+    // register to notification so we transition to the course view controler after login (embeded in tab bar controller, hence the name ...)
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(logout)
+                                                 name:MOODLEShouldLogoutNotification
+                                               object:nil];
+    
     return YES;
 }
 
@@ -85,7 +92,7 @@ static NSUInteger const kLoginTimeoutTrashold = 3600;
         // display an undetermined progress indicator while logout
         // to signal to the user that the session is over
         // use a new view controller not just a hud progress indicator
-        [self transitionToProgressViewController];
+        [self transitionToProgressViewControllerWithMessage:YES];
         
         // logout on background
         dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
@@ -120,6 +127,37 @@ static NSUInteger const kLoginTimeoutTrashold = 3600;
 }
 
 
+#pragma mark - Logout Methodes
+
+
+- (void)logout {
+    
+    // display an undetermined progress indicator while logout
+    // to signal to the user that the session is over
+    // use a new view controller not just a hud progress indicator
+    [self transitionToProgressViewControllerWithMessage:NO];
+    
+    // logout on background
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
+    dispatch_async(queue, ^{
+        
+        [self.dataModel logoutWithCompletionHandler:^(BOOL success, NSError * _Nullable error) {
+            
+            // its not important if the loggout was successful
+            // as this is just for safety (and may be performed while the user is logged out and subsequently fail here)
+            
+            // there realy is no login date now ...
+            self.dataModel.loginDate = nil;
+            
+            // update ui on main thread
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self transitionToLoginViewController];
+            });
+        }];
+    });
+}
+
+
 #pragma mark -  View Controller Transition Methodes
 
 
@@ -139,11 +177,11 @@ static NSUInteger const kLoginTimeoutTrashold = 3600;
 }
 
 
-- (void)transitionToProgressViewController {
+- (void)transitionToProgressViewControllerWithMessage:(BOOL)showMessage {
     
     UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     MOODLEProgressViewController *controller = [mainStoryBoard instantiateViewControllerWithIdentifier:MOODLEProgressViewControllerIdentifier];
-    controller.shouldShowReloginLabel = YES;
+    controller.shouldShowReloginLabel = showMessage;
     [self changeRootViewController:controller];
 }
 

@@ -50,6 +50,9 @@
 /* Section title for document items. */
 "Dokumente" = "Documents";
 
+/* Title of the subscription nav bar item */
+"Einschreiben" = "Enroll";
+
 /* VoiceOver notification for successful login */
 "Erfolgreich eingeloggt" = "Loggin was successful";
 
@@ -88,6 +91,9 @@
 
 /* Voice over message aftter successfull login. */
 "Login erfolgreich" = "Login successfull";
+
+/* title of the logout button */
+"Logout" = "Logout";
 
 /* alert view retry button title */
 "Nochmal versuchen" = "Nochmal versuchen";

@@ -55,8 +55,11 @@
     
     if (self.item.canSubscribe) {
         
-        UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Einschreiben"
-                                                                          style:UIBarButtonItemStylePlain target:self
+        
+        NSString *locString = NSLocalizedString(@"Einschreiben", @"Title of the subscription nav bar item");
+        UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:locString
+                                                                          style:UIBarButtonItemStylePlain
+                                                                         target:self
                                                                          action:@selector(subscribe:)];
         self.navigationItem.rightBarButtonItem = anotherButton;
     }

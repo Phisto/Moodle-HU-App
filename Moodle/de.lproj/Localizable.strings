@@ -44,6 +44,9 @@
 /* Section title for document items. */
 "Dokumente" = "Dokumente";
 
+/* Title of the subscription nav bar item */
+"Einschreiben" = "Einschreiben";
+
 /* Button label to favorite moodle course. */
 "Favorisieren" = "Favorisieren";
 
@@ -79,6 +82,9 @@
 
 /* Voice over message aftter successfull login. */
 "Login erfolgreich" = "Login erfolgreich";
+
+/* title of the logout button */
+"Logout" = "Logout";
 
 /* alert view retry button title */
 "Nochmal versuchen" = "Nochmal versuchen";

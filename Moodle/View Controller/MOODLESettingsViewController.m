@@ -46,6 +46,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.autoLoginSwitch.on = self.dataModel.shouldAutoLogin;
+    
+    
+    NSString *locString = NSLocalizedString(@"Logout", @"title of the logout button");
+    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:locString
+                                                                      style:UIBarButtonItemStylePlain
+                                                                     target:self
+                                                                     action:@selector(logout:)];
+    anotherButton.accessibilityLabel = locString;
+    
+    anotherButton.image = [UIImage imageNamed:@"logout_icon"];
+    self.navigationItem.rightBarButtonItem = anotherButton;
 }
 
 
@@ -94,6 +105,13 @@
 - (IBAction)shouldAutoLoginChanged:(id)sender {
     
     self.dataModel.shouldAutoLogin = [(UISwitch *)sender isOn];
+}
+
+
+- (IBAction)logout:(id)sender {
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:MOODLEShouldLogoutNotification
+                                                        object:nil];
 }
 
 

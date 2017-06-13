@@ -9,6 +9,22 @@
 
 @import UIKit;
 
+NS_ASSUME_NONNULL_BEGIN
+
+
+
+///-----------------------
+/// @name CONSTANTS
+///-----------------------
+
+
+
+/**
+ The notification that is posted when the user wants to logout.
+ */
+static NSString *MOODLEShouldLogoutNotification = @"MOODLEShouldLogoutNotification";
+
+
 
 /**
  
@@ -16,8 +32,6 @@
  Here he can manage and unhide Moodle courses he previously set hidden.
  
  */
-
-NS_ASSUME_NONNULL_BEGIN
 
 @interface MOODLESettingsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 @end
