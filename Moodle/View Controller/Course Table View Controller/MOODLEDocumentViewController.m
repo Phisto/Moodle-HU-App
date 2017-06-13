@@ -90,6 +90,12 @@
 }
 
 
+- (BOOL)shouldAutorotate {
+    
+    return YES;
+}
+
+
 #pragma mark - Web View Delegate Methodes
 
 

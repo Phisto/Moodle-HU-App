@@ -48,7 +48,37 @@
 
 - (BOOL)shouldAutorotate {
     
-    return NO;
+    return [self currentViewController].shouldAutorotate;
+}
+
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return [self.currentViewController supportedInterfaceOrientations];
+}
+
+
+-(void) tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    UIInterfaceOrientation currentOrientation = [UIApplication sharedApplication].statusBarOrientation;
+    NSInteger currentViewControllerSupportsLandscape = ([viewController supportedInterfaceOrientations] & UIInterfaceOrientationMaskLandscape);
+    if(UIInterfaceOrientationIsLandscape(currentOrientation) && !currentViewControllerSupportsLandscape) {
+        //workaround to force rotating to portrait
+        UIViewController *c = [[UIViewController alloc]init];
+        [viewController presentViewController:c animated:NO completion:nil];
+        [viewController dismissViewControllerAnimated:NO completion:nil];
+    }
+}
+
+
+#pragma mark - Helper Methodes
+
+
+- (UIViewController*) currentViewController {
+    UIViewController* controller = self.selectedViewController;
+    
+    if([controller isKindOfClass:[UINavigationController class]]) {
+        controller = [(UINavigationController *)controller topViewController];
+    }
+    return controller;
 }
 
 
