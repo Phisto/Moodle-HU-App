@@ -50,7 +50,7 @@ Document                   |  Course Search
 
 * iPhone: iPhone 4s and above
 
-* iPad: The iPad is not supported
+* iPad: The iPad is not tested and optimized so far, in the simulator the iPad Air, Air 2 and Pro do work well.
 
 * OS: iOS 9.3 and above
 
