@@ -279,7 +279,7 @@ static NSInteger const kPasswordTextFieldTag = 102;
                                         
                                         // update ui on main thread
                                         dispatch_async(dispatch_get_main_queue(), ^{
-
+                                            
                                             // remove activity indicator
                                             [self.loadingView removeFromSuperview];
                                             self.loadingView = nil;
@@ -311,7 +311,6 @@ static NSInteger const kPasswordTextFieldTag = 102;
                                         
                                         [self showFailureWithMessage:locString];
                                     }
-                                    
                                     
                                 }
                             }];

@@ -56,6 +56,9 @@
 /* Button label to favorite moodle course. */
 "Favorisieren" = "Favour";
 
+/* Title of an error alert view */
+"Fehler" = "Fehler";
+
 /* voice over item type title */
 "Gallerie" = "Gallerie";
 
@@ -86,6 +89,9 @@
 /* Voice over message aftter successfull login. */
 "Login erfolgreich" = "Login successfull";
 
+/* alert view retry button title */
+"Nochmal versuchen" = "Nochmal versuchen";
+
 /* voice over item type title */
 "Ordner" = "Ordner";
 
@@ -106,6 +112,9 @@
 
 /* Button label to hide moodle course. */
 "Verbergen" = "Hide";
+
+/* alert view retry button title */
+"Weiter" = "Weiter";
 
 /* Label of the button to unhide a moodle course. */
 "Wieder anzeigen" = "Un-hide";

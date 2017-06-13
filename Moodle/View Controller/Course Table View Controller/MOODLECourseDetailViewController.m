@@ -64,6 +64,12 @@
     
     self.courseTitleLabel.text = self.item.courseTitle;
     self.moodleTitleLabel.text = [NSString stringWithFormat:@"Moodle: %@", self.item.moodleTitle];
+    
+    
+    // accessibility
+    self.moodleTitleLabel.accessibilityLabel = [NSString stringWithFormat:@"Moodle ID: %@", self.item.moodleTitle];
+    
+    
     self.semesterLabel.text = self.item.semester;
     
     if (!self.item.courseSections) {
@@ -109,10 +115,50 @@
 - (void)failedToLoadContentWithMessage:(NSString *)message {
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        
-        NSLog(@"failedToLoadContentWithMessage: %@", message);
+    
         [self.loadingView removeFromSuperview];
-        self.loadingView = nil;
+        
+        NSString *locString = NSLocalizedString(@"Fehler", @"Error alert presenting title");
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:locString
+                                                                                 message:message
+                                                                          preferredStyle:UIAlertControllerStyleAlert];
+        NSString *cancelActionTitle = NSLocalizedString(@"Weiter", @"alert view retry button title");
+        UIAlertAction *cancleAction = [UIAlertAction actionWithTitle:cancelActionTitle
+                                                               style:UIAlertActionStyleCancel
+                                                             handler:^(UIAlertAction * _Nonnull action) {
+                                                             
+                                                                 // free the activity view
+                                                                 self.loadingView = nil;
+                                                             }];
+        [alertController addAction:cancleAction];
+        
+        NSString *retryActionTitle = NSLocalizedString(@"Nochmal versuchen", @"alert view retry button title");
+        UIAlertAction *retryAction = [UIAlertAction actionWithTitle:retryActionTitle
+                                                              style:UIAlertActionStyleDefault
+                                                            handler:^(UIAlertAction * _Nonnull action) {
+                                                                // retry content loading...
+                                                                
+                                                                // show activity indicator..
+                                                                [self.view addSubview:self.loadingView];
+                                                                
+                                                                // perform web request on background thread ...
+                                                                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul), ^{
+                                                                    
+                                                                    [self.item.dataModel loadItemContentForItem:self.item
+                                                                                              completionHandler:^(BOOL success, NSError *error) {
+                                                                                                  
+                                                                                                  if (success) { [self finishedContentLoading]; }
+                                                                                                  else { [self failedToLoadContentWithMessage:error.localizedDescription]; }
+                                                                                              }];
+                                                                });
+                                                            }];
+        
+        [alertController addAction:retryAction];
+        
+        [self presentViewController:alertController
+                           animated:YES
+                         completion:nil];
+
     });
 }
 

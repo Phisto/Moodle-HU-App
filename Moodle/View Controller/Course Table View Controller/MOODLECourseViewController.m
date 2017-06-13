@@ -59,6 +59,15 @@
 }
 
 
+- (void)viewWillAppear:(BOOL)animated {
+    
+    // call super
+    [super viewWillAppear:animated];
+ 
+    
+}
+
+
 - (BOOL)shouldAutorotate {
     
     return NO;

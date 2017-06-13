@@ -42,22 +42,16 @@
 #pragma mark - View Controller Methodes
 
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    // set webview delegate
-    self.webView.delegate = self;
-}
-
-
 - (void)viewWillAppear:(BOOL)animated {
     
     // call super
     [super viewWillAppear:animated];
 
+    // hide nav bar when scrolling web content ...
     self.navigationController.hidesBarsOnSwipe = YES;
 
+    // set webview delegate
+    self.webView.delegate = self;
     
     // prepare audio
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
@@ -72,7 +66,11 @@
     // call super
     [super viewWillDisappear:animated];
     
+    // bring back my nav bar!
     self.navigationController.hidesBarsOnSwipe = NO;
+    
+    // remove self as delegate
+    self.webView.delegate = nil;
     
     // stop
     [self.webView stopLoading];
@@ -111,6 +109,48 @@
     self.loadingView = nil;
 }
 
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        [self.loadingView removeFromSuperview];
+        
+        NSString *locString = NSLocalizedString(@"Fehler", @"Error alert presenting title");
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:locString
+                                                                                 message:error.localizedDescription
+                                                                          preferredStyle:UIAlertControllerStyleAlert];
+        NSString *cancelActionTitle = NSLocalizedString(@"Weiter", @"alert view retry button title");
+        UIAlertAction *cancleAction = [UIAlertAction actionWithTitle:cancelActionTitle
+                                                               style:UIAlertActionStyleCancel
+                                                             handler:^(UIAlertAction * _Nonnull action) {
+                                                                 
+                                                                 // free the activity view
+                                                                 self.loadingView = nil;
+                                                             }];
+        [alertController addAction:cancleAction];
+        
+        NSString *retryActionTitle = NSLocalizedString(@"Nochmal versuchen", @"alert view retry button title");
+        UIAlertAction *retryAction = [UIAlertAction actionWithTitle:retryActionTitle
+                                                              style:UIAlertActionStyleDefault
+                                                            handler:^(UIAlertAction * _Nonnull action) {
+                                                                // retry content loading...
+                                                                
+                                                                // show activity indicator..
+                                                                [self.view addSubview:self.loadingView];
+
+                                                                // load resource
+                                                                [self.webView loadRequest:[NSURLRequest requestWithURL:self.resourceURL]];
+                                                            }];
+        
+        [alertController addAction:retryAction];
+        
+        [self presentViewController:alertController
+                           animated:YES
+                         completion:nil];
+        
+    });
+}
 
 #pragma mark - Lazy
 
