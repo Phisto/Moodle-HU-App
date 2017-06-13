@@ -78,6 +78,17 @@
 }
 
 
+- (BOOL)shouldAutorotate {
+    
+    return NO;
+}
+
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+
 - (void)viewDidLayoutSubviews {
     // set content offset after the text view is properly sized
     [self.textView setContentOffset:CGPointZero animated:NO];
