@@ -17,6 +17,9 @@
 /* Other */
 #import "MOODLETableViewRowAction.h"
 
+/* Custom Controls */
+#import "SGLabeledSwitch.h"
+
 /* Colors */
 #import "UIColor+Moodle.h"
 
@@ -24,9 +27,14 @@
 @interface MOODLESettingsViewController (/* Private */)
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) IBOutlet UISwitch *autoLoginSwitch;
+@property (nonatomic, strong) IBOutlet SGLabeledSwitch *autoLoginSwitch;
 @property (nonatomic, strong) IBOutlet UILabel *hiddenSectionsLabel;
+@property (nonatomic, strong) IBOutlet UISlider *storageSlider;
+@property (nonatomic, strong) IBOutlet UILabel *storageSliderLabel;
+@property (nonatomic, strong) IBOutlet UILabel *storageLabel;
+
 @property (nonatomic, strong) MOODLEDataModel *dataModel;
+
 
 @end
 
@@ -45,7 +53,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.autoLoginSwitch.on = self.dataModel.shouldAutoLogin;
+    self.autoLoginSwitch.value = self.dataModel.shouldAutoLogin;
     
     
     NSString *locString = NSLocalizedString(@"Logout", @"title of the logout button");
@@ -67,6 +75,12 @@
     
     [self calculateIfTableViewIsHidden];
     [self.tableView reloadData];
+    
+    self.storageSlider.value = self.dataModel.documentCacheSize;
+    self.storageSliderLabel.text = [NSString stringWithFormat:@"%lu MB", self.dataModel.documentCacheSize];
+    
+    NSString *locString = NSLocalizedString(@"Zur Zeit sind %lu MB belegt.", @"label of the storage field");
+    self.storageLabel.text = [NSString stringWithFormat:locString, self.dataModel.sizeOfCachedDocuments];
 }
 
 
@@ -104,7 +118,14 @@
 
 - (IBAction)shouldAutoLoginChanged:(id)sender {
     
-    self.dataModel.shouldAutoLogin = [(UISwitch *)sender isOn];
+    self.dataModel.shouldAutoLogin = [(SGLabeledSwitch *)sender value];
+}
+
+
+- (IBAction)changedCacheSize:(UISlider *)sender {
+    
+    self.dataModel.documentCacheSize = sender.value;
+    self.storageSliderLabel.text = [NSString stringWithFormat:@"%lu MB", (NSUInteger)sender.value];
 }
 
 

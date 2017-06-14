@@ -14,6 +14,7 @@
 #import "MOODLECourseDetailViewController.h"
 #import "MOODLESearchItemDetailViewController.h"
 #import "MOODLESettingsViewController.h"
+#import "MOODLEDocumentsTableViewController.h"
 
 ///-----------------------
 /// @name IMPLEMENTATION
@@ -41,6 +42,9 @@
         tabBarItem.imageInsets = UIEdgeInsetsMake(6.0f, 0.0f, -6.0f, 0.0f);
     }
     
+    // set delegate
+    self.delegate = self;
+    
     // set status bar appearance
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 }
@@ -57,20 +61,14 @@
 }
 
 
--(void) tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
-    UIInterfaceOrientation currentOrientation = [UIApplication sharedApplication].statusBarOrientation;
-    NSInteger currentViewControllerSupportsLandscape = ([viewController supportedInterfaceOrientations] & UIInterfaceOrientationMaskLandscape);
-    if(UIInterfaceOrientationIsLandscape(currentOrientation) && !currentViewControllerSupportsLandscape) {
-        //workaround to force rotating to portrait
-        UIViewController *c = [[UIViewController alloc]init];
-        [viewController presentViewController:c animated:NO completion:nil];
-        [viewController dismissViewControllerAnimated:NO completion:nil];
+#pragma mark - Tab Bar Controller Delegate Methodes
+
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+
+    if ([[self currentViewController] isKindOfClass:[UITableViewController class]]) {
         
-        if ([[UIDevice currentDevice] respondsToSelector:@selector(orientation)]) {
-            
-            NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationMaskPortrait];
-            [[UIDevice currentDevice] setValue:value forKey:@"orientation"];
-        }
+        [[(UITableViewController *)[self currentViewController] tableView] reloadData];
     }
 }
 
@@ -78,8 +76,9 @@
 #pragma mark - Helper Methodes
 
 
-- (UIViewController*) currentViewController {
-    UIViewController* controller = self.selectedViewController;
+- (UIViewController*)currentViewController {
+    
+    UIViewController *controller = self.selectedViewController;
     
     if([controller isKindOfClass:[UINavigationController class]]) {
         controller = [(UINavigationController *)controller topViewController];

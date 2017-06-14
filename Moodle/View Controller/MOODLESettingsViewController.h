@@ -29,7 +29,7 @@ static NSString *MOODLEShouldLogoutNotification = @"MOODLEShouldLogoutNotificati
 /**
  
  The `MOODLESettingsViewController` is responsible for presenting the app settings to the user. 
- Here he can manage and unhide Moodle courses he previously set hidden.
+ Here the user can manage and unhide Moodle courses he previously set hidden.
  
  */
 

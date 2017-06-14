@@ -47,6 +47,9 @@
 /* Message if the user tried to login without entering user credentials. */
 "Bitte geben Sie einen Benutzernamen und Passwort ein." = "Please enter a username and password.";
 
+/* Error message if the file could not be saved to disc. */
+"Die Datei konnte nicht auf dem Gerät gespeichert werden." = "Die Datei konnte nicht auf dem Gerät gespeichert werden.";
+
 /* Section title for document items. */
 "Dokumente" = "Documents";
 
@@ -95,6 +98,9 @@
 /* title of the logout button */
 "Logout" = "Logout";
 
+/* Label of the button to delete a document */
+"Löschen" = "Löschen";
+
 /* alert view retry button title */
 "Nochmal versuchen" = "Nochmal versuchen";
 
@@ -133,3 +139,6 @@
 
 /* table view cell selection hint */
 "Zum aktivieren doppel tippen" = "Zum aktivieren doppel tippen";
+
+/* label of the storage field */
+"Zur Zeit sind %lu MB belegt." = "Zur Zeit sind %lu MB belegt.";

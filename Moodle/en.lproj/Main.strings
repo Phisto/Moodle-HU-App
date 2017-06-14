@@ -17,9 +17,6 @@
 /* Class = "UIBarButtonItem"; title = "Zurück"; ObjectID = "JEc-0Q-rTV"; */
 "JEc-0Q-rTV.title" = "Back";
 
-/* Class = "UILabel"; text = "Automatisch einloggen"; ObjectID = "M8f-ig-8wU"; */
-"M8f-ig-8wU.text" = "Automatically log in";
-
 /* Class = "UITextField"; placeholder = "Benutzername"; ObjectID = "MRq-42-EaO"; */
 "MRq-42-EaO.placeholder" = "Username";
 
@@ -64,3 +61,15 @@
 
 /* Class = "UIBarButtonItem"; title = "Zurück"; ObjectID = "8T3-3V-qwa"; */
 "8T3-3V-qwa.title" = "Zurück";
+
+/* Class = "UILabel"; text = "Speicherplatz für Dokumente"; ObjectID = "wL2-X8-CZB"; */
+"wL2-X8-CZB.text" = "Speicherplatz für Dokumente";
+
+/* Class = "UILabel"; text = "Zur Zeit sind 56 MB belegt."; ObjectID = "ugj-oR-RFd"; */
+"ugj-oR-RFd.text" = "";
+
+/* Class = "UITabBarItem"; title = "Dokumente"; ObjectID = "A2V-oI-E7J"; */
+"A2V-oI-E7J.title" = "Documents";
+
+/* Class = "UINavigationItem"; title = "Dokumente"; ObjectID = "pTF-84-pmZ"; */
+"pTF-84-pmZ.title" = "Documents";

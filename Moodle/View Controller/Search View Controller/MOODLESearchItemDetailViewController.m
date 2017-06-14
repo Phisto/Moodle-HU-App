@@ -14,7 +14,7 @@
 #import "MOODLESearchItem.h"
 
 /* View Controller */
-#import "MOODLEDocumentViewController.h"
+#import "MOODLEEnrollmentViewController.h"
 
 ///-----------------------
 /// @name CATEGORIES
@@ -125,8 +125,8 @@
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     
-    MOODLEDocumentViewController *newViewController = (MOODLEDocumentViewController *)[storyboard instantiateViewControllerWithIdentifier:@"subscriptViewController"];
-    newViewController.resourceURL = self.item.courseURL;
+    MOODLEEnrollmentViewController *newViewController = (MOODLEEnrollmentViewController *)[storyboard instantiateViewControllerWithIdentifier:@"enrollmentViewController"];
+    newViewController.enrollementURL = self.item.courseURL;
     [self.navigationController pushViewController:newViewController animated:YES];
 }
 

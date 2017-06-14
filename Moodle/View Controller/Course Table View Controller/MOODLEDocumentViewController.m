@@ -11,10 +11,12 @@
 
 #import "MOODLEDocumentViewController.h"
 
+/* Data Model */
+#import "MOODLEDataModel.h"
+#import "MOODLECourseSectionItem.h"
+
 /* Custom View */
 #import "MOODLEActivityView.h"
-
-
 
 ///-----------------------
 /// @name CATEGORIES
@@ -27,6 +29,9 @@
 // UI
 @property (nonatomic, strong) IBOutlet UIWebView *webView;
 @property (nonatomic, strong) MOODLEActivityView *loadingView;
+
+// Data Model
+@property (nonatomic, strong) MOODLEDataModel *dataModel;
 
 @end
 
@@ -49,15 +54,52 @@
 
     // hide nav bar when scrolling web content ...
     self.navigationController.hidesBarsOnSwipe = YES;
-
+    
     // set webview delegate
     self.webView.delegate = self;
     
-    // prepare audio
+    // prepare for audio
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
     
-    // load resource
-    [self.webView loadRequest:[NSURLRequest requestWithURL:self.resourceURL]];
+    // pdf files getting cached ...
+    if (self.item.itemType == MoodleItemTypeDocument &&
+        self.item.documentType == MoodleDocumentTypePDF) {
+        
+        NSURL *localURL = [self.dataModel localRessourceURLForItem:self.item];
+        // the file is cached
+        if (localURL) {
+
+            // load resource
+            [self.webView loadRequest:[NSURLRequest requestWithURL:localURL]];
+        }
+        // there is no space to cache
+        else if (self.dataModel.sizeOfCachedDocuments > self.dataModel.documentCacheSize) {
+            
+            // load resource
+            [self.webView loadRequest:[NSURLRequest requestWithURL:self.item.resourceURL]];
+        }
+        // file isn't cached
+        else {
+            
+            // show activity indicator view
+            [self.view addSubview:self.loadingView];
+            
+            dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
+            dispatch_async(queue, ^{
+                [self.dataModel saveRemoteRessource:self.item
+                                  completionHandler:^(BOOL success, NSError * _Nullable error, NSURL * _Nullable localRessourceURL) {
+
+                                      // load resource
+                                      [self.webView loadRequest:[NSURLRequest requestWithURL:(success) ? localRessourceURL : self.item.resourceURL]];
+                                  }];
+            });
+        }
+    }
+    else {
+        
+        // load resource
+        [self.webView loadRequest:[NSURLRequest requestWithURL:self.item.resourceURL]];
+    }
 }
 
 
@@ -99,7 +141,9 @@
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     
-    [self.view addSubview:self.loadingView];
+    if (![self.view.subviews containsObject:self.loadingView]) {
+        [self.view addSubview:self.loadingView];
+    }
 }
 
 
@@ -114,43 +158,53 @@
     
     dispatch_async(dispatch_get_main_queue(), ^{
         
-        [self.loadingView removeFromSuperview];
-        
-        NSString *locString = NSLocalizedString(@"Fehler", @"Error alert presenting title");
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:locString
-                                                                                 message:error.localizedDescription
-                                                                          preferredStyle:UIAlertControllerStyleAlert];
-        NSString *cancelActionTitle = NSLocalizedString(@"Weiter", @"alert view retry button title");
-        UIAlertAction *cancleAction = [UIAlertAction actionWithTitle:cancelActionTitle
-                                                               style:UIAlertActionStyleCancel
-                                                             handler:^(UIAlertAction * _Nonnull action) {
-                                                                 
-                                                                 // free the activity view
-                                                                 self.loadingView = nil;
-                                                             }];
-        [alertController addAction:cancleAction];
-        
-        NSString *retryActionTitle = NSLocalizedString(@"Nochmal versuchen", @"alert view retry button title");
-        UIAlertAction *retryAction = [UIAlertAction actionWithTitle:retryActionTitle
-                                                              style:UIAlertActionStyleDefault
-                                                            handler:^(UIAlertAction * _Nonnull action) {
-                                                                // retry content loading...
-                                                                
-                                                                // show activity indicator..
-                                                                [self.view addSubview:self.loadingView];
-
-                                                                // load resource
-                                                                [self.webView loadRequest:[NSURLRequest requestWithURL:self.resourceURL]];
-                                                            }];
-        
-        [alertController addAction:retryAction];
-        
-        [self presentViewController:alertController
-                           animated:YES
-                         completion:nil];
-        
+        [self presentError:error];
     });
 }
+
+
+#pragma mark - Error Presenting Methodes
+
+
+- (void)presentError:(NSError *)error {
+    
+    [self.loadingView removeFromSuperview];
+    
+    NSString *locString = NSLocalizedString(@"Fehler", @"Error alert presenting title");
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:locString
+                                                                             message:error.localizedDescription
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    NSString *cancelActionTitle = NSLocalizedString(@"Weiter", @"alert view retry button title");
+    UIAlertAction *cancleAction = [UIAlertAction actionWithTitle:cancelActionTitle
+                                                           style:UIAlertActionStyleCancel
+                                                         handler:^(UIAlertAction * _Nonnull action) {
+                                                             
+                                                             // free the activity view
+                                                             self.loadingView = nil;
+                                                         }];
+    [alertController addAction:cancleAction];
+    
+    NSString *retryActionTitle = NSLocalizedString(@"Nochmal versuchen", @"alert view retry button title");
+    UIAlertAction *retryAction = [UIAlertAction actionWithTitle:retryActionTitle
+                                                          style:UIAlertActionStyleDefault
+                                                        handler:^(UIAlertAction * _Nonnull action) {
+                                                            // retry content loading...
+                                                            
+                                                            // show activity indicator..
+                                                            [self.view addSubview:self.loadingView];
+                                                            
+                                                            // load resource
+                                                            [self.webView loadRequest:[NSURLRequest requestWithURL:self.item.resourceURL]];
+                                                        }];
+    
+    [alertController addAction:retryAction];
+    
+    [self presentViewController:alertController
+                       animated:YES
+                     completion:nil];
+
+}
+
 
 #pragma mark - Lazy
 
@@ -164,6 +218,15 @@
         _loadingView = view;
     }
     return _loadingView;
+}
+
+
+- (MOODLEDataModel *)dataModel {
+    
+    if (!_dataModel) {
+        _dataModel = [MOODLEDataModel sharedDataModel];
+    }
+    return _dataModel;
 }
 
 

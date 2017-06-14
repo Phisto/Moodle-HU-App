@@ -68,8 +68,7 @@ static NSUInteger const kLoginTimeoutTrashold = 3600;
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(logout)
                                                  name:MOODLEShouldLogoutNotification
-                                               object:nil];
-    
+                                               object:nil];    
     return YES;
 }
 

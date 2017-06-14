@@ -30,6 +30,6 @@ static NSString *MOODLETabBarControllerIdentifier = @"MOODLETabBarControllerIden
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MOODLETabBarController : UITabBarController <UISplitViewControllerDelegate>
+@interface MOODLETabBarController : UITabBarController <UITabBarControllerDelegate>
 @end
 NS_ASSUME_NONNULL_END

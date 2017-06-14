@@ -9,13 +9,11 @@
 
 @import UIKit;
 
+@class MOODLECourseSectionItem;
+
 /**
  
- The MOODLEDocumentViewController is responsible for presenting MOODLE course section resources.
- 
- ##Overview
- All resources are displayed via an UIWebView. 
- It may be better do use different kind of views to diplay different kind of resources.
+ The MOODLEDocumentViewController is responsible for presenting MOODLE course section ressources.
  
  */
 
@@ -28,13 +26,9 @@ NS_ASSUME_NONNULL_BEGIN
 ///--------------------
 
 /**
- Boolean indicating if the ressource needs to play audio.
+ The item to present.
  */
-@property (nonatomic, readwrite) BOOL isAudio;
-/**
- The url to the ressource.
- */
-@property (nonatomic, strong) NSURL *resourceURL;
+@property (nonatomic, strong) MOODLECourseSectionItem *item;
 
 @end
 NS_ASSUME_NONNULL_END

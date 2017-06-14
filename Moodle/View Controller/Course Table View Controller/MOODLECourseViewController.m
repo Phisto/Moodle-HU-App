@@ -59,12 +59,14 @@
 }
 
 
+///!!!: Identify situations where a reload is needed...
 - (void)viewWillAppear:(BOOL)animated {
     
     // call super
     [super viewWillAppear:animated];
- 
     
+    // reload table view
+    [self.tableView reloadData];
 }
 
 

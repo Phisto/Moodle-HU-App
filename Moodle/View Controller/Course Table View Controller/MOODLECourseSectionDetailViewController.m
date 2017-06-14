@@ -298,8 +298,7 @@
     
     MOODLEDocumentViewController *newViewController = (MOODLEDocumentViewController *)[storyboard instantiateViewControllerWithIdentifier:@"courseSectionItemViewController"];
     MOODLECourseSectionItem *item = self.tableViewSegments[indexPath.section][indexPath.row];
-    newViewController.resourceURL = item.resourceURL;
-    if (item.itemType == MoodleItemTypeDocument) newViewController.isAudio = (item.documentType == MoodleDocumentTypeAudioFile);
+    newViewController.item = item;
     [self.navigationController pushViewController:newViewController animated:YES];
 }
 

@@ -13,6 +13,7 @@
 
 /* Worker */
 #import "MOODLEXMLParser.h"
+#import "MOODLERessourceCoordinator.h"
 
 /* Entities */
 #import "MOODLECourse.h"
@@ -41,7 +42,7 @@ static NSString * const UserDefaultsFavouritesArrayKey = @"UserDefaultsFavourite
 static NSString * const UserDefaultsDeletedArrayKey = @"UserDefaultsDeletedArrayKey";
 static NSString * const UserDefaultsOrderingWeightsArrayKey = @"UserDefaultsOrderingWeightsArrayKey";
 static NSString * const UserDefaultsLoginDateKey = @"UserDefaultsLoginDateKey";
-
+static NSString * const UserDefaultsDocumentCacheSizeKey = @"UserDefaultsDocumentCacheSizeKey";
 
 
 ///-----------------------
@@ -66,6 +67,7 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
 // Worker
 @property (nonatomic, strong) MOODLEXMLParser *xmlParser;
 @property (nonatomic, strong) KeychainWrapper *keyChainWrapper;
+@property (nonatomic, strong) MOODLERessourceCoordinator *ressourceCoordinator;
 
 // Other
 @property (nonatomic, strong) NSString *sessionKey;
@@ -88,6 +90,12 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
 
 
 @implementation MOODLEDataModel
+#pragma mark - Syntheszie
+
+
+@synthesize documentCacheSize = _documentCacheSize;
+
+
 #pragma mark - Object Life Cycle
 
 
@@ -99,7 +107,6 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
         sharedDataModel = [[[self class] alloc] init_private];
     });
     return sharedDataModel;
-
 }
 
 
@@ -438,6 +445,29 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
 }
 
 
+#pragma mark - Ressource Methodes
+
+
+- (nullable NSURL *)localRessourceURLForItem:(MOODLECourseSectionItem *)item {
+    
+    return [self.ressourceCoordinator localRessourceURLForItem:item];
+}
+
+
+- (void)saveRemoteRessource:(MOODLECourseSectionItem *)item
+          completionHandler:(void (^)(BOOL success, NSError * _Nullable error, NSURL * _Nullable localRessourceURL))completionHandler {
+    
+    [self.ressourceCoordinator saveRemoteRessource:item
+                                 completionHandler:completionHandler];
+}
+
+
+- (NSInteger)sizeOfCachedDocuments {
+    
+    return [self.ressourceCoordinator sizeOfCachedDocuments];
+}
+
+
 #pragma mark -  Ordering/Hide Methodes
 
 
@@ -519,6 +549,21 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
 }
 
 
+#pragma mark - Document Methodes
+
+
+- (NSArray<NSURL *> *)allRessourceURLS {
+    
+    return [self.ressourceCoordinator allRessourceURLS];
+}
+
+
+- (BOOL)deleteDocumentWithURL:(NSURL *)docURL {
+    
+    return [self.ressourceCoordinator deleteDocumentWithURL:docURL];
+}
+
+
 #pragma mark - User Defaults Setter
 
 
@@ -575,6 +620,16 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
         _defaults = [NSUserDefaults standardUserDefaults];
     }
     return _defaults;
+}
+
+
+- (MOODLERessourceCoordinator *)ressourceCoordinator {
+    
+    if (!_ressourceCoordinator) {
+        
+        _ressourceCoordinator = [[MOODLERessourceCoordinator alloc] initWithSession:self.currentSession];
+    }
+    return _ressourceCoordinator;
 }
 
 
@@ -643,6 +698,35 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
         _orderingWeightDictionaries = [NSMutableDictionary dictionaryWithDictionary:dict];
     }
     return _orderingWeightDictionaries;
+}
+
+
+- (void)setDocumentCacheSize:(NSUInteger)documentCacheSize {
+    
+    if (_documentCacheSize != documentCacheSize) {
+        
+        [self.defaults setInteger:documentCacheSize
+                           forKey:UserDefaultsDocumentCacheSizeKey];
+        _documentCacheSize = documentCacheSize;
+    }
+}
+
+
+- (NSUInteger)documentCacheSize {
+    
+    if (_documentCacheSize == 0) {
+        
+        NSNumber *number = [self.defaults objectForKey:UserDefaultsDocumentCacheSizeKey];
+        if (!number) {
+            _documentCacheSize = 10;
+            [self.defaults setInteger:10
+                            forKey:UserDefaultsDocumentCacheSizeKey];
+        }
+        else {
+            _documentCacheSize = number.unsignedIntegerValue;
+        }
+    }
+    return _documentCacheSize;
 }
 
 

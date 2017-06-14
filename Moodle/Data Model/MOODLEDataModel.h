@@ -9,7 +9,7 @@
 
 @import Foundation;
 
-@class MOODLECourse;
+@class MOODLECourse, MOODLECourseSectionItem;
 
 /**
  
@@ -172,7 +172,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)logoutWithCompletionHandler:(void (^)(BOOL success, NSError * _Nullable error))completionHandler;
 /**
  
- @brief This method load the content of a given MOODLE course.
+ @brief This method will load the content of a given MOODLE course.
  
  @param item The item.
  
@@ -192,6 +192,64 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)loadSearchResultWithSerachString:(NSString *)searchString
                        completionHandler:(void (^)(BOOL success, NSError * _Nullable error, NSArray * _Nullable searchResults))completionHandler;
+
+
+
+#pragma mark - Documents
+///----------------------
+/// @name Documents
+///----------------------
+
+/**
+ The size of the document cache in Megabytes.
+ */
+@property (nonatomic, readwrite) NSUInteger documentCacheSize;
+/**
+ 
+ @brief This method will search for a local file assoziated with the given item.
+ 
+ @param item The item to search for.
+ 
+ @return  A NSURL to the local file or nil if there is no cached file.
+ 
+ */
+- (nullable NSURL *)localRessourceURLForItem:(MOODLECourseSectionItem *)item;
+/**
+ 
+ @brief This method will load the file for the given item, save it locally and call the completion handler.
+ 
+ @param item The item to load the file for.
+ 
+ @param completionHandler The completion handler to call when loading and saving is complete. This handler is executed on the main thread.
+ 
+ */
+- (void)saveRemoteRessource:(MOODLECourseSectionItem *)item
+          completionHandler:(void (^)(BOOL success, NSError * _Nullable error, NSURL * _Nullable localRessourceURL))completionHandler;
+/**
+ 
+ This method will enumerate through all cached documents and calculate the size.
+ 
+ @return The size of all cached documents in Megabyte as a NSInteger.
+ 
+ */
+- (NSInteger)sizeOfCachedDocuments;
+/**
+ 
+ This method will return all cached document urls.
+ 
+ @return The document urls.
+ 
+ */
+- (NSArray<NSURL *> *)allRessourceURLS;
+/**
+ 
+ This method will delete the file or folder at the given url.
+ 
+ @return Yes if the file was deleted, NO if the file could not be deleted or if there was no file at the given url.
+ 
+ */
+- (BOOL)deleteDocumentWithURL:(NSURL *)docURL;
+
 
 @end
 NS_ASSUME_NONNULL_END
