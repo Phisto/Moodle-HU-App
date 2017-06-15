@@ -73,3 +73,6 @@
 
 /* Class = "UINavigationItem"; title = "Dokumente"; ObjectID = "pTF-84-pmZ"; */
 "pTF-84-pmZ.title" = "Documents";
+
+/* Class = "UISlider"; accessibilityLabel = "Speicherplatz für Dokumente"; ObjectID = "evy-ei-amO"; */
+"evy-ei-amO.accessibilityLabel" = "Speicherplatz für Dokumente";

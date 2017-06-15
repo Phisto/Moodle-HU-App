@@ -37,6 +37,7 @@
     // Tab bar appearance
     // center icons  & hide title
     for(UITabBarItem * tabBarItem in self.tabBar.items){
+        NSLog(@"tabBarItem.title: %@", tabBarItem.title);
         tabBarItem.accessibilityLabel = tabBarItem.title;
         tabBarItem.title = @"";
         tabBarItem.imageInsets = UIEdgeInsetsMake(6.0f, 0.0f, -6.0f, 0.0f);

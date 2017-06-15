@@ -589,7 +589,7 @@
                                         <rect key="frame" x="0.0" y="77" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KCm-eA-fKU" id="4OE-fy-P5y">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tyx-Dw-BhN">
@@ -628,10 +628,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MOODLECommentTableViewCellIdentifier" rowHeight="80" id="YYK-Au-heP" customClass="MOODLECommentTableViewCell">
-                                        <rect key="frame" x="0.0" y="121" width="375" height="81"/>
+                                        <rect key="frame" x="0.0" y="121" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="YYK-Au-heP" id="iL1-JX-J1o">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yoS-Ya-RGY">
@@ -1078,6 +1078,7 @@
                                 <rect key="frame" x="15" y="125" width="344" height="29"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" header="YES"/>
+                                    <bool key="isElement" value="NO"/>
                                 </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="Qac-aK-p4p"/>
@@ -1089,14 +1090,25 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GsE-b1-bQg">
                                 <rect key="frame" x="0.0" y="162" width="375" height="48"/>
                                 <subviews>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="10" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="evy-ei-amO">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="evy-ei-amO" customClass="SGAccessibleSlider">
                                         <rect key="frame" x="14" y="9" width="275" height="31"/>
+                                        <accessibility key="accessibilityConfiguration" label="Speicherplatz für Dokumente"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="unit" value="Megabyte"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="integerRange" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="amount">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="changedCacheSize:" destination="Lb4-cw-fej" eventType="valueChanged" id="4Ug-yc-JyW"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="199 MB#bc-ignore!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPM-oE-veS">
                                         <rect key="frame" x="298" y="14" width="62" height="21"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="62" id="3uO-gN-mcF"/>
                                         </constraints>
@@ -1311,7 +1323,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AiU-pY-4D7" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Dokumente" image="document_logo" id="A2V-oI-E7J"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="jmp-Sd-eRA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="jmp-Sd-eRA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.01176470588" green="0.40000000000000002" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
