@@ -75,7 +75,6 @@
     // table view inset
     self.tableView.contentInset = UIEdgeInsetsMake(22.0f, 0.0f, 0.0f, 0.0f);
     
-    
     NSArray *doc = self.section.documentItemArray;
     NSArray *assign = self.section.assignmentsItemArray;
     NSArray *wiki = self.section.wikisItemArray;
@@ -159,15 +158,11 @@
             
             if (!self.section.hasDocuments && !self.section.hasWiki && !self.section.hasAssignment && !self.section.hasOhterItems) {
                 
-                //self.seperatorHeigthOneContraint.constant = 0.0f;
-                //self.seperatorHeigthTwoContraint.constant = 0.0f;
                 self.textViewHeight.constant = self.view.frame.size.height-(57.0f+self.navigationController.navigationBar.frame.size.height+10.0f);
             }
             else {
                 
                 self.textViewHeight.constant = 150.0f;
-                //self.seperatorHeigthOneContraint.constant = 8.0f;
-                //self.seperatorHeigthTwoContraint.constant = 8.0f;
             }
             
         }
@@ -185,8 +180,6 @@
     else {
         
         self.textView.text = @"";
-        //self.seperatorHeigthOneContraint.constant = 0.0f;
-        //self.seperatorHeigthTwoContraint.constant = 0.0f;
         self.textViewHeight.constant = 0.0f;
         self.textView.hidden = YES;
     }

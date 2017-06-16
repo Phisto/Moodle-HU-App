@@ -68,6 +68,9 @@
 /* voice over item type title */
 "Gallerie" = "Gallerie";
 
+/* text label if there are no entries in the document table view */
+"Keine Dokumente vorhanden" = "Keine Dokumente vorhanden";
+
 /* Message if course search yields no results. */
 "Keine Kurse mit dem Begriff '%@' gefunden." = "No courses with the term '%@' were found.";
 
@@ -101,6 +104,9 @@
 /* Label of the button to delete a document */
 "Löschen" = "Löschen";
 
+/* header title for the mp3 document section */
+"MP3 Dateien" = "MP3 Dateien";
+
 /* alert view retry button title */
 "Nochmal versuchen" = "Nochmal versuchen";
 
@@ -110,8 +116,14 @@
 /* voice over document type title PDF */
 "PDF Datei" = "PDF Datei";
 
+/* header title for the pdf document section */
+"PDF Dateien" = "PDF Dateien";
+
 /* voice over document type title PPT */
 "PowerPoint Datei" = "PowerPoint Datei";
+
+/* header title for the ppt document section */
+"PowerPoint Dateien" = "PowerPoint Dateien";
 
 /* Message the activity indicator is showing during a course search */
 "Suche" = "Searching";

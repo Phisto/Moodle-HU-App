@@ -12,7 +12,7 @@
 #import "HUProgressIndicator.h"
 
 ///-----------------------
-/// @name CAEGORIES
+/// @name CATEGORIES
 ///-----------------------
 
 

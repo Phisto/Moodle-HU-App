@@ -75,7 +75,12 @@ static NSString * const UserDefaultsCachedFilesArrayKey = @"UserDefaultsCachedFi
         
         if ([title isEqualToString:item.resourceTitle]) {
             
-            url = [self localFileURLFromTitle:item.resourceTitle];
+            NSString *extension = @"pdf";
+            if (item.documentType == MoodleDocumentTypePPT) {
+                
+                extension = @"pptx";
+            }
+            url = [self localFileURLFromTitle:item.resourceTitle withPathExtension:extension];
             
             exists = [self.fileManager fileExistsAtPath:url.path];
             if (!exists) { url = nil; }
@@ -122,7 +127,13 @@ static NSString * const UserDefaultsCachedFilesArrayKey = @"UserDefaultsCachedFi
         }
     }
 
-    NSURL *localFileURL = [self localFileURLFromTitle:item.resourceTitle];
+    NSString *extension = @"pdf";
+    if (item.documentType == MoodleDocumentTypePPT) {
+        
+        extension = @"pptx";
+    }
+    
+    NSURL *localFileURL = [self localFileURLFromTitle:item.resourceTitle withPathExtension:extension];
     
     BOOL success = [data writeToURL:localFileURL atomically:YES];
     if (success) {
@@ -160,10 +171,10 @@ static NSString * const UserDefaultsCachedFilesArrayKey = @"UserDefaultsCachedFi
 #pragma mark - Directory Methodes
 
 
-- (NSURL *)localFileURLFromTitle:(NSString *)title {
+- (NSURL *)localFileURLFromTitle:(NSString *)title withPathExtension:(NSString *)extension {
     
     NSString *cachePath = [self directoryForDocumentsCache];
-    NSString *filePath = [cachePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.pdf", title]];
+    NSString *filePath = [cachePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@", title, extension]];
     return [NSURL fileURLWithPath:filePath];
 }
 
@@ -200,7 +211,6 @@ static NSString * const UserDefaultsCachedFilesArrayKey = @"UserDefaultsCachedFi
     
     NSString *folderPath =  [self directoryForDocumentsCache];
     
-
     NSArray *directoryContent = [self.fileManager contentsOfDirectoryAtPath:folderPath error:NULL];
     if (!directoryContent) {
         
@@ -211,10 +221,12 @@ static NSString * const UserDefaultsCachedFilesArrayKey = @"UserDefaultsCachedFi
     for (NSString *path in directoryContent) {
         
         NSURL *fileURL = [[NSURL fileURLWithPath:folderPath] URLByAppendingPathComponent:path];
-        if ([[fileURL pathExtension] isEqualToString:@"pdf"]) {
+        NSString *extension = [fileURL pathExtension];
+        if ([extension isEqualToString:@"pdf"] || [extension isEqualToString:@"pptx"]) {
             [muteArray addObject:fileURL];
         }
     }
+    
     return [muteArray copy];
 }
 

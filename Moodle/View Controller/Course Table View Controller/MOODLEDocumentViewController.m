@@ -61,19 +61,23 @@
     // prepare for audio
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
     
+    
+    BOOL isDocument = (self.item.itemType == MoodleItemTypeDocument);
+    BOOL isPDF = (self.item.documentType == MoodleDocumentTypePDF);
+    BOOL isPPT = (self.item.documentType == MoodleDocumentTypePPT);
+    BOOL isSupportedDocument = (isPDF || isPPT);
+    
     // pdf files getting cached ...
-    if (self.item.itemType == MoodleItemTypeDocument &&
-        self.item.documentType == MoodleDocumentTypePDF) {
-        
+    if (isDocument && isSupportedDocument) {
+
         NSURL *localURL = [self.dataModel localRessourceURLForItem:self.item];
         // the file is cached
         if (localURL) {
-
             // load resource
             [self.webView loadRequest:[NSURLRequest requestWithURL:localURL]];
         }
         // there is no space to cache
-        else if (self.dataModel.sizeOfCachedDocuments > self.dataModel.documentCacheSize) {
+        else if (self.dataModel.sizeOfCachedDocuments >= self.dataModel.documentCacheSize) {
             
             // load resource
             [self.webView loadRequest:[NSURLRequest requestWithURL:self.item.resourceURL]];
