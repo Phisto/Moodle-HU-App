@@ -501,8 +501,7 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
             name = [element content];
         }
     }
-    
-    //NSLog(@"NAME: %@", name);
+
     return name;
 }
 /**
