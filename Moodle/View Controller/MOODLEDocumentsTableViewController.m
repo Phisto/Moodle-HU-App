@@ -15,6 +15,9 @@
 /* Table View */
 #import "MOODLECourseSectionItemTableViewCell.h"
 
+/* View Controller */
+#import "MOODLEURLRessourceViewController.h"
+
 /* Colors */
 #import "UIColor+Moodle.h"
 
@@ -232,6 +235,16 @@ static NSString * const KMOODLEPathExtentsionMP3 = @"mp3";
     unhideAction.backgroundColor = [UIColor moodle_hideActionColor];
     
     return @[unhideAction];
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    
+    MOODLEURLRessourceViewController *newViewController = (MOODLEURLRessourceViewController *)[storyboard instantiateViewControllerWithIdentifier:@"urlRessourceViewController"];
+    newViewController.localRessourceURL = self.tableData[indexPath.section][indexPath.row];
+    [self.navigationController pushViewController:newViewController animated:YES];
 }
 
 

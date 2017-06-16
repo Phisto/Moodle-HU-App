@@ -714,15 +714,15 @@
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mij-EY-19j">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <dataDetectorType key="dataDetectorTypes"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="mij-EY-19j" secondAttribute="trailing" constant="-16" id="3n9-Bh-idN"/>
+                            <constraint firstAttribute="trailing" secondItem="mij-EY-19j" secondAttribute="trailing" id="3n9-Bh-idN"/>
                             <constraint firstItem="mij-EY-19j" firstAttribute="bottom" secondItem="AhH-xS-gZg" secondAttribute="bottom" id="7Tn-mV-e16"/>
                             <constraint firstItem="mij-EY-19j" firstAttribute="top" secondItem="AhH-xS-gZg" secondAttribute="topMargin" id="Fk0-HG-AeB"/>
-                            <constraint firstItem="mij-EY-19j" firstAttribute="leading" secondItem="AhH-xS-gZg" secondAttribute="leadingMargin" constant="-16" id="XHB-qW-duS"/>
+                            <constraint firstItem="mij-EY-19j" firstAttribute="leading" secondItem="AhH-xS-gZg" secondAttribute="leading" id="XHB-qW-duS"/>
                         </constraints>
                     </view>
                     <connections>
@@ -731,7 +731,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vph-yG-2I7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4935" y="614"/>
+            <point key="canvasLocation" x="4911" y="614"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gsg-Uk-Qq0">
@@ -1009,10 +1009,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="dQs-L1-qXL" secondAttribute="trailing" constant="-16" id="6Ua-qP-zhQ"/>
+                            <constraint firstAttribute="trailing" secondItem="dQs-L1-qXL" secondAttribute="trailing" id="6Ua-qP-zhQ"/>
                             <constraint firstAttribute="topMargin" secondItem="dQs-L1-qXL" secondAttribute="top" id="8AM-bE-0K4"/>
                             <constraint firstItem="dQs-L1-qXL" firstAttribute="bottom" secondItem="fax-eb-ocY" secondAttribute="bottom" id="YWd-cG-hql"/>
-                            <constraint firstItem="dQs-L1-qXL" firstAttribute="leading" secondItem="fax-eb-ocY" secondAttribute="leadingMargin" constant="-16" id="dRD-MS-lty"/>
+                            <constraint firstItem="dQs-L1-qXL" firstAttribute="leading" secondItem="fax-eb-ocY" secondAttribute="leading" id="dRD-MS-lty"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Einschreibung" id="NRT-85-uBj">
@@ -1313,10 +1313,47 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Dokumente" id="pTF-84-pmZ"/>
+                    <connections>
+                        <segue destination="phb-OI-Do6" kind="show" id="NNc-Od-Ya7"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jmH-4I-DJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2413.5999999999999" y="3006.7466266866568"/>
+        </scene>
+        <!--URL Ressource View Controller-->
+        <scene sceneID="lLT-Xd-zlc">
+            <objects>
+                <viewController storyboardIdentifier="urlRessourceViewController" hidesBottomBarWhenPushed="YES" id="phb-OI-Do6" customClass="MOODLEURLRessourceViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SQC-W7-OI6"/>
+                        <viewControllerLayoutGuide type="bottom" id="B4c-b7-kbJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lxu-5U-Wuz">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cYr-eQ-3Xy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="topMargin" secondItem="cYr-eQ-3Xy" secondAttribute="top" id="0Yx-qk-ppj"/>
+                            <constraint firstItem="cYr-eQ-3Xy" firstAttribute="leading" secondItem="Lxu-5U-Wuz" secondAttribute="leading" id="eks-3W-6PT"/>
+                            <constraint firstAttribute="trailing" secondItem="cYr-eQ-3Xy" secondAttribute="trailing" id="imF-15-zii"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="cYr-eQ-3Xy" secondAttribute="bottom" id="mEB-XQ-Y1F"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="cYr-eQ-3Xy" id="9TL-EI-9tC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jya-o7-3WD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3245.5999999999999" y="3006.7466266866568"/>
         </scene>
         <!--Dokumente-->
         <scene sceneID="VTB-1p-ILS">
