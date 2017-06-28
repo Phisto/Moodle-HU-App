@@ -10,11 +10,11 @@
 /* Header */
 #import "MOODLESearchItemDetailViewController.h"
 
-/* Data Model */
-#import "MOODLESearchItem.h"
-
 /* View Controller */
 #import "MOODLEEnrollmentViewController.h"
+
+/* Data Model */
+#import "MOODLECourse.h"
 
 ///-----------------------
 /// @name CATEGORIES
@@ -65,7 +65,7 @@
     }
     
     
-    self.sectionTitleLabel.text = self.item.title;
+    self.sectionTitleLabel.text = self.item.courseTitle;
     self.semesterLabel.text = self.item.semester;
     NSString *locString = NSLocalizedString(@"Kursbereich: %@", @"Label indicating the assoziated department of a moodle course.");
     self.categoryLabel.text = (self.item.courseCategory) ? [NSString stringWithFormat:locString, self.item.courseCategory] : nil;
@@ -126,7 +126,7 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     
     MOODLEEnrollmentViewController *newViewController = (MOODLEEnrollmentViewController *)[storyboard instantiateViewControllerWithIdentifier:@"enrollmentViewController"];
-    newViewController.enrollementURL = self.item.courseURL;
+    newViewController.enrollementURL = self.item.url;
     [self.navigationController pushViewController:newViewController animated:YES];
 }
 

@@ -11,7 +11,7 @@
 
 /* Data Model */
 #import "MOODLEDataModel.h"
-#import "MOODLESearchItem.h"
+#import "MOODLECourse.h"
 
 /* View Controller */
 #import "MOODLETabBarController.h"
@@ -37,7 +37,7 @@
 
 // Table View
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSArray<MOODLESearchItem *> *resultArray;
+@property (nonatomic, strong) NSArray<MOODLECourse *> *resultArray;
 @property (nonatomic, readwrite) BOOL hasContent;
 
 // Navigation
@@ -154,9 +154,9 @@
     self.loadingView = nil;
     
     self.hasContent = NO;
-    MOODLESearchItem *item = [[MOODLESearchItem alloc] init];
+    MOODLECourse *item = [[MOODLECourse alloc] init];
     NSString *locString = NSLocalizedString(@"Keine Kurse mit dem Begriff '%@' gefunden.", @"Message if course search yields no results.");
-    item.title = [NSString stringWithFormat:locString, searchString];
+    item.courseTitle = [NSString stringWithFormat:locString, searchString];
     self.resultArray = @[item];
     self.tableView.hidden = NO;
     [self.tableView reloadData];
@@ -198,15 +198,15 @@
     if (self.hasContent) {
         
         cell = [tableView dequeueReusableCellWithIdentifier:MOODLESearchResultTableViewCellIdentifier];
-        MOODLESearchItem *item = self.resultArray[indexPath.row];
-        ((MOODLESearchResultTableViewCell *)cell).titleLabel.text = item.title;
+        MOODLECourse *item = self.resultArray[indexPath.row];
+        ((MOODLESearchResultTableViewCell *)cell).titleLabel.text = item.courseTitle;
         ((MOODLESearchResultTableViewCell *)cell).subscribeImageIcon.image = (item.canSubscribe) ? [UIImage imageNamed:@"subscribe_possible_icon"] : [UIImage imageNamed:@"subscribe_not_possible_icon"];
     }
     else {
         
         cell = [tableView dequeueReusableCellWithIdentifier:noResultCellIdentifier];
-        MOODLESearchItem *item = self.resultArray[indexPath.row];
-        cell.textLabel.text = item.title;
+        MOODLECourse *item = self.resultArray[indexPath.row];
+        cell.textLabel.text = item.courseTitle;
     }
     return cell;
 }
@@ -216,7 +216,7 @@
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     MOODLESearchItemDetailViewController *newViewController = (MOODLESearchItemDetailViewController *)[storyboard instantiateViewControllerWithIdentifier:@"MOODLESearchItemDetailViewController"];
-    MOODLESearchItem *item = self.resultArray[indexPath.row];
+    MOODLECourse *item = self.resultArray[indexPath.row];
     newViewController.item = item;
     [self.navigationController pushViewController:newViewController animated:YES];
 }

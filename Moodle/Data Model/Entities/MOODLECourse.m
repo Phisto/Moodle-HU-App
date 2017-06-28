@@ -7,10 +7,26 @@
  *
  */
 
+@import UIKit; // For NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType
+
 #import "MOODLECourse.h"
 
 /* Data Model */
 #import "MOODLEDataModel.h"
+
+///-----------------------
+/// @name CATEGORIES
+///-----------------------
+
+
+
+@interface MOODLECourse (/* Private */)
+
+@property (nonatomic, strong) NSMutableAttributedString *attributedCourseDescription;
+
+@end
+
+
 
 ///-----------------------
 /// @name IMPLEMENTATION
@@ -43,6 +59,23 @@
         
         _isFavourite = isFavourite;
     }
+}
+
+
+- (BOOL)canSubscribe {
+    
+    return ((self.guestSubscribe || self.selfSubscribe ) && self.url);
+}
+
+
+- (NSMutableAttributedString *)attributedCourseDescription {
+    
+    if (!_attributedCourseDescription) {
+        
+        _attributedCourseDescription = [[NSMutableAttributedString alloc] initWithString:(self.courseDescription) ? self.courseDescription : @""
+                                                                              attributes:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType }];
+    }
+    return _attributedCourseDescription;
 }
 
 

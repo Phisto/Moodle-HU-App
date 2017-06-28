@@ -9,7 +9,7 @@
 
 @import Foundation;
 
-@class MOODLEDataModel, MOODLECourse, MOODLECourseSection, MOODLESearchItem;
+@class MOODLEDataModel, MOODLECourse, MOODLECourseSection;
 
 /**
  
@@ -79,7 +79,7 @@ NS_ASSUME_NONNULL_BEGIN
  @return An array of search items or nil if no item was found.
  
  */
-- (nullable NSArray<MOODLESearchItem *> *)searchResultsFromData:(NSData *)data;
+- (nullable NSArray<MOODLECourse *> *)searchResultsFromData:(NSData *)data;
 
 @end
 NS_ASSUME_NONNULL_END

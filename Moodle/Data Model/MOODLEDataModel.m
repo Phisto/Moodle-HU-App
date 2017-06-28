@@ -17,7 +17,6 @@
 
 /* Entities */
 #import "MOODLECourse.h"
-#import "MOODLESearchItem.h"
 #import "MOODLECourseSection.h"
 
 /* Networking */
@@ -210,7 +209,7 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
         }
     }
     
-    NSArray<MOODLESearchItem *> *searchItemArray = [self.xmlParser searchResultsFromData:data];
+    NSArray<MOODLECourse *> *searchItemArray = [self.xmlParser searchResultsFromData:data];
     if (searchItemArray) {
         
         completionHandler(YES, nil, searchItemArray);

@@ -13,7 +13,6 @@
 #import "MOODLECourse.h"
 #import "MOODLECourseSection.h"
 #import "MOODLECourseSectionItem.h"
-#import "MOODLESearchItem.h"
 
 /* Parser */
 #import "TFHpple.h"
@@ -95,7 +94,7 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
 }
 
 
-- (nullable NSArray<MOODLESearchItem *> *)searchResultsFromData:(NSData *)data {
+- (nullable NSArray<MOODLECourse *> *)searchResultsFromData:(NSData *)data {
     
     NSMutableArray *mutableSearchResults = [NSMutableArray array];
     
@@ -106,18 +105,18 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
         
         if (element.children.count > 1) {
             
-            MOODLESearchItem *item = nil;
+            MOODLECourse *item = nil;
             
             TFHppleElement *infoElement = element.children[0];
             if ([[infoElement objectForKey:@"class"] isEqualToString:@"info"]) {
                 
-                item = [[MOODLESearchItem alloc] init];
+                item = [[MOODLECourse alloc] init];
                 
                 // title
                 NSString *name = [infoElement.firstChild content];
                 if (name) {
                   
-                    item.title = name;
+                    item.courseTitle = name;
                 }
                 else {
                     
@@ -126,7 +125,7 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
                 
                 NSString *url = [infoElement.firstChild.firstChild objectForKey:@"href"];
                 if (url) {
-                    item.courseURL = [NSURL URLWithString:url];
+                    item.url = [NSURL URLWithString:url];
                 }
                 
                 if (infoElement.children.count > 2) {

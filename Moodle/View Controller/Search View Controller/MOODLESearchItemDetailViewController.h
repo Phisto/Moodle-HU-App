@@ -9,11 +9,11 @@
 
 @import UIKit;
 
-@class MOODLESearchItem;
+@class MOODLECourse;
 
 /**
  
- The MOODLESearchItemDetailViewController is responsible for presenting a `MOODLESearchItem` object to the user.
+ The MOODLESearchItemDetailViewController is responsible for presenting a `MOODLECourse` object to the user.
  
  */
 
@@ -26,9 +26,9 @@ NS_ASSUME_NONNULL_BEGIN
 ///--------------------
 
 /**
- The MOODLESearchItem to present.
+ The MOODLECourse to present.
  */
-@property (nonatomic, strong) MOODLESearchItem *item;
+@property (nonatomic, strong) MOODLECourse *item;
 
 @end
 NS_ASSUME_NONNULL_END

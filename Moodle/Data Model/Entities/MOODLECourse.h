@@ -66,5 +66,38 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, readwrite) NSInteger orderingWeight;
 
+
+///!!!: So far only used by search item
+
+/**
+ An array of responsible persons for the search item.
+ */
+@property (nonatomic, strong, nullable) NSArray<NSString *> *teacher;
+/**
+ The course description of the search item.
+ */
+@property (nonatomic, strong, nullable) NSString *courseDescription;
+/**
+ The attributed course description of the search item.
+ */
+@property (nonatomic, readonly, nullable) NSMutableAttributedString *attributedCourseDescription;
+/**
+ The course category of the search item.
+ */
+@property (nonatomic, strong, nullable) NSString *courseCategory;
+/**
+ Boolean indicating if the user can subsribe to the course.
+ */
+@property (nonatomic, readonly) BOOL canSubscribe;
+/**
+ Boolean indicating if the user can subsribe to the course as a guest.
+ */
+@property (nonatomic, readwrite) BOOL guestSubscribe;
+/**
+ Boolean indicating if the user can subsribe to the course.
+ */
+@property (nonatomic, readwrite) BOOL selfSubscribe;
+
+
 @end
 NS_ASSUME_NONNULL_END
