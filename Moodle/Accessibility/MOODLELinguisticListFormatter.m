@@ -7,15 +7,15 @@
  *
  */
 
-#import "MOODLELinguisticListFormater.h"
+#import "MOODLELinguisticListFormatter.h"
 
-@interface MOODLELinguisticListFormater (/* Private */)
+@interface MOODLELinguisticListFormatter (/* Private */)
 
 @property (nonatomic, strong) NSMutableArray<NSString *> *listItems;
 
 @end
 
-@implementation MOODLELinguisticListFormater
+@implementation MOODLELinguisticListFormatter
 
 
 - (instancetype)init {

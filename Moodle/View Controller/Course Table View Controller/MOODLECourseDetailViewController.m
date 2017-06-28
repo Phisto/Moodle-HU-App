@@ -24,7 +24,7 @@
 #import "MOODLEActivityView.h"
 
 /* Accessibilility */
-#import "MOODLELinguisticListFormater.h"
+#import "MOODLELinguisticListFormatter.h"
 
 ///-----------------------
 /// @name CATEGORIES
@@ -206,7 +206,7 @@
         
         cell.noContentLabel.hidden = YES;
         
-        MOODLELinguisticListFormater *listFormatter = [MOODLELinguisticListFormater new];
+        MOODLELinguisticListFormatter *listFormatter = [MOODLELinguisticListFormatter new];
         
         if (section.hasDescription) {
             
