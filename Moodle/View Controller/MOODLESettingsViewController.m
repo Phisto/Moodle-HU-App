@@ -77,7 +77,7 @@
     [self.tableView reloadData];
     
     self.storageSlider.value = self.dataModel.documentCacheSize;
-    self.storageSliderLabel.text = [NSString stringWithFormat:@"%lu MB", self.dataModel.documentCacheSize];
+    self.storageSliderLabel.text = [NSString stringWithFormat:@"%lu MB", (unsigned long)self.dataModel.documentCacheSize];
     
     NSString *locString = NSLocalizedString(@"Zur Zeit sind %lu MB belegt.", @"label of the storage field");
     self.storageLabel.text = [NSString stringWithFormat:locString, self.dataModel.sizeOfCachedDocuments];
@@ -125,7 +125,7 @@
 - (IBAction)changedCacheSize:(UISlider *)sender {
     
     self.dataModel.documentCacheSize = sender.value;
-    self.storageSliderLabel.text = [NSString stringWithFormat:@"%lu MB", (NSUInteger)sender.value];
+    self.storageSliderLabel.text = [NSString stringWithFormat:@"%lu MB", (unsigned long)sender.value];
 }
 
 

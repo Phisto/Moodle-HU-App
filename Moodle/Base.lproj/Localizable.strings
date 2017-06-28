@@ -5,6 +5,9 @@
 /* LinguisticList formatter two items */
 "%@ und %@" = "%@ und %@";
 
+/* format */
+"%i of %i" = "%1$i of %2$i";
+
 /* Appended to accessibility label if course section has an assignment. */
 "Abgabe" = "Abgabe";
 
@@ -46,6 +49,9 @@
 
 /* Section title for document items. */
 "Dokumente" = "Dokumente";
+
+/* button text */
+"Done" = "Fertig";
 
 /* Title of the subscription nav bar item */
 "Einschreiben" = "Einschreiben";

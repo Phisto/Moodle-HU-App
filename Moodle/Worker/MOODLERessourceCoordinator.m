@@ -203,7 +203,7 @@ static NSString * const UserDefaultsCachedFilesArrayKey = @"UserDefaultsCachedFi
         fileSize = fileSize + [[self.fileManager attributesOfItemAtPath:url.path error:nil] fileSize];
     }
     
-    return fileSize/1000/1000; // we want megabyte
+    return (NSInteger)(fileSize/1000/1000); // we want megabyte
 }
 
 

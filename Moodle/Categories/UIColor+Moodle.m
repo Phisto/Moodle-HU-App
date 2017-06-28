@@ -48,9 +48,25 @@
 
 + (instancetype)moodle_blueColor {
     
+    /*
     return [UIColor colorWithRed:(3.0f/255.0f)
                            green:(102.0f/255.0f)
                             blue:(148.0f/255.0f)
+                           alpha:1.0f];
+    */
+    
+    return [UIColor colorWithRed:(2.0f/255.0f)
+                           green:(123.0f/255.0f)
+                            blue:(161.0f/255.0f)
+                           alpha:1.0f];
+}
+
+
++ (instancetype)moodle_brownColor {
+    
+    return [UIColor colorWithRed:(204.0f/255.0f)
+                           green:(204.0f/255.0f)
+                            blue:(153.0f/255.0f)
                            alpha:1.0f];
 }
 

@@ -7,6 +7,8 @@
  *
  */
 
+@import WebKit;
+
 #import "MOODLEEnrollmentViewController.h"
 
 /* Custom View */
@@ -18,11 +20,14 @@
 
 
 
-@interface MOODLEEnrollmentViewController (/* Private */)
+@interface MOODLEEnrollmentViewController (/* Private */) <WKUIDelegate>
 
 // UI
 @property (nonatomic, strong) IBOutlet UIWebView *webView;
 @property (nonatomic, strong) MOODLEActivityView *loadingView;
+
+// WebKit
+@property (nonatomic, strong) WKWebView *anotherWebView;
 
 @end
 
@@ -38,16 +43,38 @@
 #pragma mark - View Controller Methodes
 
 
+- (void)viewDidLoad {
+    
+    // call super
+    [super viewDidLoad];
+    
+    WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
+    WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectZero
+                                            configuration:configuration];
+    // configure
+    webView.UIDelegate = self;
+    
+    // store refernce
+    self.anotherWebView = webView;
+    
+    self.view = webView;
+}
+
+
 - (void)viewWillAppear:(BOOL)animated {
     
     // call super
     [super viewWillAppear:animated];
     
+    // load resource
+    [self.anotherWebView loadRequest:[NSURLRequest requestWithURL:self.enrollementURL]];
+    
+    
     // set webview delegate
-    self.webView.delegate = self;
+    //self.webView.delegate = self;
     
     // load resource
-    [self.webView loadRequest:[NSURLRequest requestWithURL:self.enrollementURL]];
+    //[self.webView loadRequest:[NSURLRequest requestWithURL:self.enrollementURL]];
 }
 
 
@@ -56,6 +83,7 @@
     // call super
     [super viewWillDisappear:animated];
     
+    /*
     // remove self as delegate
     self.webView.delegate = nil;
     
@@ -66,6 +94,7 @@
         
         [self.webView loadHTMLString:@"" baseURL:nil];
     }
+     */
 }
 
 
@@ -77,7 +106,7 @@
 
 #pragma mark - Web View Delegate Methodes
 
-
+/*
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     
     [self.view addSubview:self.loadingView];
@@ -132,7 +161,7 @@
         
     });
 }
-
+*/
 
 #pragma mark - Lazy
 

@@ -39,6 +39,10 @@ NS_ASSUME_NONNULL_BEGIN
  The color used for the table view cell favorite action.
  */
 + (instancetype)moodle_favoriteActionColor;
+/**
+ The brownish color used for the Moodle app.
+ */
++ (instancetype)moodle_brownColor;
 
 @end
 NS_ASSUME_NONNULL_END

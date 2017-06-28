@@ -717,10 +717,10 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
     if (_documentCacheSize == 0) {
         
         NSNumber *number = [self.defaults objectForKey:UserDefaultsDocumentCacheSizeKey];
-        if (!number) {
+        if (number == nil) {
             _documentCacheSize = 10;
             [self.defaults setInteger:10
-                            forKey:UserDefaultsDocumentCacheSizeKey];
+                               forKey:UserDefaultsDocumentCacheSizeKey];
         }
         else {
             _documentCacheSize = number.unsignedIntegerValue;

@@ -1001,7 +1001,7 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dQs-L1-qXL">
+                            <webView hidden="YES" contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dQs-L1-qXL">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
@@ -1261,8 +1261,8 @@
         <scene sceneID="eDW-Nh-22e">
             <objects>
                 <tableViewController id="vbQ-wy-po3" customClass="MOODLEDocumentsTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="64" sectionHeaderHeight="18" sectionFooterHeight="18" id="zw3-rj-Siw">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="64" sectionHeaderHeight="18" sectionFooterHeight="18" id="zw3-rj-Siw">
+                        <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
@@ -1314,7 +1314,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Dokumente" id="pTF-84-pmZ"/>
                     <connections>
-                        <segue destination="phb-OI-Do6" kind="show" id="NNc-Od-Ya7"/>
+                        <segue destination="phb-OI-Do6" kind="show" identifier="toRessourceViewController" id="NNc-Od-Ya7"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jmH-4I-DJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1330,26 +1330,10 @@
                         <viewControllerLayoutGuide type="bottom" id="B4c-b7-kbJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Lxu-5U-Wuz">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cYr-eQ-3Xy">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                            </webView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="topMargin" secondItem="cYr-eQ-3Xy" secondAttribute="top" id="0Yx-qk-ppj"/>
-                            <constraint firstItem="cYr-eQ-3Xy" firstAttribute="leading" secondItem="Lxu-5U-Wuz" secondAttribute="leading" id="eks-3W-6PT"/>
-                            <constraint firstAttribute="trailing" secondItem="cYr-eQ-3Xy" secondAttribute="trailing" id="imF-15-zii"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="cYr-eQ-3Xy" secondAttribute="bottom" id="mEB-XQ-Y1F"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="webView" destination="cYr-eQ-3Xy" id="9TL-EI-9tC"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jya-o7-3WD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1360,6 +1344,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AiU-pY-4D7" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Dokumente" image="document_logo" id="A2V-oI-E7J"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="jmp-Sd-eRA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
