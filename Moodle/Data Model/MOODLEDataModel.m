@@ -14,6 +14,7 @@
 /* Worker */
 #import "MOODLEXMLParser.h"
 #import "MOODLERessourceCoordinator.h"
+#import "MOODLEPersistentStoreCoordinator.h"
 
 /* Entities */
 #import "MOODLECourse.h"
@@ -41,7 +42,6 @@ static NSString * const UserDefaultsFavouritesArrayKey = @"UserDefaultsFavourite
 static NSString * const UserDefaultsDeletedArrayKey = @"UserDefaultsDeletedArrayKey";
 static NSString * const UserDefaultsOrderingWeightsArrayKey = @"UserDefaultsOrderingWeightsArrayKey";
 static NSString * const UserDefaultsLoginDateKey = @"UserDefaultsLoginDateKey";
-static NSString * const UserDefaultsDocumentCacheSizeKey = @"UserDefaultsDocumentCacheSizeKey";
 
 
 
@@ -68,6 +68,7 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
 @property (nonatomic, strong) MOODLEXMLParser *xmlParser;
 @property (nonatomic, strong) KeychainWrapper *keyChainWrapper;
 @property (nonatomic, strong) MOODLERessourceCoordinator *ressourceCoordinator;
+@property (nonatomic, strong) MOODLEPersistentStoreCoordinator *store;
 
 // Other
 @property (nonatomic, strong) NSString *sessionKey;
@@ -90,12 +91,6 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
 
 
 @implementation MOODLEDataModel
-#pragma mark - Syntheszie
-
-
-@synthesize documentCacheSize = _documentCacheSize;
-
-
 #pragma mark - Object Life Cycle
 
 
@@ -124,6 +119,9 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
                                                    delegateQueue:[NSOperationQueue mainQueue]];
         
         _hiddenCourses = [NSMutableArray array];
+        
+        // create store coordinator
+        _store = [[MOODLEPersistentStoreCoordinator alloc] init];
         
         
         // when its the first app start, initialize user defaults
@@ -703,30 +701,13 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
 
 - (void)setDocumentCacheSize:(NSUInteger)documentCacheSize {
     
-    if (_documentCacheSize != documentCacheSize) {
-        
-        [self.defaults setInteger:documentCacheSize
-                           forKey:UserDefaultsDocumentCacheSizeKey];
-        _documentCacheSize = documentCacheSize;
-    }
+    self.store.documentCacheSize = documentCacheSize;
 }
 
 
 - (NSUInteger)documentCacheSize {
     
-    if (_documentCacheSize == 0) {
-        
-        NSNumber *number = [self.defaults objectForKey:UserDefaultsDocumentCacheSizeKey];
-        if (number == nil) {
-            _documentCacheSize = 10;
-            [self.defaults setInteger:10
-                               forKey:UserDefaultsDocumentCacheSizeKey];
-        }
-        else {
-            _documentCacheSize = number.unsignedIntegerValue;
-        }
-    }
-    return _documentCacheSize;
+    return self.store.documentCacheSize;
 }
 
 
