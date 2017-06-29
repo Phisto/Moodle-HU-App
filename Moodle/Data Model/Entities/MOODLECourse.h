@@ -21,9 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MOODLECourse : NSObject
 #pragma mark - Properties
-///--------------------
-/// @name Properties
-///--------------------
+///------------------------
+/// @name MOODLE Properties
+///------------------------
 
 /**
  The title of the course.
@@ -52,12 +52,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
+@property (nonatomic, strong) NSArray *array;
 
 
 
 
-
-
+///------------------------------
+/// @name App Specific Properties
+///------------------------------
 
 /**
  The data model in which the course is stored in.
@@ -78,6 +80,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 ///!!!: So far only used by search item
+///-------------------------------
+/// @name Search Result Properties
+///-------------------------------
 
 /**
  An array of responsible persons for the search result.
