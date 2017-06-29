@@ -15,15 +15,11 @@
 /* Table View */
 #import "MOODLECourseSectionItemTableViewCell.h"
 
-/* View Controller */
-#import "MOODLEURLRessourceViewController.h"
-
 /* Colors */
 #import "UIColor+Moodle.h"
 
-/* PDF */
-#import "ReaderDocument.h"
-#import "ReaderViewController.h"
+/* View Controller */
+#import "MOODLEDocumentViewController.h"
 
 ///-----------------------
 /// @name CONSTANTS
@@ -41,7 +37,7 @@ static NSString * const KMOODLEPathExtentsionMP3 = @"mp3";
 
 
 
-@interface MOODLEDocumentsTableViewController (/* Private */)<ReaderViewControllerDelegate>
+@interface MOODLEDocumentsTableViewController (/* Private */)
 
 // UI
 @property (nonatomic, strong) UILabel *noContentInformationLabel;
@@ -246,49 +242,12 @@ static NSString * const KMOODLEPathExtentsionMP3 = @"mp3";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    
+    MOODLEDocumentViewController *newViewController = (MOODLEDocumentViewController *)[storyboard instantiateViewControllerWithIdentifier:@"urlRessourceViewController"];
     NSURL *ressourceURL = self.tableData[indexPath.section][indexPath.row];
-    NSString *pathExtension = [ressourceURL pathExtension];
-    
-    if ([pathExtension isEqualToString:@"pdf"]) {
-        
-        ReaderDocument *document = [ReaderDocument withDocumentFilePath:ressourceURL.path password:nil];
-        
-        // Must have a valid ReaderDocument object in order to proceed with things
-        if (document) {
-            
-            ReaderViewController *readerViewController = [[ReaderViewController alloc] initWithReaderDocument:document];
-            readerViewController.delegate = self; // Set the ReaderViewController delegate to self
-            
-            readerViewController.hidesBottomBarWhenPushed = YES;
-            
-            [self.navigationController pushViewController:readerViewController animated:YES];
-        }
-        // Log an error so that we know that something went wrong
-        else {
-            
-            NSLog(@"%s [ReaderDocument withDocumentFilePath:'%@' password:'%@'] failed.", __FUNCTION__, ressourceURL.path, nil);
-            
-            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-            MOODLEURLRessourceViewController *newViewController = (MOODLEURLRessourceViewController *)[storyboard instantiateViewControllerWithIdentifier:@"urlRessourceViewController"];
-            newViewController.localRessourceURL = ressourceURL;
-            [self.navigationController pushViewController:newViewController animated:YES];
-        }
-    }
-    else {
-     
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        MOODLEURLRessourceViewController *newViewController = (MOODLEURLRessourceViewController *)[storyboard instantiateViewControllerWithIdentifier:@"urlRessourceViewController"];
-        newViewController.localRessourceURL = ressourceURL;
-        [self.navigationController pushViewController:newViewController animated:YES];
-    }
-}
-
-
-#pragma mark - ReaderViewControllerDelegate methods
-
-- (void)dismissReaderViewController:(ReaderViewController *)viewController {
-    
-    [self.navigationController popViewControllerAnimated:YES];
+    newViewController.item = ressourceURL;
+    [self.navigationController pushViewController:newViewController animated:YES];
 }
 
 

@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  The item to present.
  */
-@property (nonatomic, strong) MOODLECourseSectionItem *item;
+@property (nonatomic, strong) NSObject *item;
 
 @end
 NS_ASSUME_NONNULL_END

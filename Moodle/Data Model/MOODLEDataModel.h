@@ -216,7 +216,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable NSURL *)localRessourceURLForItem:(MOODLECourseSectionItem *)item;
 /**
  
- @brief This method will load the file for the given item, save it locally and call the completion handler.
+ This method will load the file for the given item, save it locally and call the completion handler.
  
  @param item The item to load the file for.
  

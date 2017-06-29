@@ -14,6 +14,9 @@
 /* Section title for assignment items. */
 "Abgaben" = "Abgaben";
 
+/* memmory issue alert presenting title */
+"Achtung" = "Achtung";
+
 /* voice over document type title other document */
 "Andere Datei" = "Andere Datei";
 
@@ -43,6 +46,12 @@
 
 /* Message if the user tried to login without entering user credentials. */
 "Bitte geben Sie einen Benutzernamen und Passwort ein." = "Bitte geben Sie einen Benutzernamen und Passwort ein.";
+
+/* Error message displaying when item is of unknown class. */
+"Das Objekt kann nicht dargestellt werden." = "Das Objekt kann nicht dargestellt werden.";
+
+/* memmory issue alert presenting message */
+"Die Datei ist zu groß." = "Die Datei ist zu groß.";
 
 /* Error message if the file could not be saved to disc. */
 "Die Datei konnte nicht auf dem Gerät gespeichert werden." = "Die Datei konnte nicht auf dem Gerät gespeichert werden.";

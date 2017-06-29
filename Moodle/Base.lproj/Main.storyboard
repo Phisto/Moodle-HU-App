@@ -785,7 +785,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i1I-sD-yzL" id="OiW-xa-K7w">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="91 013 Academic English :Reading, Writing, Listening, Speaking-Unicert II (B2) - S.Geyer (SoSe 2017) #bc-ignore!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZU-tg-4Us">
@@ -992,7 +992,7 @@
         <!--Einschreibung-->
         <scene sceneID="H1C-p6-r6f">
             <objects>
-                <viewController storyboardIdentifier="enrollmentViewController" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="Hfc-wg-cBb" customClass="MOODLEEnrollmentViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="enrollmentViewController" hidesBottomBarWhenPushed="YES" id="Hfc-wg-cBb" customClass="MOODLEDocumentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pon-V6-Odn"/>
                         <viewControllerLayoutGuide type="bottom" id="McD-nI-jVE"/>
@@ -1267,10 +1267,10 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MOODLECourseSectionItemTableViewCellIdentifier" rowHeight="60" id="Pf3-zk-0jg" customClass="MOODLECourseSectionItemTableViewCell">
-                                <rect key="frame" x="0.0" y="56" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="55" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pf3-zk-0jg" id="h5c-MH-wfq">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zXZ-EM-82H">
@@ -1321,10 +1321,10 @@
             </objects>
             <point key="canvasLocation" x="2413.5999999999999" y="3006.7466266866568"/>
         </scene>
-        <!--URL Ressource View Controller-->
+        <!--Document View Controller-->
         <scene sceneID="lLT-Xd-zlc">
             <objects>
-                <viewController storyboardIdentifier="urlRessourceViewController" hidesBottomBarWhenPushed="YES" id="phb-OI-Do6" customClass="MOODLEURLRessourceViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="urlRessourceViewController" hidesBottomBarWhenPushed="YES" id="phb-OI-Do6" customClass="MOODLEDocumentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SQC-W7-OI6"/>
                         <viewControllerLayoutGuide type="bottom" id="B4c-b7-kbJ"/>
@@ -1332,8 +1332,24 @@
                     <view key="view" contentMode="scaleToFill" id="Lxu-5U-Wuz">
                         <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" paginationMode="leftToRight" pageLength="500" gapBetweenPages="10" translatesAutoresizingMaskIntoConstraints="NO" id="S3J-6N-feY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S3J-6N-feY" firstAttribute="leading" secondItem="Lxu-5U-Wuz" secondAttribute="leading" id="BNy-zc-fdD"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="S3J-6N-feY" secondAttribute="bottom" id="Cg5-Y4-Gir"/>
+                            <constraint firstAttribute="trailing" secondItem="S3J-6N-feY" secondAttribute="trailing" id="FXB-u2-RUA"/>
+                            <constraint firstAttribute="topMargin" secondItem="S3J-6N-feY" secondAttribute="top" id="WeX-wB-GO4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="S3J-6N-feY" id="iFZ-T4-8IA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jya-o7-3WD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

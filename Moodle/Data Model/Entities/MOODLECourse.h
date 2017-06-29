@@ -49,6 +49,16 @@ NS_ASSUME_NONNULL_BEGIN
  An array of course sections.
  */
 @property (nonatomic, strong) NSArray<MOODLECourseSection *> *courseSections;
+
+
+
+
+
+
+
+
+
+
 /**
  The data model in which the course is stored in.
  */
@@ -70,7 +80,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///!!!: So far only used by search item
 
 /**
- An array of responsible persons for the search item.
+ An array of responsible persons for the search result.
  */
 @property (nonatomic, strong, nullable) NSArray<NSString *> *teacher;
 /**

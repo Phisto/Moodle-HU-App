@@ -10,11 +10,11 @@
 /* Header */
 #import "MOODLESearchItemDetailViewController.h"
 
-/* View Controller */
-#import "MOODLEEnrollmentViewController.h"
-
 /* Data Model */
 #import "MOODLECourse.h"
+
+/* View Controller */
+#import "MOODLEDocumentViewController.h"
 
 ///-----------------------
 /// @name CATEGORIES
@@ -125,8 +125,8 @@
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     
-    MOODLEEnrollmentViewController *newViewController = (MOODLEEnrollmentViewController *)[storyboard instantiateViewControllerWithIdentifier:@"enrollmentViewController"];
-    newViewController.enrollementURL = self.item.url;
+    MOODLEDocumentViewController *newViewController = (MOODLEDocumentViewController *)[storyboard instantiateViewControllerWithIdentifier:@"enrollmentViewController"];
+    newViewController.item = self.item.url;
     [self.navigationController pushViewController:newViewController animated:YES];
 }
 

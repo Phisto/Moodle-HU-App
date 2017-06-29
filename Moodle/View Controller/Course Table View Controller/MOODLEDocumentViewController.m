@@ -33,6 +33,10 @@
 // Data Model
 @property (nonatomic, strong) MOODLEDataModel *dataModel;
 
+// State
+@property (nonatomic, readwrite) BOOL isMoodleItem;
+@property (nonatomic, readwrite) BOOL isURL;
+
 @end
 
 
@@ -51,58 +55,94 @@
     
     // call super
     [super viewWillAppear:animated];
-
+    
     // hide nav bar when scrolling web content ...
     self.navigationController.hidesBarsOnSwipe = YES;
     
+    // add activity indicator
+    [self.view addSubview:self.loadingView];
+    
     // set webview delegate
     self.webView.delegate = self;
+    self.webView.hidden = YES;
     
     // prepare for audio
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
     
-    
-    BOOL isDocument = (self.item.itemType == MoodleItemTypeDocument);
-    BOOL isPDF = (self.item.documentType == MoodleDocumentTypePDF);
-    BOOL isPPT = (self.item.documentType == MoodleDocumentTypePPT);
-    BOOL isSupportedDocument = (isPDF || isPPT);
-    
-    // pdf files getting cached ...
-    if (isDocument && isSupportedDocument) {
+    // load item
+    [self loadItem];
+}
 
-        NSURL *localURL = [self.dataModel localRessourceURLForItem:self.item];
-        // the file is cached
-        if (localURL) {
-            // load resource
-            [self.webView loadRequest:[NSURLRequest requestWithURL:localURL]];
-        }
-        // there is no space to cache
-        else if (self.dataModel.sizeOfCachedDocuments >= self.dataModel.documentCacheSize) {
+
+- (void)loadItem {
+    
+    NSString *itemClassString = NSStringFromClass([self.item class]);
+    NSString *courseSectionClassString = NSStringFromClass([MOODLECourseSectionItem class]);
+    NSString *urlClassString = NSStringFromClass([NSURL class]);
+    
+    if ([itemClassString isEqualToString:courseSectionClassString]) {
+        
+        MOODLECourseSectionItem *moodelItem = (MOODLECourseSectionItem *)self.item;
+        
+        BOOL isDocument = (moodelItem.itemType == MoodleItemTypeDocument);
+        BOOL isPDF = (moodelItem.documentType == MoodleDocumentTypePDF);
+        BOOL isPPT = (moodelItem.documentType == MoodleDocumentTypePPT);
+        BOOL mayBeLocal = (isPDF || isPPT);
+        
+        // pdf & ppt files can be cached ...
+        if (isDocument && mayBeLocal) {
             
-            // load resource
-            [self.webView loadRequest:[NSURLRequest requestWithURL:self.item.resourceURL]];
+            NSURL *localURL = [self.dataModel localRessourceURLForItem:moodelItem];
+            // the file is cached
+            if (localURL) {
+
+                // load resource
+                [self.webView loadRequest:[NSURLRequest requestWithURL:localURL]];
+            }
+            // there is no space to cache
+            else if (self.dataModel.sizeOfCachedDocuments >= self.dataModel.documentCacheSize) {
+                
+                // load resource
+                [self.webView loadRequest:[NSURLRequest requestWithURL:moodelItem.resourceURL]];
+            }
+            // file isn't cached
+            else {
+                
+                dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
+                dispatch_async(queue, ^{
+                    [self.dataModel saveRemoteRessource:moodelItem
+                                      completionHandler:^(BOOL success, NSError * _Nullable error, NSURL * _Nullable localRessourceURL) {
+                                          
+                                          // load resource
+                                          [self.webView loadRequest:[NSURLRequest requestWithURL:(success) ? localRessourceURL : moodelItem.resourceURL]];
+                                      }];
+                });
+            }
         }
-        // file isn't cached
         else {
             
-            // show activity indicator view
-            [self.view addSubview:self.loadingView];
-            
-            dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
-            dispatch_async(queue, ^{
-                [self.dataModel saveRemoteRessource:self.item
-                                  completionHandler:^(BOOL success, NSError * _Nullable error, NSURL * _Nullable localRessourceURL) {
-
-                                      // load resource
-                                      [self.webView loadRequest:[NSURLRequest requestWithURL:(success) ? localRessourceURL : self.item.resourceURL]];
-                                  }];
-            });
+            // load resource
+            [self.webView loadRequest:[NSURLRequest requestWithURL:moodelItem.resourceURL]];
         }
+    }
+    else if ([itemClassString isEqualToString:urlClassString]) {
+
+        // load resource
+        [self.webView loadRequest:[NSURLRequest requestWithURL:(NSURL *)self.item]];
     }
     else {
         
-        // load resource
-        [self.webView loadRequest:[NSURLRequest requestWithURL:self.item.resourceURL]];
+        NSLog(@"%s MOODLEDocumentViewController failed to open item '%@'.", __FUNCTION__, self.item);
+        
+        NSString *locString = NSLocalizedString(@"Das Objekt kann nicht dargestellt werden.", @"Error message displaying when item is of unknown class.");
+        NSDictionary *errorDict = @{ NSLocalizedDescriptionKey: locString };
+        NSError *newError = [NSError errorWithDomain:@"de.simonsserver.Moodle"
+                                                code:77
+                                            userInfo:errorDict];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [self presentError:newError];
+        });
     }
 }
 
@@ -117,6 +157,7 @@
     
     // remove self as delegate
     self.webView.delegate = nil;
+    self.webView.hidden = YES;
     
     // stop
     [self.webView stopLoading];
@@ -130,7 +171,48 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-    [self.webView reload];
+    [self.webView loadHTMLString:@"" baseURL:nil];
+    
+    // inform user
+    NSString *locString = NSLocalizedString(@"Achtung", @"memmory issue alert presenting title");
+    NSString *locMessage = NSLocalizedString(@"Die Datei ist zu groß.", @"memmory issue alert presenting message");
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:locString
+                                                                             message:locMessage
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    
+    NSString *cancelActionTitle = NSLocalizedString(@"Weiter", @"alert view retry button title");
+    UIAlertAction *cancleAction = [UIAlertAction actionWithTitle:cancelActionTitle
+                                                           style:UIAlertActionStyleCancel
+                                                         handler:^(UIAlertAction * _Nonnull action) {
+                                                             
+                                                             // remove the activity view
+                                                             [self.loadingView removeFromSuperview];
+                                                             self.loadingView = nil;
+                                                         }];
+    [alertController addAction:cancleAction];
+    
+    
+    NSString *retryActionTitle = NSLocalizedString(@"Nochmal versuchen", @"alert view retry button title");
+    UIAlertAction *retryAction = [UIAlertAction actionWithTitle:retryActionTitle
+                                                          style:UIAlertActionStyleDefault
+                                                        handler:^(UIAlertAction * _Nonnull action) {
+                                                            // retry content loading...
+                                                            
+                                                            // show activity indicator..
+                                                            if (![self.view.subviews containsObject:self.loadingView]) {
+                                                                [self.view addSubview:self.loadingView];
+                                                            }
+                                                            
+                                                            // load resource
+                                                            [self loadItem];
+                                                        }];
+    
+    [alertController addAction:retryAction];
+    
+    [self presentViewController:alertController
+                       animated:YES
+                     completion:nil];
+    
 }
 
 
@@ -155,6 +237,7 @@
     
     [self.loadingView removeFromSuperview];
     self.loadingView = nil;
+    self.webView.hidden = NO;
 }
 
 
@@ -183,7 +266,8 @@
                                                            style:UIAlertActionStyleCancel
                                                          handler:^(UIAlertAction * _Nonnull action) {
                                                              
-                                                             // free the activity view
+                                                             // remove the activity view
+                                                             [self.loadingView removeFromSuperview];
                                                              self.loadingView = nil;
                                                          }];
     [alertController addAction:cancleAction];
@@ -195,10 +279,12 @@
                                                             // retry content loading...
                                                             
                                                             // show activity indicator..
-                                                            [self.view addSubview:self.loadingView];
+                                                            if (![self.view.subviews containsObject:self.loadingView]) {
+                                                                [self.view addSubview:self.loadingView];
+                                                            }
                                                             
                                                             // load resource
-                                                            [self.webView loadRequest:[NSURLRequest requestWithURL:self.item.resourceURL]];
+                                                            [self loadItem];
                                                         }];
     
     [alertController addAction:retryAction];
