@@ -13,6 +13,7 @@
 
 /* Data Model */
 #import "MOODLEDataModel.h"
+#import "MOODLEForum.h"
 
 ///-----------------------
 /// @name CATEGORIES
@@ -60,6 +61,9 @@
         _isFavourite = isFavourite;
     }
 }
+
+
+#pragma mark - Custom Getter
 
 
 - (BOOL)canSubscribe {

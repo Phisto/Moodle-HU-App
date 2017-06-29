@@ -19,6 +19,8 @@
 /* Entities */
 #import "MOODLECourse.h"
 #import "MOODLECourseSection.h"
+#import "MOODLECourseSectionItem.h"
+#import "MOODLEForum.h"
 
 /* Networking */
 #import "NSURLSession+SynchronuosTask.h"
@@ -338,6 +340,19 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
         }
     }
     
+    MOODLECourseSection *firstSection = item.courseSections.firstObject;
+    if (firstSection.hasOhterItems) {
+
+        for (MOODLECourseSectionItem *sectionItem in firstSection.otherItemArray) {
+            
+            if (sectionItem.itemType == MoodleItemTypeForum) {
+                
+                item.forum = [self loadForumContentForForumURL:sectionItem.resourceURL];
+                break;
+            }
+        }
+    }
+    
     completionHandler(YES, nil);
 }
 
@@ -385,6 +400,28 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
         [self resetData];
         completionHandler(YES, nil);
     }
+}
+
+
+#pragma mark - Data Loading Methodes
+
+
+- (nonnull MOODLEForum *)loadForumContentForForumURL:(NSURL *)forumURL {
+    
+    MOODLEForum *forum = [[MOODLEForum alloc] init];
+    forum.forumURL = forumURL;
+    
+    NSURLResponse * response = nil;
+    NSError *requestError = nil;
+    NSData *data = [self.currentSession moodle_sendSynchronousRequest:[NSURLRequest requestWithURL:forumURL]
+                                                    returningResponse:&response
+                                                                error:&requestError];
+    if (data) {
+        
+        //forum =
+    }
+    
+    return forum;
 }
 
 
@@ -466,6 +503,18 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
 }
 
 
+- (NSArray<NSURL *> *)allRessourceURLS {
+    
+    return [self.ressourceCoordinator allRessourceURLS];
+}
+
+
+- (BOOL)deleteDocumentWithURL:(NSURL *)docURL {
+    
+    return [self.ressourceCoordinator deleteDocumentWithURL:docURL];
+}
+
+
 #pragma mark -  Ordering/Hide Methodes
 
 
@@ -544,21 +593,6 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
     [self.keyChainWrapper writeToKeychain];
     
     self.hasUserCredentials = NO;
-}
-
-
-#pragma mark - Document Methodes
-
-
-- (NSArray<NSURL *> *)allRessourceURLS {
-    
-    return [self.ressourceCoordinator allRessourceURLS];
-}
-
-
-- (BOOL)deleteDocumentWithURL:(NSURL *)docURL {
-    
-    return [self.ressourceCoordinator deleteDocumentWithURL:docURL];
 }
 
 

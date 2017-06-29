@@ -9,7 +9,7 @@
 
 @import Foundation;
 
-@class MOODLECourseSection, MOODLEDataModel;
+@class MOODLECourseSection, MOODLEDataModel, MOODLEForum;
 
 /**
  
@@ -49,11 +49,14 @@ NS_ASSUME_NONNULL_BEGIN
  An array of course sections.
  */
 @property (nonatomic, strong) NSArray<MOODLECourseSection *> *courseSections;
-
-
-
-@property (nonatomic, strong) NSArray *array;
-
+/**
+ The general forum associated with the course.
+ */
+@property (nonatomic, strong) MOODLEForum *forum;
+/**
+ The announcements forum associated with the course.
+ */
+@property (nonatomic, strong) MOODLEForum *announcements;
 
 
 
@@ -77,6 +80,7 @@ NS_ASSUME_NONNULL_BEGIN
  Integer indicating the priority (e.g. how far at the top) with which the ourse will be displayed in a table view.
  */
 @property (nonatomic, readwrite) NSInteger orderingWeight;
+
 
 
 ///!!!: So far only used by search item
