@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MOODLELoginViewController.html">
+	<File path="Classes/MOODLEDocumentsTableViewController.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MOODLELoginViewController</TokenIdentifier>
-			<Abstract type="html">The MOODLELoginViewController is responsible for presenting a login form to the user.</Abstract>
-			<DeclaredIn>MOODLELoginViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLEDocumentsTableViewController</TokenIdentifier>
+			<Abstract type="html">The MOODLEDocumentsTableViewController is responsible for presenting all cached ressources to the user.</Abstract>
+			<DeclaredIn>MOODLEDocumentsTableViewController.h</DeclaredIn>
             
 			
 			<NodeRef refid="19"/>

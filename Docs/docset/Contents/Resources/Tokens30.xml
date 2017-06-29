@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/TFHppleElement.html">
+	<File path="Classes/MOODLEXMLParser.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/TFHppleElement</TokenIdentifier>
-			<Abstract type="html"></Abstract>
-			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLEXMLParser</TokenIdentifier>
+			<Abstract type="html">The MOODLEXMLParser class is used to parse HTML data to create MOODLE Entities.</Abstract>
+			<DeclaredIn>MOODLEXMLParser.h</DeclaredIn>
             
 			
 			<NodeRef refid="30"/>
@@ -13,254 +13,90 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/setRaw:</TokenIdentifier>
-			<Abstract type="html">Returns this tag&apos;s HTML content.</Abstract>
-			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEXMLParser/sessionKeyFromData:</TokenIdentifier>
+			<Abstract type="html">Creates a HTML string from data and parses the string searching for the session key.</Abstract>
+			<DeclaredIn>MOODLEXMLParser.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy, readonly) NSString *raw</Declaration>
-			
-			
-			<Anchor>//api/name/raw</Anchor>
+			<Declaration>- (nullable NSString *)sessionKeyFromData:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">The data to parse.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The session key or nil.</Abstract></ReturnValue>
+			<Anchor>//api/name/sessionKeyFromData:</Anchor>
             <NodeRef refid="30"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/raw</TokenIdentifier>
-			<Abstract type="html">Returns this tag&apos;s HTML content.</Abstract>
-			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEXMLParser/createCourseItemsFromData:</TokenIdentifier>
+			<Abstract type="html">Creates a HTML string from data and parses the string searching for the HTML representation of MOODLE courses.</Abstract>
+			<DeclaredIn>MOODLEXMLParser.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy, readonly) NSString *raw</Declaration>
-			
-			
-			<Anchor>//api/name/raw</Anchor>
+			<Declaration>- (NSArray&lt;MOODLECourse*&gt; *)createCourseItemsFromData:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">The data to parse.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An array of course items or an empty array.</Abstract></ReturnValue>
+			<Anchor>//api/name/createCourseItemsFromData:</Anchor>
             <NodeRef refid="30"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/TFHppleElement/raw</TokenIdentifier>
-			<Abstract type="html">Returns this tag&apos;s HTML content.</Abstract>
-			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEXMLParser/createCourseSectionsFromData:</TokenIdentifier>
+			<Abstract type="html">Creates a HTML string from data and parses the string searching for the HTML representation of MOODLE course sections.</Abstract>
+			<DeclaredIn>MOODLEXMLParser.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy, readonly) NSString *raw</Declaration>
-			
-			
-			<Anchor>//api/name/raw</Anchor>
+			<Declaration>- (NSArray&lt;MOODLECourseSection*&gt; *)createCourseSectionsFromData:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">The data to parse.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An array of course section items or an empty array.</Abstract></ReturnValue>
+			<Anchor>//api/name/createCourseSectionsFromData:</Anchor>
             <NodeRef refid="30"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/setContent:</TokenIdentifier>
-			<Abstract type="html">Returns this tag&apos;s innerHTML content.</Abstract>
-			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEXMLParser/createContentForCourseSections:fromData:</TokenIdentifier>
+			<Abstract type="html">Creates a HTML string from data and parses the string searching for the HTML representation of the MOODLE course section content. It will then populate the sections properties.</Abstract>
+			<DeclaredIn>MOODLEXMLParser.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy, readonly) NSString *content</Declaration>
-			
-			
-			<Anchor>//api/name/content</Anchor>
+			<Declaration>- (BOOL)createContentForCourseSections:(MOODLECourseSection *)section fromData:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>section</Name>
+					<Abstract type="html">The section to create the content for.</Abstract>
+				</Parameter><Parameter>
+					<Name>data</Name>
+					<Abstract type="html">The data to parse.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the content was loaded correctly, otherwise NO.</Abstract></ReturnValue>
+			<Anchor>//api/name/createContentForCourseSections:fromData:</Anchor>
             <NodeRef refid="30"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/content</TokenIdentifier>
-			<Abstract type="html">Returns this tag&apos;s innerHTML content.</Abstract>
-			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEXMLParser/searchResultsFromData:</TokenIdentifier>
+			<Abstract type="html">Creates a HTML string from data and parses the string searching for the HTML representation of MOODLE search item.</Abstract>
+			<DeclaredIn>MOODLEXMLParser.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy, readonly) NSString *content</Declaration>
-			
-			
-			<Anchor>//api/name/content</Anchor>
-            <NodeRef refid="30"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/TFHppleElement/content</TokenIdentifier>
-			<Abstract type="html">Returns this tag&apos;s innerHTML content.</Abstract>
-			<DeclaredIn>TFHppleElement.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, copy, readonly) NSString *content</Declaration>
-			
-			
-			<Anchor>//api/name/content</Anchor>
-            <NodeRef refid="30"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/setTagName:</TokenIdentifier>
-			<Abstract type="html">Returns the name of the current tag, such as &quot;h3&quot;.</Abstract>
-			<DeclaredIn>TFHppleElement.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, copy, readonly) NSString *tagName</Declaration>
-			
-			
-			<Anchor>//api/name/tagName</Anchor>
-            <NodeRef refid="30"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/tagName</TokenIdentifier>
-			<Abstract type="html">Returns the name of the current tag, such as &quot;h3&quot;.</Abstract>
-			<DeclaredIn>TFHppleElement.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, copy, readonly) NSString *tagName</Declaration>
-			
-			
-			<Anchor>//api/name/tagName</Anchor>
-            <NodeRef refid="30"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/TFHppleElement/tagName</TokenIdentifier>
-			<Abstract type="html">Returns the name of the current tag, such as &quot;h3&quot;.</Abstract>
-			<DeclaredIn>TFHppleElement.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, copy, readonly) NSString *tagName</Declaration>
-			
-			
-			<Anchor>//api/name/tagName</Anchor>
-            <NodeRef refid="30"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/setAttributes:</TokenIdentifier>
-			<Abstract type="html">Returns tag attributes with name as key and content as value.</Abstract>
-			<DeclaredIn>TFHppleElement.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong, readonly) NSDictionary *attributes</Declaration>
-			
-			
-			<Anchor>//api/name/attributes</Anchor>
-            <NodeRef refid="30"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/attributes</TokenIdentifier>
-			<Abstract type="html">Returns tag attributes with name as key and content as value.</Abstract>
-			<DeclaredIn>TFHppleElement.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong, readonly) NSDictionary *attributes</Declaration>
-			
-			
-			<Anchor>//api/name/attributes</Anchor>
-            <NodeRef refid="30"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/TFHppleElement/attributes</TokenIdentifier>
-			<Abstract type="html">Returns tag attributes with name as key and content as value.</Abstract>
-			<DeclaredIn>TFHppleElement.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong, readonly) NSDictionary *attributes</Declaration>
-			
-			
-			<Anchor>//api/name/attributes</Anchor>
-            <NodeRef refid="30"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/setChildren:</TokenIdentifier>
-			<Abstract type="html">Returns the children of a given node.</Abstract>
-			<DeclaredIn>TFHppleElement.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong, readonly) NSArray *children</Declaration>
-			
-			
-			<Anchor>//api/name/children</Anchor>
-            <NodeRef refid="30"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/children</TokenIdentifier>
-			<Abstract type="html">Returns the children of a given node.</Abstract>
-			<DeclaredIn>TFHppleElement.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong, readonly) NSArray *children</Declaration>
-			
-			
-			<Anchor>//api/name/children</Anchor>
-            <NodeRef refid="30"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/TFHppleElement/children</TokenIdentifier>
-			<Abstract type="html">Returns the children of a given node.</Abstract>
-			<DeclaredIn>TFHppleElement.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong, readonly) NSArray *children</Declaration>
-			
-			
-			<Anchor>//api/name/children</Anchor>
-            <NodeRef refid="30"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/setFirstChild:</TokenIdentifier>
-			<Abstract type="html">Returns the first child of a given node.</Abstract>
-			<DeclaredIn>TFHppleElement.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong, readonly) TFHppleElement *firstChild</Declaration>
-			
-			
-			<Anchor>//api/name/firstChild</Anchor>
-            <NodeRef refid="30"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/firstChild</TokenIdentifier>
-			<Abstract type="html">Returns the first child of a given node.</Abstract>
-			<DeclaredIn>TFHppleElement.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong, readonly) TFHppleElement *firstChild</Declaration>
-			
-			
-			<Anchor>//api/name/firstChild</Anchor>
-            <NodeRef refid="30"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/TFHppleElement/firstChild</TokenIdentifier>
-			<Abstract type="html">Returns the first child of a given node.</Abstract>
-			<DeclaredIn>TFHppleElement.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong, readonly) TFHppleElement *firstChild</Declaration>
-			
-			
-			<Anchor>//api/name/firstChild</Anchor>
-            <NodeRef refid="30"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/setParent:</TokenIdentifier>
-			<Abstract type="html">The parent of a node.</Abstract>
-			<DeclaredIn>TFHppleElement.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, unsafe_unretained, readonly) TFHppleElement *parent</Declaration>
-			
-			
-			<Anchor>//api/name/parent</Anchor>
-            <NodeRef refid="30"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/parent</TokenIdentifier>
-			<Abstract type="html">The parent of a node.</Abstract>
-			<DeclaredIn>TFHppleElement.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, unsafe_unretained, readonly) TFHppleElement *parent</Declaration>
-			
-			
-			<Anchor>//api/name/parent</Anchor>
-            <NodeRef refid="30"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/TFHppleElement/parent</TokenIdentifier>
-			<Abstract type="html">The parent of a node.</Abstract>
-			<DeclaredIn>TFHppleElement.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, unsafe_unretained, readonly) TFHppleElement *parent</Declaration>
-			
-			
-			<Anchor>//api/name/parent</Anchor>
+			<Declaration>- (nullable NSArray&lt;MOODLECourse*&gt; *)searchResultsFromData:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">The data to parse.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An array of search items or nil if no item was found.</Abstract></ReturnValue>
+			<Anchor>//api/name/searchResultsFromData:</Anchor>
             <NodeRef refid="30"/>
 		</Token>
 		

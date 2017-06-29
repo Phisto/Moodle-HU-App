@@ -1,16 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MOODLETabBarController.html">
+	<File path="Classes/MOODLESearchResultTableViewCell.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MOODLETabBarController</TokenIdentifier>
-			<Abstract type="html">The MOODLETabBarController is a custom tab bar controller. It does change some behaviour andd appereance of the standart tab bar controller.</Abstract>
-			<DeclaredIn>MOODLETabBarController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLESearchResultTableViewCell</TokenIdentifier>
+			<Abstract type="html">This class is a custom UITableViewCell subclass, which is designed to show all relevant information about a MOODLE search result.</Abstract>
+			<DeclaredIn>MOODLESearchResultTableViewCell.h</DeclaredIn>
             
 			
 			<NodeRef refid="25"/>
 		</Token>
 		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLESearchResultTableViewCell/setTitleLabel:</TokenIdentifier>
+			<Abstract type="html">The label to display the search result title.</Abstract>
+			<DeclaredIn>MOODLESearchResultTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *titleLabel</Declaration>
+			
+			
+			<Anchor>//api/name/titleLabel</Anchor>
+            <NodeRef refid="25"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLESearchResultTableViewCell/titleLabel</TokenIdentifier>
+			<Abstract type="html">The label to display the search result title.</Abstract>
+			<DeclaredIn>MOODLESearchResultTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *titleLabel</Declaration>
+			
+			
+			<Anchor>//api/name/titleLabel</Anchor>
+            <NodeRef refid="25"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLESearchResultTableViewCell/titleLabel</TokenIdentifier>
+			<Abstract type="html">The label to display the search result title.</Abstract>
+			<DeclaredIn>MOODLESearchResultTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *titleLabel</Declaration>
+			
+			
+			<Anchor>//api/name/titleLabel</Anchor>
+            <NodeRef refid="25"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLESearchResultTableViewCell/setSubscribeImageIcon:</TokenIdentifier>
+			<Abstract type="html">The image view to indicate if the user can subsribe to the course.</Abstract>
+			<DeclaredIn>MOODLESearchResultTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UIImageView *subscribeImageIcon</Declaration>
+			
+			
+			<Anchor>//api/name/subscribeImageIcon</Anchor>
+            <NodeRef refid="25"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLESearchResultTableViewCell/subscribeImageIcon</TokenIdentifier>
+			<Abstract type="html">The image view to indicate if the user can subsribe to the course.</Abstract>
+			<DeclaredIn>MOODLESearchResultTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UIImageView *subscribeImageIcon</Declaration>
+			
+			
+			<Anchor>//api/name/subscribeImageIcon</Anchor>
+            <NodeRef refid="25"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLESearchResultTableViewCell/subscribeImageIcon</TokenIdentifier>
+			<Abstract type="html">The image view to indicate if the user can subsribe to the course.</Abstract>
+			<DeclaredIn>MOODLESearchResultTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UIImageView *subscribeImageIcon</Declaration>
+			
+			
+			<Anchor>//api/name/subscribeImageIcon</Anchor>
+            <NodeRef refid="25"/>
+		</Token>
 		
         
         

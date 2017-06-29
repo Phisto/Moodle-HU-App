@@ -1,47 +1,269 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/HUProgressIndicatorStyle.html">
+	<File path="Classes/TFHppleElement.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/HUProgressIndicatorStyle</TokenIdentifier>
-			<Abstract type="html">The style of the indicator. This will determin the size of the indicator.</Abstract>
-			<DeclaredIn>HUProgressIndicator.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/TFHppleElement</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TFHppleElement.h</DeclaredIn>
             
 			
 			<NodeRef refid="34"/>
 		</Token>
 		
 		
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/HUProgressIndicatorStyleDefault</TokenIdentifier>
-            <Abstract type="html">The default style.</Abstract>
-            <Declaration>HUProgressIndicatorStyleDefault</Declaration>
-            
-            <DeclaredIn>HUProgressIndicator.h</DeclaredIn>
-            
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/setRaw:</TokenIdentifier>
+			<Abstract type="html">Returns this tag&apos;s HTML content.</Abstract>
+			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *raw</Declaration>
+			
+			
+			<Anchor>//api/name/raw</Anchor>
             <NodeRef refid="34"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/HUProgressIndicatorStyleSmall</TokenIdentifier>
-            <Abstract type="html">The style for a small indicator (width: 80 heigth: 80). The default style.</Abstract>
-            <Declaration>HUProgressIndicatorStyleSmall</Declaration>
-            
-            <DeclaredIn>HUProgressIndicator.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/raw</TokenIdentifier>
+			<Abstract type="html">Returns this tag&apos;s HTML content.</Abstract>
+			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *raw</Declaration>
+			
+			
+			<Anchor>//api/name/raw</Anchor>
             <NodeRef refid="34"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/HUProgressIndicatorStyleLarge</TokenIdentifier>
-            <Abstract type="html">The style for a large indicator (width: 120 heigth: 120). The default style.</Abstract>
-            <Declaration>HUProgressIndicatorStyleLarge</Declaration>
-            
-            <DeclaredIn>HUProgressIndicator.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TFHppleElement/raw</TokenIdentifier>
+			<Abstract type="html">Returns this tag&apos;s HTML content.</Abstract>
+			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *raw</Declaration>
+			
+			
+			<Anchor>//api/name/raw</Anchor>
             <NodeRef refid="34"/>
-        </Token>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/setContent:</TokenIdentifier>
+			<Abstract type="html">Returns this tag&apos;s innerHTML content.</Abstract>
+			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *content</Declaration>
+			
+			
+			<Anchor>//api/name/content</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/content</TokenIdentifier>
+			<Abstract type="html">Returns this tag&apos;s innerHTML content.</Abstract>
+			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *content</Declaration>
+			
+			
+			<Anchor>//api/name/content</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TFHppleElement/content</TokenIdentifier>
+			<Abstract type="html">Returns this tag&apos;s innerHTML content.</Abstract>
+			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *content</Declaration>
+			
+			
+			<Anchor>//api/name/content</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/setTagName:</TokenIdentifier>
+			<Abstract type="html">Returns the name of the current tag, such as &quot;h3&quot;.</Abstract>
+			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *tagName</Declaration>
+			
+			
+			<Anchor>//api/name/tagName</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/tagName</TokenIdentifier>
+			<Abstract type="html">Returns the name of the current tag, such as &quot;h3&quot;.</Abstract>
+			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *tagName</Declaration>
+			
+			
+			<Anchor>//api/name/tagName</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TFHppleElement/tagName</TokenIdentifier>
+			<Abstract type="html">Returns the name of the current tag, such as &quot;h3&quot;.</Abstract>
+			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *tagName</Declaration>
+			
+			
+			<Anchor>//api/name/tagName</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/setAttributes:</TokenIdentifier>
+			<Abstract type="html">Returns tag attributes with name as key and content as value.</Abstract>
+			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSDictionary *attributes</Declaration>
+			
+			
+			<Anchor>//api/name/attributes</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/attributes</TokenIdentifier>
+			<Abstract type="html">Returns tag attributes with name as key and content as value.</Abstract>
+			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSDictionary *attributes</Declaration>
+			
+			
+			<Anchor>//api/name/attributes</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TFHppleElement/attributes</TokenIdentifier>
+			<Abstract type="html">Returns tag attributes with name as key and content as value.</Abstract>
+			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSDictionary *attributes</Declaration>
+			
+			
+			<Anchor>//api/name/attributes</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/setChildren:</TokenIdentifier>
+			<Abstract type="html">Returns the children of a given node.</Abstract>
+			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSArray *children</Declaration>
+			
+			
+			<Anchor>//api/name/children</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/children</TokenIdentifier>
+			<Abstract type="html">Returns the children of a given node.</Abstract>
+			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSArray *children</Declaration>
+			
+			
+			<Anchor>//api/name/children</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TFHppleElement/children</TokenIdentifier>
+			<Abstract type="html">Returns the children of a given node.</Abstract>
+			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSArray *children</Declaration>
+			
+			
+			<Anchor>//api/name/children</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/setFirstChild:</TokenIdentifier>
+			<Abstract type="html">Returns the first child of a given node.</Abstract>
+			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) TFHppleElement *firstChild</Declaration>
+			
+			
+			<Anchor>//api/name/firstChild</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/firstChild</TokenIdentifier>
+			<Abstract type="html">Returns the first child of a given node.</Abstract>
+			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) TFHppleElement *firstChild</Declaration>
+			
+			
+			<Anchor>//api/name/firstChild</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TFHppleElement/firstChild</TokenIdentifier>
+			<Abstract type="html">Returns the first child of a given node.</Abstract>
+			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) TFHppleElement *firstChild</Declaration>
+			
+			
+			<Anchor>//api/name/firstChild</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/setParent:</TokenIdentifier>
+			<Abstract type="html">The parent of a node.</Abstract>
+			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, unsafe_unretained, readonly) TFHppleElement *parent</Declaration>
+			
+			
+			<Anchor>//api/name/parent</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TFHppleElement/parent</TokenIdentifier>
+			<Abstract type="html">The parent of a node.</Abstract>
+			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, unsafe_unretained, readonly) TFHppleElement *parent</Declaration>
+			
+			
+			<Anchor>//api/name/parent</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TFHppleElement/parent</TokenIdentifier>
+			<Abstract type="html">The parent of a node.</Abstract>
+			<DeclaredIn>TFHppleElement.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, unsafe_unretained, readonly) TFHppleElement *parent</Declaration>
+			
+			
+			<Anchor>//api/name/parent</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
         
         
 	</File>

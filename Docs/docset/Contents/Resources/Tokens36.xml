@@ -1,117 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/MoodleItemType.html">
+	<File path="Categories/NSURLSession+SynchronousTask.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/MoodleItemType</TokenIdentifier>
-			<Abstract type="html">These constants defines the different types of course section resources.</Abstract>
-			<DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cat/NSURLSession(SynchronousTask)</TokenIdentifier>
+			<Abstract type="html">This category is a convenient categorie to perform synchronous requests via NSURLSession object.</Abstract>
+			<DeclaredIn>NSURLSession+SynchronuosTask.h</DeclaredIn>
             
 			
 			<NodeRef refid="36"/>
 		</Token>
 		
 		
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/MoodleItemTypeDocument</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>MoodleItemTypeDocument</Declaration>
-            
-            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
-            
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSURLSession/moodle_sendSynchronousRequest:returningResponse:error:</TokenIdentifier>
+			<Abstract type="html">Performs a synchronous requests.</Abstract>
+			<DeclaredIn>NSURLSession+SynchronuosTask.h</DeclaredIn>
+			
+			<Declaration>- (nullable NSData *)moodle_sendSynchronousRequest:(NSURLRequest *)request returningResponse:(__autoreleasing NSURLResponse *_Nullable *_Nullable)responsePtr error:(__autoreleasing NSError **)errorPtr</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>request</Name>
+					<Abstract type="html">The request to perform.</Abstract>
+				</Parameter><Parameter>
+					<Name>responsePtr</Name>
+					<Abstract type="html">An object that provides response metadata, such as HTTP headers and status code. If you are making an HTTP or HTTPS request, the returned object is actually an NSHTTPURLResponse object..</Abstract>
+				</Parameter><Parameter>
+					<Name>errorPtr</Name>
+					<Abstract type="html">An error object that indicates why the request failed, or nil if the request was successful.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The respons data of the request or nil.</Abstract></ReturnValue>
+			<Anchor>//api/name/moodle_sendSynchronousRequest:returningResponse:error:</Anchor>
             <NodeRef refid="36"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/MoodleItemTypeWiki</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>MoodleItemTypeWiki</Declaration>
-            
-            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
-            
-            <NodeRef refid="36"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/MoodleItemTypeComment</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>MoodleItemTypeComment</Declaration>
-            
-            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
-            
-            <NodeRef refid="36"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/MoodleItemTypeAssignment</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>MoodleItemTypeAssignment</Declaration>
-            
-            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
-            
-            <NodeRef refid="36"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/MoodleItemTypeURL</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>MoodleItemTypeURL</Declaration>
-            
-            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
-            
-            <NodeRef refid="36"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/MoodleItemTypeForum</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>MoodleItemTypeForum</Declaration>
-            
-            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
-            
-            <NodeRef refid="36"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/MoodleItemTypeGlossary</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>MoodleItemTypeGlossary</Declaration>
-            
-            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
-            
-            <NodeRef refid="36"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/MoodleItemTypeGallery</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>MoodleItemTypeGallery</Declaration>
-            
-            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
-            
-            <NodeRef refid="36"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/MoodleItemTypeFolder</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>MoodleItemTypeFolder</Declaration>
-            
-            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
-            
-            <NodeRef refid="36"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/MoodleItemTypeOther</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>MoodleItemTypeOther</Declaration>
-            
-            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
-            
-            <NodeRef refid="36"/>
-        </Token>
+		</Token>
+		
         
         
 	</File>

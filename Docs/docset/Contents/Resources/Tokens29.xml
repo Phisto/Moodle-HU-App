@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/TFHpple.html">
+	<File path="Classes/MOODLEUser.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/TFHpple</TokenIdentifier>
-			<Abstract type="html">A nice Objective-C wrapper on the XPathQuery library (libxml2) for parsing HTML.</Abstract>
-			<DeclaredIn>TFHpple.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLEUser</TokenIdentifier>
+			<Abstract type="html">A MOODLECourse object represents a MOODLE course.</Abstract>
+			<DeclaredIn>MOODLEUser.h</DeclaredIn>
             
 			
 			<NodeRef refid="29"/>

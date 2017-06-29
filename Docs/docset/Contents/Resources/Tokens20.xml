@@ -1,52 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MOODLEProgressViewController.html">
+	<File path="Classes/MOODLELinguisticListFormatter.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MOODLEProgressViewController</TokenIdentifier>
-			<Abstract type="html">The MOODLESettingsViewController is responsible for showing a undetermined progress indicator to the user.</Abstract>
-			<DeclaredIn>MOODLEProgressViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLELinguisticListFormatter</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MOODLELinguisticListFormatter.h</DeclaredIn>
             
 			
 			<NodeRef refid="20"/>
 		</Token>
 		
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLEProgressViewController/setShouldShowReloginLabel:</TokenIdentifier>
-			<Abstract type="html">Boolean indicating if the re-login label should be visible.</Abstract>
-			<DeclaredIn>MOODLEProgressViewController.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readwrite) BOOL shouldShowReloginLabel</Declaration>
-			
-			
-			<Anchor>//api/name/shouldShowReloginLabel</Anchor>
-            <NodeRef refid="20"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLEProgressViewController/shouldShowReloginLabel</TokenIdentifier>
-			<Abstract type="html">Boolean indicating if the re-login label should be visible.</Abstract>
-			<DeclaredIn>MOODLEProgressViewController.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readwrite) BOOL shouldShowReloginLabel</Declaration>
-			
-			
-			<Anchor>//api/name/shouldShowReloginLabel</Anchor>
-            <NodeRef refid="20"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MOODLEProgressViewController/shouldShowReloginLabel</TokenIdentifier>
-			<Abstract type="html">Boolean indicating if the re-login label should be visible.</Abstract>
-			<DeclaredIn>MOODLEProgressViewController.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readwrite) BOOL shouldShowReloginLabel</Declaration>
-			
-			
-			<Anchor>//api/name/shouldShowReloginLabel</Anchor>
-            <NodeRef refid="20"/>
-		</Token>
 		
         
         

@@ -1,104 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MOODLEXMLParser.html">
+	<File path="Classes/MOODLETabBarController.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MOODLEXMLParser</TokenIdentifier>
-			<Abstract type="html">The MOODLEXMLParser class is used to parse HTML data to create MOODLE Entities.</Abstract>
-			<DeclaredIn>MOODLEXMLParser.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLETabBarController</TokenIdentifier>
+			<Abstract type="html">The MOODLETabBarController is a custom tab bar controller. It does change some behaviour andd appereance of the standart tab bar controller.</Abstract>
+			<DeclaredIn>MOODLETabBarController.h</DeclaredIn>
             
 			
 			<NodeRef refid="27"/>
 		</Token>
 		
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLEXMLParser/sessionKeyFromData:</TokenIdentifier>
-			<Abstract type="html">Creates a HTML string from data and parses the string searching for the session key.</Abstract>
-			<DeclaredIn>MOODLEXMLParser.h</DeclaredIn>
-			
-			<Declaration>- (nullable NSString *)sessionKeyFromData:(NSData *)data</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">The data to parse.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">The session key or nil.</Abstract></ReturnValue>
-			<Anchor>//api/name/sessionKeyFromData:</Anchor>
-            <NodeRef refid="27"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLEXMLParser/createCourseItemsFromData:</TokenIdentifier>
-			<Abstract type="html">Creates a HTML string from data and parses the string searching for the HTML representation of MOODLE courses.</Abstract>
-			<DeclaredIn>MOODLEXMLParser.h</DeclaredIn>
-			
-			<Declaration>- (NSArray&lt;MOODLECourse*&gt; *)createCourseItemsFromData:(NSData *)data</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">The data to parse.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">An array of course items or an empty array.</Abstract></ReturnValue>
-			<Anchor>//api/name/createCourseItemsFromData:</Anchor>
-            <NodeRef refid="27"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLEXMLParser/createCourseSectionsFromData:</TokenIdentifier>
-			<Abstract type="html">Creates a HTML string from data and parses the string searching for the HTML representation of MOODLE course sections.</Abstract>
-			<DeclaredIn>MOODLEXMLParser.h</DeclaredIn>
-			
-			<Declaration>- (NSArray&lt;MOODLECourseSection*&gt; *)createCourseSectionsFromData:(NSData *)data</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">The data to parse.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">An array of course section items or an empty array.</Abstract></ReturnValue>
-			<Anchor>//api/name/createCourseSectionsFromData:</Anchor>
-            <NodeRef refid="27"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLEXMLParser/createContentForCourseSections:fromData:</TokenIdentifier>
-			<Abstract type="html">Creates a HTML string from data and parses the string searching for the HTML representation of the MOODLE course section content. It will then populate the sections properties.</Abstract>
-			<DeclaredIn>MOODLEXMLParser.h</DeclaredIn>
-			
-			<Declaration>- (BOOL)createContentForCourseSections:(MOODLECourseSection *)section fromData:(NSData *)data</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>section</Name>
-					<Abstract type="html">The section to create the content for.</Abstract>
-				</Parameter><Parameter>
-					<Name>data</Name>
-					<Abstract type="html">The data to parse.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">YES if the content was loaded correctly, otherwise NO.</Abstract></ReturnValue>
-			<Anchor>//api/name/createContentForCourseSections:fromData:</Anchor>
-            <NodeRef refid="27"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLEXMLParser/searchResultsFromData:</TokenIdentifier>
-			<Abstract type="html">Creates a HTML string from data and parses the string searching for the HTML representation of MOODLE search item.</Abstract>
-			<DeclaredIn>MOODLEXMLParser.h</DeclaredIn>
-			
-			<Declaration>- (nullable NSArray&lt;MOODLESearchItem*&gt; *)searchResultsFromData:(NSData *)data</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">The data to parse.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">An array of search items or nil if no item was found.</Abstract></ReturnValue>
-			<Anchor>//api/name/searchResultsFromData:</Anchor>
-            <NodeRef refid="27"/>
-		</Token>
 		
         
         

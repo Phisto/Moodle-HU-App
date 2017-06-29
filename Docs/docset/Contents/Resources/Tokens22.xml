@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MOODLESearchItemDetailViewController.html">
+	<File path="Classes/MOODLEProgressViewController.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MOODLESearchItemDetailViewController</TokenIdentifier>
-			<Abstract type="html">The MOODLESearchItemDetailViewController is responsible for presenting a MOODLESearchItem object to the user.</Abstract>
-			<DeclaredIn>MOODLESearchItemDetailViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLEProgressViewController</TokenIdentifier>
+			<Abstract type="html">The MOODLESettingsViewController is responsible for showing a undetermined progress indicator to the user.</Abstract>
+			<DeclaredIn>MOODLEProgressViewController.h</DeclaredIn>
             
 			
 			<NodeRef refid="22"/>
@@ -13,38 +13,38 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLESearchItemDetailViewController/setItem:</TokenIdentifier>
-			<Abstract type="html">The MOODLESearchItem to present.</Abstract>
-			<DeclaredIn>MOODLESearchItemDetailViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEProgressViewController/setShouldShowReloginLabel:</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the re-login label should be visible.</Abstract>
+			<DeclaredIn>MOODLEProgressViewController.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) MOODLESearchItem *item</Declaration>
+			<Declaration>@property (nonatomic, readwrite) BOOL shouldShowReloginLabel</Declaration>
 			
 			
-			<Anchor>//api/name/item</Anchor>
+			<Anchor>//api/name/shouldShowReloginLabel</Anchor>
             <NodeRef refid="22"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLESearchItemDetailViewController/item</TokenIdentifier>
-			<Abstract type="html">The MOODLESearchItem to present.</Abstract>
-			<DeclaredIn>MOODLESearchItemDetailViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEProgressViewController/shouldShowReloginLabel</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the re-login label should be visible.</Abstract>
+			<DeclaredIn>MOODLEProgressViewController.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) MOODLESearchItem *item</Declaration>
+			<Declaration>@property (nonatomic, readwrite) BOOL shouldShowReloginLabel</Declaration>
 			
 			
-			<Anchor>//api/name/item</Anchor>
+			<Anchor>//api/name/shouldShowReloginLabel</Anchor>
             <NodeRef refid="22"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MOODLESearchItemDetailViewController/item</TokenIdentifier>
-			<Abstract type="html">The MOODLESearchItem to present.</Abstract>
-			<DeclaredIn>MOODLESearchItemDetailViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEProgressViewController/shouldShowReloginLabel</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the re-login label should be visible.</Abstract>
+			<DeclaredIn>MOODLEProgressViewController.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) MOODLESearchItem *item</Declaration>
+			<Declaration>@property (nonatomic, readwrite) BOOL shouldShowReloginLabel</Declaration>
 			
 			
-			<Anchor>//api/name/item</Anchor>
+			<Anchor>//api/name/shouldShowReloginLabel</Anchor>
             <NodeRef refid="22"/>
 		</Token>
 		

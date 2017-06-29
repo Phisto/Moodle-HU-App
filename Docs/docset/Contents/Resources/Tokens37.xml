@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/UIColor+Moodle.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/UIColor(Moodle)</TokenIdentifier>
+			<Abstract type="html">A convenient UIColor category to give easy access to custom colors spezific to the Moodle app.</Abstract>
+			<DeclaredIn>UIColor+Moodle.h</DeclaredIn>
+            
+			
+			<NodeRef refid="37"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIColor/moodle_blueColor</TokenIdentifier>
+			<Abstract type="html">The blue color used for the Moodle app.</Abstract>
+			<DeclaredIn>UIColor+Moodle.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)moodle_blueColor</Declaration>
+			
+			
+			<Anchor>//api/name/moodle_blueColor</Anchor>
+            <NodeRef refid="37"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIColor/moodle_unhideActionColor</TokenIdentifier>
+			<Abstract type="html">The color used for the table view cell unhide action.</Abstract>
+			<DeclaredIn>UIColor+Moodle.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)moodle_unhideActionColor</Declaration>
+			
+			
+			<Anchor>//api/name/moodle_unhideActionColor</Anchor>
+            <NodeRef refid="37"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIColor/moodle_hideActionColor</TokenIdentifier>
+			<Abstract type="html">The color used for the table view cell hide action.</Abstract>
+			<DeclaredIn>UIColor+Moodle.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)moodle_hideActionColor</Declaration>
+			
+			
+			<Anchor>//api/name/moodle_hideActionColor</Anchor>
+            <NodeRef refid="37"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIColor/moodle_favoriteActionColor</TokenIdentifier>
+			<Abstract type="html">The color used for the table view cell favorite action.</Abstract>
+			<DeclaredIn>UIColor+Moodle.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)moodle_favoriteActionColor</Declaration>
+			
+			
+			<Anchor>//api/name/moodle_favoriteActionColor</Anchor>
+            <NodeRef refid="37"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIColor/moodle_brownColor</TokenIdentifier>
+			<Abstract type="html">The brownish color used for the Moodle app.</Abstract>
+			<DeclaredIn>UIColor+Moodle.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)moodle_brownColor</Declaration>
+			
+			
+			<Anchor>//api/name/moodle_brownColor</Anchor>
+            <NodeRef refid="37"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/MoodleDocumentType.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/MoodleDocumentType</TokenIdentifier>
+			<Abstract type="html">These constants defines the different MoodleItemTypeDocument subytypes.</Abstract>
+			<DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
+            
+			
+			<NodeRef refid="39"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/MoodleDocumentTypePDF</TokenIdentifier>
+            <Abstract type="html">A PDF document</Abstract>
+            <Declaration>MoodleDocumentTypePDF</Declaration>
+            
+            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
+            
+            <NodeRef refid="39"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/MoodleDocumentTypePPT</TokenIdentifier>
+            <Abstract type="html">A Powerpoint document</Abstract>
+            <Declaration>MoodleDocumentTypePPT</Declaration>
+            
+            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
+            
+            <NodeRef refid="39"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/MoodleDocumentTypeWordDocument</TokenIdentifier>
+            <Abstract type="html">A Word document</Abstract>
+            <Declaration>MoodleDocumentTypeWordDocument</Declaration>
+            
+            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
+            
+            <NodeRef refid="39"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/MoodleDocumentTypeAudioFile</TokenIdentifier>
+            <Abstract type="html">An audio document</Abstract>
+            <Declaration>MoodleDocumentTypeAudioFile</Declaration>
+            
+            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
+            
+            <NodeRef refid="39"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/MoodleDocumentTypeOther</TokenIdentifier>
+            <Abstract type="html">An unknown document</Abstract>
+            <Declaration>MoodleDocumentTypeOther</Declaration>
+            
+            <DeclaredIn>MOODLECourseSectionItem.h</DeclaredIn>
+            
+            <NodeRef refid="39"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>
