@@ -13,8 +13,20 @@
 		
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MOODLEDataModel/sharedDataModel</TokenIdentifier>
+			<Abstract type="html">Returns the shared data model object for the process.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)sharedDataModel</Declaration>
+			
+			<ReturnValue><Abstract type="html">The default MOODLEDataModel object for the process.</Abstract></ReturnValue>
+			<Anchor>//api/name/sharedDataModel</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/MOODLEDataModel/new</TokenIdentifier>
-			<Abstract type="html">UNAVAILABLE. This class is a singleton class to access the singleton use +sharedDataModel.</Abstract>
+			<Abstract type="html">UNAVAILABLE. This class is a singleton class to access the singleton use sharedDataModel.</Abstract>
 			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
 			
 			<Declaration>+ (instancetype)new</Declaration>
@@ -26,7 +38,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/init</TokenIdentifier>
-			<Abstract type="html">UNAVAILABLE. This class is a singleton class to access the singleton use +sharedDataModel.</Abstract>
+			<Abstract type="html">UNAVAILABLE. This class is a singleton class to access the singleton use sharedDataModel.</Abstract>
 			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
 			
 			<Declaration>- (instancetype)init</Declaration>

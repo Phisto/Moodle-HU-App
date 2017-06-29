@@ -23,11 +23,19 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MOODLEDataModel : NSObject
-#pragma mark - Data Model Life Cycle
+#pragma mark - Creating a Data Model
 ///----------------------------
-/// @name Data Model Life Cycle
+/// @name Creating a Data Model
 ///----------------------------
 
+/**
+
+ Returns the shared data model object for the process.
+
+ @discussion This method always returns the same data model object.
+
+ @return The default MOODLEDataModel object for the process.
+ */
 + (instancetype)sharedDataModel;
 /**
  
@@ -46,9 +54,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-#pragma mark - Data
+#pragma mark - Moodle Data
 ///--------------------
-/// @name Data
+/// @name Moodle Data
 ///--------------------
 
 /**
