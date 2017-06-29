@@ -245,6 +245,8 @@ NS_ASSUME_NONNULL_BEGIN
  
  This method will delete the file or folder at the given url.
  
+ @param docURL The url to the file or folder.
+ 
  @return Yes if the file was deleted, NO if the file could not be deleted or if there was no file at the given url.
  
  */

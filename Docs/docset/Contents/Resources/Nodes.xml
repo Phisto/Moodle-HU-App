@@ -41,6 +41,10 @@
 						<NodeRef refid="28"/>
 						<NodeRef refid="29"/>
 						<NodeRef refid="30"/>
+						<NodeRef refid="31"/>
+						<NodeRef refid="32"/>
+						<NodeRef refid="33"/>
+						<NodeRef refid="34"/>
 						
 					</Subnodes>
 				</Node>
@@ -50,9 +54,9 @@
 					<Name>Categories</Name>
 					<Path>index.html</Path>
 					<Subnodes>
-						<NodeRef refid="31"/>
-						<NodeRef refid="32"/>
-						<NodeRef refid="33"/>
+						<NodeRef refid="35"/>
+						<NodeRef refid="36"/>
+						<NodeRef refid="37"/>
 						
 					</Subnodes>
 				</Node>
@@ -63,9 +67,9 @@
 					<Name>Constants</Name>
 					<Path>index.html</Path>
 					<Subnodes>
-						<NodeRef refid="34"/>
-						<NodeRef refid="35"/>
-						<NodeRef refid="36"/>
+						<NodeRef refid="38"/>
+						<NodeRef refid="39"/>
+						<NodeRef refid="40"/>
 						
 					</Subnodes>
 				</Node>
@@ -515,11 +519,21 @@
             
         </Node>
 		<Node id="19" type="file" documentType="reference">
+            <Name>MOODLEDocumentsTableViewController</Name>
+            <Path>Classes/MOODLEDocumentsTableViewController.html</Path>
+            
+        </Node>
+		<Node id="20" type="file" documentType="reference">
+            <Name>MOODLELinguisticListFormatter</Name>
+            <Path>Classes/MOODLELinguisticListFormatter.html</Path>
+            
+        </Node>
+		<Node id="21" type="file" documentType="reference">
             <Name>MOODLELoginViewController</Name>
             <Path>Classes/MOODLELoginViewController.html</Path>
             
         </Node>
-		<Node id="20" type="file" documentType="reference">
+		<Node id="22" type="file" documentType="reference">
             <Name>MOODLEProgressViewController</Name>
             <Path>Classes/MOODLEProgressViewController.html</Path>
             
@@ -546,34 +560,34 @@
             </Subnodes>
             
         </Node>
-		<Node id="21" type="file" documentType="reference">
-            <Name>MOODLESearchItem</Name>
-            <Path>Classes/MOODLESearchItem.html</Path>
+		<Node id="23" type="file" documentType="reference">
+            <Name>MOODLERessourceCoordinator</Name>
+            <Path>Classes/MOODLERessourceCoordinator.html</Path>
             
                 <Subnodes>
                 <Node type="section">
-                    <Path>Classes/MOODLESearchItem.html</Path>
+                    <Path>Classes/MOODLERessourceCoordinator.html</Path>
                     <Name>Overview</Name>
                     <Anchor>overview</Anchor>
                 </Node>
                 <Node type="section">
-                    <Path>Classes/MOODLESearchItem.html</Path>
+                    <Path>Classes/MOODLERessourceCoordinator.html</Path>
                     <Name>Tasks</Name>
                     <Anchor>tasks</Anchor>
                 </Node>
                 
+                
+                
                 <Node type="section">
-                    <Path>Classes/MOODLESearchItem.html</Path>
-                    <Name>Properties</Name>
-                    <Anchor>properties</Anchor>
+                    <Path>Classes/MOODLERessourceCoordinator.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
                 </Node>
-                
-                
                 
             </Subnodes>
             
         </Node>
-		<Node id="22" type="file" documentType="reference">
+		<Node id="24" type="file" documentType="reference">
             <Name>MOODLESearchItemDetailViewController</Name>
             <Path>Classes/MOODLESearchItemDetailViewController.html</Path>
             
@@ -600,7 +614,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="23" type="file" documentType="reference">
+		<Node id="25" type="file" documentType="reference">
             <Name>MOODLESearchResultTableViewCell</Name>
             <Path>Classes/MOODLESearchResultTableViewCell.html</Path>
             
@@ -627,17 +641,17 @@
             </Subnodes>
             
         </Node>
-		<Node id="24" type="file" documentType="reference">
+		<Node id="26" type="file" documentType="reference">
             <Name>MOODLESettingsViewController</Name>
             <Path>Classes/MOODLESettingsViewController.html</Path>
             
         </Node>
-		<Node id="25" type="file" documentType="reference">
+		<Node id="27" type="file" documentType="reference">
             <Name>MOODLETabBarController</Name>
             <Path>Classes/MOODLETabBarController.html</Path>
             
         </Node>
-		<Node id="26" type="file" documentType="reference">
+		<Node id="28" type="file" documentType="reference">
             <Name>MOODLETableViewRowAction</Name>
             <Path>Classes/MOODLETableViewRowAction.html</Path>
             
@@ -670,7 +684,12 @@
             </Subnodes>
             
         </Node>
-		<Node id="27" type="file" documentType="reference">
+		<Node id="29" type="file" documentType="reference">
+            <Name>MOODLEUser</Name>
+            <Path>Classes/MOODLEUser.html</Path>
+            
+        </Node>
+		<Node id="30" type="file" documentType="reference">
             <Name>MOODLEXMLParser</Name>
             <Path>Classes/MOODLEXMLParser.html</Path>
             
@@ -697,7 +716,34 @@
             </Subnodes>
             
         </Node>
-		<Node id="28" type="file" documentType="reference">
+		<Node id="31" type="file" documentType="reference">
+            <Name>SGAccessibleSlider</Name>
+            <Path>Classes/SGAccessibleSlider.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/SGAccessibleSlider.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/SGAccessibleSlider.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/SGAccessibleSlider.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="32" type="file" documentType="reference">
             <Name>SGLabeledSwitch</Name>
             <Path>Classes/SGLabeledSwitch.html</Path>
             
@@ -724,12 +770,12 @@
             </Subnodes>
             
         </Node>
-		<Node id="29" type="file" documentType="reference">
+		<Node id="33" type="file" documentType="reference">
             <Name>TFHpple</Name>
             <Path>Classes/TFHpple.html</Path>
             
         </Node>
-		<Node id="30" type="file" documentType="reference">
+		<Node id="34" type="file" documentType="reference">
             <Name>TFHppleElement</Name>
             <Path>Classes/TFHppleElement.html</Path>
             
@@ -757,7 +803,7 @@
             
         </Node>
 		
-		<Node id="31" type="file" documentType="reference">
+		<Node id="35" type="file" documentType="reference">
             <Name>NSURLRequest(Moodle)</Name>
             <Path>Categories/NSURLRequest+Moodle.html</Path>
             
@@ -784,7 +830,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="32" type="file" documentType="reference">
+		<Node id="36" type="file" documentType="reference">
             <Name>NSURLSession(SynchronousTask)</Name>
             <Path>Categories/NSURLSession+SynchronousTask.html</Path>
             
@@ -811,7 +857,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="33" type="file" documentType="reference">
+		<Node id="37" type="file" documentType="reference">
             <Name>UIColor(Moodle)</Name>
             <Path>Categories/UIColor+Moodle.html</Path>
             
@@ -840,17 +886,17 @@
         </Node>
 		
         
-        <Node id="34" type="file" documentType="reference">
+        <Node id="38" type="file" documentType="reference">
             <Name>HUProgressIndicatorStyle</Name>
             <Path>Constants/HUProgressIndicatorStyle.html</Path>
             
         </Node>
-		<Node id="35" type="file" documentType="reference">
+		<Node id="39" type="file" documentType="reference">
             <Name>MoodleDocumentType</Name>
             <Path>Constants/MoodleDocumentType.html</Path>
             
         </Node>
-		<Node id="36" type="file" documentType="reference">
+		<Node id="40" type="file" documentType="reference">
             <Name>MoodleItemType</Name>
             <Path>Constants/MoodleItemType.html</Path>
             

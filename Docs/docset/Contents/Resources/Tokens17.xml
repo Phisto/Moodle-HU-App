@@ -450,7 +450,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/loadItemContentForItem:completionHandler:</TokenIdentifier>
-			<Abstract type="html">This method load the content of a given MOODLE course.</Abstract>
+			<Abstract type="html">This method will load the content of a given MOODLE course.</Abstract>
 			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
 			
 			<Declaration>- (void)loadItemContentForItem:(MOODLECourse *)item completionHandler:(void ( ^ ) ( BOOL success , NSError *_Nullable error ))completionHandler</Declaration>
@@ -485,6 +485,120 @@
 			</Parameters>
 			
 			<Anchor>//api/name/loadSearchResultWithSerachString:completionHandler:</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/setDocumentCacheSize:</TokenIdentifier>
+			<Abstract type="html">The size of the document cache in Megabytes.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSUInteger documentCacheSize</Declaration>
+			
+			
+			<Anchor>//api/name/documentCacheSize</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/documentCacheSize</TokenIdentifier>
+			<Abstract type="html">The size of the document cache in Megabytes.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSUInteger documentCacheSize</Declaration>
+			
+			
+			<Anchor>//api/name/documentCacheSize</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEDataModel/documentCacheSize</TokenIdentifier>
+			<Abstract type="html">The size of the document cache in Megabytes.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSUInteger documentCacheSize</Declaration>
+			
+			
+			<Anchor>//api/name/documentCacheSize</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/localRessourceURLForItem:</TokenIdentifier>
+			<Abstract type="html">This method will search for a local file assoziated with the given item.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>- (nullable NSURL *)localRessourceURLForItem:(MOODLECourseSectionItem *)item</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>item</Name>
+					<Abstract type="html">The item to search for.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A NSURL to the local file or nil if there is no cached file.</Abstract></ReturnValue>
+			<Anchor>//api/name/localRessourceURLForItem:</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/saveRemoteRessource:completionHandler:</TokenIdentifier>
+			<Abstract type="html">This method will load the file for the given item, save it locally and call the completion handler.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>- (void)saveRemoteRessource:(MOODLECourseSectionItem *)item completionHandler:(void ( ^ ) ( BOOL success , NSError *_Nullable error , NSURL *_Nullable localRessourceURL ))completionHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>item</Name>
+					<Abstract type="html">The item to load the file for.</Abstract>
+				</Parameter><Parameter>
+					<Name>completionHandler</Name>
+					<Abstract type="html">The completion handler to call when loading and saving is complete. This handler is executed on the main thread.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/saveRemoteRessource:completionHandler:</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/sizeOfCachedDocuments</TokenIdentifier>
+			<Abstract type="html">This method will enumerate through all cached documents and calculate the size.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>- (NSInteger)sizeOfCachedDocuments</Declaration>
+			
+			<ReturnValue><Abstract type="html">The size of all cached documents in Megabyte as a NSInteger.</Abstract></ReturnValue>
+			<Anchor>//api/name/sizeOfCachedDocuments</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/allRessourceURLS</TokenIdentifier>
+			<Abstract type="html">This method will return all cached document urls.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>- (NSArray&lt;NSURL*&gt; *)allRessourceURLS</Declaration>
+			
+			<ReturnValue><Abstract type="html">The document urls.</Abstract></ReturnValue>
+			<Anchor>//api/name/allRessourceURLS</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDataModel/deleteDocumentWithURL:</TokenIdentifier>
+			<Abstract type="html">This method will delete the file or folder at the given url.</Abstract>
+			<DeclaredIn>MOODLEDataModel.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)deleteDocumentWithURL:(NSURL *)docURL</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>docURL</Name>
+					<Abstract type="html">The url to the file or folder.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Yes if the file was deleted, NO if the file could not be deleted or if there was no file at the given url.</Abstract></ReturnValue>
+			<Anchor>//api/name/deleteDocumentWithURL:</Anchor>
             <NodeRef refid="17"/>
 		</Token>
 		

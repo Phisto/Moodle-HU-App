@@ -58,6 +58,8 @@
 		
 		<option value="//api/name/courseArray">courseArray</option>
 		
+		<option value="//api/name/documentCacheSize">documentCacheSize</option>
+		
 		<option value="//api/name/hasUserCredentials">hasUserCredentials</option>
 		
 		<option value="//api/name/hiddenCourses">hiddenCourses</option>
@@ -86,6 +88,10 @@
 	
 	<optgroup label="Instance Methods">
 		
+		<option value="//api/name/allRessourceURLS">- allRessourceURLS</option>
+		
+		<option value="//api/name/deleteDocumentWithURL:">- deleteDocumentWithURL:</option>
+		
 		<option value="//api/name/deleteUserCredentials">- deleteUserCredentials</option>
 		
 		<option value="//api/name/init">- init</option>
@@ -94,15 +100,21 @@
 		
 		<option value="//api/name/loadSearchResultWithSerachString:completionHandler:">- loadSearchResultWithSerachString:completionHandler:</option>
 		
+		<option value="//api/name/localRessourceURLForItem:">- localRessourceURLForItem:</option>
+		
 		<option value="//api/name/loginWithUsername:password:completionHandler:">- loginWithUsername:password:completionHandler:</option>
 		
 		<option value="//api/name/logoutWithCompletionHandler:">- logoutWithCompletionHandler:</option>
+		
+		<option value="//api/name/saveRemoteRessource:completionHandler:">- saveRemoteRessource:completionHandler:</option>
 		
 		<option value="//api/name/saveUserCredentials:andPassword:">- saveUserCredentials:andPassword:</option>
 		
 		<option value="//api/name/setItem:isFavorit:">- setItem:isFavorit:</option>
 		
 		<option value="//api/name/setItem:isHidden:">- setItem:isHidden:</option>
+		
+		<option value="//api/name/sizeOfCachedDocuments">- sizeOfCachedDocuments</option>
 		
 		<option value="//api/name/updateCourseItemsOrderingWeight">- updateCourseItemsOrderingWeight</option>
 		
@@ -995,7 +1007,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>This method load the content of a given MOODLE course.</p>
+				<p>This method will load the content of a given MOODLE course.</p>
 			</div>
 			
 		    
@@ -1102,6 +1114,321 @@
 </div>
 						</div>
 						
+
+						<a title="Documents" name="task_Documents"></a>
+						<h2 class="task-title">Documents</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/documentCacheSize" title="documentCacheSize"></a>
+	<h3 class="method-title"><code><a href="#//api/name/documentCacheSize">&nbsp;&nbsp;documentCacheSize</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The size of the document cache in Megabytes.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSUInteger documentCacheSize</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/localRessourceURLForItem:" title="localRessourceURLForItem:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/localRessourceURLForItem:">&ndash;&nbsp;localRessourceURLForItem:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method will search for a local file assoziated with the given item.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable NSURL *)localRessourceURLForItem:(MOODLECourseSectionItem *)<em>item</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>item</code></th>
+						<td><p>The item to search for.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A NSURL to the local file or nil if there is no cached file.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/saveRemoteRessource:completionHandler:" title="saveRemoteRessource:completionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/saveRemoteRessource:completionHandler:">&ndash;&nbsp;saveRemoteRessource:completionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method will load the file for the given item, save it locally and call the completion handler.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)saveRemoteRessource:(MOODLECourseSectionItem *)<em>item</em> completionHandler:(void ( ^ ) ( BOOL success , NSError *_Nullable error , NSURL *_Nullable localRessourceURL ))<em>completionHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>item</code></th>
+						<td><p>The item to load the file for.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionHandler</code></th>
+						<td><p>The completion handler to call when loading and saving is complete. This handler is executed on the main thread.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sizeOfCachedDocuments" title="sizeOfCachedDocuments"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sizeOfCachedDocuments">&ndash;&nbsp;sizeOfCachedDocuments</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method will enumerate through all cached documents and calculate the size.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSInteger)sizeOfCachedDocuments</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The size of all cached documents in Megabyte as a NSInteger.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/allRessourceURLS" title="allRessourceURLS"></a>
+	<h3 class="method-title"><code><a href="#//api/name/allRessourceURLS">&ndash;&nbsp;allRessourceURLS</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method will return all cached document urls.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray&lt;NSURL*&gt; *)allRessourceURLS</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The document urls.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteDocumentWithURL:" title="deleteDocumentWithURL:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteDocumentWithURL:">&ndash;&nbsp;deleteDocumentWithURL:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method will delete the file or folder at the given url.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)deleteDocumentWithURL:(NSURL *)<em>docURL</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>docURL</code></th>
+						<td><p>The url to the file or folder.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Yes if the file was deleted, NO if the file could not be deleted or if there was no file at the given url.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
 					</div>
 					
 					
@@ -1114,7 +1441,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 -. All rights reserved. Updated: 2017-06-08</p>
+						<p class="copyright">Copyright &copy; 2017 -. All rights reserved. Updated: 2017-06-29</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/MOODLEDocumentViewController</TokenIdentifier>
-			<Abstract type="html">The MOODLEDocumentViewController is responsible for presenting MOODLE course section resources.</Abstract>
+			<Abstract type="html">The MOODLEDocumentViewController is responsible for presenting MOODLE course section ressources.</Abstract>
 			<DeclaredIn>MOODLEDocumentViewController.h</DeclaredIn>
             
 			
@@ -13,74 +13,38 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDocumentViewController/setIsAudio:</TokenIdentifier>
-			<Abstract type="html">Boolean indicating if the ressource needs to play audio.</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDocumentViewController/setItem:</TokenIdentifier>
+			<Abstract type="html">The item to present.</Abstract>
 			<DeclaredIn>MOODLEDocumentViewController.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readwrite) BOOL isAudio</Declaration>
+			<Declaration>@property (nonatomic, strong) NSObject *item</Declaration>
 			
 			
-			<Anchor>//api/name/isAudio</Anchor>
+			<Anchor>//api/name/item</Anchor>
             <NodeRef refid="18"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDocumentViewController/isAudio</TokenIdentifier>
-			<Abstract type="html">Boolean indicating if the ressource needs to play audio.</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDocumentViewController/item</TokenIdentifier>
+			<Abstract type="html">The item to present.</Abstract>
 			<DeclaredIn>MOODLEDocumentViewController.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readwrite) BOOL isAudio</Declaration>
+			<Declaration>@property (nonatomic, strong) NSObject *item</Declaration>
 			
 			
-			<Anchor>//api/name/isAudio</Anchor>
+			<Anchor>//api/name/item</Anchor>
             <NodeRef refid="18"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MOODLEDocumentViewController/isAudio</TokenIdentifier>
-			<Abstract type="html">Boolean indicating if the ressource needs to play audio.</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEDocumentViewController/item</TokenIdentifier>
+			<Abstract type="html">The item to present.</Abstract>
 			<DeclaredIn>MOODLEDocumentViewController.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readwrite) BOOL isAudio</Declaration>
+			<Declaration>@property (nonatomic, strong) NSObject *item</Declaration>
 			
 			
-			<Anchor>//api/name/isAudio</Anchor>
-            <NodeRef refid="18"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDocumentViewController/setResourceURL:</TokenIdentifier>
-			<Abstract type="html">The url to the ressource.</Abstract>
-			<DeclaredIn>MOODLEDocumentViewController.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSURL *resourceURL</Declaration>
-			
-			
-			<Anchor>//api/name/resourceURL</Anchor>
-            <NodeRef refid="18"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDocumentViewController/resourceURL</TokenIdentifier>
-			<Abstract type="html">The url to the ressource.</Abstract>
-			<DeclaredIn>MOODLEDocumentViewController.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSURL *resourceURL</Declaration>
-			
-			
-			<Anchor>//api/name/resourceURL</Anchor>
-            <NodeRef refid="18"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MOODLEDocumentViewController/resourceURL</TokenIdentifier>
-			<Abstract type="html">The url to the ressource.</Abstract>
-			<DeclaredIn>MOODLEDocumentViewController.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSURL *resourceURL</Declaration>
-			
-			
-			<Anchor>//api/name/resourceURL</Anchor>
+			<Anchor>//api/name/item</Anchor>
             <NodeRef refid="18"/>
 		</Token>
 		

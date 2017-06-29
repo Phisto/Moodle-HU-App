@@ -372,6 +372,258 @@
             <NodeRef refid="7"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/setTeacher:</TokenIdentifier>
+			<Abstract type="html">An array of responsible persons for the search result.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, nullable) NSArray&lt;NSString*&gt; *teacher</Declaration>
+			
+			
+			<Anchor>//api/name/teacher</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/teacher</TokenIdentifier>
+			<Abstract type="html">An array of responsible persons for the search result.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, nullable) NSArray&lt;NSString*&gt; *teacher</Declaration>
+			
+			
+			<Anchor>//api/name/teacher</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourse/teacher</TokenIdentifier>
+			<Abstract type="html">An array of responsible persons for the search result.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, nullable) NSArray&lt;NSString*&gt; *teacher</Declaration>
+			
+			
+			<Anchor>//api/name/teacher</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/setCourseDescription:</TokenIdentifier>
+			<Abstract type="html">The course description of the search item.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, nullable) NSString *courseDescription</Declaration>
+			
+			
+			<Anchor>//api/name/courseDescription</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/courseDescription</TokenIdentifier>
+			<Abstract type="html">The course description of the search item.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, nullable) NSString *courseDescription</Declaration>
+			
+			
+			<Anchor>//api/name/courseDescription</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourse/courseDescription</TokenIdentifier>
+			<Abstract type="html">The course description of the search item.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, nullable) NSString *courseDescription</Declaration>
+			
+			
+			<Anchor>//api/name/courseDescription</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/setAttributedCourseDescription:</TokenIdentifier>
+			<Abstract type="html">The attributed course description of the search item.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, nullable) NSMutableAttributedString *attributedCourseDescription</Declaration>
+			
+			
+			<Anchor>//api/name/attributedCourseDescription</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/attributedCourseDescription</TokenIdentifier>
+			<Abstract type="html">The attributed course description of the search item.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, nullable) NSMutableAttributedString *attributedCourseDescription</Declaration>
+			
+			
+			<Anchor>//api/name/attributedCourseDescription</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourse/attributedCourseDescription</TokenIdentifier>
+			<Abstract type="html">The attributed course description of the search item.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, nullable) NSMutableAttributedString *attributedCourseDescription</Declaration>
+			
+			
+			<Anchor>//api/name/attributedCourseDescription</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/setCourseCategory:</TokenIdentifier>
+			<Abstract type="html">The course category of the search item.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, nullable) NSString *courseCategory</Declaration>
+			
+			
+			<Anchor>//api/name/courseCategory</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/courseCategory</TokenIdentifier>
+			<Abstract type="html">The course category of the search item.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, nullable) NSString *courseCategory</Declaration>
+			
+			
+			<Anchor>//api/name/courseCategory</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourse/courseCategory</TokenIdentifier>
+			<Abstract type="html">The course category of the search item.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, nullable) NSString *courseCategory</Declaration>
+			
+			
+			<Anchor>//api/name/courseCategory</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/setCanSubscribe:</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the user can subsribe to the course.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL canSubscribe</Declaration>
+			
+			
+			<Anchor>//api/name/canSubscribe</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/canSubscribe</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the user can subsribe to the course.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL canSubscribe</Declaration>
+			
+			
+			<Anchor>//api/name/canSubscribe</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourse/canSubscribe</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the user can subsribe to the course.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL canSubscribe</Declaration>
+			
+			
+			<Anchor>//api/name/canSubscribe</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/setGuestSubscribe:</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the user can subsribe to the course as a guest.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL guestSubscribe</Declaration>
+			
+			
+			<Anchor>//api/name/guestSubscribe</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/guestSubscribe</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the user can subsribe to the course as a guest.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL guestSubscribe</Declaration>
+			
+			
+			<Anchor>//api/name/guestSubscribe</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourse/guestSubscribe</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the user can subsribe to the course as a guest.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL guestSubscribe</Declaration>
+			
+			
+			<Anchor>//api/name/guestSubscribe</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/setSelfSubscribe:</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the user can subsribe to the course.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL selfSubscribe</Declaration>
+			
+			
+			<Anchor>//api/name/selfSubscribe</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourse/selfSubscribe</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the user can subsribe to the course.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL selfSubscribe</Declaration>
+			
+			
+			<Anchor>//api/name/selfSubscribe</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourse/selfSubscribe</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the user can subsribe to the course.</Abstract>
+			<DeclaredIn>MOODLECourse.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL selfSubscribe</Declaration>
+			
+			
+			<Anchor>//api/name/selfSubscribe</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
         
         
 	</File>

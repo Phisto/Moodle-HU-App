@@ -44,25 +44,124 @@
 					<div class="section section-overview index-overview">
 						
 						
-						<h1>Overview</h1>
+						<h1>Important</h1>
 
-<p>The &ldquo;insert name&rdquo; app was written to access the Moodle™ instance of the &lsquo;Humboldt-Universität zu Berlin&rsquo;.</p>
+<p>This application is not an official app.
+<strong>It is NOT supported, maintained or otherwise associated with the &lsquo;Humboldt-Universität zu Berlin&rsquo; or Moodle Pty Ltd.</strong></p>
 
-<h2>Usage</h2>
+<p><strong>Do not contact their support for help.</strong></p>
 
-<p>will follow</p>
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
+
+<h2>Overview</h2>
+
+<p>I wrote this app to access a user account on the Moodle™ instance of the &lsquo;Humboldt-Universität zu Berlin&rsquo;.</p>
+
+<h2>Accessiblity</h2>
+
+<p>I have given much attention to support VoiceOver properly.
+I don&rsquo;t have feedback regarding the VoiceOver behavior of the app,
+so I dont know if it fits the need of users who utilize this technologie.</p>
+
+<h3>Screenshots</h3>
+
+<table>
+<thead>
+<tr>
+<th align="center">Login                      </th>
+<th align="center">  My Courses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img src="[http://simonsapps.de/hu](http://simonsapps.de/hu" alt="" />_moodle_screenshots/login.png)  </td>
+<td align="center">  <img src="[http://simonsapps.de/hu](http://simonsapps.de/hu" alt="" />_moodle_screenshots/kurse.png)</td>
+</tr>
+</tbody>
+</table>
+
+
+<table>
+<thead>
+<tr>
+<th align="center">Course Detail              </th>
+<th align="center">  Course Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img src="[http://simonsapps.de/hu](http://simonsapps.de/hu" alt="" />_moodle_screenshots/kurs_detail.png)  </td>
+<td align="center">  <img src="[http://simonsapps.de/hu](http://simonsapps.de/hu" alt="" />_moodle_screenshots/kurs_sektion.png)</td>
+</tr>
+</tbody>
+</table>
+
+
+<table>
+<thead>
+<tr>
+<th align="center">Document                   </th>
+<th align="center">  Course Search</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img src="[http://simonsapps.de/hu](http://simonsapps.de/hu" alt="" />_moodle_screenshots/dokument.png)  </td>
+<td align="center">  <img src="[http://simonsapps.de/hu](http://simonsapps.de/hu" alt="" />_moodle_screenshots/suche.png)</td>
+</tr>
+</tbody>
+</table>
+
+
+<h2>Install</h2>
+
+<ol>
+<li>Install <a href="https://developer.apple.com/xcode/">Xcode</a></li>
+<li>Download the source code or <code>git clone </code>https://github.com/Phisto/Moodle-HU-App.git<code></code></li>
+<li>Open &ldquo;Moodle.xcodeproj&rdquo; in Xcode</li>
+<li>Go to Xcode&rsquo;s Preferences > Accounts and add your Apple ID</li>
+<li>In Xcode&rsquo;s sidebar select &ldquo;Moodle&rdquo; and go to General > Identity. Append a word at the end of the <em>Bundle Identifier</em> e.g. de.simonsserver.Moodle<em>.name</em> so it&rsquo;s unique. Select your Apple ID in Signing > Team</li>
+<li>Connect your iPhone using USB and select it in Xcode&rsquo;s Product menu > Destination</li>
+<li>Press CMD+R or Product > Run to install the HU-Moodle app</li>
+<li>If you install using a free (non-developer) account, make sure to rebuild Dash every 7 days, otherwise it will quit at launch when your certificate expires</li>
+</ol>
+
+
+<h2>Device Compatibility</h2>
+
+<ul>
+<li><p>iPhone: iPhone 4s and above</p></li>
+<li><p>iPad: The iPad is not tested and optimized so far, in the simulator the iPad Air, Air 2 and Pro do work well.</p></li>
+<li><p>OS: iOS 9.3 and above</p></li>
+</ul>
+
 
 <h2>Credits</h2>
 
-<p>will follow</p>
+<h4>Icons</h4>
 
-<h2>Hpple</h2>
+<ul>
+<li><p>App icon and banner based on logo from the <a href="https://www.hu-berlin.de/de/hu-intern/design/downloads/logo">HU website</a>.</p></li>
+<li><p>Checkmark icon made by <a href="http://www.flaticon.com/authors/catalin-fertu">Catalin Fertu</a> from <a href="www.flaticon.com">flaticon</a>.</p></li>
+<li><p>Document icons, favorit and folder icon made by <a href="http://www.flaticon.com/authors/madebyoliver">Madebyoliver</a> from <a href="www.flaticon.com">flaticon</a>.</p></li>
+<li><p>&lsquo;My Courses&rsquo; icon made by <a href="http://www.flaticon.com/packs/stationery">Stationery</a> from <a href="www.flaticon.com">flaticon</a>.</p></li>
+<li><p>Forum icon made by <a href="http://www.flaticon.com/authors/vectors-market">Vectors Market</a> from <a href="www.flaticon.com">flaticon</a>.</p></li>
+</ul>
 
-<p>The &ldquo;insert name&rdquo; app uses Hpple to parse HTML data.</p>
 
-<h3>License</h3>
+<h4>Frameworks</h4>
 
-<p>The &ldquo;insert name&rdquo; app is released under the GNU General Public License (GPL).</p>
+<ul>
+<li><p><a href="Classes/KeychainWrapper.html">KeychainWrapper</a> created by Tim Mitra. Source: <a href="https://developer.apple.com/library/content/documentation/Security/Conceptual/keychainServConcepts/iPhoneTasks/iPhoneTasks.html">https://developer.apple.com/library/content/documentation/Security/Conceptual/keychainServConcepts/iPhoneTasks/iPhoneTasks.html</a></p></li>
+<li><p>Hpple created by Geoffrey Grosenbach. Source: <a href="https://github.com/topfunky/hpple">https://github.com/topfunky/hpple</a></p></li>
+</ul>
+
+
+<h2>License</h2>
+
+<p>The app is released under the GNU General Public License (GPL).</p>
 
 <p>See <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a> for details.</p>
 
@@ -120,11 +219,15 @@
 								
 								<li><a href="Classes/MOODLEDocumentViewController.html">MOODLEDocumentViewController</a></li>
 								
+								<li><a href="Classes/MOODLEDocumentsTableViewController.html">MOODLEDocumentsTableViewController</a></li>
+								
+								<li><a href="Classes/MOODLELinguisticListFormatter.html">MOODLELinguisticListFormatter</a></li>
+								
 								<li><a href="Classes/MOODLELoginViewController.html">MOODLELoginViewController</a></li>
 								
 								<li><a href="Classes/MOODLEProgressViewController.html">MOODLEProgressViewController</a></li>
 								
-								<li><a href="Classes/MOODLESearchItem.html">MOODLESearchItem</a></li>
+								<li><a href="Classes/MOODLERessourceCoordinator.html">MOODLERessourceCoordinator</a></li>
 								
 								<li><a href="Classes/MOODLESearchItemDetailViewController.html">MOODLESearchItemDetailViewController</a></li>
 								
@@ -136,7 +239,11 @@
 								
 								<li><a href="Classes/MOODLETableViewRowAction.html">MOODLETableViewRowAction</a></li>
 								
+								<li><a href="Classes/MOODLEUser.html">MOODLEUser</a></li>
+								
 								<li><a href="Classes/MOODLEXMLParser.html">MOODLEXMLParser</a></li>
+								
+								<li><a href="Classes/SGAccessibleSlider.html">SGAccessibleSlider</a></li>
 								
 								<li><a href="Classes/SGLabeledSwitch.html">SGLabeledSwitch</a></li>
 								
@@ -184,7 +291,7 @@
 					<footer>
 						<div class="footer-copyright">
 							
-							<p class="copyright">Copyright &copy; 2017 -. All rights reserved. Updated: 2017-06-08</p>
+							<p class="copyright">Copyright &copy; 2017 -. All rights reserved. Updated: 2017-06-29</p>
 							
 							
 							<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
