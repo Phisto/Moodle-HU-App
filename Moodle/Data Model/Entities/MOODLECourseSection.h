@@ -32,11 +32,11 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  The description of the section.
  */
-@property (nonatomic, strong, nullable) NSString *sectionDescription;
+@property (nonatomic, strong, nullable) NSString *sectionDescriptionRaw;
 /**
  The attributed description of the section.
  */
-@property (nonatomic, readonly) NSMutableAttributedString *attributedSectionDescription;
+@property (nonatomic, readonly) NSAttributedString *attributedSectionDescription;
 /**
  The url of the section.
  */

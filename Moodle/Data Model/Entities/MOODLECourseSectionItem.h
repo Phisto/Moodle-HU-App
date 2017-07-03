@@ -96,7 +96,11 @@ typedef NS_ENUM(NSInteger, MoodleDocumentType) {
 /**
  The text of the resource. Only applies to `MoodleItemTypeComment`.
  */
-@property (nonatomic, strong, nullable) NSString *text;
+@property (nonatomic, strong, nullable) NSString *textRaw;
+/**
+ The text of the resource. Only applies to `MoodleItemTypeComment`.
+ */
+@property (nonatomic, readonly, nullable) NSAttributedString *attributedText;
 
 @end
 NS_ASSUME_NONNULL_END

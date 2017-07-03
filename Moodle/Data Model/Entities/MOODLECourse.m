@@ -23,7 +23,7 @@
 
 @interface MOODLECourse (/* Private */)
 
-@property (nonatomic, strong) NSMutableAttributedString *attributedCourseDescription;
+@property (nonatomic, strong) NSAttributedString *attributedCourseDescription;
 
 @end
 
@@ -72,12 +72,19 @@
 }
 
 
-- (NSMutableAttributedString *)attributedCourseDescription {
+- (NSAttributedString *)attributedCourseDescription {
     
     if (!_attributedCourseDescription) {
         
-        _attributedCourseDescription = [[NSMutableAttributedString alloc] initWithString:(self.courseDescription) ? self.courseDescription : @""
-                                                                              attributes:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType }];
+        NSString *raw = (self.courseDescriptionRaw) ? self.courseDescriptionRaw : @"";
+        NSString *rawHTML = [raw stringByAppendingString:@"<style>body{font-family: '.SFUIText'; font-size:17px;}</style>"];
+        NSAttributedString *courseDescription = [[NSAttributedString alloc] initWithData:[rawHTML dataUsingEncoding:NSUnicodeStringEncoding]
+                                                                                 options:@{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType,
+                                                                                        NSCharacterEncodingDocumentAttribute: @(NSUTF8StringEncoding)}
+                                                                      documentAttributes:NULL
+                                                                                   error:nil];
+        
+        _attributedCourseDescription = courseDescription;
     }
     return _attributedCourseDescription;
 }

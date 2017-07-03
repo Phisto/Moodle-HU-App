@@ -43,7 +43,10 @@
 @property (nonatomic, strong) IBOutlet NSLayoutConstraint *seperatorHeigthTwoContraint;
 
 // Other
-@property (nonatomic, strong) IBOutlet UITextView *heightCalculationTextView;
+@property (nonatomic, strong) UITextView *heightCalculationTextView;
+
+// State
+@property (nonatomic, readwrite) BOOL didLayoutTextView;
 
 @end
 
@@ -106,8 +109,7 @@
     self.sectionTitleLabel.text = self.section.sectionTitle;
     
     // set/calculate contraints
-    NSMutableAttributedString *attributedString = self.section.attributedSectionDescription;
-    [attributedString addAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16.0f]} range:NSMakeRange(0, attributedString.length)];
+    NSAttributedString *attributedString = self.section.attributedSectionDescription;
     CGFloat height = [self textViewHeightForAttributedText:attributedString
                                                   andWidth:self.view.frame.size.width-30.0f];
     [self calculateAndSetContrainsts:height];
@@ -130,8 +132,14 @@
 
 
 - (void)viewDidLayoutSubviews {
-    // set content offset after the text view is properly sized
-    [self.textView setContentOffset:CGPointZero animated:NO];
+    
+    // just once
+    if (!self.didLayoutTextView) {
+        
+        // set content offset after the text view is properly sized
+        [self.textView setContentOffset:CGPointZero animated:NO];
+        self.didLayoutTextView = YES;
+    }
 }
 
 
@@ -163,7 +171,7 @@
             
             if (!self.section.hasDocuments && !self.section.hasWiki && !self.section.hasAssignment && !self.section.hasOhterItems) {
                 
-                self.textViewHeight.constant = self.view.frame.size.height-(57.0f+self.navigationController.navigationBar.frame.size.height+10.0f);
+                self.textViewHeight.constant = self.view.frame.size.height-(57.0f+self.navigationController.navigationBar.frame.size.height+self.tabBarController.tabBar.frame.size.height+[[UIApplication sharedApplication] statusBarFrame].size.height);
             }
             else {
                 
@@ -204,17 +212,8 @@
     if (doc.itemType == MoodleItemTypeComment) {
         
         MOODLECommentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MOODLECommentTableViewCellIdentifier];
-        
-        
-        NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithData:[doc.text dataUsingEncoding:NSUnicodeStringEncoding]
-                                                                                              options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType }
-                                                                                   documentAttributes:nil
-                                                                                                error:nil];
-        
-        [attributedString addAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:13.0f]} range:NSMakeRange(0, attributedString.length)];
-        
-        cell.textView.attributedText = attributedString;
-        
+        cell.textView.attributedText = doc.attributedText;
+
         // accessibility
         NSString *locString = NSLocalizedString(@"Kommentar", @"prefix for a comment course section item");
         cell.accessibilityLabel = locString;
@@ -254,14 +253,8 @@
     
     if (doc.itemType == MoodleItemTypeComment) {
         
-        NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithData:[doc.text dataUsingEncoding:NSUnicodeStringEncoding]
-                                                                                              options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType }
-                                                                                   documentAttributes:nil
-                                                                                                error:nil];
-        
-        [attributedString addAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:14.0f]} range:NSMakeRange(0, attributedString.length)];
-        CGFloat height = [self textViewHeightForAttributedText:attributedString
-                                                      andWidth:self.view.frame.size.width-30.0f];
+        CGFloat height = [self textViewHeightForAttributedText:doc.attributedText
+                                                      andWidth:tableView.frame.size.width-20.0f];// substract margins
         
         return (height > 150.0f) ? 150.0f : height;
     }

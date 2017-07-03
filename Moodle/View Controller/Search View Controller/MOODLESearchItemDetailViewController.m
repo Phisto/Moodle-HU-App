@@ -74,10 +74,7 @@
     CGFloat height = self.item.teacher.count*20.0f;
     self.tableViewHeightConstraint.constant = (height > 80.0f) ? 80.0f : height;
     [self.tableView reloadData];
-    
-    NSMutableAttributedString *attributedString = self.item.attributedCourseDescription;
-    [attributedString addAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:17.0f]} range:NSMakeRange(0, attributedString.length)];
-    self.textView.attributedText = attributedString;
+    self.textView.attributedText = self.item.attributedCourseDescription;
 }
 
 

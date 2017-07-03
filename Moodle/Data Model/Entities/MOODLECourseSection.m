@@ -19,7 +19,7 @@
 
 @interface MOODLECourseSection (/* Private */)
 
-@property (nonatomic, strong) NSMutableAttributedString *attributedSectionDescription;
+@property (nonatomic, strong) NSAttributedString *attributedSectionDescription;
 
 @end
 
@@ -43,7 +43,7 @@
 
 - (BOOL)hasDescription {
     
-    return (self.sectionDescription != nil);
+    return (self.sectionDescriptionRaw != nil);
 }
 
 
@@ -71,15 +71,19 @@
 }
 
 
-- (NSMutableAttributedString *)attributedSectionDescription {
+- (NSAttributedString *)attributedSectionDescription {
     
     if (!_attributedSectionDescription) {
         
-        _attributedSectionDescription = [[NSMutableAttributedString alloc] initWithString:(self.sectionDescription) ? self.sectionDescription : @""
-                                                                               attributes:@{
-                                                                                            NSDocumentTypeDocumentAttribute:
-                                                                                                NSHTMLTextDocumentType
-                                                                                            }];
+        NSString *raw = (self.sectionDescriptionRaw) ? self.sectionDescriptionRaw : @"";
+        NSString *rawHTML = [raw stringByAppendingString:@"<style>body{font-family: '.SFUIText'; font-size:16px;}</style>"];
+        NSAttributedString *courseDescription = [[NSAttributedString alloc] initWithData:[rawHTML dataUsingEncoding:NSUnicodeStringEncoding]
+                                                                                 options:@{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType,
+                                                                                           NSCharacterEncodingDocumentAttribute: @(NSUTF8StringEncoding)}
+                                                                      documentAttributes:NULL
+                                                                                   error:nil];
+        
+        _attributedSectionDescription = courseDescription;
     }
     
     

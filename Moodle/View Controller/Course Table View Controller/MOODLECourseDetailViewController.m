@@ -225,7 +225,8 @@
         
         if (section.hasContent) {
             
-            MOODLECourseSectionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MOODLECourseSectionTableViewCellIdentifier];
+            MOODLECourseSectionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MOODLECourseSectionTableViewCellIdentifier
+                                                                                     forIndexPath:indexPath];
             
             cell.noContentLabel.hidden = YES;
             
@@ -285,7 +286,8 @@
         else {
             
             static NSString *noContentCell = @"noContentCell";
-            returnCell = [tableView dequeueReusableCellWithIdentifier:noContentCell];
+            returnCell = [tableView dequeueReusableCellWithIdentifier:noContentCell
+                                                         forIndexPath:indexPath];
             returnCell.textLabel.text = section.sectionTitle;
             
             // accessibility

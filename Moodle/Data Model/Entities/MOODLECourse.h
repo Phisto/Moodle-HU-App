@@ -95,11 +95,11 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  The course description of the search item.
  */
-@property (nonatomic, strong, nullable) NSString *courseDescription;
+@property (nonatomic, strong, nullable) NSString *courseDescriptionRaw;
 /**
  The attributed course description of the search item.
  */
-@property (nonatomic, readonly, nullable) NSMutableAttributedString *attributedCourseDescription;
+@property (nonatomic, readonly, nullable) NSAttributedString *attributedCourseDescription;
 /**
  The course category of the search item.
  */

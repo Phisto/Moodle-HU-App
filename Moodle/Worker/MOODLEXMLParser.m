@@ -176,10 +176,10 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
                     
                     // get summary
                     TFHppleElement *summaryElement = contentElement.children[0];
-                    NSString *summary = [summaryElement content];
+                    NSString *summary = [summaryElement raw];
                     if (summary.length > 5) {
                         
-                        item.courseDescription = summary;
+                        item.courseDescriptionRaw = summary;
                     }
                     
                     // get teacher
@@ -297,7 +297,7 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
                 MOODLECourseSection *section = [[MOODLECourseSection alloc] init];
                 
                 section.sectionTitle = name;
-                section.sectionDescription = sectionSummary;
+                section.sectionDescriptionRaw = sectionSummary;
                 section.sectionURL = sectionURL;
                 
                 // set flags
@@ -371,7 +371,7 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
                 MOODLECourseSection *section = [[MOODLECourseSection alloc] init];
                 
                 section.sectionTitle = name;
-                section.sectionDescription = sectionSummary;
+                section.sectionDescriptionRaw = sectionSummary;
                 section.sectionURL = sectionURL;
                 
                 // set flags
@@ -402,7 +402,7 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
             NSArray<MOODLECourseSectionItem *> *items = [self sectionItems:sectionElement.children[2]];
             
             section.sectionTitle = name;
-            section.sectionDescription = sectionSummary;
+            section.sectionDescriptionRaw = sectionSummary;
             
             NSMutableArray *muteDocArray = [NSMutableArray array];
             NSMutableArray *muteAssignArray = [NSMutableArray array];
@@ -761,15 +761,7 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
     if (element.hasChildren) {
         
         element = [element firstChild];
-        summary = [element content];
-        if (summary.length < 5) {
-            summary = nil;
-        }
-        // add proper html markup
-        else {
-
-            summary = summary;
-        }
+        summary = [element raw];
     }
     return summary;
 }
@@ -843,7 +835,7 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
                         }
                     }
                 }
-                item.text = [itemElement content];
+                item.textRaw = [itemElement raw];
                 item.resourceURL = nil;
                 
             }
