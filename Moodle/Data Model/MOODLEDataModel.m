@@ -21,6 +21,7 @@
 #import "MOODLECourseSection.h"
 #import "MOODLECourseSectionItem.h"
 #import "MOODLEForum.h"
+#import "MOODLEForumEntry.h"
 
 /* Networking */
 #import "NSURLSession+SynchronuosTask.h"
@@ -342,16 +343,62 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
     
     MOODLECourseSection *firstSection = item.courseSections.firstObject;
     if (firstSection.hasOhterItems) {
+        
+        BOOL isFirstForumItem = YES;
 
         for (MOODLECourseSectionItem *sectionItem in firstSection.otherItemArray) {
             
             if (sectionItem.itemType == MoodleItemTypeForum) {
                 
-                item.forum = [self loadForumContentForForumURL:sectionItem.resourceURL];
-                break;
+                if (isFirstForumItem) {
+                    
+                    item.announcements = [self loadForumContentForForumURL:sectionItem.resourceURL];
+                    isFirstForumItem = NO;
+                }
+                else {
+                 
+                    item.forum = [self loadForumContentForForumURL:sectionItem.resourceURL];
+                    break;
+                }
             }
         }
     }
+    
+    completionHandler(YES, nil);
+}
+
+
+- (void)loadForumEntryContentForEntry:(MOODLEForumEntry *)entry
+                    completionHandler:(void (^)(BOOL, NSError * _Nullable error))completionHandler {
+    
+    NSURLResponse * response = nil;
+    NSError *requestError = nil;
+    NSData *data = [self.currentSession moodle_sendSynchronousRequest:[NSURLRequest requestWithURL:entry.entryURL]
+                                                    returningResponse:&response
+                                                                error:&requestError];
+    // handle basic connectivity issues here
+    if (!data) {
+        completionHandler(NO, (requestError) ? requestError : nil);
+        return;
+    }
+    
+    // handle HTTP errors here
+    if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
+        
+        NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
+        
+        if (statusCode != 200) {
+            
+            NSString *locString = NSLocalizedString(@"Bei der Kommunikation mit dem Server, ist ein Fehler aufgetreten.", @"Error message if the server wont respond with 200 http response code.");
+            NSDictionary *userInfo = @{NSLocalizedDescriptionKey: locString};
+            NSError *newError = [NSError errorWithDomain:@"de.simonsserver.Moodle" code:1990 userInfo:userInfo];
+            completionHandler(NO, newError);
+            return;
+        }
+    }
+    
+    NSArray<MOODLEForumPost *> *postArray = [self.xmlParser forumEntryItemsFromData:data];
+    entry.posts = postArray;
     
     completionHandler(YES, nil);
 }
@@ -409,7 +456,6 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
 - (nonnull MOODLEForum *)loadForumContentForForumURL:(NSURL *)forumURL {
     
     MOODLEForum *forum = [[MOODLEForum alloc] init];
-    forum.forumURL = forumURL;
     
     NSURLResponse * response = nil;
     NSError *requestError = nil;
@@ -418,8 +464,10 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
                                                                 error:&requestError];
     if (data) {
         
-        //forum =
+        forum = [self.xmlParser forumFromData:data];
     }
+    
+    forum.forumURL = forumURL;
     
     return forum;
 }

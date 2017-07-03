@@ -80,6 +80,9 @@
 /* Title of an error alert view */
 "Fehler" = "Fehler";
 
+/* Titel of the forum */
+"Forum" = "Forum";
+
 /* voice over item type title */
 "Gallerie" = "Gallerie";
 

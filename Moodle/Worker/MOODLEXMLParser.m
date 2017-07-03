@@ -7,12 +7,17 @@
  *
  */
 
+@import UIKit;
+
 #import "MOODLEXMLParser.h"
 
 /* Entities */
 #import "MOODLECourse.h"
 #import "MOODLECourseSection.h"
 #import "MOODLECourseSectionItem.h"
+#import "MOODLEForum.h"
+#import "MOODLEForumEntry.h"
+#import "MOODLEForumPost.h"
 
 /* Parser */
 #import "TFHpple.h"
@@ -184,7 +189,7 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
                         
                         if (teachersNode.children.count > 1) {
                             
-                            NSString *teacher = [teachersNode.children[1] content];
+                            NSString *teacher = (NSString *)[teachersNode.children[1] content];
                             if (teacher) [muteTeacherArray addObject:teacher];
                         }
                     }
@@ -194,7 +199,7 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
                     TFHppleElement *courseCategoryElement = contentElement.children[2];
                     if (courseCategoryElement.children.count > 1) {
                         
-                        NSString *categorie = [courseCategoryElement.children[1] content];
+                        NSString *categorie = (NSString *)[courseCategoryElement.children[1] content];
                         if (categorie) item.courseCategory = categorie;
                     }
                 }
@@ -435,6 +440,247 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
     }
     
     return section.hasContenLoaded;
+}
+
+
+- (MOODLEForum *)forumFromData:(NSData *)data {
+    
+    TFHpple *courseParser = [TFHpple hppleWithHTMLData:data];
+    
+    NSString *courseXpathQueryString = @"//table[@class='forumheaderlist']/tbody/tr";
+    NSArray *courseNodes = [courseParser searchWithXPathQuery:courseXpathQueryString];
+    
+    NSMutableArray *muteEntryArray = [NSMutableArray array];
+    MOODLEForum *forum = [[MOODLEForum alloc] init];
+    
+    for (TFHppleElement *element in courseNodes) {
+        
+        MOODLEForumEntry *entry = [[MOODLEForumEntry alloc] init];
+        BOOL isFirstRepliesEntry = YES;
+    
+        for (TFHppleElement *child in element.children) {
+            
+            NSString *className = [child objectForKey:@"class"];
+            
+            if ([className isEqualToString:@"topic starter"]) {
+                
+                entry.entryURL = [NSURL URLWithString:[child.children.firstObject objectForKey:@"href"]];
+                entry.title = child.content;
+            }
+            
+            else if ([className isEqualToString:@"author"]) {
+                
+                entry.author = child.content;
+            }
+            
+            else if ([className isEqualToString:@"replies"]) {
+                
+                if (isFirstRepliesEntry) {
+                    
+                    entry.replies = child.content.integerValue;
+                    isFirstRepliesEntry = NO;
+                }
+                else {
+                    
+                    entry.unreadReplies = child.content.integerValue;
+                }
+                
+            }
+            
+            /*
+            if ([className isEqualToString:@"picture"]) {
+             
+            }
+            
+            if ([className isEqualToString:@"lastpost"]) {
+                
+            }
+             
+            if ([className isEqualToString:@"discussionsubscription"]) {
+             
+            }
+             */
+        }
+        [muteEntryArray addObject:entry];
+        
+    }
+    
+    if (muteEntryArray.count > 0) {
+        
+        forum.entries = [muteEntryArray copy];
+    }
+    
+    return forum;
+}
+
+
+- (NSArray<MOODLEForumPost *> *)forumEntryItemsFromData:(NSData *)data {
+    
+    
+    TFHpple *courseParser = [TFHpple hppleWithHTMLData:data];
+    
+    NSMutableArray *mutePostArray = [NSMutableArray array];
+
+    NSString *courseXpathQueryStringReply = @"//div[@class='indent']/div";
+    NSArray *courseNodesReply = [courseParser searchWithXPathQuery:courseXpathQueryStringReply];
+    for (TFHppleElement *element in courseNodesReply) {
+
+        MOODLEForumPost *post = [[MOODLEForumPost alloc] init];
+        
+        NSArray *topicNodes = [element searchWithXPathQuery:@"//div[@class='topic']"];
+        TFHppleElement *topic = topicNodes.firstObject;
+        if (topic) {
+            
+            TFHppleElement *titleELement = topic.children.firstObject;
+            NSString *title = titleELement.content;
+            
+            post.title = title;
+            
+            if (topic.children.count > 1) {
+                
+                TFHppleElement *authorELement = topic.children[1];
+                NSString *autohr = authorELement.content;
+                post.author = autohr;
+            }
+            
+        }
+        
+        
+        NSArray *contentNodes = [element searchWithXPathQuery:@"//div[@class='posting fullpost']"];
+        TFHppleElement *contentElement = contentNodes.firstObject;
+        if (contentElement) {
+            
+            post.rawContent = contentElement.raw;
+        }
+        
+        if (post.author && post.title && post.content) {
+            
+            post.isOP = NO;
+            [mutePostArray addObject:post];
+        }
+        
+        
+        /// get attachments
+        NSArray *attachmentNodes = [element searchWithXPathQuery:@"//div[@class='attachments']"];
+        if (attachmentNodes.firstObject) {
+            
+            TFHppleElement *attachments = (TFHppleElement *)attachmentNodes.firstObject;
+            
+            if (attachments.children.count > 2) {
+                
+                TFHppleElement *docNode = attachments.children[2];
+                
+                NSString *title = docNode.content;
+                NSString *urlString = [docNode objectForKey:@"href"];
+                
+                
+                MOODLECourseSectionItem *item = [[MOODLECourseSectionItem alloc] init];
+                item = [[MOODLECourseSectionItem alloc] init];
+                
+                
+                if ([[urlString pathExtension] isEqualToString:@"pdf"]) {
+                    item.itemType = MoodleItemTypeDocument;
+                    item.documentType = MoodleDocumentTypePDF;
+                } else {
+                    item.itemType = MoodleItemTypeOther;
+                }
+                
+                item.resourceURL = [NSURL URLWithString:urlString];
+                
+                item.resourceTitle = title;
+                
+                post.attachments = @[item];
+            }
+            
+        }
+    }
+
+    
+    
+    NSArray *xQueryArray = @[@"//div[@class='forumpost clearfix read firstpost starter']",
+                             @"//div[@class='forumpost clearfix read lastpost firstpost starter']"];
+    for (NSString *searchQuery in xQueryArray) {
+        
+        NSArray *courseNodesStarter = [courseParser searchWithXPathQuery:searchQuery];
+        if (courseNodesStarter.count > 0) {
+            for (TFHppleElement *starterelement in courseNodesStarter) {
+                
+                MOODLEForumPost *starterpost = [[MOODLEForumPost alloc] init];
+                
+                NSArray *startertopicNodes = [starterelement searchWithXPathQuery:@"//div[@class='topic firstpost starter']"];
+                
+                TFHppleElement *startertopic = startertopicNodes.firstObject;
+                if (startertopic) {
+                    
+                    TFHppleElement *startertitleELement = startertopic.children.firstObject;
+                    NSString *startertitle = startertitleELement.content;
+                    
+                    starterpost.title = startertitle;
+                    
+                    if (startertopic.children.count > 1) {
+                        
+                        TFHppleElement *starterauthorELement = startertopic.children[1];
+                        NSString *starterautohr = starterauthorELement.content;
+                        starterpost.author = starterautohr;
+                    }
+                    
+                }
+                
+                NSArray *startercontentNodes = [starterelement searchWithXPathQuery:@"//div[@class='posting fullpost']"];
+                TFHppleElement *startercontentElement = startercontentNodes.firstObject;
+                if (startercontentElement) {
+                    
+                    starterpost.rawContent = startercontentElement.raw;
+                }
+                
+                if (starterpost.author && starterpost.title && starterpost.content) {
+                    
+                    starterpost.isOP = YES;
+                    [mutePostArray insertObject:starterpost atIndex:0];
+                }
+                
+                /// get attachments
+                NSArray *attachmentNodes = [starterelement searchWithXPathQuery:@"//div[@class='attachments']"];
+                if (attachmentNodes.firstObject) {
+                 
+                    TFHppleElement *attachments = (TFHppleElement *)attachmentNodes.firstObject;
+                    
+                    if (attachments.children.count > 2) {
+                        
+                        TFHppleElement *docNode = attachments.children[2];
+
+                        NSString *title = docNode.content;
+                        NSString *urlString = [docNode objectForKey:@"href"];
+                        
+                        
+                        MOODLECourseSectionItem *item = [[MOODLECourseSectionItem alloc] init];
+                        item = [[MOODLECourseSectionItem alloc] init];
+                        
+                        
+                        if ([[urlString pathExtension] isEqualToString:@"pdf"]) {
+                            item.itemType = MoodleItemTypeDocument;
+                            item.documentType = MoodleDocumentTypePDF;
+                        } else {
+                            item.itemType = MoodleItemTypeOther;
+                        }
+                        
+                        item.resourceURL = [NSURL URLWithString:urlString];
+                       
+                        item.resourceTitle = title;
+
+                        starterpost.attachments = @[item];
+                    }
+
+                }
+                
+                break;
+            }
+            
+            break;
+        }
+    }
+  
+    return [mutePostArray copy];
 }
 
 

@@ -9,5 +9,14 @@
 #import "MOODLEForum.h"
 
 @implementation MOODLEForum
+#pragma mark - Getter
 
+
+- (BOOL)hasEntries {
+    
+    return (self.entries.count > 0);
+}
+
+
+#pragma mark -
 @end

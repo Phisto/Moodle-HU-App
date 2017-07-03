@@ -9,7 +9,7 @@
 
 @import Foundation;
 
-@class MOODLEDataModel, MOODLECourse, MOODLECourseSection;
+@class MOODLEDataModel, MOODLECourse, MOODLECourseSection, MOODLEForum, MOODLEForumPost;
 
 /**
  
@@ -80,6 +80,23 @@ NS_ASSUME_NONNULL_BEGIN
  
  */
 - (nullable NSArray<MOODLECourse *> *)searchResultsFromData:(NSData *)data;
+/**
+ 
+ Creates a HTML string from data and parses the string searching for forum.
+ 
+ @param data The data to parse.
+ 
+ @return The forum or nil.
+ 
+ */
+- (MOODLEForum *)forumFromData:(NSData *)data;
+
+
+
+
+- (NSArray<MOODLEForumPost *> *)forumEntryItemsFromData:(NSData *)data;
+
+
 
 @end
 NS_ASSUME_NONNULL_END

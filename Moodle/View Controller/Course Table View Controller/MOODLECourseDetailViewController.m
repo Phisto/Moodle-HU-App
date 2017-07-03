@@ -11,11 +11,13 @@
 
 /* View Controller */
 #import "MOODLECourseSectionDetailViewController.h"
+#import "MOODLEForumViewController.h"
 
 /* Data Model */
 #import "MOODLEDataModel.h"
 #import "MOODLECourse.h"
 #import "MOODLECourseSection.h"
+#import "MOODLEForum.h"
 
 /* Table View */
 #import "MOODLECourseSectionTableViewCell.h"
@@ -196,77 +198,91 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    MOODLECourseSection *section = [self.item.courseSections objectAtIndex:indexPath.row];
-    
     UITableViewCell *returnCell = nil;
     
-    if (section.hasContent) {
+    // dont show first segment
+    if (indexPath.row == 0) {
         
-        MOODLECourseSectionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MOODLECourseSectionTableViewCellIdentifier];
-        
-        cell.noContentLabel.hidden = YES;
-        
-        MOODLELinguisticListFormatter *listFormatter = [MOODLELinguisticListFormatter new];
-        
-        if (section.hasDescription) {
+        returnCell = [tableView dequeueReusableCellWithIdentifier:@"forumCell" forIndexPath:indexPath];
+        if (!self.item.forum.hasEntries && !self.item.announcements.hasEntries) {
             
-            cell.descriptionImageView.image = [UIImage imageNamed:@"comment_icon_heigh"];
-            
-            NSString *locString = NSLocalizedString(@"Beschreibung", @"Appended to accessibility label if course section has a description.");
-            [listFormatter addItemToList:locString];
-            
-        } else {
-            
-            cell.descriptionImageView.image = [UIImage imageNamed:@"comment_icon_low"];
+            returnCell.backgroundColor = [UIColor lightGrayColor];
+            returnCell.userInteractionEnabled = NO;
         }
-        
-        if (section.hasDocuments || section.hasOhterItems) {
-            
-            cell.dokumentImageView.image = [UIImage imageNamed:@"doc_icon_heigh"];
-            
-            NSString *locString = NSLocalizedString(@"Dokumente", @"Appended to accessibility label if course section has documents 1.");
-            [listFormatter addItemToList:locString];
-            
-        } else {
-            
-            cell.dokumentImageView.image = [UIImage imageNamed:@"doc_icon_low"];
-        }
-        
-        if (section.hasAssignment) {
-            
-            
-            cell.assignmentImageView.image = [UIImage imageNamed:@"assign_icon_blue"];
-            
-            NSString *locString = NSLocalizedString(@"Abgabe", @"Appended to accessibility label if course section has an assignment.");
-            [listFormatter addItemToList:locString];
-            
-        } else {
-            
-            cell.assignmentImageView.image = [UIImage imageNamed:@"assign_icon_grey"];
-        }
-        
-        
-        // accessibility
-        NSString *accesibility_label = section.sectionTitle;
-        accesibility_label = [accesibility_label stringByAppendingString:@"\n "]; // make pause after title
-        accesibility_label = [accesibility_label stringByAppendingString:listFormatter.list];
-        NSString *locString = NSLocalizedString(@" vorhanden", @"Appended to accessibility label.");
-        cell.accessibilityLabel = [accesibility_label stringByAppendingString:locString];;
-        
-        
-        cell.sectionTitleLabel.text = section.sectionTitle;
-        
-        returnCell = cell;
-        
     }
     else {
-    
-        static NSString *noContentCell = @"noContentCell";
-        returnCell = [tableView dequeueReusableCellWithIdentifier:noContentCell];
-        returnCell.textLabel.text = section.sectionTitle;
+     
+        MOODLECourseSection *section = [self.item.courseSections objectAtIndex:indexPath.row];
         
-        // accessibility
-        returnCell.accessibilityLabel = section.sectionTitle;
+        if (section.hasContent) {
+            
+            MOODLECourseSectionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MOODLECourseSectionTableViewCellIdentifier];
+            
+            cell.noContentLabel.hidden = YES;
+            
+            MOODLELinguisticListFormatter *listFormatter = [MOODLELinguisticListFormatter new];
+            
+            if (section.hasDescription) {
+                
+                cell.descriptionImageView.image = [UIImage imageNamed:@"comment_icon_heigh"];
+                
+                NSString *locString = NSLocalizedString(@"Beschreibung", @"Appended to accessibility label if course section has a description.");
+                [listFormatter addItemToList:locString];
+                
+            } else {
+                
+                cell.descriptionImageView.image = [UIImage imageNamed:@"comment_icon_low"];
+            }
+            
+            if (section.hasDocuments || section.hasOhterItems) {
+                
+                cell.dokumentImageView.image = [UIImage imageNamed:@"doc_icon_heigh"];
+                
+                NSString *locString = NSLocalizedString(@"Dokumente", @"Appended to accessibility label if course section has documents 1.");
+                [listFormatter addItemToList:locString];
+                
+            } else {
+                
+                cell.dokumentImageView.image = [UIImage imageNamed:@"doc_icon_low"];
+            }
+            
+            if (section.hasAssignment) {
+                
+                
+                cell.assignmentImageView.image = [UIImage imageNamed:@"assign_icon_blue"];
+                
+                NSString *locString = NSLocalizedString(@"Abgabe", @"Appended to accessibility label if course section has an assignment.");
+                [listFormatter addItemToList:locString];
+                
+            } else {
+                
+                cell.assignmentImageView.image = [UIImage imageNamed:@"assign_icon_grey"];
+            }
+            
+            
+            // accessibility
+            NSString *accesibility_label = section.sectionTitle;
+            accesibility_label = [accesibility_label stringByAppendingString:@"\n "]; // make pause after title
+            accesibility_label = [accesibility_label stringByAppendingString:listFormatter.list];
+            NSString *locString = NSLocalizedString(@" vorhanden", @"Appended to accessibility label.");
+            cell.accessibilityLabel = [accesibility_label stringByAppendingString:locString];;
+            
+            
+            cell.sectionTitleLabel.text = section.sectionTitle;
+            
+            returnCell = cell;
+            
+        }
+        else {
+            
+            static NSString *noContentCell = @"noContentCell";
+            returnCell = [tableView dequeueReusableCellWithIdentifier:noContentCell];
+            returnCell.textLabel.text = section.sectionTitle;
+            
+            // accessibility
+            returnCell.accessibilityLabel = section.sectionTitle;
+        }
+        
     }
 
     return returnCell;
@@ -275,17 +291,28 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return 80.0f;
+    return (indexPath.row == 0) ? 44.0f : 80.0f;
 }
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     
-    MOODLECourseSectionDetailViewController *newViewController = (MOODLECourseSectionDetailViewController *)[storyboard instantiateViewControllerWithIdentifier:@"courseSectionViewController"];
-    newViewController.section = self.item.courseSections[indexPath.row];
-    [self.navigationController pushViewController:newViewController animated:YES];
+    if (indexPath.row == 0) {
+        
+        MOODLEForumViewController *forumController = (MOODLEForumViewController *)[storyboard instantiateViewControllerWithIdentifier:@"forumViewController"];
+        forumController.navigationItem.title = NSLocalizedString(@"Forum", @"Titel of the forum");
+        forumController.course = self.item;
+        [self.navigationController pushViewController:forumController animated:YES];
+    }
+    else {
+        
+        MOODLECourseSectionDetailViewController *newViewController = (MOODLECourseSectionDetailViewController *)[storyboard instantiateViewControllerWithIdentifier:@"courseSectionViewController"];
+        newViewController.section = self.item.courseSections[indexPath.row];
+        [self.navigationController pushViewController:newViewController animated:YES];
+    }
 }
 
 
