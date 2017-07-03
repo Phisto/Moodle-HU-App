@@ -38,6 +38,7 @@
 		F45778A51EE78E8D0000B130 /* bezierdata_w80_h80.archive in Resources */ = {isa = PBXBuildFile; fileRef = F45778A21EE78E8D0000B130 /* bezierdata_w80_h80.archive */; };
 		F45778A61EE78E8D0000B130 /* bezierdata_w120_h120.archive in Resources */ = {isa = PBXBuildFile; fileRef = F45778A31EE78E8D0000B130 /* bezierdata_w120_h120.archive */; };
 		F45DE6761ED1FEDD0077BC61 /* MOODLECommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F45DE6751ED1FEDD0077BC61 /* MOODLECommentTableViewCell.m */; };
+		F45ED3691F0A65540086CEED /* MOODLEForumThreadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F45ED3681F0A65540086CEED /* MOODLEForumThreadTableViewCell.m */; };
 		F466904A1EE1FED500748E8C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F46690461EE1FED500748E8C /* Localizable.strings */; };
 		F46AA5D11F0564D00072F05C /* MOODLEForum.m in Sources */ = {isa = PBXBuildFile; fileRef = F46AA5D01F0564D00072F05C /* MOODLEForum.m */; };
 		F46AA5D41F056BAE0072F05C /* MOODLEPersistentStoreCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = F46AA5D31F056BAE0072F05C /* MOODLEPersistentStoreCoordinator.m */; };
@@ -109,6 +110,8 @@
 		F45778A31EE78E8D0000B130 /* bezierdata_w120_h120.archive */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = bezierdata_w120_h120.archive; sourceTree = "<group>"; };
 		F45DE6741ED1FEDD0077BC61 /* MOODLECommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOODLECommentTableViewCell.h; sourceTree = "<group>"; };
 		F45DE6751ED1FEDD0077BC61 /* MOODLECommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOODLECommentTableViewCell.m; sourceTree = "<group>"; };
+		F45ED3671F0A65540086CEED /* MOODLEForumThreadTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOODLEForumThreadTableViewCell.h; sourceTree = "<group>"; };
+		F45ED3681F0A65540086CEED /* MOODLEForumThreadTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOODLEForumThreadTableViewCell.m; sourceTree = "<group>"; };
 		F46690471EE1FED500748E8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F46690481EE1FED500748E8C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F46690491EE1FED500748E8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -480,6 +483,8 @@
 				F45DE6751ED1FEDD0077BC61 /* MOODLECommentTableViewCell.m */,
 				F440C7C71F07C99F000ABE37 /* MOODLEForumPostTableViewCell.h */,
 				F440C7C81F07C99F000ABE37 /* MOODLEForumPostTableViewCell.m */,
+				F45ED3671F0A65540086CEED /* MOODLEForumThreadTableViewCell.h */,
+				F45ED3681F0A65540086CEED /* MOODLEForumThreadTableViewCell.m */,
 			);
 			path = "Custom Cells";
 			sourceTree = "<group>";
@@ -618,6 +623,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F45ED3691F0A65540086CEED /* MOODLEForumThreadTableViewCell.m in Sources */,
 				F4327CE31EEAFFE400AA4A7B /* MOODLELinguisticListFormatter.m in Sources */,
 				F4913BA71EF2ACBD000DCFC5 /* SGAccessibleSlider.m in Sources */,
 				F4D49AF81EC8C17E00CA1193 /* MOODLETabBarController.m in Sources */,

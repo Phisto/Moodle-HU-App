@@ -58,11 +58,9 @@
 #pragma mark - View Controller Methodes
 
 
-- (void)viewWillAppear:(BOOL)animated {
-    
+- (void)viewDidLoad {
     // call super
-    [super viewWillAppear:animated];
-
+    [super viewDidLoad];
     
     self.courseTitleLabel.text = self.item.courseTitle;
     self.moodleTitleLabel.text = [NSString stringWithFormat:@"Moodle: %@", self.item.moodleTitle];
@@ -91,6 +89,17 @@
         });
     }
     else { [self showTableView]; }
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    // call super
+    [super viewWillAppear:animated];
+    
+    // deselect table view cell
+    [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow
+                                  animated:YES];
 }
 
 

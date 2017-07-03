@@ -17,6 +17,9 @@
 /* View Controller */
 #import "MOODLEForumEntryViewController.h"
 
+/* Tabel View Cell */
+#import "MOODLEForumThreadTableViewCell.h"
+
 ///-----------------------
 /// @name CATEGORIES
 ///-----------------------
@@ -78,6 +81,16 @@
 }
 
 
+- (void)viewWillAppear:(BOOL)animated {
+    // call super
+    [super viewWillAppear:animated];
+    
+    // deselect table view cell
+    [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow
+                                  animated:YES];
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -101,10 +114,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"forumTableViewCellIdentifier"
+    MOODLEForumThreadTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MOODLEForumThreadTableViewCellIdentifier
                                                             forIndexPath:indexPath];
-    cell.textLabel.text = ((MOODLEForumEntry *)self.proxyTableData[indexPath.section][indexPath.row]).title;
-    cell.detailTextLabel.text = ((MOODLEForumEntry *)self.proxyTableData[indexPath.section][indexPath.row]).author;
+    cell.titleLabel.text = ((MOODLEForumEntry *)self.proxyTableData[indexPath.section][indexPath.row]).title;
+    cell.authorLabel.text = ((MOODLEForumEntry *)self.proxyTableData[indexPath.section][indexPath.row]).author;
+    cell.profileImageView.image = [UIImage imageNamed:@"user_icon"];
+    
+    NSInteger replies = ((MOODLEForumEntry *)self.proxyTableData[indexPath.section][indexPath.row]).replies;
+    NSInteger unread = ((MOODLEForumEntry *)self.proxyTableData[indexPath.section][indexPath.row]).unreadReplies;
+    NSString *repliesString = [NSString stringWithFormat:@"%lu/%lu", (replies-unread)+1, replies+1];
+    cell.repliesLabel.text = repliesString;
     return cell;
 }
 

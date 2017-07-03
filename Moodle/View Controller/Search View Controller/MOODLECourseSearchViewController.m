@@ -74,11 +74,14 @@
 
 
 - (void)viewDidAppear:(BOOL)animated {
-    
     // call super
     [super viewDidAppear:animated];
     
     [self.searchBar resignFirstResponder];
+    
+    // deselect table view cell
+    [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow
+                                  animated:YES];
 }
 
 

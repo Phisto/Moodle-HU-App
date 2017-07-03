@@ -80,16 +80,10 @@
 /* Class = "UILabel"; text = "Forum"; ObjectID = "f5x-Kx-cOH"; */
 "f5x-Kx-cOH.text" = "Forum";
 
-/* Class = "UILabel"; text = "Subtitle"; ObjectID = "Thi-rw-otC"; */
-"Thi-rw-otC.text" = "";
-
-/* Class = "UILabel"; text = "Title"; ObjectID = "qcQ-af-yMQ"; */
-"qcQ-af-yMQ.text" = "";
-
 /* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "JJ4-Ez-na6"; */
 "JJ4-Ez-na6.text" = "";
 
-/* Class = "UILabel"; text = "Sabine Schäfer"; ObjectID = "M2h-iT-j0B"; */
+/* Class = "UILabel"; text = "Sabine Junghein"; ObjectID = "M2h-iT-j0B"; */
 "M2h-iT-j0B.text" = "";
 
 /* Class = "UILabel"; text = "#1"; ObjectID = "Smq-cK-tHi"; */
@@ -103,3 +97,12 @@
 
 /* Class = "UILabel"; text = "MySuperHandout.pdf"; ObjectID = "mck-jG-YJV"; */
 "mck-jG-YJV.text" = "";
+
+/* Class = "UILabel"; text = "Katrin Schmidt"; ObjectID = "FG6-8D-VWk"; */
+"FG6-8D-VWk.text" = "";
+
+/* Class = "UILabel"; text = "Übersicht Seminarleistungen"; ObjectID = "JzU-8O-79b"; */
+"JzU-8O-79b.text" = "";
+
+/* Class = "UILabel"; text = "6/6"; ObjectID = "hUu-k8-2VV"; */
+"hUu-k8-2VV.text" = "";

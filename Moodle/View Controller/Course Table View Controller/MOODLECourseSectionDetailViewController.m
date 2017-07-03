@@ -100,6 +100,21 @@
     }
     _tableViewSegments = [array copy];
     _tableViewSegmentTitles = [titles copy];
+    
+    
+    // set title
+    self.sectionTitleLabel.text = self.section.sectionTitle;
+    
+    // set/calculate contraints
+    NSMutableAttributedString *attributedString = self.section.attributedSectionDescription;
+    [attributedString addAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16.0f]} range:NSMakeRange(0, attributedString.length)];
+    CGFloat height = [self textViewHeightForAttributedText:attributedString
+                                                  andWidth:self.view.frame.size.width-30.0f];
+    [self calculateAndSetContrainsts:height];
+    self.textView.attributedText = attributedString;
+    
+    // reload table view
+    [self.tableView reloadData];
 }
 
 
@@ -108,19 +123,9 @@
     // call super
     [super viewWillAppear:animated];
     
-    // set title
-    self.sectionTitleLabel.text = self.section.sectionTitle;
-
-    // set/calculate contraints
-    NSMutableAttributedString *attributedString = self.section.attributedSectionDescription;
-    [attributedString addAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16.0f]} range:NSMakeRange(0, attributedString.length)];
-    CGFloat height = [self textViewHeightForAttributedText:attributedString
-                                                  andWidth:self.view.frame.size.width-30.0f];
-    [self calculateAndSetContrainsts:height];
-    self.textView.attributedText = attributedString;
-
-    // reload table view
-    [self.tableView reloadData];
+    // deselect table view cell
+    [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow
+                                  animated:YES];
 }
 
 

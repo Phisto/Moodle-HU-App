@@ -113,14 +113,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
     MOODLEForumPost *post = self.entry.posts[indexPath.row];
-    MOODLEForumPostTableViewCell *cell = (MOODLEForumPostTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"postCell"
-                                                                                                         forIndexPath:indexPath];
+    MOODLEForumPostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MOODLEForumPostTableViewCellIdentifier
+                                                                         forIndexPath:indexPath];
     cell.authorLabel.text = post.author;
     cell.titleLabel.text = post.title;
     cell.textView.attributedText = post.content;
     cell.opLabel.hidden = !post.isOP;
     cell.postRankLabel.text = [NSString stringWithFormat:@"#%lu", indexPath.row+1];
-    cell.profileImageView.image = [UIImage imageNamed:@"forum_icon"];
+    cell.profileImageView.image = [UIImage imageNamed:@"user_icon"];
     
     
     if (post.hasAttachments) {
