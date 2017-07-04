@@ -275,6 +275,41 @@
 			path = Accessibility;
 			sourceTree = "<group>";
 		};
+		F45ED36A1F0B12970086CEED /* Forum */ = {
+			isa = PBXGroup;
+			children = (
+				F45ED3671F0A65540086CEED /* MOODLEForumThreadTableViewCell.h */,
+				F45ED3681F0A65540086CEED /* MOODLEForumThreadTableViewCell.m */,
+				F440C7C71F07C99F000ABE37 /* MOODLEForumPostTableViewCell.h */,
+				F440C7C81F07C99F000ABE37 /* MOODLEForumPostTableViewCell.m */,
+			);
+			name = Forum;
+			sourceTree = "<group>";
+		};
+		F45ED36B1F0B12AC0086CEED /* Course */ = {
+			isa = PBXGroup;
+			children = (
+				F4D49AEC1EC8B07E00CA1193 /* MOODLECourseTableViewCell.h */,
+				F4D49AED1EC8B07E00CA1193 /* MOODLECourseTableViewCell.m */,
+				F43852901EC90AEC005BC780 /* MOODLECourseSectionTableViewCell.h */,
+				F43852911EC90AEC005BC780 /* MOODLECourseSectionTableViewCell.m */,
+				F4FC68F21ECC552800854DA1 /* MOODLECourseSectionItemTableViewCell.h */,
+				F4FC68F31ECC552800854DA1 /* MOODLECourseSectionItemTableViewCell.m */,
+				F45DE6741ED1FEDD0077BC61 /* MOODLECommentTableViewCell.h */,
+				F45DE6751ED1FEDD0077BC61 /* MOODLECommentTableViewCell.m */,
+			);
+			name = Course;
+			sourceTree = "<group>";
+		};
+		F45ED36C1F0B12B30086CEED /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				F42860D21ED1EFB000D498EC /* MOODLESearchResultTableViewCell.h */,
+				F42860D31ED1EFB000D498EC /* MOODLESearchResultTableViewCell.m */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
 		F47F4F011EE4D6D40047B330 /* Custom Controlls */ = {
 			isa = PBXGroup;
 			children = (
@@ -471,20 +506,9 @@
 		F4FC68F11ECC54CA00854DA1 /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
-				F4D49AEC1EC8B07E00CA1193 /* MOODLECourseTableViewCell.h */,
-				F4D49AED1EC8B07E00CA1193 /* MOODLECourseTableViewCell.m */,
-				F43852901EC90AEC005BC780 /* MOODLECourseSectionTableViewCell.h */,
-				F43852911EC90AEC005BC780 /* MOODLECourseSectionTableViewCell.m */,
-				F4FC68F21ECC552800854DA1 /* MOODLECourseSectionItemTableViewCell.h */,
-				F4FC68F31ECC552800854DA1 /* MOODLECourseSectionItemTableViewCell.m */,
-				F42860D21ED1EFB000D498EC /* MOODLESearchResultTableViewCell.h */,
-				F42860D31ED1EFB000D498EC /* MOODLESearchResultTableViewCell.m */,
-				F45DE6741ED1FEDD0077BC61 /* MOODLECommentTableViewCell.h */,
-				F45DE6751ED1FEDD0077BC61 /* MOODLECommentTableViewCell.m */,
-				F440C7C71F07C99F000ABE37 /* MOODLEForumPostTableViewCell.h */,
-				F440C7C81F07C99F000ABE37 /* MOODLEForumPostTableViewCell.m */,
-				F45ED3671F0A65540086CEED /* MOODLEForumThreadTableViewCell.h */,
-				F45ED3681F0A65540086CEED /* MOODLEForumThreadTableViewCell.m */,
+				F45ED36B1F0B12AC0086CEED /* Course */,
+				F45ED36C1F0B12B30086CEED /* Search */,
+				F45ED36A1F0B12970086CEED /* Forum */,
 			);
 			path = "Custom Cells";
 			sourceTree = "<group>";

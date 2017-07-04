@@ -59,10 +59,6 @@ static NSString *MOODLEForumPostTableViewCellIdentifier = @"MOODLEForumPostTable
 
 
 
-
-
-
-
 /**
  
  */

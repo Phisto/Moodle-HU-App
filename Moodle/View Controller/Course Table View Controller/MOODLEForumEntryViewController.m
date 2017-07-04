@@ -29,7 +29,7 @@
 
 
 
-@interface MOODLEForumEntryViewController (/* Private */) <UITableViewDelegate, UITableViewDataSource>
+@interface MOODLEForumEntryViewController (/* Private */) <UITableViewDelegate, UITableViewDataSource, UITableViewDataSourcePrefetching>
 
 // UI
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
@@ -121,7 +121,8 @@
     cell.opLabel.hidden = !post.isOP;
     cell.postRankLabel.text = [NSString stringWithFormat:@"#%lu", indexPath.row+1];
     cell.profileImageView.image = [UIImage imageNamed:@"user_icon"];
-    
+    cell.indentationWidth = 15.0f;
+    cell.indentationLevel = post.postIndention;
     
     if (post.hasAttachments) {
         
@@ -138,9 +139,7 @@
         cell.ressourceContainerView.hidden = YES;
         cell.userInteractionEnabled = NO;
     }
-    
-    
-    
+
     return cell;
 }
 
@@ -182,6 +181,7 @@
     newViewController.item = item;
     [self.navigationController pushViewController:newViewController animated:YES];
 }
+
 
 
 - (UITextView *)heightCalculationTextView {

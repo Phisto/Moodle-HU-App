@@ -38,6 +38,11 @@ NS_ASSUME_NONNULL_BEGIN
  
  */
 @property (nonatomic, strong) NSString *rawContent;
+///!!!: I dont like that property, maybe rename it or put the logic somewhere else ...
+/**
+ 
+ */
+@property (nonatomic, readwrite) NSUInteger postIndention;
 /**
  
  */
