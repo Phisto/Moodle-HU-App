@@ -87,7 +87,8 @@
         BOOL isDocument = (moodelItem.itemType == MoodleItemTypeDocument);
         BOOL isPDF = (moodelItem.documentType == MoodleDocumentTypePDF);
         BOOL isPPT = (moodelItem.documentType == MoodleDocumentTypePPT);
-        BOOL mayBeLocal = (isPDF || isPPT);
+        BOOL isWORD = (moodelItem.documentType == MoodleDocumentTypeWordDocument);
+        BOOL mayBeLocal = (isPDF || isPPT || isWORD);
         
         // pdf & ppt files can be cached ...
         if (isDocument && mayBeLocal) {

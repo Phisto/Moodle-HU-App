@@ -155,6 +155,9 @@
 /* voice over document type title WORD */
 "Word Datei" = "Word Datei";
 
+/* header title for the word document section */
+"Word Dateien" = "Word Dateien";
+
 /* table view cell selection hint */
 "Zum aktivieren doppel tippen" = "Zum aktivieren doppel tippen";
 

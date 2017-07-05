@@ -80,6 +80,11 @@ static NSString * const UserDefaultsCachedFilesArrayKey = @"UserDefaultsCachedFi
                 
                 extension = @"pptx";
             }
+            else if (item.documentType == MoodleDocumentTypeWordDocument) {
+                
+                extension = @"docx";
+            }
+            
             url = [self localFileURLFromTitle:item.resourceTitle withPathExtension:extension];
             
             exists = [self.fileManager fileExistsAtPath:url.path];
@@ -131,6 +136,10 @@ static NSString * const UserDefaultsCachedFilesArrayKey = @"UserDefaultsCachedFi
     if (item.documentType == MoodleDocumentTypePPT) {
         
         extension = @"pptx";
+    }
+    else if (item.documentType == MoodleDocumentTypeWordDocument) {
+        
+        extension = @"docx";
     }
     
     NSURL *localFileURL = [self localFileURLFromTitle:item.resourceTitle withPathExtension:extension];
@@ -222,7 +231,7 @@ static NSString * const UserDefaultsCachedFilesArrayKey = @"UserDefaultsCachedFi
         
         NSURL *fileURL = [[NSURL fileURLWithPath:folderPath] URLByAppendingPathComponent:path];
         NSString *extension = [fileURL pathExtension];
-        if ([extension isEqualToString:@"pdf"] || [extension isEqualToString:@"pptx"]) {
+        if ([extension isEqualToString:@"pdf"] || [extension isEqualToString:@"pptx"] || [extension isEqualToString:@"docx"]) {
             [muteArray addObject:fileURL];
         }
     }

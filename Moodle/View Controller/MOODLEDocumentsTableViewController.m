@@ -28,6 +28,7 @@
 
 static NSString * const KMOODLEPathExtentsionPDF = @"pdf";
 static NSString * const KMOODLEPathExtentsionPPT = @"pptx";
+static NSString * const KMOODLEPathExtentsionWORD = @"docx";
 static NSString * const KMOODLEPathExtentsionMP3 = @"mp3";
 
 
@@ -61,10 +62,9 @@ static NSString * const KMOODLEPathExtentsionMP3 = @"mp3";
 #pragma mark - View Controller Methodes
 
 
-- (void)viewDidAppear:(BOOL)animated {
-    
+- (void)viewWillAppear:(BOOL)animated {
     // call super
-    [super viewDidAppear:animated];
+    [super viewWillAppear:animated];
     
     // table view inset
     self.tableView.contentInset = UIEdgeInsetsMake(22.0f, 0.0f, 22.0f, 0.0f);
@@ -97,6 +97,7 @@ static NSString * const KMOODLEPathExtentsionMP3 = @"mp3";
     
     NSMutableArray *pdfArray = [NSMutableArray array];
     NSMutableArray *pptArray = [NSMutableArray array];
+    NSMutableArray *wordArray = [NSMutableArray array];
     NSMutableArray *mp3Array = [NSMutableArray array];
     
     for (NSURL *fileURL in [self.dataModel allRessourceURLS]) {
@@ -109,6 +110,10 @@ static NSString * const KMOODLEPathExtentsionMP3 = @"mp3";
         else if ([extension isEqualToString:KMOODLEPathExtentsionPPT]) {
             
             [pptArray addObject:fileURL];
+        }
+        else if ([extension isEqualToString:KMOODLEPathExtentsionWORD]) {
+            
+            [wordArray addObject:fileURL];
         }
         else if ([extension isEqualToString:KMOODLEPathExtentsionMP3]) {
             
@@ -126,6 +131,12 @@ static NSString * const KMOODLEPathExtentsionMP3 = @"mp3";
         
         [muteArrayArray addObject:[pptArray copy]];
         NSString *locString = NSLocalizedString(@"PowerPoint Dateien", @"header title for the ppt document section");
+        [titleArray addObject:locString];
+    }
+    if (wordArray.count > 0) {
+        
+        [muteArrayArray addObject:[wordArray copy]];
+        NSString *locString = NSLocalizedString(@"Word Dateien", @"header title for the word document section");
         [titleArray addObject:locString];
     }
     if (mp3Array.count > 0) {
@@ -183,7 +194,22 @@ static NSString * const KMOODLEPathExtentsionMP3 = @"mp3";
     cell.itemLabel.text = [url.lastPathComponent stringByDeletingPathExtension];
     
     NSString *extension = [url.lastPathComponent pathExtension];
-    cell.fileIconImageView.image = ([extension isEqualToString:KMOODLEPathExtentsionPDF]) ? [UIImage imageNamed:@"pdf_icon"] : [UIImage imageNamed:@"ppt_icon"];
+    if ([extension isEqualToString:KMOODLEPathExtentsionPDF]) {
+        
+        cell.fileIconImageView.image = [UIImage imageNamed:@"pdf_icon"];
+    }
+    else if ([extension isEqualToString:KMOODLEPathExtentsionPPT]) {
+        
+        cell.fileIconImageView.image = [UIImage imageNamed:@"ppt_icon"];
+    }
+    else if ([extension isEqualToString:KMOODLEPathExtentsionWORD]) {
+        
+        cell.fileIconImageView.image = [UIImage imageNamed:@"doc_icon"];
+    }
+    else if ([extension isEqualToString:KMOODLEPathExtentsionMP3]) {
+        
+        cell.fileIconImageView.image = [UIImage imageNamed:@"mp3_icon"];
+    }
     
     // accessibility
     cell.accessibilityLabel = cell.itemLabel.text;
