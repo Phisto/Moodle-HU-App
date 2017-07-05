@@ -119,7 +119,7 @@
     cell.titleLabel.text = post.title;
     cell.textView.attributedText = post.content;
     cell.opLabel.hidden = !post.isOP;
-    cell.postRankLabel.text = [NSString stringWithFormat:@"#%lu", indexPath.row+1];
+    cell.postRankLabel.text = [NSString stringWithFormat:@"#%d", indexPath.row+1];
     cell.profileImageView.image = [UIImage imageNamed:@"user_icon"];
     cell.indentationWidth = 15.0f;
     cell.indentationLevel = post.postIndention;
@@ -182,6 +182,13 @@
     [self.navigationController pushViewController:newViewController animated:YES];
 }
 
+
+- (void)tableView:(UITableView *)tableView prefetchRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths {
+    
+    
+    
+    
+}
 
 
 - (UITextView *)heightCalculationTextView {
