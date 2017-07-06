@@ -108,6 +108,7 @@
     MOODLEForumPostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MOODLEForumPostTableViewCellIdentifier
                                                                          forIndexPath:indexPath];
     cell.authorLabel.text = post.author;
+    cell.timeLabel.text = post.time;
     cell.titleLabel.text = post.title;
     cell.textView.attributedText = post.content;
     cell.opLabel.hidden = !post.isOP;

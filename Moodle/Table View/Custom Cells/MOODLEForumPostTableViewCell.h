@@ -54,6 +54,10 @@ static NSString *MOODLEForumPostTableViewCellIdentifier = @"MOODLEForumPostTable
  */
 @property (nonatomic, strong) IBOutlet UILabel *authorLabel;
 /**
+ The label to display the time the post was registered.
+ */
+@property (nonatomic, strong) IBOutlet UILabel *timeLabel;
+/**
  The teyt view to display the posts content.
  */
 @property (nonatomic, strong) IBOutlet UITextView *textView;

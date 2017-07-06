@@ -30,6 +30,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong) NSString *author;
 /**
+ The time the post was registered.
+ */
+@property (nonatomic, strong) NSString *time;
+/**
  The content of the post.
  */
 @property (nonatomic, readonly) NSAttributedString *content;

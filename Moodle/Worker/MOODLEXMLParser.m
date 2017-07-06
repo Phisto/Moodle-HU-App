@@ -547,7 +547,21 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
                             
                             TFHppleElement *starterauthorELement = startertopic.children[1];
                             NSString *starterautohr = starterauthorELement.content;
-                            starterpost.author = starterautohr;
+                            NSArray<NSString *> *components = [starterautohr componentsSeparatedByString:@" - "];
+                            if (components.count == 2) {
+                                
+                                NSString *name = components[0];
+                                name = [name stringByReplacingOccurrencesOfString:@"von " withString:@""];
+                                starterpost.author = name;
+                                
+                                
+                                NSString *time = components[1];
+                                starterpost.time = time;
+                            }
+                            else {
+                                
+                                starterpost.author = starterautohr;
+                            }
                         }
                         
                     }
@@ -614,8 +628,22 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
                         if (topic.children.count > 1) {
                             
                             TFHppleElement *authorELement = topic.children[1];
-                            NSString *autohr = authorELement.content;
-                            post.author = autohr;
+                            NSString *author = authorELement.content;
+                            NSArray<NSString *> *components = [author componentsSeparatedByString:@" - "];
+                            if (components.count == 2) {
+                                
+                                NSString *name = components[0];
+                                name = [name stringByReplacingOccurrencesOfString:@"von " withString:@""];
+                                post.author = name;
+                                
+                                
+                                NSString *time = components[1];
+                                post.time = time;
+                            }
+                            else {
+                                
+                                post.author = author;
+                            }
                         }
                         
                     }
@@ -687,10 +715,23 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
                                     if (topic.children.count > 1) {
                                         
                                         TFHppleElement *authorELement = topic.children[1];
-                                        NSString *autohr = authorELement.content;
-                                        post.author = autohr;
+                                        NSString *author = authorELement.content;
+                                        NSArray<NSString *> *components = [author componentsSeparatedByString:@" - "];
+                                        if (components.count == 2) {
+                                            
+                                            NSString *name = components[0];
+                                            name = [name stringByReplacingOccurrencesOfString:@"von " withString:@""];
+                                            post.author = name;
+                                            
+                                            
+                                            NSString *time = components[1];
+                                            post.time = time;
+                                        }
+                                        else {
+                                            
+                                            post.author = author;
+                                        }
                                     }
-                                    
                                 }
                                 
                                 // get content

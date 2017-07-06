@@ -487,7 +487,6 @@ static NSInteger const kPasswordTextFieldTag = 102;
 
 
 
-#pragma mark - ACCESSIBILITY
 ///-----------------------
 /// @name ACCESSIBILITY
 ///-----------------------
@@ -495,6 +494,7 @@ static NSInteger const kPasswordTextFieldTag = 102;
 
 
 @implementation MOODLELoginViewController (Accessibility)
+#pragma mark - ACCESSIBILITY
 
 
 - (BOOL)accessibility_accessibilityIsActiv {
