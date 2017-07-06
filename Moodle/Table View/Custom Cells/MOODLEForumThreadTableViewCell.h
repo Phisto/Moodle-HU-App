@@ -1,10 +1,11 @@
-//
-//  MOODLEForumThreadTableViewCell.h
-//  Moodle
-//
-//  Created by Simon Gaus on 03.07.17.
-//  Copyright © 2017 Simon Gaus. All rights reserved.
-//
+/*
+ *
+ *  MOODLEForumThreadTableViewCell.h
+ *  Moodle
+ *
+ *  Copyright © 2017 Simon Gaus. All rights reserved.
+ *
+ */
 
 @import UIKit;
 

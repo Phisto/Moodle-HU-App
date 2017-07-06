@@ -1,10 +1,11 @@
-//
-//  MOODLEForumPostTableViewCell.h
-//  Moodle
-//
-//  Created by Simon Gaus on 01.07.17.
-//  Copyright © 2017 Simon Gaus. All rights reserved.
-//
+/*
+ *
+ *  MOODLEForumPostTableViewCell.h
+ *  Moodle
+ *
+ *  Copyright © 2017 Simon Gaus. All rights reserved.
+ *
+ */
 
 @import UIKit;
 
