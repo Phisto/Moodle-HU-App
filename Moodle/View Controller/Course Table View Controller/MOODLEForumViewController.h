@@ -13,7 +13,7 @@
 
 /**
  
- 
+ The `MOODLEForumViewController` is responsible for presenting the `MOODLEForum` object associated with a given moodle course to the user.
  
  */
 
@@ -22,8 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MOODLEForumViewController : UIViewController
 
 /**
- 
- 
+ The course object the forum is associated with.
  */
 @property (nonatomic, strong) MOODLECourse *course;
 

@@ -200,11 +200,18 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)loadSearchResultWithSerachString:(NSString *)searchString
                        completionHandler:(void (^)(BOOL success, NSError * _Nullable error, NSArray * _Nullable searchResults))completionHandler;
-
-
-
+/**
+ 
+ @brief This method will load the content of a given forum thread.
+ 
+ @param entry The entry for which to load the content.
+ 
+ @param completionHandler The completion handler to call when loading is complete.
+ 
+ */
 - (void)loadForumEntryContentForEntry:(MOODLEForumEntry *)entry
                     completionHandler:(void (^)(BOOL, NSError * _Nullable error))completionHandler;
+
 
 
 #pragma mark - Documents

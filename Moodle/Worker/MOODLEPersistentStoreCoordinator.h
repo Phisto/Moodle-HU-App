@@ -11,7 +11,7 @@
 
 /**
  
- 
+ The MOODLEPersistentStoreCoordinator class is used to coordinate the persistently stored values for the app.
  
  */
 

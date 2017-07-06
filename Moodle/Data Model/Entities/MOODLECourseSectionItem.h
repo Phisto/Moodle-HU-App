@@ -11,8 +11,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
-
 ///-----------------------
 /// @name ENUMERATIONS
 ///-----------------------
@@ -64,6 +62,8 @@ typedef NS_ENUM(NSInteger, MoodleDocumentType) {
     /// An unknown document
     MoodleDocumentTypeOther
 };
+
+
 
 /**
  

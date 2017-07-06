@@ -90,10 +90,15 @@ NS_ASSUME_NONNULL_BEGIN
  
  */
 - (MOODLEForum *)forumFromData:(NSData *)data;
-
-
-
-
+/**
+ 
+ Creates a HTML string from data and parses the string searching for forum posts.
+ 
+ @param data The data to parse.
+ 
+ @return An array of forum posts or an empty array.
+ 
+ */
 - (NSArray<MOODLEForumPost *> *)forumEntryItemsFromData:(NSData *)data;
 
 

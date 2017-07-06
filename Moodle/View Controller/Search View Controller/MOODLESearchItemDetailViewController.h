@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///--------------------
 
 /**
- The MOODLECourse to present.
+ The course object to present.
  */
 @property (nonatomic, strong) MOODLECourse *item;
 
