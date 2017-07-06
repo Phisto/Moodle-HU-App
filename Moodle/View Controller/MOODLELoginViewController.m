@@ -91,19 +91,6 @@ static NSInteger const kPasswordTextFieldTag = 102;
     self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                         action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:self.tapGestureRecognizer];
-    
-    /*
-    NSLog(@"Cookies before login");
-    NSLog(@"\n\n\n");
-    
-    NSArray *cookies = [NSHTTPCookieStorage sharedHTTPCookieStorage].cookies;
-    for (NSHTTPCookie *plaetzchen in cookies) {
-        
-        NSLog(@"cookies:%@", plaetzchen);
-    }
-    
-    NSLog(@"\n\n\n");
-    */
 }
 
 
