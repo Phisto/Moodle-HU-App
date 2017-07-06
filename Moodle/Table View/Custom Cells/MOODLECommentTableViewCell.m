@@ -22,6 +22,8 @@
 
 
 @implementation MOODLECommentTableViewCell (Accessibility)
+#pragma mark -
+
 
 - (NSArray<UIAccessibilityCustomAction *> *)accessibilityCustomActions {
     
@@ -31,14 +33,18 @@
                                                       selector:@selector(readComment)]];
 }
 
+
 - (void)readComment {
     
     [self accessibility_informUserViaVoiceOver:self.textView.text];
 }
+
 
 - (void)accessibility_informUserViaVoiceOver:(NSString *)message {
     
     UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, message);
 }
 
+
+#pragma mark -
 @end

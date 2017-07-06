@@ -32,7 +32,7 @@
 // UI
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 // Table View Data
-@property (nonatomic, strong) NSArray<NSArray *> *proxyTableData;
+@property (nonatomic, strong) NSArray<NSArray *> *tableData;
 @property (nonatomic, strong) NSArray<NSString *> *headerTitleArray;
 
 @end
@@ -60,23 +60,23 @@
         
         if (announcments) {
             
-            self.proxyTableData = @[self.course.announcements.entries, self.course.forum.entries];
+            self.tableData = @[self.course.announcements.entries, self.course.forum.entries];
             self.headerTitleArray = @[@"Ankündigungen", @"Forum"];
         }
         else {
             
-            self.proxyTableData = @[self.course.forum.entries];
+            self.tableData = @[self.course.forum.entries];
             self.headerTitleArray = @[@"Forum"];
         }
     }
     else if (announcments) {
         
-        self.proxyTableData = @[self.course.announcements.entries];
+        self.tableData = @[self.course.announcements.entries];
         self.headerTitleArray = @[@"Ankündigungen"];
     }
     else {
         
-        self.proxyTableData = @[];
+        self.tableData = @[];
         self.headerTitleArray = @[];
     }
 }
@@ -103,13 +103,13 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return self.proxyTableData.count;
+    return self.tableData.count;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return self.proxyTableData[section].count;
+    return self.tableData[section].count;
 }
 
 
@@ -117,13 +117,13 @@
     
     MOODLEForumThreadTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MOODLEForumThreadTableViewCellIdentifier
                                                             forIndexPath:indexPath];
-    cell.titleLabel.text = ((MOODLEForumEntry *)self.proxyTableData[indexPath.section][indexPath.row]).title;
-    cell.authorLabel.text = ((MOODLEForumEntry *)self.proxyTableData[indexPath.section][indexPath.row]).author;
+    cell.titleLabel.text = ((MOODLEForumEntry *)self.tableData[indexPath.section][indexPath.row]).title;
+    cell.authorLabel.text = ((MOODLEForumEntry *)self.tableData[indexPath.section][indexPath.row]).author;
     cell.profileImageView.image = [UIImage imageNamed:@"user_icon"];
     
-    NSInteger replies = ((MOODLEForumEntry *)self.proxyTableData[indexPath.section][indexPath.row]).replies;
-    NSInteger unread = ((MOODLEForumEntry *)self.proxyTableData[indexPath.section][indexPath.row]).unreadReplies;
-    NSString *repliesString = [NSString stringWithFormat:@"%lu/%lu", (replies-unread)+1, replies+1];
+    NSInteger replies = ((MOODLEForumEntry *)self.tableData[indexPath.section][indexPath.row]).replies;
+    NSInteger unread = ((MOODLEForumEntry *)self.tableData[indexPath.section][indexPath.row]).unreadReplies;
+    NSString *repliesString = [NSString stringWithFormat:@"%lu/%lu", (long)(replies-unread)+1, (long)replies+1];
     cell.repliesLabel.text = repliesString;
     return cell;
 }
@@ -137,7 +137,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    MOODLEForumEntry *entry = self.proxyTableData[indexPath.section][indexPath.row];
+    MOODLEForumEntry *entry = self.tableData[indexPath.section][indexPath.row];
     
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];

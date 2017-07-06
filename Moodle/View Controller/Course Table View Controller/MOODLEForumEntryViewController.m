@@ -30,13 +30,11 @@
 
 
 
-@interface MOODLEForumEntryViewController (/* Private */) <UITableViewDelegate, UITableViewDataSource, UITableViewDataSourcePrefetching>
+@interface MOODLEForumEntryViewController (/* Private */) <UITableViewDelegate, UITableViewDataSource>
 
 // UI
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) MOODLEActivityView *loadingView;
-
-
 // Other
 @property (nonatomic, strong) IBOutlet UITextView *heightCalculationTextView;
 
@@ -52,13 +50,6 @@
 
 @implementation MOODLEForumEntryViewController
 #pragma mark - View Controller Methodes
-
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-
-}
 
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -120,7 +111,7 @@
     cell.titleLabel.text = post.title;
     cell.textView.attributedText = post.content;
     cell.opLabel.hidden = !post.isOP;
-    cell.postRankLabel.text = [NSString stringWithFormat:@"#%d", indexPath.row+1];
+    cell.postRankLabel.text = [NSString stringWithFormat:@"#%d", (int)indexPath.row+1];
     cell.profileImageView.image = [UIImage imageNamed:@"user_icon"];
     cell.indentationWidth = 15.0f;
     cell.indentationLevel = post.postIndention;
@@ -184,24 +175,6 @@
 }
 
 
-- (void)tableView:(UITableView *)tableView prefetchRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths {
-    
-    
-    
-    
-}
-
-
-- (UITextView *)heightCalculationTextView {
-    
-    if (!_heightCalculationTextView) {
-        
-        _heightCalculationTextView = [[UITextView alloc] init];
-    }
-    return _heightCalculationTextView;
-}
-
-
 #pragma mark - Lazy/Getter
 
 
@@ -214,6 +187,16 @@
         _loadingView = view;
     }
     return _loadingView;
+}
+
+
+- (UITextView *)heightCalculationTextView {
+    
+    if (!_heightCalculationTextView) {
+        
+        _heightCalculationTextView = [[UITextView alloc] init];
+    }
+    return _heightCalculationTextView;
 }
 
 

@@ -580,8 +580,6 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
                             
                             
                             MOODLECourseSectionItem *item = [[MOODLECourseSectionItem alloc] init];
-                            item = [[MOODLECourseSectionItem alloc] init];
-                            
                             
                             if ([[urlString pathExtension] isEqualToString:@"pdf"]) {
                                 item.itemType = MoodleItemTypeDocument;
@@ -651,8 +649,6 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
                             
                             
                             MOODLECourseSectionItem *item = [[MOODLECourseSectionItem alloc] init];
-                            item = [[MOODLECourseSectionItem alloc] init];
-                            
                             
                             if ([[urlString pathExtension] isEqualToString:@"pdf"]) {
                                 item.itemType = MoodleItemTypeDocument;
@@ -726,8 +722,6 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
                                         
                                         
                                         MOODLECourseSectionItem *item = [[MOODLECourseSectionItem alloc] init];
-                                        item = [[MOODLECourseSectionItem alloc] init];
-                                        
                                         
                                         if ([[urlString pathExtension] isEqualToString:@"pdf"]) {
                                             item.itemType = MoodleItemTypeDocument;
