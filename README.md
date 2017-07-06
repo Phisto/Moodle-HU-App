@@ -19,6 +19,17 @@ I have given much attention to support VoiceOver properly.
 I don't have feedback regarding the VoiceOver behavior of the app, 
 so I dont know if it fits the need of users who utilize this technologie.
 
+## Features
+
+* Access your Moodle courses
+* Access to course ressources
+* Access the course forum
+* Search for Moodle courses
+* Subscribe to Moodle courses
+* Save course ressources to your phone
+* Order courses
+* Favor courses
+
 ### Screenshots
 
 Login                      |  My Courses
