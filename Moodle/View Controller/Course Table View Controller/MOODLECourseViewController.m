@@ -12,6 +12,7 @@
 /* Controller */
 #import "MOODLETabBarController.h"
 #import "MOODLECourseDetailViewController.h"
+#import "MOODLECourseSearchViewController.h"
 
 /* Data Model */
 #import "MOODLEDataModel.h"
@@ -56,6 +57,13 @@
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self
                                                                                             action:@selector(longPressGestureRecognized:)];
     [self.tableView addGestureRecognizer:longPress];
+
+    UIBarButtonItem *searchButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Suche", @"title of the search button")
+                                                                     style:UIBarButtonItemStylePlain
+                                                                    target:self
+                                                                    action:@selector(search:)];
+    searchButton.image = [UIImage imageNamed:@"search_icon"];
+    self.navigationItem.rightBarButtonItem = searchButton;
 }
 
 
@@ -276,6 +284,18 @@
     MOODLECourse *item = self.dataModel.courseArray[indexPath.row];
     newViewController.item = item;
     [self.navigationController pushViewController:newViewController animated:YES];
+}
+
+
+#pragma mark - Search Result Updating
+
+
+- (IBAction)search:(id)sender {
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    
+    MOODLECourseSearchViewController *searchViewController = (MOODLECourseSearchViewController *)[storyboard instantiateViewControllerWithIdentifier:@"MOODLECourseSearchViewController"];
+    [self.navigationController pushViewController:searchViewController animated:YES];
 }
 
 

@@ -8,9 +8,6 @@
 /* Class = "UIBarButtonItem"; title = "Zurück"; ObjectID = "BnC-Ox-YdD"; */
 "BnC-Ox-YdD.title" = "Back";
 
-/* Class = "UITabBarItem"; title = "Suche"; ObjectID = "I6W-iR-Qtp"; */
-"I6W-iR-Qtp.title" = "Search";
-
 /* Class = "UILabel"; text = "Bitte erneut einloggen"; ObjectID = "ICm-EU-cXP"; */
 "ICm-EU-cXP.text" = "Please login again";
 
