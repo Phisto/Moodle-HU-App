@@ -9,7 +9,7 @@
 
 @import Foundation;
 
-@class MOODLECourse, MOODLECourseSectionItem, MOODLEForumEntry;
+@class MOODLECourse, MOODLECourseSectionItem, MOODLEForumEntry, MOODLEChat;
 
 /**
  
@@ -67,7 +67,10 @@ NS_ASSUME_NONNULL_BEGIN
  A mutable array of MOODLE courses that are hidden.
  */
 @property (nonatomic, strong) NSMutableArray<MOODLECourse *> *hiddenCourses;
-
+/**
+ A mutable array of MOODLE chat items.
+ */
+@property (nullable, nonatomic, strong) NSArray<MOODLEChat *> *chats;
 
 
 #pragma mark - Login
@@ -211,8 +214,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)loadForumEntryContentForEntry:(MOODLEForumEntry *)entry
                     completionHandler:(void (^)(BOOL, NSError * _Nullable error))completionHandler;
-
-
+/**
+ 
+ @brief This method will load all 'recent' chats for this Moodle account.
+ 
+ @param completionHandler The completion handler to call when loading is complete.
+ 
+ */
+- (void)loadChatsWithCompletionHandler:(void (^)(BOOL success, NSError * _Nullable error))completionHandler;
 
 #pragma mark - Documents
 ///----------------------

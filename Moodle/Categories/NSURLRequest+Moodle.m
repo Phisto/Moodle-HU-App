@@ -82,5 +82,16 @@
 }
 
 
++ (instancetype)moodle_recentChatsRequest {
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    request.cachePolicy = NSURLRequestReloadIgnoringCacheData;
+    [request setURL:[NSURL URLWithString:@"https://moodle.hu-berlin.de/message/index.php?viewing=recentconversations"]];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    return [request copy];
+}
+
+
 #pragma mark -
 @end

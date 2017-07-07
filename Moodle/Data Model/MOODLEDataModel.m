@@ -267,6 +267,7 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
                                     
                                     self.sessionKey = [self.xmlParser sessionKeyFromData:data];
                                     NSArray *result = [self.xmlParser createCourseItemsFromData:data];
+                                    
                                         
                                     // set data model
                                     if (result.count > 0) {
@@ -447,6 +448,40 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
         [self resetData];
         completionHandler(YES, nil);
     }
+}
+
+
+- (void)loadChatsWithCompletionHandler:(void (^)(BOOL success, NSError * _Nullable error))completionHandler {
+    
+    NSURLResponse * response = nil;
+    NSError *requestError = nil;
+    NSData *data = [self.currentSession moodle_sendSynchronousRequest:[NSURLRequest moodle_recentChatsRequest]
+                                                    returningResponse:&response
+                                                                error:&requestError];
+
+    // handle basic connectivity issues here
+    if (!data) {
+        completionHandler(NO, (requestError) ? requestError : nil);
+        return;
+    }
+    
+    // handle HTTP errors here
+    if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
+        
+        NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
+        
+        if (statusCode != 200) {
+            
+            NSString *locString = NSLocalizedString(@"Bei der Kommunikation mit dem Server, ist ein Fehler aufgetreten.", @"Error message if the server wont respond with 200 http response code.");
+            NSDictionary *userInfo = @{NSLocalizedDescriptionKey: locString};
+            NSError *newError = [NSError errorWithDomain:@"de.simonsserver.Moodle" code:1990 userInfo:userInfo];
+            completionHandler(NO, newError);
+            return;
+        }
+    }
+    
+    self.chats = [self.xmlParser chatItemsFromData:data];
+    completionHandler(YES, nil);
 }
 
 

@@ -27,6 +27,12 @@
 		F42860C81ED0444800D498EC /* NSURLSession+SynchronuosTask.m in Sources */ = {isa = PBXBuildFile; fileRef = F42860C71ED0444800D498EC /* NSURLSession+SynchronuosTask.m */; };
 		F42860D11ED0DC0B00D498EC /* MOODLESearchItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F42860D01ED0DC0B00D498EC /* MOODLESearchItemDetailViewController.m */; };
 		F42860D41ED1EFB000D498EC /* MOODLESearchResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F42860D31ED1EFB000D498EC /* MOODLESearchResultTableViewCell.m */; };
+		F43143D11F0FE96E00B07352 /* MOODLEChat.m in Sources */ = {isa = PBXBuildFile; fileRef = F43143D01F0FE96E00B07352 /* MOODLEChat.m */; };
+		F43143D51F10082900B07352 /* MOODLEMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43143D41F10082900B07352 /* MOODLEMessagesViewController.m */; };
+		F43143D91F1015CA00B07352 /* MOODLEChatItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F43143D81F1015CA00B07352 /* MOODLEChatItemTableViewCell.m */; };
+		F43144021F103AE300B07352 /* MOODLEChatMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F43144011F103AE300B07352 /* MOODLEChatMessageTableViewCell.m */; };
+		F43144051F103B1700B07352 /* SGBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F43144041F103B1700B07352 /* SGBubbleView.m */; };
+		F43144081F1048FD00B07352 /* MOODLEChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F43144071F1048FD00B07352 /* MOODLEChatMessage.m */; };
 		F4327CE31EEAFFE400AA4A7B /* MOODLELinguisticListFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F4327CE21EEAFFE400AA4A7B /* MOODLELinguisticListFormatter.m */; };
 		F43852921EC90AEC005BC780 /* MOODLECourseSectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F43852911EC90AEC005BC780 /* MOODLECourseSectionTableViewCell.m */; };
 		F43852961EC922D7005BC780 /* MOODLECourseSectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F43852951EC922D7005BC780 /* MOODLECourseSectionItem.m */; };
@@ -90,6 +96,18 @@
 		F42860D01ED0DC0B00D498EC /* MOODLESearchItemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOODLESearchItemDetailViewController.m; sourceTree = "<group>"; };
 		F42860D21ED1EFB000D498EC /* MOODLESearchResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOODLESearchResultTableViewCell.h; sourceTree = "<group>"; };
 		F42860D31ED1EFB000D498EC /* MOODLESearchResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOODLESearchResultTableViewCell.m; sourceTree = "<group>"; };
+		F43143CF1F0FE96E00B07352 /* MOODLEChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOODLEChat.h; sourceTree = "<group>"; };
+		F43143D01F0FE96E00B07352 /* MOODLEChat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOODLEChat.m; sourceTree = "<group>"; };
+		F43143D31F10082900B07352 /* MOODLEMessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOODLEMessagesViewController.h; sourceTree = "<group>"; };
+		F43143D41F10082900B07352 /* MOODLEMessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOODLEMessagesViewController.m; sourceTree = "<group>"; };
+		F43143D71F1015CA00B07352 /* MOODLEChatItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOODLEChatItemTableViewCell.h; sourceTree = "<group>"; };
+		F43143D81F1015CA00B07352 /* MOODLEChatItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOODLEChatItemTableViewCell.m; sourceTree = "<group>"; };
+		F43144001F103AE300B07352 /* MOODLEChatMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOODLEChatMessageTableViewCell.h; sourceTree = "<group>"; };
+		F43144011F103AE300B07352 /* MOODLEChatMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOODLEChatMessageTableViewCell.m; sourceTree = "<group>"; };
+		F43144031F103B1700B07352 /* SGBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGBubbleView.h; sourceTree = "<group>"; };
+		F43144041F103B1700B07352 /* SGBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGBubbleView.m; sourceTree = "<group>"; };
+		F43144061F1048FD00B07352 /* MOODLEChatMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOODLEChatMessage.h; sourceTree = "<group>"; };
+		F43144071F1048FD00B07352 /* MOODLEChatMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOODLEChatMessage.m; sourceTree = "<group>"; };
 		F4327CE11EEAFFE400AA4A7B /* MOODLELinguisticListFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOODLELinguisticListFormatter.h; sourceTree = "<group>"; };
 		F4327CE21EEAFFE400AA4A7B /* MOODLELinguisticListFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOODLELinguisticListFormatter.m; sourceTree = "<group>"; };
 		F43852901EC90AEC005BC780 /* MOODLECourseSectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOODLECourseSectionTableViewCell.h; sourceTree = "<group>"; };
@@ -225,10 +243,8 @@
 				F4D49AF11EC8B16600CA1193 /* MOODLECourseDetailViewController.m */,
 				F43852971EC93A7E005BC780 /* MOODLECourseSectionDetailViewController.h */,
 				F43852981EC93A7E005BC780 /* MOODLECourseSectionDetailViewController.m */,
-				F46AA5D81F05958E0072F05C /* MOODLEForumViewController.h */,
-				F46AA5D91F05958E0072F05C /* MOODLEForumViewController.m */,
-				F4AB59B01F05B470007670E5 /* MOODLEForumEntryViewController.h */,
-				F4AB59B11F05B470007670E5 /* MOODLEForumEntryViewController.m */,
+				F42860CA1ED0843E00D498EC /* Search View Controller */,
+				F43143CB1F0FE90000B07352 /* Forum View Controller */,
 			);
 			path = "Course Table View Controller";
 			sourceTree = "<group>";
@@ -241,7 +257,8 @@
 				F42860CF1ED0DC0B00D498EC /* MOODLESearchItemDetailViewController.h */,
 				F42860D01ED0DC0B00D498EC /* MOODLESearchItemDetailViewController.m */,
 			);
-			path = "Search View Controller";
+			name = "Search View Controller";
+			path = "../Search View Controller";
 			sourceTree = "<group>";
 		};
 		F42860CE1ED0DA4D00D498EC /* Navigation Controller */ = {
@@ -251,6 +268,74 @@
 				F4D49AF71EC8C17E00CA1193 /* MOODLETabBarController.m */,
 			);
 			path = "Navigation Controller";
+			sourceTree = "<group>";
+		};
+		F43143CB1F0FE90000B07352 /* Forum View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F46AA5D81F05958E0072F05C /* MOODLEForumViewController.h */,
+				F46AA5D91F05958E0072F05C /* MOODLEForumViewController.m */,
+				F4AB59B01F05B470007670E5 /* MOODLEForumEntryViewController.h */,
+				F4AB59B11F05B470007670E5 /* MOODLEForumEntryViewController.m */,
+			);
+			name = "Forum View Controller";
+			sourceTree = "<group>";
+		};
+		F43143CC1F0FE92100B07352 /* Forum Entities */ = {
+			isa = PBXGroup;
+			children = (
+				F46AA5CF1F0564D00072F05C /* MOODLEForum.h */,
+				F46AA5D01F0564D00072F05C /* MOODLEForum.m */,
+				F46AA5D51F058E120072F05C /* MOODLEForumEntry.h */,
+				F46AA5D61F058E120072F05C /* MOODLEForumEntry.m */,
+				F4AB59B31F05B645007670E5 /* MOODLEForumPost.h */,
+				F4AB59B41F05B645007670E5 /* MOODLEForumPost.m */,
+			);
+			name = "Forum Entities";
+			sourceTree = "<group>";
+		};
+		F43143CD1F0FE92B00B07352 /* Course Entities */ = {
+			isa = PBXGroup;
+			children = (
+				F4D49ADC1EC85C4400CA1193 /* MOODLECourse.h */,
+				F4D49ADD1EC85C4400CA1193 /* MOODLECourse.m */,
+				F4D49AE71EC8AF1300CA1193 /* MOODLECourseSection.h */,
+				F4D49AE81EC8AF1300CA1193 /* MOODLECourseSection.m */,
+				F43852941EC922D7005BC780 /* MOODLECourseSectionItem.h */,
+				F43852951EC922D7005BC780 /* MOODLECourseSectionItem.m */,
+			);
+			name = "Course Entities";
+			sourceTree = "<group>";
+		};
+		F43143CE1F0FE93800B07352 /* Chat Entities */ = {
+			isa = PBXGroup;
+			children = (
+				F43143CF1F0FE96E00B07352 /* MOODLEChat.h */,
+				F43143D01F0FE96E00B07352 /* MOODLEChat.m */,
+				F43144061F1048FD00B07352 /* MOODLEChatMessage.h */,
+				F43144071F1048FD00B07352 /* MOODLEChatMessage.m */,
+			);
+			name = "Chat Entities";
+			sourceTree = "<group>";
+		};
+		F43143D21F1007E200B07352 /* Messages View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F43143D31F10082900B07352 /* MOODLEMessagesViewController.h */,
+				F43143D41F10082900B07352 /* MOODLEMessagesViewController.m */,
+			);
+			name = "Messages View Controller";
+			sourceTree = "<group>";
+		};
+		F43143D61F1015A700B07352 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				F43143D71F1015CA00B07352 /* MOODLEChatItemTableViewCell.h */,
+				F43143D81F1015CA00B07352 /* MOODLEChatItemTableViewCell.m */,
+				F43144001F103AE300B07352 /* MOODLEChatMessageTableViewCell.h */,
+				F43144011F103AE300B07352 /* MOODLEChatMessageTableViewCell.m */,
+			);
+			name = Messages;
 			sourceTree = "<group>";
 		};
 		F4372A3B1EDF70AE005A1427 /* Data Model */ = {
@@ -347,6 +432,8 @@
 				F45778A11EE78E8D0000B130 /* HUProgressIndicator.m */,
 				F4C841621EE8437800B0EEC5 /* MOODLEActivityView.h */,
 				F4C841631EE8437800B0EEC5 /* MOODLEActivityView.m */,
+				F43144031F103B1700B07352 /* SGBubbleView.h */,
+				F43144041F103B1700B07352 /* SGBubbleView.m */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -428,19 +515,10 @@
 		F4D49ADF1EC85EE600CA1193 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				F43143CE1F0FE93800B07352 /* Chat Entities */,
 				F4DBA3521F05183D00922921 /* Unused Entities */,
-				F4D49ADC1EC85C4400CA1193 /* MOODLECourse.h */,
-				F4D49ADD1EC85C4400CA1193 /* MOODLECourse.m */,
-				F4D49AE71EC8AF1300CA1193 /* MOODLECourseSection.h */,
-				F4D49AE81EC8AF1300CA1193 /* MOODLECourseSection.m */,
-				F43852941EC922D7005BC780 /* MOODLECourseSectionItem.h */,
-				F43852951EC922D7005BC780 /* MOODLECourseSectionItem.m */,
-				F46AA5CF1F0564D00072F05C /* MOODLEForum.h */,
-				F46AA5D01F0564D00072F05C /* MOODLEForum.m */,
-				F46AA5D51F058E120072F05C /* MOODLEForumEntry.h */,
-				F46AA5D61F058E120072F05C /* MOODLEForumEntry.m */,
-				F4AB59B31F05B645007670E5 /* MOODLEForumPost.h */,
-				F4AB59B41F05B645007670E5 /* MOODLEForumPost.m */,
+				F43143CD1F0FE92B00B07352 /* Course Entities */,
+				F43143CC1F0FE92100B07352 /* Forum Entities */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -472,16 +550,16 @@
 			children = (
 				F4D49AC61EC71A9800CA1193 /* MOODLELoginViewController.h */,
 				F4D49AC71EC71A9800CA1193 /* MOODLELoginViewController.m */,
-				F40518451EDB04AE008B3BF7 /* MOODLESettingsViewController.h */,
-				F40518461EDB04AE008B3BF7 /* MOODLESettingsViewController.m */,
 				F43D50271EE17A4200BF534E /* MOODLEProgressViewController.h */,
 				F43D50281EE17A4200BF534E /* MOODLEProgressViewController.m */,
 				F46BE0391EC9E9B60060F934 /* MOODLEDocumentViewController.h */,
 				F46BE03A1EC9E9B60060F934 /* MOODLEDocumentViewController.m */,
 				F42860CE1ED0DA4D00D498EC /* Navigation Controller */,
 				F42860C91ED0842900D498EC /* Course Table View Controller */,
-				F42860CA1ED0843E00D498EC /* Search View Controller */,
+				F43143D21F1007E200B07352 /* Messages View Controller */,
 				F49623FA1EF35CA6005464F4 /* Documents View Controller */,
+				F40518451EDB04AE008B3BF7 /* MOODLESettingsViewController.h */,
+				F40518461EDB04AE008B3BF7 /* MOODLESettingsViewController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -509,6 +587,7 @@
 				F45ED36B1F0B12AC0086CEED /* Course */,
 				F45ED36C1F0B12B30086CEED /* Search */,
 				F45ED36A1F0B12970086CEED /* Forum */,
+				F43143D61F1015A700B07352 /* Messages */,
 			);
 			path = "Custom Cells";
 			sourceTree = "<group>";
@@ -677,7 +756,11 @@
 				F4D49AEE1EC8B07E00CA1193 /* MOODLECourseTableViewCell.m in Sources */,
 				F46AA5D11F0564D00072F05C /* MOODLEForum.m in Sources */,
 				F40518441EDAE506008B3BF7 /* MOODLETableViewRowAction.m in Sources */,
+				F43143D51F10082900B07352 /* MOODLEMessagesViewController.m in Sources */,
+				F43144081F1048FD00B07352 /* MOODLEChatMessage.m in Sources */,
+				F43144021F103AE300B07352 /* MOODLEChatMessageTableViewCell.m in Sources */,
 				F46AA5D41F056BAE0072F05C /* MOODLEPersistentStoreCoordinator.m in Sources */,
+				F43143D91F1015CA00B07352 /* MOODLEChatItemTableViewCell.m in Sources */,
 				F46AA5DA1F05958E0072F05C /* MOODLEForumViewController.m in Sources */,
 				F4AB59B51F05B645007670E5 /* MOODLEForumPost.m in Sources */,
 				F43852921EC90AEC005BC780 /* MOODLECourseSectionTableViewCell.m in Sources */,
@@ -686,6 +769,8 @@
 				F4FC68F41ECC552800854DA1 /* MOODLECourseSectionItemTableViewCell.m in Sources */,
 				F4D49AE51EC88F1300CA1193 /* KeychainWrapper.m in Sources */,
 				F4D198851EE2C8F400BF64F2 /* AccessibilityCoordinator.m in Sources */,
+				F43144051F103B1700B07352 /* SGBubbleView.m in Sources */,
+				F43143D11F0FE96E00B07352 /* MOODLEChat.m in Sources */,
 				F46AA5D71F058E120072F05C /* MOODLEForumEntry.m in Sources */,
 				F42860D41ED1EFB000D498EC /* MOODLESearchResultTableViewCell.m in Sources */,
 				F46D48181EF1C86400634C89 /* MOODLEDocumentsTableViewController.m in Sources */,

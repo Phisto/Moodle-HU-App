@@ -41,7 +41,6 @@
 @property (nonatomic, strong) IBOutlet UILabel *moodleTitleLabel;
 @property (nonatomic, strong) IBOutlet UILabel *semesterLabel;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
-
 @property (nonatomic, strong) MOODLEActivityView *loadingView;
 
 @end
@@ -191,7 +190,6 @@
     self.tableView.dataSource = self;
     self.tableView.hidden = NO;
     [self.tableView reloadData];
-    
     [self.view setNeedsDisplay];
 }
 

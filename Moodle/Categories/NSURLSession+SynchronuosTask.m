@@ -27,6 +27,7 @@
     
     result = nil;
     
+    NSLog(@"1");
     sem = dispatch_semaphore_create(0);
     
     [[self dataTaskWithRequest:request
@@ -44,7 +45,7 @@
              }] resume];
     
     dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);
-    
+    NSLog(@"2");
     return result;
 }
 

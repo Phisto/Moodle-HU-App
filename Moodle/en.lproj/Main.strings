@@ -106,3 +106,33 @@
 
 /* Class = "UILabel"; text = "Mi, 23. Juli 2017, 13:21"; ObjectID = "HrG-3J-PGc"; */
 "HrG-3J-PGc.text" = "";
+
+/* Class = "UITabBarItem"; title = "Nachrichten"; ObjectID = "mAB-OY-5SX"; */
+"mAB-OY-5SX.title" = "Nachrichten";
+
+/* Class = "UILabel"; text = "29.12.2019 23:69"; ObjectID = "0xF-Fq-EsC"; */
+"0xF-Fq-EsC.text" = "";
+
+/* Class = "UILabel"; text = "Karin Mustermuster"; ObjectID = "L7C-tk-bje"; */
+"L7C-tk-bje.text" = "";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "Pmm-pg-6Gt"; */
+"Pmm-pg-6Gt.text" = "";
+
+/* Class = "UINavigationItem"; title = "Nachrichten"; ObjectID = "F6K-N9-AXB"; */
+"F6K-N9-AXB.title" = "Nachrichten";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "0Pj-gQ-h7I"; */
+"0Pj-gQ-h7I.text" = "";
+
+/* Class = "UILabel"; text = "Mo, 16. November 2015"; ObjectID = "467-pH-Z5O"; */
+"467-pH-Z5O.text" = "";
+
+/* Class = "UILabel"; text = " 21:59"; ObjectID = "GUw-Bb-n9M"; */
+"GUw-Bb-n9M.text" = "";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "W76-Fh-boC"; */
+"W76-Fh-boC.text" = "";
+
+/* Class = "UILabel"; text = " 21:59"; ObjectID = "oFN-F0-Dga"; */
+"oFN-F0-Dga.text" = "";

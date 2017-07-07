@@ -18,6 +18,7 @@
 #import "MOODLEForum.h"
 #import "MOODLEForumEntry.h"
 #import "MOODLEForumPost.h"
+#import "MOODLEChat.h"
 
 /* Parser */
 #import "TFHpple.h"
@@ -787,6 +788,60 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
     }
   
     return [mutePostArray copy];
+}
+
+
+- (NSArray<MOODLEChat *> *)chatItemsFromData:(NSData *)data {
+    
+    TFHpple *chatParser = [TFHpple hppleWithHTMLData:data];
+    NSMutableArray *muteChatArray = [NSMutableArray array];
+    
+    NSString *queryString = @"//div[@class='singlemessage']";
+    NSArray *messageNodeArray = [chatParser searchWithXPathQuery:queryString];
+    for (TFHppleElement *messageNode in messageNodeArray) {
+        
+        
+        MOODLEChat *chatItem = [[MOODLEChat alloc] init];
+     
+        for (TFHppleElement *messageNodeChild in messageNode.children) {
+            
+            if ([[messageNodeChild objectForKey:@"class"] isEqualToString:@"otheruser"]) {
+            
+                if (messageNodeChild.children.count == 2) {
+                    NSString *partner = messageNodeChild.content;
+                    chatItem.chatPartnerName = partner;
+                }
+                
+            }
+            else if ([[messageNodeChild objectForKey:@"class"] isEqualToString:@"messagedate"]) {
+                
+                NSString *date = [messageNodeChild content];
+                chatItem.lastMessageDate = date;
+            }
+            else if ([[messageNodeChild objectForKey:@"class"] isEqualToString:@"themessage"]) {
+                
+                NSString *message = [messageNodeChild content];
+                chatItem.previewMessage = message;
+            }
+            else if ([[messageNodeChild objectForKey:@"class"] isEqualToString:@"messagecontext"]) {
+                
+                for (TFHppleElement *element in messageNodeChild.children) {
+                    
+                    if ([element.tagName isEqualToString:@"a"]) {
+                        
+                        NSString *urlString = [element objectForKey:@"href"];
+                        if (urlString) {
+                            
+                            chatItem.chatURL = [NSURL URLWithString:urlString];
+                            [muteChatArray addObject:chatItem];
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    return [muteChatArray copy];
 }
 
 

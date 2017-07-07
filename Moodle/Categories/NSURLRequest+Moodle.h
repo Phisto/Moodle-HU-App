@@ -53,6 +53,12 @@ NS_ASSUME_NONNULL_BEGIN
  
  */
 + (instancetype)moodle_logoutRequestWithSessionKey:(NSString *)sessionKey;
+/**
+ 
+ Creates and returns a NSURLRequest object configured to perform a recent chat fetch request.
+ 
+ */
++ (instancetype)moodle_recentChatsRequest;
 
 @end
 NS_ASSUME_NONNULL_END
