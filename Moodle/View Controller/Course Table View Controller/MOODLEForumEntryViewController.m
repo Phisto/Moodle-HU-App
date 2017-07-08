@@ -77,6 +77,19 @@
 }
 
 
+- (BOOL)shouldAutorotate {
+    
+    UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+    BOOL rotate = !UIInterfaceOrientationIsPortrait(interfaceOrientation);
+    return rotate;
+}
+
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -86,7 +86,9 @@
 
 - (BOOL)shouldAutorotate {
     
-    return NO;
+    UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+    BOOL rotate = !UIInterfaceOrientationIsPortrait(interfaceOrientation);
+    return rotate;
 }
 
 
