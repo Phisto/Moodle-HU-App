@@ -22,6 +22,8 @@
 #import "MOODLECourseSectionItem.h"
 #import "MOODLEForum.h"
 #import "MOODLEForumEntry.h"
+#import "MOODLEChat.h"
+#import "MOODLEChatMessage.h"
 
 /* Networking */
 #import "NSURLSession+SynchronuosTask.h"
@@ -484,6 +486,40 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
     completionHandler(YES, nil);
 }
 
+
+- (void)loadChatMessagesforChat:(MOODLEChat *)chat withCompletionHandler:(void (^)(BOOL success, NSError * _Nullable error))completionHandler {
+    
+    
+    NSURLResponse * response = nil;
+    NSError *requestError = nil;
+    NSData *data = [self.currentSession moodle_sendSynchronousRequest:[NSURLRequest requestWithURL:chat.chatURL]
+                                                    returningResponse:&response
+                                                                error:&requestError];
+    
+    // handle basic connectivity issues here
+    if (!data) {
+        completionHandler(NO, (requestError) ? requestError : nil);
+        return;
+    }
+    
+    // handle HTTP errors here
+    if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
+        
+        NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
+        
+        if (statusCode != 200) {
+            
+            NSString *locString = NSLocalizedString(@"Bei der Kommunikation mit dem Server, ist ein Fehler aufgetreten.", @"Error message if the server wont respond with 200 http response code.");
+            NSDictionary *userInfo = @{NSLocalizedDescriptionKey: locString};
+            NSError *newError = [NSError errorWithDomain:@"de.simonsserver.Moodle" code:1990 userInfo:userInfo];
+            completionHandler(NO, newError);
+            return;
+        }
+    }
+    
+    chat.messages = [self.xmlParser chatMessagesFromData:data];
+    completionHandler(YES, nil);
+}
 
 #pragma mark - Data Loading Methodes
 

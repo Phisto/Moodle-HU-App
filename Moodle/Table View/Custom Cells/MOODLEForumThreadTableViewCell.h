@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  The cell identifier for this table view cell.
  */
-static NSString *MOODLEForumThreadTableViewCellIdentifier = @"MOODLEForumThreadTableViewCellIdentifier";
+static NSString * const MOODLEForumThreadTableViewCellIdentifier = @"MOODLEForumThreadTableViewCellIdentifier";
 
 
 

@@ -9,5 +9,11 @@
 
 #import "MOODLECourseTableViewCell.h"
 
+///-----------------------
+/// @name IMPLEMENTATION
+///-----------------------
+
+
+
 @implementation MOODLECourseTableViewCell
 @end

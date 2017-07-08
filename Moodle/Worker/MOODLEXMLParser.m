@@ -19,6 +19,7 @@
 #import "MOODLEForumEntry.h"
 #import "MOODLEForumPost.h"
 #import "MOODLEChat.h"
+#import "MOODLEChatMessage.h"
 
 /* Parser */
 #import "TFHpple.h"
@@ -832,12 +833,98 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
                         NSString *urlString = [element objectForKey:@"href"];
                         if (urlString) {
                             
+                            urlString = [urlString stringByAppendingString:@"&history=1"];
                             chatItem.chatURL = [NSURL URLWithString:urlString];
                             [muteChatArray addObject:chatItem];
                         }
                     }
                 }
             }
+        }
+    }
+    
+    return [muteChatArray copy];
+}
+
+- (NSArray<NSArray<MOODLEChatMessage *> *> *)chatMessagesFromData:(NSData *)data {
+    
+    TFHpple *messageParser = [TFHpple hppleWithHTMLData:data];
+    NSMutableArray *muteChatArray = [NSMutableArray array];
+    
+    NSString *queryString = @"//div[@class='mdl-left messagehistory']";
+    NSArray *messageNodeArray = [messageParser searchWithXPathQuery:queryString];
+    if (messageNodeArray.count > 1) {
+        
+        NSMutableArray *muteArray = nil;
+        NSString *currentDate = nil;
+        
+        for (TFHppleElement *element in ((TFHppleElement *)messageNodeArray[1]).children) {
+
+            if ([[element objectForKey:@"class"] isEqualToString:@"mdl-align"]) {
+            
+                if (muteArray.count > 0) {
+                    
+                    [muteChatArray addObject:[muteArray copy]];
+                    muteArray = [NSMutableArray array];
+                }
+                else {
+                    
+                    muteArray = [NSMutableArray array];
+                }
+                
+                currentDate = [element content];
+            }
+            if ([[element objectForKey:@"class"] containsString:@"messagecontent"]) {
+                
+                MOODLEChatMessage *message = [[MOODLEChatMessage alloc] init];
+                if (currentDate) message.date = currentDate;
+                
+                if ([[element.firstChild objectForKey:@"class"] isEqualToString:@"message me"]) {
+                    
+                    for (TFHppleElement *child in element.firstChild.children) {
+                        
+                        if ([[child objectForKey:@"class"] isEqualToString:@"message-meta"]) {
+                            
+                            message.time = [child content];
+                        }
+                        if ([[child objectForKey:@"class"] isEqualToString:@"text"]) {
+                            
+                            message.rawMessage = [child content];
+                        }
+                    }
+                    message.isFromSelf = YES;
+                    
+                    if (message.date && message.time && message.rawMessage) {
+                        
+                        [muteArray addObject:message];
+                    }
+                }
+                else if ([[element.firstChild objectForKey:@"class"] isEqualToString:@"message other"]) {
+                    
+                    for (TFHppleElement *child in element.firstChild.children) {
+                        
+                        if ([[child objectForKey:@"class"] isEqualToString:@"message-meta"]) {
+                            
+                            message.time = [child content];
+                        }
+                        if ([[child objectForKey:@"class"] isEqualToString:@"text"]) {
+                            
+                            message.rawMessage = [child content];
+                        }
+                    }
+                    message.isFromSelf = NO;
+                    
+                    if (message.date && message.time && message.rawMessage) {
+                        
+                        [muteArray addObject:message];
+                    }
+                }
+            }
+        }
+        
+        if (muteArray.count > 0) {
+            
+            [muteChatArray addObject:[muteArray copy]];
         }
     }
     

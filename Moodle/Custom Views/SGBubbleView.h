@@ -11,7 +11,7 @@
 /**
  
  
- An UIView subclass drawing as a 'bubble'.
+ An UIView subclass drawing as a 'bubble'. Designable.
  
  
  */

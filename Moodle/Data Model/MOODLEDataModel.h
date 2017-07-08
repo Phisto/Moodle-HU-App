@@ -222,6 +222,17 @@ NS_ASSUME_NONNULL_BEGIN
  
  */
 - (void)loadChatsWithCompletionHandler:(void (^)(BOOL success, NSError * _Nullable error))completionHandler;
+/**
+ 
+ @brief This method will load all messages for a given chat.
+ 
+ @param chat The chat for which to load the messages.
+ 
+ @param completionHandler The completion handler to call when loading is complete.
+ 
+ */
+- (void)loadChatMessagesforChat:(MOODLEChat *)chat withCompletionHandler:(void (^)(BOOL success, NSError * _Nullable error))completionHandler;
+
 
 #pragma mark - Documents
 ///----------------------

@@ -9,6 +9,8 @@
 
 @import Foundation;
 
+@class MOODLEChatMessage;
+
 /**
  
  A MOODLEChat object represents a chat with another Moodle user.
@@ -36,9 +38,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong) NSURL *chatURL;
 /**
- The messages of this chat.
+ The messages associated with this chat.
  */
-@property (nullable, nonatomic, strong) NSArray *messages;
+@property (nullable, nonatomic, strong) NSArray<NSArray<MOODLEChatMessage *> *> *messages;
 
 @end
 NS_ASSUME_NONNULL_END

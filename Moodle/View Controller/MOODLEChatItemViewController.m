@@ -1,27 +1,24 @@
 /*
  *
- *  MOODLEMessagesViewController.m
+ *  MOODLEChatItemViewController.m
  *  Moodle
  *
  *  Copyright © 2017 Simon Gaus. All rights reserved.
  *
  */
 
-#import "MOODLEMessagesViewController.h"
+#import "MOODLEChatItemViewController.h"
 
 /* Data Model */
 #import "MOODLEDataModel.h"
 #import "MOODLEChat.h"
+#import "MOODLEChatMessage.h"
 
 /* Custom Views */
 #import "MOODLEActivityView.h"
 
 /* Table View */
-#import "MOODLEChatItemTableViewCell.h"
-
-/* View Controller */
-#import "MOODLEChatItemViewController.h"
-
+#import "MOODLEChatMessageTableViewCell.h"
 
 ///-----------------------
 /// @name CATEGORIES
@@ -29,7 +26,7 @@
 
 
 
-@interface MOODLEMessagesViewController (/* Private */)
+@interface MOODLEChatItemViewController (/* Private */)
 
 // UI
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
@@ -47,14 +44,14 @@
 
 
 
-@implementation MOODLEMessagesViewController
+@implementation MOODLEChatItemViewController
 #pragma mark - View Controller Methodes
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    if (!self.dataModel.chats) {
+    if (!self.chat.messages) {
         
         // show activity indicator..
         [self.view addSubview:self.loadingView];
@@ -62,7 +59,7 @@
         // perform web request on background thread ...
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul), ^{
             
-            [self.dataModel loadChatsWithCompletionHandler:^(BOOL success, NSError * _Nullable error) {
+            [self.dataModel loadChatMessagesforChat:self.chat withCompletionHandler:^(BOOL success, NSError * _Nullable error) {
                 if (success) { [self finishedContentLoading]; }
                 else { [self failedToLoadContentWithMessage:error.localizedDescription]; }
             }];
@@ -170,48 +167,78 @@
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.sectionFooterHeight = 0.0f;
     self.tableView.hidden = NO;
     [self.tableView reloadData];
     [self.view setNeedsDisplay];
 }
-
 
 #pragma mark - Table View Methodes
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    MOODLEChat *chat = self.dataModel.chats[indexPath.row];
-    MOODLEChatItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MOODLEChatItemTableViewCellIdentifier
-                                                                        forIndexPath:indexPath];
-    cell.chatPartnerLabel.text = chat.chatPartnerName;
-    cell.timeLabel.text = chat.lastMessageDate;
-    cell.previewMessageView.text = chat.previewMessage;
-    cell.profileImagView.image = [UIImage imageNamed:@"user_icon"];
-    return cell;
-}
-
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    MOODLEChatMessage *messages = self.chat.messages[indexPath.section][indexPath.row];
+    MOODLEChatMessageTableViewCell *cell;
+    if (messages.isFromSelf) {
+        
+        cell = [tableView dequeueReusableCellWithIdentifier:MOODLEChatMessageTableViewCellIdentifierLEFT
+                                               forIndexPath:indexPath];
+    }
+    else {
+        
+        cell = [tableView dequeueReusableCellWithIdentifier:MOODLEChatMessageTableViewCellIdentifierRIGHT
+                                               forIndexPath:indexPath];
+    }
     
-    return 100.0f;
+    cell.timeLabel.text = messages.time;
+    cell.textView.text = messages.rawMessage;
+
+    return cell;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return self.dataModel.chats.count;
+     return self.chat.messages[section].count;
 }
 
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    MOODLEChat *chat = self.dataModel.chats[indexPath.row];
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    MOODLEChatItemViewController *newViewController = (MOODLEChatItemViewController *)[storyboard instantiateViewControllerWithIdentifier:@"chatItemViewController"];
-    newViewController.chat = chat;
-    newViewController.navigationItem.title = chat.chatPartnerName;
-    [self.navigationController pushViewController:newViewController animated:YES];
+    return self.chat.messages.count;
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    
+    return 35.0f;
+}
+
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    
+    UIView *view = [[UIView alloc] init];
+    UILabel *label = [[UILabel alloc] init];
+    
+    // view
+    view.backgroundColor = [UIColor whiteColor];
+    
+    // label
+    label.text = self.chat.messages[section].firstObject.date;
+    label.textAlignment = NSTextAlignmentCenter;
+    [label sizeToFit];
+    label.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [view addSubview:label];
+    
+    // autolayout
+    [label.leadingAnchor constraintEqualToAnchor:view.leadingAnchor constant:0].active = YES;
+    [label.trailingAnchor constraintEqualToAnchor:view.trailingAnchor constant:0].active = YES;
+    [label.topAnchor constraintEqualToAnchor:view.topAnchor constant:0].active = YES;
+    [label.bottomAnchor constraintEqualToAnchor:view.bottomAnchor constant:0].active = YES;
+
+    return view;
 }
 
 

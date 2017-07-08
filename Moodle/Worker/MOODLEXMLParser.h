@@ -9,7 +9,7 @@
 
 @import Foundation;
 
-@class MOODLEDataModel, MOODLECourse, MOODLECourseSection, MOODLEForum, MOODLEForumPost, MOODLEChat;
+@class MOODLEDataModel, MOODLECourse, MOODLECourseSection, MOODLEForum, MOODLEForumPost, MOODLEChat, MOODLEChatMessage;
 
 /**
  
@@ -111,6 +111,16 @@ NS_ASSUME_NONNULL_BEGIN
  
  */
 - (NSArray<MOODLEChat *> *)chatItemsFromData:(NSData *)data;
+/**
+ 
+ Creates a HTML string from data and parses the string searching for chat messages.
+ 
+ @param data The data to parse.
+ 
+ @return An array of chat messages or an empty array.
+ 
+ */
+- (NSArray<NSArray<MOODLEChatMessage *> *> *)chatMessagesFromData:(NSData *)data;
 
 @end
 NS_ASSUME_NONNULL_END

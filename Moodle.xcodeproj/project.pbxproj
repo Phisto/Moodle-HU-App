@@ -33,6 +33,7 @@
 		F43144021F103AE300B07352 /* MOODLEChatMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F43144011F103AE300B07352 /* MOODLEChatMessageTableViewCell.m */; };
 		F43144051F103B1700B07352 /* SGBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F43144041F103B1700B07352 /* SGBubbleView.m */; };
 		F43144081F1048FD00B07352 /* MOODLEChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F43144071F1048FD00B07352 /* MOODLEChatMessage.m */; };
+		F431440B1F1056F600B07352 /* MOODLEChatItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F431440A1F1056F600B07352 /* MOODLEChatItemViewController.m */; };
 		F4327CE31EEAFFE400AA4A7B /* MOODLELinguisticListFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F4327CE21EEAFFE400AA4A7B /* MOODLELinguisticListFormatter.m */; };
 		F43852921EC90AEC005BC780 /* MOODLECourseSectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F43852911EC90AEC005BC780 /* MOODLECourseSectionTableViewCell.m */; };
 		F43852961EC922D7005BC780 /* MOODLECourseSectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F43852951EC922D7005BC780 /* MOODLECourseSectionItem.m */; };
@@ -108,6 +109,8 @@
 		F43144041F103B1700B07352 /* SGBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGBubbleView.m; sourceTree = "<group>"; };
 		F43144061F1048FD00B07352 /* MOODLEChatMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOODLEChatMessage.h; sourceTree = "<group>"; };
 		F43144071F1048FD00B07352 /* MOODLEChatMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOODLEChatMessage.m; sourceTree = "<group>"; };
+		F43144091F1056F600B07352 /* MOODLEChatItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOODLEChatItemViewController.h; sourceTree = "<group>"; };
+		F431440A1F1056F600B07352 /* MOODLEChatItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOODLEChatItemViewController.m; sourceTree = "<group>"; };
 		F4327CE11EEAFFE400AA4A7B /* MOODLELinguisticListFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOODLELinguisticListFormatter.h; sourceTree = "<group>"; };
 		F4327CE21EEAFFE400AA4A7B /* MOODLELinguisticListFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOODLELinguisticListFormatter.m; sourceTree = "<group>"; };
 		F43852901EC90AEC005BC780 /* MOODLECourseSectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOODLECourseSectionTableViewCell.h; sourceTree = "<group>"; };
@@ -323,6 +326,8 @@
 			children = (
 				F43143D31F10082900B07352 /* MOODLEMessagesViewController.h */,
 				F43143D41F10082900B07352 /* MOODLEMessagesViewController.m */,
+				F43144091F1056F600B07352 /* MOODLEChatItemViewController.h */,
+				F431440A1F1056F600B07352 /* MOODLEChatItemViewController.m */,
 			);
 			name = "Messages View Controller";
 			sourceTree = "<group>";
@@ -515,10 +520,10 @@
 		F4D49ADF1EC85EE600CA1193 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				F43143CE1F0FE93800B07352 /* Chat Entities */,
 				F4DBA3521F05183D00922921 /* Unused Entities */,
 				F43143CD1F0FE92B00B07352 /* Course Entities */,
 				F43143CC1F0FE92100B07352 /* Forum Entities */,
+				F43143CE1F0FE93800B07352 /* Chat Entities */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -769,6 +774,7 @@
 				F4FC68F41ECC552800854DA1 /* MOODLECourseSectionItemTableViewCell.m in Sources */,
 				F4D49AE51EC88F1300CA1193 /* KeychainWrapper.m in Sources */,
 				F4D198851EE2C8F400BF64F2 /* AccessibilityCoordinator.m in Sources */,
+				F431440B1F1056F600B07352 /* MOODLEChatItemViewController.m in Sources */,
 				F43144051F103B1700B07352 /* SGBubbleView.m in Sources */,
 				F43143D11F0FE96E00B07352 /* MOODLEChat.m in Sources */,
 				F46AA5D71F058E120072F05C /* MOODLEForumEntry.m in Sources */,

@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  The cell identifier for this table view cell.
  */
-static NSString *MOODLECourseSectionItemTableViewCellIdentifier = @"MOODLECourseSectionItemTableViewCellIdentifier";
+static NSString * const MOODLECourseSectionItemTableViewCellIdentifier = @"MOODLECourseSectionItemTableViewCellIdentifier";
 
 
 
