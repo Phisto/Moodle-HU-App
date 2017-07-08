@@ -122,14 +122,8 @@
 /* Class = "UINavigationItem"; title = "Nachrichten"; ObjectID = "F6K-N9-AXB"; */
 "F6K-N9-AXB.title" = "Nachrichten";
 
-/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "0Pj-gQ-h7I"; */
-"0Pj-gQ-h7I.text" = "";
-
 /* Class = "UILabel"; text = " 21:59"; ObjectID = "GUw-Bb-n9M"; */
 "GUw-Bb-n9M.text" = "";
-
-/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "W76-Fh-boC"; */
-"W76-Fh-boC.text" = "";
 
 /* Class = "UILabel"; text = " 21:59"; ObjectID = "oFN-F0-Dga"; */
 "oFN-F0-Dga.text" = "";

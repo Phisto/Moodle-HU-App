@@ -252,7 +252,7 @@
         CGFloat height = [self textViewHeightForAttributedText:doc.attributedText
                                                       andWidth:tableView.frame.size.width-20.0f];// substract margins
         
-        return (height > 150.0f) ? 150.0f : height;
+        return height;
     }
     
     return 44.0f;
