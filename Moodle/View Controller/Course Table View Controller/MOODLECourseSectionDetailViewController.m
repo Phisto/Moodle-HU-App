@@ -32,19 +32,15 @@
 @property (nonatomic, strong) IBOutlet UILabel *sectionTitleLabel;
 @property (nonatomic, strong) IBOutlet UITextView *textView;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
-
 // Table View
 @property (nonatomic, strong) NSArray<NSString *> *tableViewSegmentTitles;
 @property (nonatomic, strong) NSArray<NSArray<MOODLECourseSectionItem *> *> *tableViewSegments;
-
 // Constraints
 @property (nonatomic, strong) IBOutlet NSLayoutConstraint *textViewHeight;
 @property (nonatomic, strong) IBOutlet NSLayoutConstraint *seperatorHeigthOneContraint;
 @property (nonatomic, strong) IBOutlet NSLayoutConstraint *seperatorHeigthTwoContraint;
-
 // Other
 @property (nonatomic, strong) UITextView *heightCalculationTextView;
-
 // State
 @property (nonatomic, readwrite) BOOL didLayoutTextView;
 

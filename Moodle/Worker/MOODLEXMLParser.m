@@ -889,7 +889,7 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
                         }
                         if ([[child objectForKey:@"class"] isEqualToString:@"text"]) {
                             
-                            message.rawMessage = [child content];
+                            message.rawMessage = [child raw];
                         }
                     }
                     message.isFromSelf = YES;
@@ -909,7 +909,7 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
                         }
                         if ([[child objectForKey:@"class"] isEqualToString:@"text"]) {
                             
-                            message.rawMessage = [child content];
+                            message.rawMessage = [child raw];
                         }
                     }
                     message.isFromSelf = NO;

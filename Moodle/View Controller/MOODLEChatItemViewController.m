@@ -33,6 +33,8 @@
 @property (nonatomic, strong) MOODLEActivityView *loadingView;
 // Data
 @property (nonatomic, strong) MOODLEDataModel *dataModel;
+// Other
+@property (nonatomic, strong) UITextView *heightCalculationTextView;
 
 @end
 
@@ -178,9 +180,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    MOODLEChatMessage *messages = self.chat.messages[indexPath.section][indexPath.row];
+    MOODLEChatMessage *message = self.chat.messages[indexPath.section][indexPath.row];
     MOODLEChatMessageTableViewCell *cell;
-    if (messages.isFromSelf) {
+    if (message.isFromSelf) {
         
         cell = [tableView dequeueReusableCellWithIdentifier:MOODLEChatMessageTableViewCellIdentifierLEFT
                                                forIndexPath:indexPath];
@@ -191,8 +193,8 @@
                                                forIndexPath:indexPath];
     }
     
-    cell.timeLabel.text = messages.time;
-    cell.textView.text = messages.rawMessage;
+    cell.timeLabel.text = message.time;
+    cell.textView.attributedText = message.attributedMessage;
 
     return cell;
 }
@@ -207,6 +209,15 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
     return self.chat.messages.count;
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    MOODLEChatMessage *message = self.chat.messages[indexPath.section][indexPath.row];
+    CGFloat height = [self textViewHeightForAttributedText:message.attributedMessage
+                                                  andWidth:(tableView.frame.size.width*0.7f)-10];// substract width margin
+    return height+16.0f; // add height margins
 }
 
 
@@ -242,7 +253,29 @@
 }
 
 
+#pragma mark - Helper Methodes
+
+
+- (CGFloat)textViewHeightForAttributedText:(NSAttributedString *)text andWidth:(CGFloat)width {
+    
+    [self.heightCalculationTextView setAttributedText:text];
+    CGSize size = [self.heightCalculationTextView sizeThatFits:CGSizeMake(width, FLT_MAX)];
+    
+    return size.height;
+}
+
+
 #pragma mark - Lazy/Getter Methodes
+
+
+- (UITextView *)heightCalculationTextView {
+    
+    if (!_heightCalculationTextView) {
+        
+        _heightCalculationTextView = [[UITextView alloc] init];
+    }
+    return _heightCalculationTextView;
+}
 
 
 - (MOODLEDataModel *)dataModel {

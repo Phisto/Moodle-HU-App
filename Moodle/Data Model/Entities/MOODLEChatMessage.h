@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  The message.
  */
-@property (nonatomic, strong) NSAttributedString *attributedMessage;
+@property (nonatomic, readonly) NSAttributedString *attributedMessage;
 /**
  The raw message.
  */
