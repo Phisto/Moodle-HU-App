@@ -464,10 +464,17 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
             
             NSString *className = [child objectForKey:@"class"];
             
-            if ([className isEqualToString:@"topic starter"]) {
+            if ([className containsString:@"topic starter"]) {
                 
-                entry.entryURL = [NSURL URLWithString:[child.children.firstObject objectForKey:@"href"]];
-                entry.title = child.content;
+                if (child.children.count == 2) {
+                    
+                    entry.entryURL = [NSURL URLWithString:[child.children[1] objectForKey:@"href"]];
+                    entry.title = child.content;
+                }
+                else {
+                    entry.entryURL = [NSURL URLWithString:[child.children.firstObject objectForKey:@"href"]];
+                    entry.title = child.content;
+                }
             }
             
             else if ([className isEqualToString:@"author"]) {
@@ -845,6 +852,7 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
     
     return [muteChatArray copy];
 }
+
 
 - (NSArray<NSArray<MOODLEChatMessage *> *> *)chatMessagesFromData:(NSData *)data {
     
