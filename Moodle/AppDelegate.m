@@ -28,7 +28,7 @@
 
 // As I dont know when the moodle session will invalidate,
 // just assumed that a session will invalidate after two houres
-static NSUInteger const kLoginTimeoutTrashold = 3600;
+static NSTimeInterval const kLoginTimeoutTrashold = 7200.0f;
 
 
 
