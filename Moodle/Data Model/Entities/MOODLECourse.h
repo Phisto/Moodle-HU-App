@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  An array of course sections.
  */
-@property (nonatomic, strong) NSArray<MOODLECourseSection *> *courseSections;
+@property (nullable, nonatomic, strong) NSArray<MOODLECourseSection *> *courseSections;
 /**
  The general forum associated with the course.
  */

@@ -176,6 +176,8 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
                                                delegateQueue:[NSOperationQueue mainQueue]];
     
     self.hiddenCourses = [NSMutableArray array];
+    
+    self.store = [[MOODLEPersistentStoreCoordinator alloc] init];
 }
 
 
@@ -520,6 +522,7 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
     chat.messages = [self.xmlParser chatMessagesFromData:data];
     completionHandler(YES, nil);
 }
+
 
 #pragma mark - Data Loading Methodes
 

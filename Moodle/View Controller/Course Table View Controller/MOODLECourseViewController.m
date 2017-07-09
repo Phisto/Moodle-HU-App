@@ -84,6 +84,17 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    /*
+     Memory usage reduction for an (small) example account was about 0,3 - 0,4 MB.
+     
+     In my opinion it would be ridiculous to have to reload all content just to save that
+     small amount of memory.
+     
+     for (MOODLECourse *course in self.dataModel.courseArray) {
+     
+        course.courseSections = nil;
+     }
+     */
 }
 
 

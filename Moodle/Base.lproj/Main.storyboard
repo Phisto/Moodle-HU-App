@@ -1387,8 +1387,8 @@
                     <connections>
                         <segue destination="2BP-Cf-FdR" kind="relationship" relationship="viewControllers" id="3Iy-E7-FOX"/>
                         <segue destination="AiU-pY-4D7" kind="relationship" relationship="viewControllers" id="gjA-fE-8di"/>
-                        <segue destination="j2Q-0v-0TT" kind="relationship" relationship="viewControllers" id="KCA-3K-F0N"/>
                         <segue destination="XSK-fw-i8c" kind="relationship" relationship="viewControllers" id="gN7-ec-Gd2"/>
+                        <segue destination="j2Q-0v-0TT" kind="relationship" relationship="viewControllers" id="KCA-3K-F0N"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aI0-Lj-4GG" userLabel="First Responder" sceneMemberID="firstResponder"/>
