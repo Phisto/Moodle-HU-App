@@ -24,6 +24,7 @@
 		F40006201ECE236800FB1F60 /* MOODLEXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F400061F1ECE236800FB1F60 /* MOODLEXMLParser.m */; };
 		F40518441EDAE506008B3BF7 /* MOODLETableViewRowAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F40518431EDAE506008B3BF7 /* MOODLETableViewRowAction.m */; };
 		F40518471EDB04AE008B3BF7 /* MOODLESettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F40518461EDB04AE008B3BF7 /* MOODLESettingsViewController.m */; };
+		F40D0D171F124CF200A98A0D /* UIView+Autolayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D0D161F124CF200A98A0D /* UIView+Autolayout.m */; };
 		F42860C81ED0444800D498EC /* NSURLSession+SynchronuosTask.m in Sources */ = {isa = PBXBuildFile; fileRef = F42860C71ED0444800D498EC /* NSURLSession+SynchronuosTask.m */; };
 		F42860D11ED0DC0B00D498EC /* MOODLESearchItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F42860D01ED0DC0B00D498EC /* MOODLESearchItemDetailViewController.m */; };
 		F42860D41ED1EFB000D498EC /* MOODLESearchResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F42860D31ED1EFB000D498EC /* MOODLESearchResultTableViewCell.m */; };
@@ -91,6 +92,8 @@
 		F40518431EDAE506008B3BF7 /* MOODLETableViewRowAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOODLETableViewRowAction.m; sourceTree = "<group>"; };
 		F40518451EDB04AE008B3BF7 /* MOODLESettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOODLESettingsViewController.h; sourceTree = "<group>"; };
 		F40518461EDB04AE008B3BF7 /* MOODLESettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOODLESettingsViewController.m; sourceTree = "<group>"; };
+		F40D0D151F124CF200A98A0D /* UIView+Autolayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Autolayout.h"; sourceTree = "<group>"; };
+		F40D0D161F124CF200A98A0D /* UIView+Autolayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Autolayout.m"; sourceTree = "<group>"; };
 		F42860C61ED0444800D498EC /* NSURLSession+SynchronuosTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSession+SynchronuosTask.h"; sourceTree = "<group>"; };
 		F42860C71ED0444800D498EC /* NSURLSession+SynchronuosTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLSession+SynchronuosTask.m"; sourceTree = "<group>"; };
 		F42860CF1ED0DC0B00D498EC /* MOODLESearchItemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOODLESearchItemDetailViewController.h; sourceTree = "<group>"; };
@@ -546,6 +549,8 @@
 				F42860C71ED0444800D498EC /* NSURLSession+SynchronuosTask.m */,
 				F451B6161EE59E9D00BE056E /* UIColor+Moodle.h */,
 				F451B6171EE59E9D00BE056E /* UIColor+Moodle.m */,
+				F40D0D151F124CF200A98A0D /* UIView+Autolayout.h */,
+				F40D0D161F124CF200A98A0D /* UIView+Autolayout.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -768,6 +773,7 @@
 				F43143D91F1015CA00B07352 /* MOODLEChatItemTableViewCell.m in Sources */,
 				F46AA5DA1F05958E0072F05C /* MOODLEForumViewController.m in Sources */,
 				F4AB59B51F05B645007670E5 /* MOODLEForumPost.m in Sources */,
+				F40D0D171F124CF200A98A0D /* UIView+Autolayout.m in Sources */,
 				F43852921EC90AEC005BC780 /* MOODLECourseSectionTableViewCell.m in Sources */,
 				F4D49AD61EC790BE00CA1193 /* TFHpple.m in Sources */,
 				F4D49AC81EC71A9800CA1193 /* MOODLELoginViewController.m in Sources */,
