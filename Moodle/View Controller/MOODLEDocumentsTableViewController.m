@@ -38,7 +38,7 @@ static NSString * const KMOODLEPathExtentsionMP3 = @"mp3";
 
 
 
-@interface MOODLEDocumentsTableViewController (/* Private */)
+@interface MOODLEDocumentsTableViewController (/* Private */)<UIDocumentInteractionControllerDelegate>
 
 // UI
 @property (nonatomic, strong) UILabel *noContentInformationLabel;
@@ -47,6 +47,8 @@ static NSString * const KMOODLEPathExtentsionMP3 = @"mp3";
 // Table View
 @property (nonatomic, strong) NSArray<NSArray<NSURL *> *> *tableData;
 @property (nonatomic, strong) NSArray<NSString *> *titleArray;
+// View Controller
+@property (nonatomic, strong) UIDocumentInteractionController *documentController;
 
 @end
 
@@ -72,6 +74,13 @@ static NSString * const KMOODLEPathExtentsionMP3 = @"mp3";
     [self reloadTableData];
     // reload table view
     [self.tableView reloadData];
+    // unhide tabbar and remove document controller if we come from document
+    if (self.documentController) {
+     
+        self.tabBarController.tabBar.hidden = NO;
+        self.documentController.delegate = nil;
+        self.documentController = nil;
+    }
 }
 
 
@@ -270,13 +279,42 @@ static NSString * const KMOODLEPathExtentsionMP3 = @"mp3";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    
-    MOODLEDocumentViewController *newViewController = (MOODLEDocumentViewController *)[storyboard instantiateViewControllerWithIdentifier:@"urlRessourceViewController"];
     NSURL *ressourceURL = self.tableData[indexPath.section][indexPath.row];
-    newViewController.item = ressourceURL;
-    [self.navigationController pushViewController:newViewController animated:YES];
+    
+    self.documentController = [UIDocumentInteractionController interactionControllerWithURL:ressourceURL];
+    self.documentController.delegate = self;
+    self.documentController.name = [[ressourceURL lastPathComponent] stringByDeletingPathExtension];
+    BOOL erfolg = [self.documentController presentPreviewAnimated:YES];
+    self.tabBarController.tabBar.hidden = YES;
+    
+    if (!erfolg) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        MOODLEDocumentViewController *newViewController = (MOODLEDocumentViewController *)[storyboard instantiateViewControllerWithIdentifier:@"urlRessourceViewController"];
+        newViewController.item = ressourceURL;
+        [self.navigationController pushViewController:newViewController animated:YES];
+    }
 }
+
+
+#pragma mark - Document Interaction Controller Delegate Methodes
+
+
+- (UIViewController *)documentInteractionControllerViewControllerForPreview:(UIDocumentInteractionController *)controller {
+    
+    return self.navigationController;
+}
+
+/*
+- (UIView *)documentInteractionControllerViewForPreview:(UIDocumentInteractionController *)controller {
+    
+    return self.view;
+}
+
+- (CGRect)documentInteractionControllerRectForPreview:(UIDocumentInteractionController *)controller {
+    
+    return self.view.frame;
+}
+*/
 
 
 #pragma mark - Lazy/Getter Methodes

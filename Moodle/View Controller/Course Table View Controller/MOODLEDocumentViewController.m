@@ -24,18 +24,17 @@
 
 
 
-@interface MOODLEDocumentViewController (/* Private */)
+@interface MOODLEDocumentViewController (/* Private */)<UIDocumentInteractionControllerDelegate>
 
 // UI
 @property (nonatomic, strong) IBOutlet UIWebView *webView;
 @property (nonatomic, strong) MOODLEActivityView *loadingView;
-
 // Data Model
 @property (nonatomic, strong) MOODLEDataModel *dataModel;
-
 // State
-@property (nonatomic, readwrite) BOOL isMoodleItem;
-@property (nonatomic, readwrite) BOOL isURL;
+@property (nonatomic, readwrite) BOOL didPresentDocumentInteractionController;
+// View Controller
+@property (nonatomic, strong) UIDocumentInteractionController *documentController;
 
 @end
 
@@ -56,21 +55,30 @@
     // call super
     [super viewWillAppear:animated];
     
-    // hide nav bar when scrolling web content ...
-    self.navigationController.hidesBarsOnSwipe = YES;
-    
-    // add activity indicator
-    [self.view addSubview:self.loadingView];
-    
-    // set webview delegate
-    self.webView.delegate = self;
-    self.webView.hidden = YES;
-    
-    // prepare for audio
-    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
-    
-    // load item
-    [self loadItem];
+    if (self.didPresentDocumentInteractionController) {
+        
+        self.documentController.delegate = nil;
+        self.documentController = nil;
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    else {
+        
+        // hide nav bar when scrolling web content ...
+        self.navigationController.hidesBarsOnSwipe = YES;
+        
+        // add activity indicator
+        [self.view addSubview:self.loadingView];
+        
+        // set webview delegate
+        self.webView.delegate = self;
+        self.webView.hidden = YES;
+        
+        // prepare for audio
+        [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+        
+        // load item
+        [self loadItem];
+    }
 }
 
 
@@ -96,9 +104,20 @@
             NSURL *localURL = [self.dataModel localRessourceURLForItem:moodelItem];
             // the file is cached
             if (localURL) {
-
-                // load resource
-                [self.webView loadRequest:[NSURLRequest requestWithURL:localURL]];
+                
+                self.documentController = [UIDocumentInteractionController interactionControllerWithURL:localURL];
+                self.documentController.delegate = self;
+                self.documentController.name = [[localURL lastPathComponent] stringByDeletingPathExtension];
+                BOOL erfolg = [self.documentController presentPreviewAnimated:YES];
+                self.didPresentDocumentInteractionController = erfolg;
+                if (!erfolg) { // fallback
+                
+                    // free controller
+                    self.documentController.delegate = nil;
+                    self.documentController = nil;
+                    // load resource via webview
+                    [self.webView loadRequest:[NSURLRequest requestWithURL:localURL]];
+                }
             }
             // there is no space to cache
             else if (self.dataModel.sizeOfCachedDocuments >= self.dataModel.documentCacheSize) {
@@ -114,8 +133,29 @@
                     [self.dataModel saveRemoteRessource:moodelItem
                                       completionHandler:^(BOOL success, NSError * _Nullable error, NSURL * _Nullable localRessourceURL) {
                                           
-                                          // load resource
-                                          [self.webView loadRequest:[NSURLRequest requestWithURL:(success) ? localRessourceURL : moodelItem.resourceURL]];
+                                          dispatch_async(dispatch_get_main_queue(), ^{
+                                          
+                                          if (success) {
+                                              
+                                              self.documentController = [UIDocumentInteractionController interactionControllerWithURL:localRessourceURL];
+                                              self.documentController.delegate = self;
+                                              self.documentController.name = [[localRessourceURL lastPathComponent] stringByDeletingPathExtension];
+                                              BOOL erfolg = [self.documentController presentPreviewAnimated:YES];
+                                              self.didPresentDocumentInteractionController = erfolg;
+                                              if (!erfolg) { // fallback
+                                                  
+                                                  // free controller
+                                                  self.documentController.delegate = nil;
+                                                  self.documentController = nil;
+                                                  // load resource via webview
+                                                  [self.webView loadRequest:[NSURLRequest requestWithURL:localRessourceURL]];
+                                              }
+                                          }
+                                          else {
+                                              // load resource
+                                              [self.webView loadRequest:[NSURLRequest requestWithURL:moodelItem.resourceURL]];
+                                          }
+                                          });
                                       }];
                 });
             }
@@ -162,10 +202,6 @@
     
     // stop
     [self.webView stopLoading];
-    
-    if (self.isMovingFromParentViewController) {
-        [self.webView loadHTMLString:@"" baseURL:nil];
-    }
 }
 
 
@@ -294,6 +330,23 @@
                        animated:YES
                      completion:nil];
 
+}
+
+
+#pragma mark - Document Interaction Controller Delegate Methodes
+
+
+- (UIViewController *)documentInteractionControllerViewControllerForPreview:(UIDocumentInteractionController *)controller {
+    
+    return self.navigationController;
+}
+
+
+- (void)documentInteractionControllerWillBeginPreview:(UIDocumentInteractionController *)controller {
+    
+    [self.loadingView removeFromSuperview];
+    self.loadingView = nil;
+    self.webView.hidden = NO;
 }
 
 
