@@ -65,6 +65,16 @@ Document                   |  Course Search
 
 * OS: iOS 9.3 and above
 
+## How it works
+
+The app does not use a designated API to access the Moodle instance, it basically downloads the relevant web pages and searches the HTML for the needed information.
+It does not store this data on the device.
+
+## Security
+
+The password and username are stored in the devices [keychain](https://developer.apple.com/library/content/documentation/Security/Conceptual/keychainServConcepts/01introduction/introduction.html).
+However, hidden/favoured course titles and files are not stored in particular secure fashion and will be readable if one has unencrypted access to the devices file system. Chat messages are not stored on the device.
+
 ## Credits
 
 #### Icons
