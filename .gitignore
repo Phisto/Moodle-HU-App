@@ -30,6 +30,8 @@ xcuserdata/
 # Icon must end with two \r
 Icon
 
+# Exclude icon templates
+Moodle Icons Vorlagen
 
 # Thumbnails
 ._*
