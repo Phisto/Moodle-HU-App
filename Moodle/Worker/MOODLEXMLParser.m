@@ -305,11 +305,11 @@ static NSString * const kDocIconURLAudio = @"mp3-24";
                 // set flags
                 section.hasContenLoaded = canLoadContent;
                 section.isIndependentSection = !canLoadContent;
-                
-                
+
                 if (canLoadContent) {
                     
                     NSArray<MOODLECourseSectionItem *> *items = [self sectionItems:sectionElement.children[2]];
+                    
                     
                     NSMutableArray *muteDocArray = [NSMutableArray array];
                     NSMutableArray *muteAssignArray = [NSMutableArray array];

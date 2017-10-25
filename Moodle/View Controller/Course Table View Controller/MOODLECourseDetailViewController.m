@@ -214,7 +214,7 @@
         
         returnCell = [tableView dequeueReusableCellWithIdentifier:@"forumCell" forIndexPath:indexPath];
         if (!self.item.forum.hasEntries && !self.item.announcements.hasEntries) {
-            
+                
             returnCell.backgroundColor = [UIColor lightGrayColor];
             returnCell.userInteractionEnabled = NO;
         }
@@ -276,7 +276,6 @@
             accesibility_label = [accesibility_label stringByAppendingString:listFormatter.list];
             NSString *locString = NSLocalizedString(@" vorhanden", @"Appended to accessibility label.");
             cell.accessibilityLabel = [accesibility_label stringByAppendingString:locString];;
-            
             
             cell.sectionTitleLabel.text = section.sectionTitle;
             

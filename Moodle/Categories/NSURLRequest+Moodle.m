@@ -21,8 +21,7 @@
 
 + (instancetype)moodle_loginRequestWithUsername:(NSString *)username andPassword:(NSString *)password {
     
-    NSString *post = @"username=%@&password=%@&rememberusername=0";
-    post = [NSString stringWithFormat:post, username, password];
+    NSString *post = [NSString stringWithFormat:@"username=%@&password=%@&rememberusername=0", username, password];
     
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     

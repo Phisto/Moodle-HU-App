@@ -369,6 +369,8 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
         }
     }
     
+    item.courseSections = [self prepareFirstCourseSection:item.courseSections];
+    
     completionHandler(YES, nil);
 }
 
@@ -637,7 +639,34 @@ typedef void (^CompletionBlock)(BOOL success, NSError *error);
 }
 
 
-#pragma mark -  Ordering/Hide Methodes
+#pragma mark -  Ordering/Hide/Prepare Methodes
+
+
+- (NSArray<MOODLECourseSection *> *)prepareFirstCourseSection:(NSArray<MOODLECourseSection *> *)courseSections {
+    
+    MOODLECourseSection *firstSection = courseSections[0];
+    
+    if (firstSection.hasDocuments || firstSection.hasWiki || firstSection.hasAssignment ) {
+        
+        NSMutableArray *muteArray = [NSMutableArray arrayWithArray:courseSections];
+        
+        MOODLECourseSection *newSection = [[MOODLECourseSection alloc] init];
+        newSection.sectionTitle = @"Kursmaterial";
+        newSection.sectionDescriptionRaw = @"Kursübergreifende Materialien";
+        
+        newSection.documentItemArray = (firstSection.documentItemArray > 0) ? [firstSection.documentItemArray copy] : nil;
+        newSection.assignmentsItemArray = (firstSection.assignmentsItemArray > 0) ? [firstSection.assignmentsItemArray copy] : nil;
+        newSection.wikisItemArray = (firstSection.wikisItemArray > 0) ? [firstSection.wikisItemArray copy] : nil;
+        
+        newSection.hasContenLoaded = YES;
+        
+        [muteArray insertObject:newSection atIndex:1];
+        
+        return [muteArray copy];
+    }
+    
+    return courseSections;
+}
 
 
 - (void)updateCourseItemsOrderingWeight {
