@@ -34,16 +34,16 @@ so I dont know if it fits the need of users who utilize this technologie.
 
 Login                      |  My Courses
 :-------------------------:|:-------------------------:
-![](http://simonsapps.de/hu_moodle_screenshots/login.png)  |  ![](http://simonsapps.de/hu_moodle_screenshots/kurse.png)
+![](http://simonsapps.de/misc/hu_moodle_screenshots/login.png)  |  ![](http://simonsapps.de/misc/hu_moodle_screenshots/kurse.png)
 
 
 Course Detail              |  Course Section
 :-------------------------:|:-------------------------:
-![](http://simonsapps.de/hu_moodle_screenshots/kurs_detail.png)  |  ![](http://simonsapps.de/hu_moodle_screenshots/kurs_sektion.png)
+![](http://simonsapps.de/misc/hu_moodle_screenshots/kurs_detail.png)  |  ![](http://simonsapps.de/misc/hu_moodle_screenshots/kurs_sektion.png)
 
 Document                   |  Course Search
 :-------------------------:|:-------------------------:
-![](http://simonsapps.de/hu_moodle_screenshots/dokument.png)  |  ![](http://simonsapps.de/hu_moodle_screenshots/suche.png)
+![](http://simonsapps.de/misc/hu_moodle_screenshots/dokument.png)  |  ![](http://simonsapps.de/misc/hu_moodle_screenshots/suche.png)
 
 
 ## Install
