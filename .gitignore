@@ -157,11 +157,11 @@ playground.xcworkspace
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 
-### Exclude documentation ###
+### Exclude documentation+ ###
 
-Docs/*
 Docs/
-
+Docs/
+Moodle\ Icons\ Vorlagen/
 
 
 
