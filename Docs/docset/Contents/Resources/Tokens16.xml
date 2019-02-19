@@ -1,16 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MOODLECourseViewController.html">
+	<File path="Classes/MOODLECourseSectionDetailViewController.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MOODLECourseViewController</TokenIdentifier>
-			<Abstract type="html">The MOODLECourseViewController is responsible for presenting an array of MOODLECourse objects to the user.</Abstract>
-			<DeclaredIn>MOODLECourseViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLECourseSectionDetailViewController</TokenIdentifier>
+			<Abstract type="html">The MOODLECourseSectionDetailViewController is responsible for presenting a MOODLECourseSection object to the user.</Abstract>
+			<DeclaredIn>MOODLECourseSectionDetailViewController.h</DeclaredIn>
             
 			
 			<NodeRef refid="16"/>
 		</Token>
 		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSectionDetailViewController/setSection:</TokenIdentifier>
+			<Abstract type="html">The MOODLECourseSection to present.</Abstract>
+			<DeclaredIn>MOODLECourseSectionDetailViewController.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) MOODLECourseSection *section</Declaration>
+			
+			
+			<Anchor>//api/name/section</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSectionDetailViewController/section</TokenIdentifier>
+			<Abstract type="html">The MOODLECourseSection to present.</Abstract>
+			<DeclaredIn>MOODLECourseSectionDetailViewController.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) MOODLECourseSection *section</Declaration>
+			
+			
+			<Anchor>//api/name/section</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseSectionDetailViewController/section</TokenIdentifier>
+			<Abstract type="html">The MOODLECourseSection to present.</Abstract>
+			<DeclaredIn>MOODLECourseSectionDetailViewController.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) MOODLECourseSection *section</Declaration>
+			
+			
+			<Anchor>//api/name/section</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
 		
         
         

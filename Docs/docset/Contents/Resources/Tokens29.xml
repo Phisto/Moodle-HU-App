@@ -1,16 +1,412 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MOODLEUser.html">
+	<File path="Classes/MOODLEForumPostTableViewCell.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MOODLEUser</TokenIdentifier>
-			<Abstract type="html">A MOODLECourse object represents a MOODLE course.</Abstract>
-			<DeclaredIn>MOODLEUser.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLEForumPostTableViewCell</TokenIdentifier>
+			<Abstract type="html">This class is a custom UITableViewCell subclass, which is designed to show all relevant information about a forum post.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
             
 			
 			<NodeRef refid="29"/>
 		</Token>
 		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPostTableViewCell/setProfileImageView:</TokenIdentifier>
+			<Abstract type="html">The image view to display the authors profile picture.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UIImageView *profileImageView</Declaration>
+			
+			
+			<Anchor>//api/name/profileImageView</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPostTableViewCell/profileImageView</TokenIdentifier>
+			<Abstract type="html">The image view to display the authors profile picture.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UIImageView *profileImageView</Declaration>
+			
+			
+			<Anchor>//api/name/profileImageView</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumPostTableViewCell/profileImageView</TokenIdentifier>
+			<Abstract type="html">The image view to display the authors profile picture.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UIImageView *profileImageView</Declaration>
+			
+			
+			<Anchor>//api/name/profileImageView</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPostTableViewCell/setTitleLabel:</TokenIdentifier>
+			<Abstract type="html">The label to display the posts title.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *titleLabel</Declaration>
+			
+			
+			<Anchor>//api/name/titleLabel</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPostTableViewCell/titleLabel</TokenIdentifier>
+			<Abstract type="html">The label to display the posts title.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *titleLabel</Declaration>
+			
+			
+			<Anchor>//api/name/titleLabel</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumPostTableViewCell/titleLabel</TokenIdentifier>
+			<Abstract type="html">The label to display the posts title.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *titleLabel</Declaration>
+			
+			
+			<Anchor>//api/name/titleLabel</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPostTableViewCell/setOpLabel:</TokenIdentifier>
+			<Abstract type="html">The label to indicate if the post is from the thread starter.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *opLabel</Declaration>
+			
+			
+			<Anchor>//api/name/opLabel</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPostTableViewCell/opLabel</TokenIdentifier>
+			<Abstract type="html">The label to indicate if the post is from the thread starter.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *opLabel</Declaration>
+			
+			
+			<Anchor>//api/name/opLabel</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumPostTableViewCell/opLabel</TokenIdentifier>
+			<Abstract type="html">The label to indicate if the post is from the thread starter.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *opLabel</Declaration>
+			
+			
+			<Anchor>//api/name/opLabel</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPostTableViewCell/setAuthorLabel:</TokenIdentifier>
+			<Abstract type="html">The label to display the authors name.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *authorLabel</Declaration>
+			
+			
+			<Anchor>//api/name/authorLabel</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPostTableViewCell/authorLabel</TokenIdentifier>
+			<Abstract type="html">The label to display the authors name.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *authorLabel</Declaration>
+			
+			
+			<Anchor>//api/name/authorLabel</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumPostTableViewCell/authorLabel</TokenIdentifier>
+			<Abstract type="html">The label to display the authors name.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *authorLabel</Declaration>
+			
+			
+			<Anchor>//api/name/authorLabel</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPostTableViewCell/setTimeLabel:</TokenIdentifier>
+			<Abstract type="html">The label to display the time the post was registered.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *timeLabel</Declaration>
+			
+			
+			<Anchor>//api/name/timeLabel</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPostTableViewCell/timeLabel</TokenIdentifier>
+			<Abstract type="html">The label to display the time the post was registered.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *timeLabel</Declaration>
+			
+			
+			<Anchor>//api/name/timeLabel</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumPostTableViewCell/timeLabel</TokenIdentifier>
+			<Abstract type="html">The label to display the time the post was registered.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *timeLabel</Declaration>
+			
+			
+			<Anchor>//api/name/timeLabel</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPostTableViewCell/setTextView:</TokenIdentifier>
+			<Abstract type="html">The teyt view to display the posts content.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UITextView *textView</Declaration>
+			
+			
+			<Anchor>//api/name/textView</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPostTableViewCell/textView</TokenIdentifier>
+			<Abstract type="html">The teyt view to display the posts content.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UITextView *textView</Declaration>
+			
+			
+			<Anchor>//api/name/textView</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumPostTableViewCell/textView</TokenIdentifier>
+			<Abstract type="html">The teyt view to display the posts content.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UITextView *textView</Declaration>
+			
+			
+			<Anchor>//api/name/textView</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPostTableViewCell/setPostRankLabel:</TokenIdentifier>
+			<Abstract type="html">The label to display the posts rank in the thread.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *postRankLabel</Declaration>
+			
+			
+			<Anchor>//api/name/postRankLabel</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPostTableViewCell/postRankLabel</TokenIdentifier>
+			<Abstract type="html">The label to display the posts rank in the thread.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *postRankLabel</Declaration>
+			
+			
+			<Anchor>//api/name/postRankLabel</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumPostTableViewCell/postRankLabel</TokenIdentifier>
+			<Abstract type="html">The label to display the posts rank in the thread.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *postRankLabel</Declaration>
+			
+			
+			<Anchor>//api/name/postRankLabel</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPostTableViewCell/setRessourceContainerView:</TokenIdentifier>
+			<Abstract type="html">The ressource container view.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UIView *ressourceContainerView</Declaration>
+			
+			
+			<Anchor>//api/name/ressourceContainerView</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPostTableViewCell/ressourceContainerView</TokenIdentifier>
+			<Abstract type="html">The ressource container view.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UIView *ressourceContainerView</Declaration>
+			
+			
+			<Anchor>//api/name/ressourceContainerView</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumPostTableViewCell/ressourceContainerView</TokenIdentifier>
+			<Abstract type="html">The ressource container view.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UIView *ressourceContainerView</Declaration>
+			
+			
+			<Anchor>//api/name/ressourceContainerView</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPostTableViewCell/setRessourceTitleLabel:</TokenIdentifier>
+			<Abstract type="html">The label to display the ressource title.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *ressourceTitleLabel</Declaration>
+			
+			
+			<Anchor>//api/name/ressourceTitleLabel</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPostTableViewCell/ressourceTitleLabel</TokenIdentifier>
+			<Abstract type="html">The label to display the ressource title.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *ressourceTitleLabel</Declaration>
+			
+			
+			<Anchor>//api/name/ressourceTitleLabel</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumPostTableViewCell/ressourceTitleLabel</TokenIdentifier>
+			<Abstract type="html">The label to display the ressource title.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *ressourceTitleLabel</Declaration>
+			
+			
+			<Anchor>//api/name/ressourceTitleLabel</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPostTableViewCell/setRessourceIconImageView:</TokenIdentifier>
+			<Abstract type="html">The image view to display the ressource type icon.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UIImageView *ressourceIconImageView</Declaration>
+			
+			
+			<Anchor>//api/name/ressourceIconImageView</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPostTableViewCell/ressourceIconImageView</TokenIdentifier>
+			<Abstract type="html">The image view to display the ressource type icon.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UIImageView *ressourceIconImageView</Declaration>
+			
+			
+			<Anchor>//api/name/ressourceIconImageView</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumPostTableViewCell/ressourceIconImageView</TokenIdentifier>
+			<Abstract type="html">The image view to display the ressource type icon.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UIImageView *ressourceIconImageView</Declaration>
+			
+			
+			<Anchor>//api/name/ressourceIconImageView</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPostTableViewCell/setRessourceContainerHeightConstraint:</TokenIdentifier>
+			<Abstract type="html">The NSLayoutConstraint for the height of the ressourceContainerView.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet NSLayoutConstraint *ressourceContainerHeightConstraint</Declaration>
+			
+			
+			<Anchor>//api/name/ressourceContainerHeightConstraint</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPostTableViewCell/ressourceContainerHeightConstraint</TokenIdentifier>
+			<Abstract type="html">The NSLayoutConstraint for the height of the ressourceContainerView.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet NSLayoutConstraint *ressourceContainerHeightConstraint</Declaration>
+			
+			
+			<Anchor>//api/name/ressourceContainerHeightConstraint</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumPostTableViewCell/ressourceContainerHeightConstraint</TokenIdentifier>
+			<Abstract type="html">The NSLayoutConstraint for the height of the ressourceContainerView.</Abstract>
+			<DeclaredIn>MOODLEForumPostTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet NSLayoutConstraint *ressourceContainerHeightConstraint</Declaration>
+			
+			
+			<Anchor>//api/name/ressourceContainerHeightConstraint</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
 		
         
         

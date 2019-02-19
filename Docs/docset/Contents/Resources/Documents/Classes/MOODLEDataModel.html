@@ -56,6 +56,8 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/chats">chats</option>
+		
 		<option value="//api/name/courseArray">courseArray</option>
 		
 		<option value="//api/name/documentCacheSize">documentCacheSize</option>
@@ -97,6 +99,12 @@
 		<option value="//api/name/deleteUserCredentials">- deleteUserCredentials</option>
 		
 		<option value="//api/name/init">- init</option>
+		
+		<option value="//api/name/loadChatMessagesforChat:withCompletionHandler:">- loadChatMessagesforChat:withCompletionHandler:</option>
+		
+		<option value="//api/name/loadChatsWithCompletionHandler:">- loadChatsWithCompletionHandler:</option>
+		
+		<option value="//api/name/loadForumEntryContentForEntry:completionHandler:">- loadForumEntryContentForEntry:completionHandler:</option>
 		
 		<option value="//api/name/loadItemContentForItem:completionHandler:">- loadItemContentForItem:completionHandler:</option>
 		
@@ -383,6 +391,47 @@
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSMutableArray&lt;MOODLECourse*&gt; *hiddenCourses</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/chats" title="chats"></a>
+	<h3 class="method-title"><code><a href="#//api/name/chats">&nbsp;&nbsp;chats</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A mutable array of MOODLE chat items.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nullable, nonatomic, strong) NSArray&lt;MOODLEChat*&gt; *chats</code></div>
 
 		    
 			
@@ -1164,6 +1213,175 @@
 			
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadForumEntryContentForEntry:completionHandler:" title="loadForumEntryContentForEntry:completionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadForumEntryContentForEntry:completionHandler:">&ndash;&nbsp;loadForumEntryContentForEntry:completionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method will load the content of a given forum thread.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)loadForumEntryContentForEntry:(MOODLEForumEntry *)<em>entry</em> completionHandler:(void ( ^ ) ( BOOL , NSError *_Nullable error ))<em>completionHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>entry</code></th>
+						<td><p>The entry for which to load the content.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionHandler</code></th>
+						<td><p>The completion handler to call when loading is complete.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadChatsWithCompletionHandler:" title="loadChatsWithCompletionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadChatsWithCompletionHandler:">&ndash;&nbsp;loadChatsWithCompletionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method will load all &lsquo;recent&rsquo; <a href="#//api/name/chats">chats</a> for this Moodle account.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)loadChatsWithCompletionHandler:(void ( ^ ) ( BOOL success , NSError *_Nullable error ))<em>completionHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionHandler</code></th>
+						<td><p>The completion handler to call when loading is complete.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadChatMessagesforChat:withCompletionHandler:" title="loadChatMessagesforChat:withCompletionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadChatMessagesforChat:withCompletionHandler:">&ndash;&nbsp;loadChatMessagesforChat:withCompletionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method will load all messages for a given chat.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)loadChatMessagesforChat:(MOODLEChat *)<em>chat</em> withCompletionHandler:(void ( ^ ) ( BOOL success , NSError *_Nullable error ))<em>completionHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>chat</code></th>
+						<td><p>The chat for which to load the messages.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionHandler</code></th>
+						<td><p>The completion handler to call when loading is complete.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEDataModel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -1494,7 +1712,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 -. All rights reserved. Updated: 2017-06-29</p>
+						<p class="copyright">Copyright &copy; 2017 -. All rights reserved. Updated: 2017-12-13</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

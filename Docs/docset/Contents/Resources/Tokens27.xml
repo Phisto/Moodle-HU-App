@@ -1,16 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MOODLETabBarController.html">
+	<File path="Classes/MOODLEForumEntryViewController.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MOODLETabBarController</TokenIdentifier>
-			<Abstract type="html">The MOODLETabBarController is a custom tab bar controller. It does change some behaviour andd appereance of the standart tab bar controller.</Abstract>
-			<DeclaredIn>MOODLETabBarController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLEForumEntryViewController</TokenIdentifier>
+			<Abstract type="html">The MOODLEForumEntryViewController is responsible for presenting a MOODLEForumEntry object to the user.</Abstract>
+			<DeclaredIn>MOODLEForumEntryViewController.h</DeclaredIn>
             
 			
 			<NodeRef refid="27"/>
 		</Token>
 		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumEntryViewController/setEntry:</TokenIdentifier>
+			<Abstract type="html">The forum thread to display.</Abstract>
+			<DeclaredIn>MOODLEForumEntryViewController.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) MOODLEForumEntry *entry</Declaration>
+			
+			
+			<Anchor>//api/name/entry</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumEntryViewController/entry</TokenIdentifier>
+			<Abstract type="html">The forum thread to display.</Abstract>
+			<DeclaredIn>MOODLEForumEntryViewController.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) MOODLEForumEntry *entry</Declaration>
+			
+			
+			<Anchor>//api/name/entry</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumEntryViewController/entry</TokenIdentifier>
+			<Abstract type="html">The forum thread to display.</Abstract>
+			<DeclaredIn>MOODLEForumEntryViewController.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) MOODLEForumEntry *entry</Declaration>
+			
+			
+			<Anchor>//api/name/entry</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumEntryViewController/setDataModel:</TokenIdentifier>
+			<Abstract type="html">The app&apos;s data model object.</Abstract>
+			<DeclaredIn>MOODLEForumEntryViewController.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) MOODLEDataModel *dataModel</Declaration>
+			
+			
+			<Anchor>//api/name/dataModel</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumEntryViewController/dataModel</TokenIdentifier>
+			<Abstract type="html">The app&apos;s data model object.</Abstract>
+			<DeclaredIn>MOODLEForumEntryViewController.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) MOODLEDataModel *dataModel</Declaration>
+			
+			
+			<Anchor>//api/name/dataModel</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumEntryViewController/dataModel</TokenIdentifier>
+			<Abstract type="html">The app&apos;s data model object.</Abstract>
+			<DeclaredIn>MOODLEForumEntryViewController.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) MOODLEDataModel *dataModel</Declaration>
+			
+			
+			<Anchor>//api/name/dataModel</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
 		
         
         

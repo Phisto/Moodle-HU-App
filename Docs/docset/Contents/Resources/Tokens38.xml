@@ -1,47 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/HUProgressIndicatorStyle.html">
+	<File path="Classes/MOODLESearchItemDetailViewController.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/HUProgressIndicatorStyle</TokenIdentifier>
-			<Abstract type="html">The style of the indicator. This will determin the size of the indicator.</Abstract>
-			<DeclaredIn>HUProgressIndicator.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLESearchItemDetailViewController</TokenIdentifier>
+			<Abstract type="html">The MOODLESearchItemDetailViewController is responsible for presenting a MOODLECourse object to the user.</Abstract>
+			<DeclaredIn>MOODLESearchItemDetailViewController.h</DeclaredIn>
             
 			
 			<NodeRef refid="38"/>
 		</Token>
 		
 		
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/HUProgressIndicatorStyleDefault</TokenIdentifier>
-            <Abstract type="html">The default style.</Abstract>
-            <Declaration>HUProgressIndicatorStyleDefault</Declaration>
-            
-            <DeclaredIn>HUProgressIndicator.h</DeclaredIn>
-            
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLESearchItemDetailViewController/setItem:</TokenIdentifier>
+			<Abstract type="html">The course object to present.</Abstract>
+			<DeclaredIn>MOODLESearchItemDetailViewController.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) MOODLECourse *item</Declaration>
+			
+			
+			<Anchor>//api/name/item</Anchor>
             <NodeRef refid="38"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/HUProgressIndicatorStyleSmall</TokenIdentifier>
-            <Abstract type="html">The style for a small indicator (width: 80 heigth: 80). The default style.</Abstract>
-            <Declaration>HUProgressIndicatorStyleSmall</Declaration>
-            
-            <DeclaredIn>HUProgressIndicator.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLESearchItemDetailViewController/item</TokenIdentifier>
+			<Abstract type="html">The course object to present.</Abstract>
+			<DeclaredIn>MOODLESearchItemDetailViewController.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) MOODLECourse *item</Declaration>
+			
+			
+			<Anchor>//api/name/item</Anchor>
             <NodeRef refid="38"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/HUProgressIndicatorStyleLarge</TokenIdentifier>
-            <Abstract type="html">The style for a large indicator (width: 120 heigth: 120). The default style.</Abstract>
-            <Declaration>HUProgressIndicatorStyleLarge</Declaration>
-            
-            <DeclaredIn>HUProgressIndicator.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLESearchItemDetailViewController/item</TokenIdentifier>
+			<Abstract type="html">The course object to present.</Abstract>
+			<DeclaredIn>MOODLESearchItemDetailViewController.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) MOODLECourse *item</Declaration>
+			
+			
+			<Anchor>//api/name/item</Anchor>
             <NodeRef refid="38"/>
-        </Token>
+		</Token>
+		
         
         
 	</File>

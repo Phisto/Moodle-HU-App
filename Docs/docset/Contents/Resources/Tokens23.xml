@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MOODLERessourceCoordinator.html">
+	<File path="Classes/MOODLEDocumentViewController.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MOODLERessourceCoordinator</TokenIdentifier>
-			<Abstract type="html">The MOODLERessourceCoordinator class is used to coordinate the locally stored files.</Abstract>
-			<DeclaredIn>MOODLERessourceCoordinator.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLEDocumentViewController</TokenIdentifier>
+			<Abstract type="html">The MOODLEDocumentViewController is responsible for presenting MOODLE course section ressources.</Abstract>
+			<DeclaredIn>MOODLEDocumentViewController.h</DeclaredIn>
             
 			
 			<NodeRef refid="23"/>
@@ -13,97 +13,38 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLERessourceCoordinator/initWithSession:</TokenIdentifier>
-			<Abstract type="html">Initialzes a MOODLERessourceCoordinator object.</Abstract>
-			<DeclaredIn>MOODLERessourceCoordinator.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDocumentViewController/setItem:</TokenIdentifier>
+			<Abstract type="html">The item to present.</Abstract>
+			<DeclaredIn>MOODLEDocumentViewController.h</DeclaredIn>
 			
-			<Declaration>- (instancetype)initWithSession:(NSURLSession *)session</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>session</Name>
-					<Abstract type="html">The sesson to use for network requests.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">An initialized MOODLERessourceCoordinator object.</Abstract></ReturnValue>
-			<Anchor>//api/name/initWithSession:</Anchor>
+			<Declaration>@property (nonatomic, strong) NSObject *item</Declaration>
+			
+			
+			<Anchor>//api/name/item</Anchor>
             <NodeRef refid="23"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLERessourceCoordinator/localRessourceURLForItem:</TokenIdentifier>
-			<Abstract type="html">This method will search for a local file assoziated with the given item.</Abstract>
-			<DeclaredIn>MOODLERessourceCoordinator.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEDocumentViewController/item</TokenIdentifier>
+			<Abstract type="html">The item to present.</Abstract>
+			<DeclaredIn>MOODLEDocumentViewController.h</DeclaredIn>
 			
-			<Declaration>- (nullable NSURL *)localRessourceURLForItem:(MOODLECourseSectionItem *)item</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>item</Name>
-					<Abstract type="html">The item to search for.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">A NSURL to the local file or nil if there is no cached file.</Abstract></ReturnValue>
-			<Anchor>//api/name/localRessourceURLForItem:</Anchor>
+			<Declaration>@property (nonatomic, strong) NSObject *item</Declaration>
+			
+			
+			<Anchor>//api/name/item</Anchor>
             <NodeRef refid="23"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLERessourceCoordinator/saveRemoteRessource:completionHandler:</TokenIdentifier>
-			<Abstract type="html">This method will load the file for the given item, save it locally and call the completion handler.</Abstract>
-			<DeclaredIn>MOODLERessourceCoordinator.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEDocumentViewController/item</TokenIdentifier>
+			<Abstract type="html">The item to present.</Abstract>
+			<DeclaredIn>MOODLEDocumentViewController.h</DeclaredIn>
 			
-			<Declaration>- (void)saveRemoteRessource:(MOODLECourseSectionItem *)item completionHandler:(void ( ^ ) ( BOOL success , NSError *_Nullable error , NSURL *_Nullable localRessourceURL ))completionHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>item</Name>
-					<Abstract type="html">The item to load the file for.</Abstract>
-				</Parameter><Parameter>
-					<Name>completionHandler</Name>
-					<Abstract type="html">The completion handler to call when loading and saving is complete. This handler is executed on the main thread.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, strong) NSObject *item</Declaration>
 			
-			<Anchor>//api/name/saveRemoteRessource:completionHandler:</Anchor>
-            <NodeRef refid="23"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLERessourceCoordinator/sizeOfCachedDocuments</TokenIdentifier>
-			<Abstract type="html">This method will enumerate through all cached documents and calculate the size.</Abstract>
-			<DeclaredIn>MOODLERessourceCoordinator.h</DeclaredIn>
 			
-			<Declaration>- (NSInteger)sizeOfCachedDocuments</Declaration>
-			
-			<ReturnValue><Abstract type="html">The size of all cached documents in Megabyte as a NSInteger.</Abstract></ReturnValue>
-			<Anchor>//api/name/sizeOfCachedDocuments</Anchor>
-            <NodeRef refid="23"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLERessourceCoordinator/allRessourceURLS</TokenIdentifier>
-			<Abstract type="html">This method will return all cached document urls.</Abstract>
-			<DeclaredIn>MOODLERessourceCoordinator.h</DeclaredIn>
-			
-			<Declaration>- (NSArray&lt;NSURL*&gt; *)allRessourceURLS</Declaration>
-			
-			<ReturnValue><Abstract type="html">The document urls.</Abstract></ReturnValue>
-			<Anchor>//api/name/allRessourceURLS</Anchor>
-            <NodeRef refid="23"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLERessourceCoordinator/deleteDocumentWithURL:</TokenIdentifier>
-			<Abstract type="html">This method will delete the file or folder at the given url.</Abstract>
-			<DeclaredIn>MOODLERessourceCoordinator.h</DeclaredIn>
-			
-			<Declaration>- (BOOL)deleteDocumentWithURL:(NSURL *)docURL</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>docURL</Name>
-					<Abstract type="html">The url to the file or folder.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">Yes if the file was deleted, NO if the file could not be deleted or if there was no file at the given url.</Abstract></ReturnValue>
-			<Anchor>//api/name/deleteDocumentWithURL:</Anchor>
+			<Anchor>//api/name/item</Anchor>
             <NodeRef refid="23"/>
 		</Token>
 		

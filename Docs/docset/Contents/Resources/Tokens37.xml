@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/UIColor+Moodle.html">
+	<File path="Classes/MOODLERessourceCoordinator.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/UIColor(Moodle)</TokenIdentifier>
-			<Abstract type="html">A convenient UIColor category to give easy access to custom colors spezific to the Moodle app.</Abstract>
-			<DeclaredIn>UIColor+Moodle.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLERessourceCoordinator</TokenIdentifier>
+			<Abstract type="html">The MOODLERessourceCoordinator class is used to coordinate the locally stored files.</Abstract>
+			<DeclaredIn>MOODLERessourceCoordinator.h</DeclaredIn>
             
 			
 			<NodeRef refid="37"/>
@@ -13,62 +13,97 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIColor/moodle_blueColor</TokenIdentifier>
-			<Abstract type="html">The blue color used for the Moodle app.</Abstract>
-			<DeclaredIn>UIColor+Moodle.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLERessourceCoordinator/initWithSession:</TokenIdentifier>
+			<Abstract type="html">Initialzes a MOODLERessourceCoordinator object.</Abstract>
+			<DeclaredIn>MOODLERessourceCoordinator.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)moodle_blueColor</Declaration>
-			
-			
-			<Anchor>//api/name/moodle_blueColor</Anchor>
+			<Declaration>- (instancetype)initWithSession:(NSURLSession *)session</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>session</Name>
+					<Abstract type="html">The sesson to use for network requests.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An initialized MOODLERessourceCoordinator object.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithSession:</Anchor>
             <NodeRef refid="37"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIColor/moodle_unhideActionColor</TokenIdentifier>
-			<Abstract type="html">The color used for the table view cell unhide action.</Abstract>
-			<DeclaredIn>UIColor+Moodle.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLERessourceCoordinator/localRessourceURLForItem:</TokenIdentifier>
+			<Abstract type="html">This method will search for a local file assoziated with the given item.</Abstract>
+			<DeclaredIn>MOODLERessourceCoordinator.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)moodle_unhideActionColor</Declaration>
-			
-			
-			<Anchor>//api/name/moodle_unhideActionColor</Anchor>
+			<Declaration>- (nullable NSURL *)localRessourceURLForItem:(MOODLECourseSectionItem *)item</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>item</Name>
+					<Abstract type="html">The item to search for.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A NSURL to the local file or nil if there is no cached file.</Abstract></ReturnValue>
+			<Anchor>//api/name/localRessourceURLForItem:</Anchor>
             <NodeRef refid="37"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIColor/moodle_hideActionColor</TokenIdentifier>
-			<Abstract type="html">The color used for the table view cell hide action.</Abstract>
-			<DeclaredIn>UIColor+Moodle.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLERessourceCoordinator/saveRemoteRessource:completionHandler:</TokenIdentifier>
+			<Abstract type="html">This method will load the file for the given item, save it locally and call the completion handler.</Abstract>
+			<DeclaredIn>MOODLERessourceCoordinator.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)moodle_hideActionColor</Declaration>
+			<Declaration>- (void)saveRemoteRessource:(MOODLECourseSectionItem *)item completionHandler:(void ( ^ ) ( BOOL success , NSError *_Nullable error , NSURL *_Nullable localRessourceURL ))completionHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>item</Name>
+					<Abstract type="html">The item to load the file for.</Abstract>
+				</Parameter><Parameter>
+					<Name>completionHandler</Name>
+					<Abstract type="html">The completion handler to call when loading and saving is complete. This handler is executed on the main thread.</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			
-			<Anchor>//api/name/moodle_hideActionColor</Anchor>
+			<Anchor>//api/name/saveRemoteRessource:completionHandler:</Anchor>
             <NodeRef refid="37"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIColor/moodle_favoriteActionColor</TokenIdentifier>
-			<Abstract type="html">The color used for the table view cell favorite action.</Abstract>
-			<DeclaredIn>UIColor+Moodle.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLERessourceCoordinator/sizeOfCachedDocuments</TokenIdentifier>
+			<Abstract type="html">This method will enumerate through all cached documents and calculate the size.</Abstract>
+			<DeclaredIn>MOODLERessourceCoordinator.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)moodle_favoriteActionColor</Declaration>
+			<Declaration>- (NSInteger)sizeOfCachedDocuments</Declaration>
 			
-			
-			<Anchor>//api/name/moodle_favoriteActionColor</Anchor>
+			<ReturnValue><Abstract type="html">The size of all cached documents in Megabyte as a NSInteger.</Abstract></ReturnValue>
+			<Anchor>//api/name/sizeOfCachedDocuments</Anchor>
             <NodeRef refid="37"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIColor/moodle_brownColor</TokenIdentifier>
-			<Abstract type="html">The brownish color used for the Moodle app.</Abstract>
-			<DeclaredIn>UIColor+Moodle.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLERessourceCoordinator/allRessourceURLS</TokenIdentifier>
+			<Abstract type="html">This method will return all cached document urls.</Abstract>
+			<DeclaredIn>MOODLERessourceCoordinator.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)moodle_brownColor</Declaration>
+			<Declaration>- (NSArray&lt;NSURL*&gt; *)allRessourceURLS</Declaration>
 			
+			<ReturnValue><Abstract type="html">The document urls.</Abstract></ReturnValue>
+			<Anchor>//api/name/allRessourceURLS</Anchor>
+            <NodeRef refid="37"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLERessourceCoordinator/deleteDocumentWithURL:</TokenIdentifier>
+			<Abstract type="html">This method will delete the file or folder at the given url.</Abstract>
+			<DeclaredIn>MOODLERessourceCoordinator.h</DeclaredIn>
 			
-			<Anchor>//api/name/moodle_brownColor</Anchor>
+			<Declaration>- (BOOL)deleteDocumentWithURL:(NSURL *)docURL</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>docURL</Name>
+					<Abstract type="html">The url to the file or folder.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Yes if the file was deleted, NO if the file could not be deleted or if there was no file at the given url.</Abstract></ReturnValue>
+			<Anchor>//api/name/deleteDocumentWithURL:</Anchor>
             <NodeRef refid="37"/>
 		</Token>
 		

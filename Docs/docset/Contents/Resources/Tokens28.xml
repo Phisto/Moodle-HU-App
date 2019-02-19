@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MOODLETableViewRowAction.html">
+	<File path="Classes/MOODLEForumPost.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MOODLETableViewRowAction</TokenIdentifier>
-			<Abstract type="html">A MOODLETableViewRowAction object defines a single action to present when the user swipes horizontally in a table row.</Abstract>
-			<DeclaredIn>MOODLETableViewRowAction.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLEForumPost</TokenIdentifier>
+			<Abstract type="html">A MOODLEForumPost object represents an post associated with a forum entry.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
             
 			
 			<NodeRef refid="28"/>
@@ -13,101 +13,326 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLETableViewRowAction/setFont:</TokenIdentifier>
-			<Abstract type="html">The font of the button label.</Abstract>
-			<DeclaredIn>MOODLETableViewRowAction.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPost/setTitle:</TokenIdentifier>
+			<Abstract type="html">The title of the post.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) UIFont *font</Declaration>
+			<Declaration>@property (nonatomic, strong) NSString *title</Declaration>
 			
 			
-			<Anchor>//api/name/font</Anchor>
+			<Anchor>//api/name/title</Anchor>
             <NodeRef refid="28"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLETableViewRowAction/font</TokenIdentifier>
-			<Abstract type="html">The font of the button label.</Abstract>
-			<DeclaredIn>MOODLETableViewRowAction.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPost/title</TokenIdentifier>
+			<Abstract type="html">The title of the post.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) UIFont *font</Declaration>
+			<Declaration>@property (nonatomic, strong) NSString *title</Declaration>
 			
 			
-			<Anchor>//api/name/font</Anchor>
+			<Anchor>//api/name/title</Anchor>
             <NodeRef refid="28"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MOODLETableViewRowAction/font</TokenIdentifier>
-			<Abstract type="html">The font of the button label.</Abstract>
-			<DeclaredIn>MOODLETableViewRowAction.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumPost/title</TokenIdentifier>
+			<Abstract type="html">The title of the post.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) UIFont *font</Declaration>
+			<Declaration>@property (nonatomic, strong) NSString *title</Declaration>
 			
 			
-			<Anchor>//api/name/font</Anchor>
+			<Anchor>//api/name/title</Anchor>
             <NodeRef refid="28"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLETableViewRowAction/setIconAndLabelColor:</TokenIdentifier>
-			<Abstract type="html">The color of the button label and icon.</Abstract>
-			<DeclaredIn>MOODLETableViewRowAction.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPost/setAuthor:</TokenIdentifier>
+			<Abstract type="html">The author of the post.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) UIColor *iconAndLabelColor</Declaration>
+			<Declaration>@property (nonatomic, strong) NSString *author</Declaration>
 			
 			
-			<Anchor>//api/name/iconAndLabelColor</Anchor>
+			<Anchor>//api/name/author</Anchor>
             <NodeRef refid="28"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLETableViewRowAction/iconAndLabelColor</TokenIdentifier>
-			<Abstract type="html">The color of the button label and icon.</Abstract>
-			<DeclaredIn>MOODLETableViewRowAction.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPost/author</TokenIdentifier>
+			<Abstract type="html">The author of the post.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) UIColor *iconAndLabelColor</Declaration>
+			<Declaration>@property (nonatomic, strong) NSString *author</Declaration>
 			
 			
-			<Anchor>//api/name/iconAndLabelColor</Anchor>
+			<Anchor>//api/name/author</Anchor>
             <NodeRef refid="28"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MOODLETableViewRowAction/iconAndLabelColor</TokenIdentifier>
-			<Abstract type="html">The color of the button label and icon.</Abstract>
-			<DeclaredIn>MOODLETableViewRowAction.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumPost/author</TokenIdentifier>
+			<Abstract type="html">The author of the post.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) UIColor *iconAndLabelColor</Declaration>
+			<Declaration>@property (nonatomic, strong) NSString *author</Declaration>
 			
 			
-			<Anchor>//api/name/iconAndLabelColor</Anchor>
+			<Anchor>//api/name/author</Anchor>
             <NodeRef refid="28"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/MOODLETableViewRowAction/rowActionWithStyle:title:icon:handler:</TokenIdentifier>
-			<Abstract type="html">Creates and returns a new table view row action object.
-The style and handler block you specify cannot be changed later.</Abstract>
-			<DeclaredIn>MOODLETableViewRowAction.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPost/setTime:</TokenIdentifier>
+			<Abstract type="html">The time the post was registered.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)rowActionWithStyle:(UITableViewRowActionStyle)style title:(nullable NSString *)title icon:(nullable UIImage *)icon handler:(void ( ^ ) ( UITableViewRowAction *action , NSIndexPath *indexPath ))handler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>style</Name>
-					<Abstract type="html">The style characteristics to apply to the button. You use this value to apply default appearance characteristics to the button. For a list of possible style values, see UITableViewRowActionStyle.</Abstract>
-				</Parameter><Parameter>
-					<Name>title</Name>
-					<Abstract type="html">The string to display in the button.</Abstract>
-				</Parameter><Parameter>
-					<Name>icon</Name>
-					<Abstract type="html">The image to display in the button.</Abstract>
-				</Parameter><Parameter>
-					<Name>handler</Name>
-					<Abstract type="html">The block to execute when the user taps the button associated with this action.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">A new table row action object that you can return from your table view’s delegate method.</Abstract></ReturnValue>
-			<Anchor>//api/name/rowActionWithStyle:title:icon:handler:</Anchor>
+			<Declaration>@property (nonatomic, strong) NSString *time</Declaration>
+			
+			
+			<Anchor>//api/name/time</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPost/time</TokenIdentifier>
+			<Abstract type="html">The time the post was registered.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *time</Declaration>
+			
+			
+			<Anchor>//api/name/time</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumPost/time</TokenIdentifier>
+			<Abstract type="html">The time the post was registered.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *time</Declaration>
+			
+			
+			<Anchor>//api/name/time</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPost/setContent:</TokenIdentifier>
+			<Abstract type="html">The content of the post.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSAttributedString *content</Declaration>
+			
+			
+			<Anchor>//api/name/content</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPost/content</TokenIdentifier>
+			<Abstract type="html">The content of the post.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSAttributedString *content</Declaration>
+			
+			
+			<Anchor>//api/name/content</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumPost/content</TokenIdentifier>
+			<Abstract type="html">The content of the post.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSAttributedString *content</Declaration>
+			
+			
+			<Anchor>//api/name/content</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPost/setRawContent:</TokenIdentifier>
+			<Abstract type="html">The raw html content of the post.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *rawContent</Declaration>
+			
+			
+			<Anchor>//api/name/rawContent</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPost/rawContent</TokenIdentifier>
+			<Abstract type="html">The raw html content of the post.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *rawContent</Declaration>
+			
+			
+			<Anchor>//api/name/rawContent</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumPost/rawContent</TokenIdentifier>
+			<Abstract type="html">The raw html content of the post.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *rawContent</Declaration>
+			
+			
+			<Anchor>//api/name/rawContent</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPost/setPostIndention:</TokenIdentifier>
+			<Abstract type="html">The indention level of the post.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSUInteger postIndention</Declaration>
+			
+			
+			<Anchor>//api/name/postIndention</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPost/postIndention</TokenIdentifier>
+			<Abstract type="html">The indention level of the post.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSUInteger postIndention</Declaration>
+			
+			
+			<Anchor>//api/name/postIndention</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumPost/postIndention</TokenIdentifier>
+			<Abstract type="html">The indention level of the post.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSUInteger postIndention</Declaration>
+			
+			
+			<Anchor>//api/name/postIndention</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPost/setIsOP:</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the post is from the forum entry author.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL isOP</Declaration>
+			
+			
+			<Anchor>//api/name/isOP</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPost/isOP</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the post is from the forum entry author.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL isOP</Declaration>
+			
+			
+			<Anchor>//api/name/isOP</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumPost/isOP</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the post is from the forum entry author.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL isOP</Declaration>
+			
+			
+			<Anchor>//api/name/isOP</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPost/setHasAttachments:</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the post has an attachment.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL hasAttachments</Declaration>
+			
+			
+			<Anchor>//api/name/hasAttachments</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPost/hasAttachments</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the post has an attachment.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL hasAttachments</Declaration>
+			
+			
+			<Anchor>//api/name/hasAttachments</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumPost/hasAttachments</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the post has an attachment.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL hasAttachments</Declaration>
+			
+			
+			<Anchor>//api/name/hasAttachments</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPost/setAttachments:</TokenIdentifier>
+			<Abstract type="html">An array of attachments.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray&lt;MOODLECourseSectionItem*&gt; *attachments</Declaration>
+			
+			
+			<Anchor>//api/name/attachments</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumPost/attachments</TokenIdentifier>
+			<Abstract type="html">An array of attachments.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray&lt;MOODLECourseSectionItem*&gt; *attachments</Declaration>
+			
+			
+			<Anchor>//api/name/attachments</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumPost/attachments</TokenIdentifier>
+			<Abstract type="html">An array of attachments.</Abstract>
+			<DeclaredIn>MOODLEForumPost.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray&lt;MOODLECourseSectionItem*&gt; *attachments</Declaration>
+			
+			
+			<Anchor>//api/name/attachments</Anchor>
             <NodeRef refid="28"/>
 		</Token>
 		

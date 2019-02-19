@@ -1,17 +1,232 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MOODLESettingsViewController.html">
+	<File path="Classes/MOODLEForumEntry.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MOODLESettingsViewController</TokenIdentifier>
-			<Abstract type="html">The MOODLESettingsViewController is responsible for presenting the app settings to the user.
-Here the user can manage and unhide Moodle courses he previously set hidden.</Abstract>
-			<DeclaredIn>MOODLESettingsViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLEForumEntry</TokenIdentifier>
+			<Abstract type="html">A MOODLEForumEntry object represents an entry associated with a forum.</Abstract>
+			<DeclaredIn>MOODLEForumEntry.h</DeclaredIn>
             
 			
 			<NodeRef refid="26"/>
 		</Token>
 		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumEntry/setTitle:</TokenIdentifier>
+			<Abstract type="html">The title of the entry.</Abstract>
+			<DeclaredIn>MOODLEForumEntry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *title</Declaration>
+			
+			
+			<Anchor>//api/name/title</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumEntry/title</TokenIdentifier>
+			<Abstract type="html">The title of the entry.</Abstract>
+			<DeclaredIn>MOODLEForumEntry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *title</Declaration>
+			
+			
+			<Anchor>//api/name/title</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumEntry/title</TokenIdentifier>
+			<Abstract type="html">The title of the entry.</Abstract>
+			<DeclaredIn>MOODLEForumEntry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *title</Declaration>
+			
+			
+			<Anchor>//api/name/title</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumEntry/setAuthor:</TokenIdentifier>
+			<Abstract type="html">The authors name of the entry.</Abstract>
+			<DeclaredIn>MOODLEForumEntry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *author</Declaration>
+			
+			
+			<Anchor>//api/name/author</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumEntry/author</TokenIdentifier>
+			<Abstract type="html">The authors name of the entry.</Abstract>
+			<DeclaredIn>MOODLEForumEntry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *author</Declaration>
+			
+			
+			<Anchor>//api/name/author</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumEntry/author</TokenIdentifier>
+			<Abstract type="html">The authors name of the entry.</Abstract>
+			<DeclaredIn>MOODLEForumEntry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *author</Declaration>
+			
+			
+			<Anchor>//api/name/author</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumEntry/setReplies:</TokenIdentifier>
+			<Abstract type="html">The number of replies to the entry.</Abstract>
+			<DeclaredIn>MOODLEForumEntry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSInteger replies</Declaration>
+			
+			
+			<Anchor>//api/name/replies</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumEntry/replies</TokenIdentifier>
+			<Abstract type="html">The number of replies to the entry.</Abstract>
+			<DeclaredIn>MOODLEForumEntry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSInteger replies</Declaration>
+			
+			
+			<Anchor>//api/name/replies</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumEntry/replies</TokenIdentifier>
+			<Abstract type="html">The number of replies to the entry.</Abstract>
+			<DeclaredIn>MOODLEForumEntry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSInteger replies</Declaration>
+			
+			
+			<Anchor>//api/name/replies</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumEntry/setUnreadReplies:</TokenIdentifier>
+			<Abstract type="html">The number of unread replies to the entry.</Abstract>
+			<DeclaredIn>MOODLEForumEntry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSInteger unreadReplies</Declaration>
+			
+			
+			<Anchor>//api/name/unreadReplies</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumEntry/unreadReplies</TokenIdentifier>
+			<Abstract type="html">The number of unread replies to the entry.</Abstract>
+			<DeclaredIn>MOODLEForumEntry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSInteger unreadReplies</Declaration>
+			
+			
+			<Anchor>//api/name/unreadReplies</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumEntry/unreadReplies</TokenIdentifier>
+			<Abstract type="html">The number of unread replies to the entry.</Abstract>
+			<DeclaredIn>MOODLEForumEntry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) NSInteger unreadReplies</Declaration>
+			
+			
+			<Anchor>//api/name/unreadReplies</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumEntry/setPosts:</TokenIdentifier>
+			<Abstract type="html">An array with all posts in the forum entry.</Abstract>
+			<DeclaredIn>MOODLEForumEntry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray&lt;MOODLEForumPost*&gt; *posts</Declaration>
+			
+			
+			<Anchor>//api/name/posts</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumEntry/posts</TokenIdentifier>
+			<Abstract type="html">An array with all posts in the forum entry.</Abstract>
+			<DeclaredIn>MOODLEForumEntry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray&lt;MOODLEForumPost*&gt; *posts</Declaration>
+			
+			
+			<Anchor>//api/name/posts</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumEntry/posts</TokenIdentifier>
+			<Abstract type="html">An array with all posts in the forum entry.</Abstract>
+			<DeclaredIn>MOODLEForumEntry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray&lt;MOODLEForumPost*&gt; *posts</Declaration>
+			
+			
+			<Anchor>//api/name/posts</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumEntry/setEntryURL:</TokenIdentifier>
+			<Abstract type="html">The url of the entry.</Abstract>
+			<DeclaredIn>MOODLEForumEntry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSURL *entryURL</Declaration>
+			
+			
+			<Anchor>//api/name/entryURL</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumEntry/entryURL</TokenIdentifier>
+			<Abstract type="html">The url of the entry.</Abstract>
+			<DeclaredIn>MOODLEForumEntry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSURL *entryURL</Declaration>
+			
+			
+			<Anchor>//api/name/entryURL</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumEntry/entryURL</TokenIdentifier>
+			<Abstract type="html">The url of the entry.</Abstract>
+			<DeclaredIn>MOODLEForumEntry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSURL *entryURL</Declaration>
+			
+			
+			<Anchor>//api/name/entryURL</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
 		
         
         

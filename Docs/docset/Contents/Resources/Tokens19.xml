@@ -1,16 +1,196 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MOODLEDocumentsTableViewController.html">
+	<File path="Classes/MOODLECourseSectionTableViewCell.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MOODLEDocumentsTableViewController</TokenIdentifier>
-			<Abstract type="html">The MOODLEDocumentsTableViewController is responsible for presenting all cached ressources to the user.</Abstract>
-			<DeclaredIn>MOODLEDocumentsTableViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLECourseSectionTableViewCell</TokenIdentifier>
+			<Abstract type="html">This class is a custom UITableViewCell subclass, which is designed to show all relevant information about a MOODLE course section item.</Abstract>
+			<DeclaredIn>MOODLECourseSectionTableViewCell.h</DeclaredIn>
             
 			
 			<NodeRef refid="19"/>
 		</Token>
 		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSectionTableViewCell/setSectionTitleLabel:</TokenIdentifier>
+			<Abstract type="html">The label to display the section title.</Abstract>
+			<DeclaredIn>MOODLECourseSectionTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *sectionTitleLabel</Declaration>
+			
+			
+			<Anchor>//api/name/sectionTitleLabel</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSectionTableViewCell/sectionTitleLabel</TokenIdentifier>
+			<Abstract type="html">The label to display the section title.</Abstract>
+			<DeclaredIn>MOODLECourseSectionTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *sectionTitleLabel</Declaration>
+			
+			
+			<Anchor>//api/name/sectionTitleLabel</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseSectionTableViewCell/sectionTitleLabel</TokenIdentifier>
+			<Abstract type="html">The label to display the section title.</Abstract>
+			<DeclaredIn>MOODLECourseSectionTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *sectionTitleLabel</Declaration>
+			
+			
+			<Anchor>//api/name/sectionTitleLabel</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSectionTableViewCell/setNoContentLabel:</TokenIdentifier>
+			<Abstract type="html">The label to indicate to the user that the section has no content.</Abstract>
+			<DeclaredIn>MOODLECourseSectionTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *noContentLabel</Declaration>
+			
+			
+			<Anchor>//api/name/noContentLabel</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSectionTableViewCell/noContentLabel</TokenIdentifier>
+			<Abstract type="html">The label to indicate to the user that the section has no content.</Abstract>
+			<DeclaredIn>MOODLECourseSectionTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *noContentLabel</Declaration>
+			
+			
+			<Anchor>//api/name/noContentLabel</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseSectionTableViewCell/noContentLabel</TokenIdentifier>
+			<Abstract type="html">The label to indicate to the user that the section has no content.</Abstract>
+			<DeclaredIn>MOODLECourseSectionTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *noContentLabel</Declaration>
+			
+			
+			<Anchor>//api/name/noContentLabel</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSectionTableViewCell/setAssignmentImageView:</TokenIdentifier>
+			<Abstract type="html">The image view to indicate to the user if there is a assignment for this section.</Abstract>
+			<DeclaredIn>MOODLECourseSectionTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UIImageView *assignmentImageView</Declaration>
+			
+			
+			<Anchor>//api/name/assignmentImageView</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSectionTableViewCell/assignmentImageView</TokenIdentifier>
+			<Abstract type="html">The image view to indicate to the user if there is a assignment for this section.</Abstract>
+			<DeclaredIn>MOODLECourseSectionTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UIImageView *assignmentImageView</Declaration>
+			
+			
+			<Anchor>//api/name/assignmentImageView</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseSectionTableViewCell/assignmentImageView</TokenIdentifier>
+			<Abstract type="html">The image view to indicate to the user if there is a assignment for this section.</Abstract>
+			<DeclaredIn>MOODLECourseSectionTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UIImageView *assignmentImageView</Declaration>
+			
+			
+			<Anchor>//api/name/assignmentImageView</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSectionTableViewCell/setDescriptionImageView:</TokenIdentifier>
+			<Abstract type="html">The image view to indicate to the user if there is a description for this section.</Abstract>
+			<DeclaredIn>MOODLECourseSectionTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UIImageView *descriptionImageView</Declaration>
+			
+			
+			<Anchor>//api/name/descriptionImageView</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSectionTableViewCell/descriptionImageView</TokenIdentifier>
+			<Abstract type="html">The image view to indicate to the user if there is a description for this section.</Abstract>
+			<DeclaredIn>MOODLECourseSectionTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UIImageView *descriptionImageView</Declaration>
+			
+			
+			<Anchor>//api/name/descriptionImageView</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseSectionTableViewCell/descriptionImageView</TokenIdentifier>
+			<Abstract type="html">The image view to indicate to the user if there is a description for this section.</Abstract>
+			<DeclaredIn>MOODLECourseSectionTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UIImageView *descriptionImageView</Declaration>
+			
+			
+			<Anchor>//api/name/descriptionImageView</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSectionTableViewCell/setDokumentImageView:</TokenIdentifier>
+			<Abstract type="html">The image view to indicate to the user if there are documents for this section.</Abstract>
+			<DeclaredIn>MOODLECourseSectionTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UIImageView *dokumentImageView</Declaration>
+			
+			
+			<Anchor>//api/name/dokumentImageView</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSectionTableViewCell/dokumentImageView</TokenIdentifier>
+			<Abstract type="html">The image view to indicate to the user if there are documents for this section.</Abstract>
+			<DeclaredIn>MOODLECourseSectionTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UIImageView *dokumentImageView</Declaration>
+			
+			
+			<Anchor>//api/name/dokumentImageView</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseSectionTableViewCell/dokumentImageView</TokenIdentifier>
+			<Abstract type="html">The image view to indicate to the user if there are documents for this section.</Abstract>
+			<DeclaredIn>MOODLECourseSectionTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBOutlet UIImageView *dokumentImageView</Declaration>
+			
+			
+			<Anchor>//api/name/dokumentImageView</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
 		
         
         

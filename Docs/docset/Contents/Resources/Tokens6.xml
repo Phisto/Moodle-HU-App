@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MOODLECommentTableViewCell.html">
+	<File path="Classes/MOODLEChat.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MOODLECommentTableViewCell</TokenIdentifier>
-			<Abstract type="html">This class is a custom UITableViewCell subclass, which is designed to show a comment inside a text view.</Abstract>
-			<DeclaredIn>MOODLECommentTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLEChat</TokenIdentifier>
+			<Abstract type="html">A MOODLEChat object represents a chat with another Moodle user.</Abstract>
+			<DeclaredIn>MOODLEChat.h</DeclaredIn>
             
 			
 			<NodeRef refid="6"/>
@@ -13,38 +13,182 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLECommentTableViewCell/setTextView:</TokenIdentifier>
-			<Abstract type="html">The text view to display the comment.</Abstract>
-			<DeclaredIn>MOODLECommentTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEChat/setChatPartnerName:</TokenIdentifier>
+			<Abstract type="html">The name of the other Moodle user.</Abstract>
+			<DeclaredIn>MOODLEChat.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) IBOutlet UITextView *textView</Declaration>
+			<Declaration>@property (nonatomic, strong) NSString *chatPartnerName</Declaration>
 			
 			
-			<Anchor>//api/name/textView</Anchor>
+			<Anchor>//api/name/chatPartnerName</Anchor>
             <NodeRef refid="6"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLECommentTableViewCell/textView</TokenIdentifier>
-			<Abstract type="html">The text view to display the comment.</Abstract>
-			<DeclaredIn>MOODLECommentTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEChat/chatPartnerName</TokenIdentifier>
+			<Abstract type="html">The name of the other Moodle user.</Abstract>
+			<DeclaredIn>MOODLEChat.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) IBOutlet UITextView *textView</Declaration>
+			<Declaration>@property (nonatomic, strong) NSString *chatPartnerName</Declaration>
 			
 			
-			<Anchor>//api/name/textView</Anchor>
+			<Anchor>//api/name/chatPartnerName</Anchor>
             <NodeRef refid="6"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MOODLECommentTableViewCell/textView</TokenIdentifier>
-			<Abstract type="html">The text view to display the comment.</Abstract>
-			<DeclaredIn>MOODLECommentTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEChat/chatPartnerName</TokenIdentifier>
+			<Abstract type="html">The name of the other Moodle user.</Abstract>
+			<DeclaredIn>MOODLEChat.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) IBOutlet UITextView *textView</Declaration>
+			<Declaration>@property (nonatomic, strong) NSString *chatPartnerName</Declaration>
 			
 			
-			<Anchor>//api/name/textView</Anchor>
+			<Anchor>//api/name/chatPartnerName</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEChat/setLastMessageDate:</TokenIdentifier>
+			<Abstract type="html">The date of the last message.</Abstract>
+			<DeclaredIn>MOODLEChat.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *lastMessageDate</Declaration>
+			
+			
+			<Anchor>//api/name/lastMessageDate</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEChat/lastMessageDate</TokenIdentifier>
+			<Abstract type="html">The date of the last message.</Abstract>
+			<DeclaredIn>MOODLEChat.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *lastMessageDate</Declaration>
+			
+			
+			<Anchor>//api/name/lastMessageDate</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEChat/lastMessageDate</TokenIdentifier>
+			<Abstract type="html">The date of the last message.</Abstract>
+			<DeclaredIn>MOODLEChat.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *lastMessageDate</Declaration>
+			
+			
+			<Anchor>//api/name/lastMessageDate</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEChat/setPreviewMessage:</TokenIdentifier>
+			<Abstract type="html">A preview text of the last message.</Abstract>
+			<DeclaredIn>MOODLEChat.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *previewMessage</Declaration>
+			
+			
+			<Anchor>//api/name/previewMessage</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEChat/previewMessage</TokenIdentifier>
+			<Abstract type="html">A preview text of the last message.</Abstract>
+			<DeclaredIn>MOODLEChat.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *previewMessage</Declaration>
+			
+			
+			<Anchor>//api/name/previewMessage</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEChat/previewMessage</TokenIdentifier>
+			<Abstract type="html">A preview text of the last message.</Abstract>
+			<DeclaredIn>MOODLEChat.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *previewMessage</Declaration>
+			
+			
+			<Anchor>//api/name/previewMessage</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEChat/setChatURL:</TokenIdentifier>
+			<Abstract type="html">The url of the chat.</Abstract>
+			<DeclaredIn>MOODLEChat.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSURL *chatURL</Declaration>
+			
+			
+			<Anchor>//api/name/chatURL</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEChat/chatURL</TokenIdentifier>
+			<Abstract type="html">The url of the chat.</Abstract>
+			<DeclaredIn>MOODLEChat.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSURL *chatURL</Declaration>
+			
+			
+			<Anchor>//api/name/chatURL</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEChat/chatURL</TokenIdentifier>
+			<Abstract type="html">The url of the chat.</Abstract>
+			<DeclaredIn>MOODLEChat.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSURL *chatURL</Declaration>
+			
+			
+			<Anchor>//api/name/chatURL</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEChat/setMessages:</TokenIdentifier>
+			<Abstract type="html">The messages associated with this chat.</Abstract>
+			<DeclaredIn>MOODLEChat.h</DeclaredIn>
+			
+			<Declaration>@property (nullable, nonatomic, strong) NSArray&lt;NSArray&lt;MOODLEChatMessage*&gt; *&gt; *messages</Declaration>
+			
+			
+			<Anchor>//api/name/messages</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEChat/messages</TokenIdentifier>
+			<Abstract type="html">The messages associated with this chat.</Abstract>
+			<DeclaredIn>MOODLEChat.h</DeclaredIn>
+			
+			<Declaration>@property (nullable, nonatomic, strong) NSArray&lt;NSArray&lt;MOODLEChatMessage*&gt; *&gt; *messages</Declaration>
+			
+			
+			<Anchor>//api/name/messages</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEChat/messages</TokenIdentifier>
+			<Abstract type="html">The messages associated with this chat.</Abstract>
+			<DeclaredIn>MOODLEChat.h</DeclaredIn>
+			
+			<Declaration>@property (nullable, nonatomic, strong) NSArray&lt;NSArray&lt;MOODLEChatMessage*&gt; *&gt; *messages</Declaration>
+			
+			
+			<Anchor>//api/name/messages</Anchor>
             <NodeRef refid="6"/>
 		</Token>
 		

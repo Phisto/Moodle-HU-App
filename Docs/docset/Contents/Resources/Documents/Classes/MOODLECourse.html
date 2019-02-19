@@ -56,19 +56,23 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/announcements">announcements</option>
+		
 		<option value="//api/name/attributedCourseDescription">attributedCourseDescription</option>
 		
 		<option value="//api/name/canSubscribe">canSubscribe</option>
 		
 		<option value="//api/name/courseCategory">courseCategory</option>
 		
-		<option value="//api/name/courseDescription">courseDescription</option>
+		<option value="//api/name/courseDescriptionRaw">courseDescriptionRaw</option>
 		
 		<option value="//api/name/courseSections">courseSections</option>
 		
 		<option value="//api/name/courseTitle">courseTitle</option>
 		
 		<option value="//api/name/dataModel">dataModel</option>
+		
+		<option value="//api/name/forum">forum</option>
 		
 		<option value="//api/name/guestSubscribe">guestSubscribe</option>
 		
@@ -139,9 +143,9 @@
 						<a title="Tasks" name="tasks"></a>
 						
 
-						<a title="Properties" name="task_Properties"></a>
-						
-<h2 class="task-title">Properties</h2>
+						<a title="MOODLE Properties" name="task_MOODLE Properties"></a>
+						<h2 class="task-title">MOODLE Properties</h2>
+
 						<div class="task-list">
 							<div class="section-method">
 	<a name="//api/name/courseTitle" title="courseTitle"></a>
@@ -365,7 +369,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSArray&lt;MOODLECourseSection*&gt; *courseSections</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nullable, nonatomic, strong) NSArray&lt;MOODLECourseSection*&gt; *courseSections</code></div>
 
 		    
 			
@@ -390,6 +394,96 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/forum" title="forum"></a>
+	<h3 class="method-title"><code><a href="#//api/name/forum">&nbsp;&nbsp;forum</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The general forum associated with the course.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) MOODLEForum *forum</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLECourse.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/announcements" title="announcements"></a>
+	<h3 class="method-title"><code><a href="#//api/name/announcements">&nbsp;&nbsp;announcements</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The announcements <a href="#//api/name/forum">forum</a> associated with the course.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) MOODLEForum *announcements</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLECourse.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="App Specific Properties" name="task_App Specific Properties"></a>
+						<h2 class="task-title">App Specific Properties</h2>
+
+						<div class="task-list">
+							<div class="section-method">
 	<a name="//api/name/dataModel" title="dataModel"></a>
 	<h3 class="method-title"><code><a href="#//api/name/dataModel">&nbsp;&nbsp;dataModel</a></code>
 </h3>
@@ -553,7 +647,15 @@
 			
 		</div>
 	</div>
-</div><div class="section-method">
+</div>
+						</div>
+						
+
+						<a title="Search Result Properties" name="task_Search Result Properties"></a>
+						<h2 class="task-title">Search Result Properties</h2>
+
+						<div class="task-list">
+							<div class="section-method">
 	<a name="//api/name/teacher" title="teacher"></a>
 	<h3 class="method-title"><code><a href="#//api/name/teacher">&nbsp;&nbsp;teacher</a></code>
 </h3>
@@ -595,8 +697,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/courseDescription" title="courseDescription"></a>
-	<h3 class="method-title"><code><a href="#//api/name/courseDescription">&nbsp;&nbsp;courseDescription</a></code>
+	<a name="//api/name/courseDescriptionRaw" title="courseDescriptionRaw"></a>
+	<h3 class="method-title"><code><a href="#//api/name/courseDescriptionRaw">&nbsp;&nbsp;courseDescriptionRaw</a></code>
 </h3>
 
 	<div class="method-info">
@@ -611,7 +713,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, nullable) NSString *courseDescription</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, nullable) NSString *courseDescriptionRaw</code></div>
 
 		    
 			
@@ -652,7 +754,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, nullable) NSMutableAttributedString *attributedCourseDescription</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, nullable) NSAttributedString *attributedCourseDescription</code></div>
 
 		    
 			
@@ -855,7 +957,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 -. All rights reserved. Updated: 2017-06-29</p>
+						<p class="copyright">Copyright &copy; 2017 -. All rights reserved. Updated: 2017-12-13</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

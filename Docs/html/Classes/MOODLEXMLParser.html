@@ -60,11 +60,19 @@
 	
 	<optgroup label="Instance Methods">
 		
+		<option value="//api/name/chatItemsFromData:">- chatItemsFromData:</option>
+		
+		<option value="//api/name/chatMessagesFromData:">- chatMessagesFromData:</option>
+		
 		<option value="//api/name/createContentForCourseSections:fromData:">- createContentForCourseSections:fromData:</option>
 		
 		<option value="//api/name/createCourseItemsFromData:">- createCourseItemsFromData:</option>
 		
 		<option value="//api/name/createCourseSectionsFromData:">- createCourseSectionsFromData:</option>
+		
+		<option value="//api/name/forumEntryItemsFromData:">- forumEntryItemsFromData:</option>
+		
+		<option value="//api/name/forumFromData:">- forumFromData:</option>
 		
 		<option value="//api/name/searchResultsFromData:">- searchResultsFromData:</option>
 		
@@ -418,6 +426,238 @@
 			
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/forumFromData:" title="forumFromData:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/forumFromData:">&ndash;&nbsp;forumFromData:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates a HTML string from data and parses the string searching for forum.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (MOODLEForum *)forumFromData:(NSData *)<em>data</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>The data to parse.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The forum or nil.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEXMLParser.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/forumEntryItemsFromData:" title="forumEntryItemsFromData:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/forumEntryItemsFromData:">&ndash;&nbsp;forumEntryItemsFromData:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates a HTML string from data and parses the string searching for forum posts.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray&lt;MOODLEForumPost*&gt; *)forumEntryItemsFromData:(NSData *)<em>data</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>The data to parse.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An array of forum posts or an empty array.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEXMLParser.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/chatItemsFromData:" title="chatItemsFromData:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/chatItemsFromData:">&ndash;&nbsp;chatItemsFromData:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates a HTML string from data and parses the string searching for chats.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray&lt;MOODLEChat*&gt; *)chatItemsFromData:(NSData *)<em>data</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>The data to parse.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An array of chats or an empty array.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEXMLParser.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/chatMessagesFromData:" title="chatMessagesFromData:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/chatMessagesFromData:">&ndash;&nbsp;chatMessagesFromData:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates a HTML string from data and parses the string searching for chat messages.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray&lt;NSArray&lt;MOODLEChatMessage*&gt; *&gt; *)chatMessagesFromData:(NSData *)<em>data</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>The data to parse.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An array of chat messages or an empty array.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MOODLEXMLParser.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -433,7 +673,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 -. All rights reserved. Updated: 2017-06-29</p>
+						<p class="copyright">Copyright &copy; 2017 -. All rights reserved. Updated: 2017-12-13</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

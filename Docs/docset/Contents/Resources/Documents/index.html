@@ -65,6 +65,20 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 I don&rsquo;t have feedback regarding the VoiceOver behavior of the app,
 so I dont know if it fits the need of users who utilize this technologie.</p>
 
+<h2>Features</h2>
+
+<ul>
+<li>Access your Moodle courses</li>
+<li>Access to course ressources</li>
+<li>Access the course forum</li>
+<li>Search for Moodle courses</li>
+<li>Subscribe to Moodle courses</li>
+<li>Save course ressources to your phone</li>
+<li>Order courses</li>
+<li>Favor courses</li>
+</ul>
+
+
 <h3>Screenshots</h3>
 
 <table>
@@ -138,6 +152,16 @@ so I dont know if it fits the need of users who utilize this technologie.</p>
 </ul>
 
 
+<h2>How it works</h2>
+
+<p>The app does not use a designated API to access the Moodle instance, it basically downloads the relevant web pages and searches the HTML for the needed information.
+It does not store this data on the device.</p>
+
+<h2>Security</h2>
+
+<p>The password and username are stored in the devices <a href="https://developer.apple.com/library/content/documentation/Security/Conceptual/keychainServConcepts/01introduction/introduction.html">keychain</a>.
+However, hidden/favoured course titles and files are not stored in particular secure fashion and will be readable if one has unencrypted access to the devices file system. Chat messages are not stored on the device.</p>
+
 <h2>Credits</h2>
 
 <h4>Icons</h4>
@@ -193,6 +217,16 @@ so I dont know if it fits the need of users who utilize this technologie.</p>
 								
 								<li><a href="Classes/MOODLEActivityView.html">MOODLEActivityView</a></li>
 								
+								<li><a href="Classes/MOODLEChat.html">MOODLEChat</a></li>
+								
+								<li><a href="Classes/MOODLEChatItemTableViewCell.html">MOODLEChatItemTableViewCell</a></li>
+								
+								<li><a href="Classes/MOODLEChatItemViewController.html">MOODLEChatItemViewController</a></li>
+								
+								<li><a href="Classes/MOODLEChatMessage.html">MOODLEChatMessage</a></li>
+								
+								<li><a href="Classes/MOODLEChatMessageTableViewCell.html">MOODLEChatMessageTableViewCell</a></li>
+								
 								<li><a href="Classes/MOODLECommentTableViewCell.html">MOODLECommentTableViewCell</a></li>
 								
 								<li><a href="Classes/MOODLECourse.html">MOODLECourse</a></li>
@@ -221,9 +255,27 @@ so I dont know if it fits the need of users who utilize this technologie.</p>
 								
 								<li><a href="Classes/MOODLEDocumentsTableViewController.html">MOODLEDocumentsTableViewController</a></li>
 								
+								<li><a href="Classes/MOODLEForum.html">MOODLEForum</a></li>
+								
+								<li><a href="Classes/MOODLEForumEntry.html">MOODLEForumEntry</a></li>
+								
+								<li><a href="Classes/MOODLEForumEntryViewController.html">MOODLEForumEntryViewController</a></li>
+								
+								<li><a href="Classes/MOODLEForumPost.html">MOODLEForumPost</a></li>
+								
+								<li><a href="Classes/MOODLEForumPostTableViewCell.html">MOODLEForumPostTableViewCell</a></li>
+								
+								<li><a href="Classes/MOODLEForumThreadTableViewCell.html">MOODLEForumThreadTableViewCell</a></li>
+								
+								<li><a href="Classes/MOODLEForumViewController.html">MOODLEForumViewController</a></li>
+								
 								<li><a href="Classes/MOODLELinguisticListFormatter.html">MOODLELinguisticListFormatter</a></li>
 								
 								<li><a href="Classes/MOODLELoginViewController.html">MOODLELoginViewController</a></li>
+								
+								<li><a href="Classes/MOODLEMessagesViewController.html">MOODLEMessagesViewController</a></li>
+								
+								<li><a href="Classes/MOODLEPersistentStoreCoordinator.html">MOODLEPersistentStoreCoordinator</a></li>
 								
 								<li><a href="Classes/MOODLEProgressViewController.html">MOODLEProgressViewController</a></li>
 								
@@ -244,6 +296,8 @@ so I dont know if it fits the need of users who utilize this technologie.</p>
 								<li><a href="Classes/MOODLEXMLParser.html">MOODLEXMLParser</a></li>
 								
 								<li><a href="Classes/SGAccessibleSlider.html">SGAccessibleSlider</a></li>
+								
+								<li><a href="Classes/SGBubbleView.html">SGBubbleView</a></li>
 								
 								<li><a href="Classes/SGLabeledSwitch.html">SGLabeledSwitch</a></li>
 								
@@ -282,6 +336,8 @@ so I dont know if it fits the need of users who utilize this technologie.</p>
 								
 								<li><a href="Categories/UIColor+Moodle.html">UIColor(Moodle)</a></li>
 								
+								<li><a href="Categories/UIView+Autolayout.html">UIView(Autolayout)</a></li>
+								
 							</ul>
 							
 						</div>
@@ -291,7 +347,7 @@ so I dont know if it fits the need of users who utilize this technologie.</p>
 					<footer>
 						<div class="footer-copyright">
 							
-							<p class="copyright">Copyright &copy; 2017 -. All rights reserved. Updated: 2017-06-29</p>
+							<p class="copyright">Copyright &copy; 2017 -. All rights reserved. Updated: 2017-12-13</p>
 							
 							
 							<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

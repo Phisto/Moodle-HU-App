@@ -699,7 +699,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#appledoc Xcode script\n# Start constants\ntarget=\"iphoneos\";\noutputPath=\"~/Documents/XCode/iPhone Apps/UniApps/Moodle/Docs\";\n# End constants\n/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--output \"${outputPath}\" \\\n--docset-platform-family \"${target}\" \\\n--ignore \".m\" \\\n--index-desc \"~/Documents/XCode/iPhone Apps/UniApps/Moodle/README.md\" \\\n--logformat xcode \\\n\"${PROJECT_DIR}\"";
+			shellScript = "#appledoc Xcode script\n# Start constants\ntarget=\"iphoneos\";\noutputPath=\"~/Documents/XCode/iOS Apps/Moodle - Projekt/Docs\";\n# End constants\n/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--output \"${outputPath}\" \\\n--docset-platform-family \"${target}\" \\\n--ignore \".m\" \\\n--index-desc \"~/Documents/XCode/iOS Apps/Moodle - Projekt/README.md\" \\\n--logformat xcode \\\n\"${PROJECT_DIR}\"";
 		};
 		F466904B1EE2033300748E8C /* Update Localized Files */ = {
 			isa = PBXShellScriptBuildPhase;

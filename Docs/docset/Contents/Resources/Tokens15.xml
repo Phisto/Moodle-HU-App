@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MOODLECourseTableViewCell.html">
+	<File path="Classes/MOODLECourseSection.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MOODLECourseTableViewCell</TokenIdentifier>
-			<Abstract type="html">This class is a custom UITableViewCell subclass, which is designed to show all relevant information about a MOODLE course.</Abstract>
-			<DeclaredIn>MOODLECourseTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLECourseSection</TokenIdentifier>
+			<Abstract type="html">A MOODLECourseSection object represents a MOODLE course section.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
             
 			
 			<NodeRef refid="15"/>
@@ -13,110 +13,578 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseTableViewCell/setCourseTitleLabel:</TokenIdentifier>
-			<Abstract type="html">The label to display the course title.</Abstract>
-			<DeclaredIn>MOODLECourseTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/setSectionTitle:</TokenIdentifier>
+			<Abstract type="html">The title of the section.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *courseTitleLabel</Declaration>
+			<Declaration>@property (nonatomic, strong) NSString *sectionTitle</Declaration>
 			
 			
-			<Anchor>//api/name/courseTitleLabel</Anchor>
+			<Anchor>//api/name/sectionTitle</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseTableViewCell/courseTitleLabel</TokenIdentifier>
-			<Abstract type="html">The label to display the course title.</Abstract>
-			<DeclaredIn>MOODLECourseTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/sectionTitle</TokenIdentifier>
+			<Abstract type="html">The title of the section.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *courseTitleLabel</Declaration>
+			<Declaration>@property (nonatomic, strong) NSString *sectionTitle</Declaration>
 			
 			
-			<Anchor>//api/name/courseTitleLabel</Anchor>
+			<Anchor>//api/name/sectionTitle</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseTableViewCell/courseTitleLabel</TokenIdentifier>
-			<Abstract type="html">The label to display the course title.</Abstract>
-			<DeclaredIn>MOODLECourseTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseSection/sectionTitle</TokenIdentifier>
+			<Abstract type="html">The title of the section.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *courseTitleLabel</Declaration>
+			<Declaration>@property (nonatomic, strong) NSString *sectionTitle</Declaration>
 			
 			
-			<Anchor>//api/name/courseTitleLabel</Anchor>
+			<Anchor>//api/name/sectionTitle</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseTableViewCell/setMoodleTitleLabel:</TokenIdentifier>
-			<Abstract type="html">The label to display the course moodle title.</Abstract>
-			<DeclaredIn>MOODLECourseTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/setSectionDescriptionRaw:</TokenIdentifier>
+			<Abstract type="html">The description of the section.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *moodleTitleLabel</Declaration>
+			<Declaration>@property (nonatomic, strong, nullable) NSString *sectionDescriptionRaw</Declaration>
 			
 			
-			<Anchor>//api/name/moodleTitleLabel</Anchor>
+			<Anchor>//api/name/sectionDescriptionRaw</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseTableViewCell/moodleTitleLabel</TokenIdentifier>
-			<Abstract type="html">The label to display the course moodle title.</Abstract>
-			<DeclaredIn>MOODLECourseTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/sectionDescriptionRaw</TokenIdentifier>
+			<Abstract type="html">The description of the section.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *moodleTitleLabel</Declaration>
+			<Declaration>@property (nonatomic, strong, nullable) NSString *sectionDescriptionRaw</Declaration>
 			
 			
-			<Anchor>//api/name/moodleTitleLabel</Anchor>
+			<Anchor>//api/name/sectionDescriptionRaw</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseTableViewCell/moodleTitleLabel</TokenIdentifier>
-			<Abstract type="html">The label to display the course moodle title.</Abstract>
-			<DeclaredIn>MOODLECourseTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseSection/sectionDescriptionRaw</TokenIdentifier>
+			<Abstract type="html">The description of the section.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *moodleTitleLabel</Declaration>
+			<Declaration>@property (nonatomic, strong, nullable) NSString *sectionDescriptionRaw</Declaration>
 			
 			
-			<Anchor>//api/name/moodleTitleLabel</Anchor>
+			<Anchor>//api/name/sectionDescriptionRaw</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseTableViewCell/setSemesterLabel:</TokenIdentifier>
-			<Abstract type="html">The label to display the course semester.</Abstract>
-			<DeclaredIn>MOODLECourseTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/setAttributedSectionDescription:</TokenIdentifier>
+			<Abstract type="html">The attributed description of the section.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *semesterLabel</Declaration>
+			<Declaration>@property (nonatomic, readonly) NSAttributedString *attributedSectionDescription</Declaration>
 			
 			
-			<Anchor>//api/name/semesterLabel</Anchor>
+			<Anchor>//api/name/attributedSectionDescription</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseTableViewCell/semesterLabel</TokenIdentifier>
-			<Abstract type="html">The label to display the course semester.</Abstract>
-			<DeclaredIn>MOODLECourseTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/attributedSectionDescription</TokenIdentifier>
+			<Abstract type="html">The attributed description of the section.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *semesterLabel</Declaration>
+			<Declaration>@property (nonatomic, readonly) NSAttributedString *attributedSectionDescription</Declaration>
 			
 			
-			<Anchor>//api/name/semesterLabel</Anchor>
+			<Anchor>//api/name/attributedSectionDescription</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseTableViewCell/semesterLabel</TokenIdentifier>
-			<Abstract type="html">The label to display the course semester.</Abstract>
-			<DeclaredIn>MOODLECourseTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseSection/attributedSectionDescription</TokenIdentifier>
+			<Abstract type="html">The attributed description of the section.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *semesterLabel</Declaration>
+			<Declaration>@property (nonatomic, readonly) NSAttributedString *attributedSectionDescription</Declaration>
 			
 			
-			<Anchor>//api/name/semesterLabel</Anchor>
+			<Anchor>//api/name/attributedSectionDescription</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/setSectionURL:</TokenIdentifier>
+			<Abstract type="html">The url of the section.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSURL *sectionURL</Declaration>
+			
+			
+			<Anchor>//api/name/sectionURL</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/sectionURL</TokenIdentifier>
+			<Abstract type="html">The url of the section.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSURL *sectionURL</Declaration>
+			
+			
+			<Anchor>//api/name/sectionURL</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseSection/sectionURL</TokenIdentifier>
+			<Abstract type="html">The url of the section.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSURL *sectionURL</Declaration>
+			
+			
+			<Anchor>//api/name/sectionURL</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/setHasContenLoaded:</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the sections content is loaded.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL hasContenLoaded</Declaration>
+			
+			
+			<Anchor>//api/name/hasContenLoaded</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/hasContenLoaded</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the sections content is loaded.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL hasContenLoaded</Declaration>
+			
+			
+			<Anchor>//api/name/hasContenLoaded</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseSection/hasContenLoaded</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the sections content is loaded.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL hasContenLoaded</Declaration>
+			
+			
+			<Anchor>//api/name/hasContenLoaded</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/setIsIndependentSection:</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the sections content is only accessible through a seperate section website.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL isIndependentSection</Declaration>
+			
+			
+			<Anchor>//api/name/isIndependentSection</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/isIndependentSection</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the sections content is only accessible through a seperate section website.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL isIndependentSection</Declaration>
+			
+			
+			<Anchor>//api/name/isIndependentSection</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseSection/isIndependentSection</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the sections content is only accessible through a seperate section website.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL isIndependentSection</Declaration>
+			
+			
+			<Anchor>//api/name/isIndependentSection</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/setHasContent:</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the section has content.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL hasContent</Declaration>
+			
+			
+			<Anchor>//api/name/hasContent</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/hasContent</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the section has content.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL hasContent</Declaration>
+			
+			
+			<Anchor>//api/name/hasContent</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseSection/hasContent</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the section has content.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL hasContent</Declaration>
+			
+			
+			<Anchor>//api/name/hasContent</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/setHasDescription:</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the section has a description.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL hasDescription</Declaration>
+			
+			
+			<Anchor>//api/name/hasDescription</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/hasDescription</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the section has a description.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL hasDescription</Declaration>
+			
+			
+			<Anchor>//api/name/hasDescription</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseSection/hasDescription</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the section has a description.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL hasDescription</Declaration>
+			
+			
+			<Anchor>//api/name/hasDescription</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/setHasAssignment:</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the section has an assignment.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL hasAssignment</Declaration>
+			
+			
+			<Anchor>//api/name/hasAssignment</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/hasAssignment</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the section has an assignment.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL hasAssignment</Declaration>
+			
+			
+			<Anchor>//api/name/hasAssignment</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseSection/hasAssignment</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the section has an assignment.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL hasAssignment</Declaration>
+			
+			
+			<Anchor>//api/name/hasAssignment</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/setHasWiki:</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the section has a wiki.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL hasWiki</Declaration>
+			
+			
+			<Anchor>//api/name/hasWiki</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/hasWiki</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the section has a wiki.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL hasWiki</Declaration>
+			
+			
+			<Anchor>//api/name/hasWiki</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseSection/hasWiki</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the section has a wiki.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL hasWiki</Declaration>
+			
+			
+			<Anchor>//api/name/hasWiki</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/setHasDocuments:</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the section has documents.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL hasDocuments</Declaration>
+			
+			
+			<Anchor>//api/name/hasDocuments</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/hasDocuments</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the section has documents.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL hasDocuments</Declaration>
+			
+			
+			<Anchor>//api/name/hasDocuments</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseSection/hasDocuments</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the section has documents.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL hasDocuments</Declaration>
+			
+			
+			<Anchor>//api/name/hasDocuments</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/setHasOhterItems:</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the section has other section items.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL hasOhterItems</Declaration>
+			
+			
+			<Anchor>//api/name/hasOhterItems</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/hasOhterItems</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the section has other section items.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL hasOhterItems</Declaration>
+			
+			
+			<Anchor>//api/name/hasOhterItems</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseSection/hasOhterItems</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the section has other section items.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL hasOhterItems</Declaration>
+			
+			
+			<Anchor>//api/name/hasOhterItems</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/setDocumentItemArray:</TokenIdentifier>
+			<Abstract type="html">An array with resources of the type MoodleItemTypeDocument.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray&lt;MOODLECourseSectionItem*&gt; *documentItemArray</Declaration>
+			
+			
+			<Anchor>//api/name/documentItemArray</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/documentItemArray</TokenIdentifier>
+			<Abstract type="html">An array with resources of the type MoodleItemTypeDocument.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray&lt;MOODLECourseSectionItem*&gt; *documentItemArray</Declaration>
+			
+			
+			<Anchor>//api/name/documentItemArray</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseSection/documentItemArray</TokenIdentifier>
+			<Abstract type="html">An array with resources of the type MoodleItemTypeDocument.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray&lt;MOODLECourseSectionItem*&gt; *documentItemArray</Declaration>
+			
+			
+			<Anchor>//api/name/documentItemArray</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/setAssignmentsItemArray:</TokenIdentifier>
+			<Abstract type="html">An array with resources of the type MoodleItemTypeAssignment.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray&lt;MOODLECourseSectionItem*&gt; *assignmentsItemArray</Declaration>
+			
+			
+			<Anchor>//api/name/assignmentsItemArray</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/assignmentsItemArray</TokenIdentifier>
+			<Abstract type="html">An array with resources of the type MoodleItemTypeAssignment.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray&lt;MOODLECourseSectionItem*&gt; *assignmentsItemArray</Declaration>
+			
+			
+			<Anchor>//api/name/assignmentsItemArray</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseSection/assignmentsItemArray</TokenIdentifier>
+			<Abstract type="html">An array with resources of the type MoodleItemTypeAssignment.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray&lt;MOODLECourseSectionItem*&gt; *assignmentsItemArray</Declaration>
+			
+			
+			<Anchor>//api/name/assignmentsItemArray</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/setWikisItemArray:</TokenIdentifier>
+			<Abstract type="html">An array with resources of the type MoodleItemTypeWiki.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray&lt;MOODLECourseSectionItem*&gt; *wikisItemArray</Declaration>
+			
+			
+			<Anchor>//api/name/wikisItemArray</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/wikisItemArray</TokenIdentifier>
+			<Abstract type="html">An array with resources of the type MoodleItemTypeWiki.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray&lt;MOODLECourseSectionItem*&gt; *wikisItemArray</Declaration>
+			
+			
+			<Anchor>//api/name/wikisItemArray</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseSection/wikisItemArray</TokenIdentifier>
+			<Abstract type="html">An array with resources of the type MoodleItemTypeWiki.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray&lt;MOODLECourseSectionItem*&gt; *wikisItemArray</Declaration>
+			
+			
+			<Anchor>//api/name/wikisItemArray</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/setOtherItemArray:</TokenIdentifier>
+			<Abstract type="html">An array with resources of different types.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray&lt;MOODLECourseSectionItem*&gt; *otherItemArray</Declaration>
+			
+			
+			<Anchor>//api/name/otherItemArray</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLECourseSection/otherItemArray</TokenIdentifier>
+			<Abstract type="html">An array with resources of different types.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray&lt;MOODLECourseSectionItem*&gt; *otherItemArray</Declaration>
+			
+			
+			<Anchor>//api/name/otherItemArray</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLECourseSection/otherItemArray</TokenIdentifier>
+			<Abstract type="html">An array with resources of different types.</Abstract>
+			<DeclaredIn>MOODLECourseSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray&lt;MOODLECourseSectionItem*&gt; *otherItemArray</Declaration>
+			
+			
+			<Anchor>//api/name/otherItemArray</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		

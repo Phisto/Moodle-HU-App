@@ -38,7 +38,6 @@
 ///-----------------------
 
 
-
 static NSString * const UserDefaultsFirstLoginKey = @"UserDefaultsFirstLoginKey";
 static NSString * const UserDefaultsShouldRememberCredentialsKey = @"UserDefaultsShouldRememberCredentialsKey";
 static NSString * const UserDefaultsShouldAutoLoginKey = @"UserDefaultsShouldAutoLoginKey";

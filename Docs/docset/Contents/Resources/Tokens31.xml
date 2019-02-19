@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/SGAccessibleSlider.html">
+	<File path="Classes/MOODLEForumViewController.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/SGAccessibleSlider</TokenIdentifier>
-			<Abstract type="html">## Overview</Abstract>
-			<DeclaredIn>SGAccessibleSlider.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLEForumViewController</TokenIdentifier>
+			<Abstract type="html">The MOODLEForumViewController is responsible for presenting the MOODLEForum object associated with a given moodle course to the user.</Abstract>
+			<DeclaredIn>MOODLEForumViewController.h</DeclaredIn>
             
 			
 			<NodeRef refid="31"/>
@@ -13,110 +13,38 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SGAccessibleSlider/setUnit:</TokenIdentifier>
-			<Abstract type="html">The name of the unit to measure with the slider. (e.g. &quot;Megabyte&quot;, &quot;Litre&quot;, &quot;Search results&quot;)</Abstract>
-			<DeclaredIn>SGAccessibleSlider.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumViewController/setCourse:</TokenIdentifier>
+			<Abstract type="html">The course object the forum is associated with.</Abstract>
+			<DeclaredIn>MOODLEForumViewController.h</DeclaredIn>
 			
-			<Declaration>@property (nullable, nonatomic, strong) IBInspectable NSString *unit</Declaration>
+			<Declaration>@property (nonatomic, strong) MOODLECourse *course</Declaration>
 			
 			
-			<Anchor>//api/name/unit</Anchor>
+			<Anchor>//api/name/course</Anchor>
             <NodeRef refid="31"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SGAccessibleSlider/unit</TokenIdentifier>
-			<Abstract type="html">The name of the unit to measure with the slider. (e.g. &quot;Megabyte&quot;, &quot;Litre&quot;, &quot;Search results&quot;)</Abstract>
-			<DeclaredIn>SGAccessibleSlider.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForumViewController/course</TokenIdentifier>
+			<Abstract type="html">The course object the forum is associated with.</Abstract>
+			<DeclaredIn>MOODLEForumViewController.h</DeclaredIn>
 			
-			<Declaration>@property (nullable, nonatomic, strong) IBInspectable NSString *unit</Declaration>
+			<Declaration>@property (nonatomic, strong) MOODLECourse *course</Declaration>
 			
 			
-			<Anchor>//api/name/unit</Anchor>
+			<Anchor>//api/name/course</Anchor>
             <NodeRef refid="31"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/SGAccessibleSlider/unit</TokenIdentifier>
-			<Abstract type="html">The name of the unit to measure with the slider. (e.g. &quot;Megabyte&quot;, &quot;Litre&quot;, &quot;Search results&quot;)</Abstract>
-			<DeclaredIn>SGAccessibleSlider.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForumViewController/course</TokenIdentifier>
+			<Abstract type="html">The course object the forum is associated with.</Abstract>
+			<DeclaredIn>MOODLEForumViewController.h</DeclaredIn>
 			
-			<Declaration>@property (nullable, nonatomic, strong) IBInspectable NSString *unit</Declaration>
-			
-			
-			<Anchor>//api/name/unit</Anchor>
-            <NodeRef refid="31"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SGAccessibleSlider/setIntegerRange:</TokenIdentifier>
-			<Abstract type="html">Boolean value indicating if the range of the slider is a integer (1-10) or float (0.0-1.0) range.</Abstract>
-			<DeclaredIn>SGAccessibleSlider.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readwrite, getter=usesIntegerRange) IBInspectable BOOL integerRange</Declaration>
+			<Declaration>@property (nonatomic, strong) MOODLECourse *course</Declaration>
 			
 			
-			<Anchor>//api/name/integerRange</Anchor>
-            <NodeRef refid="31"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SGAccessibleSlider/usesIntegerRange</TokenIdentifier>
-			<Abstract type="html">Boolean value indicating if the range of the slider is a integer (1-10) or float (0.0-1.0) range.</Abstract>
-			<DeclaredIn>SGAccessibleSlider.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readwrite, getter=usesIntegerRange) IBInspectable BOOL integerRange</Declaration>
-			
-			
-			<Anchor>//api/name/integerRange</Anchor>
-            <NodeRef refid="31"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/SGAccessibleSlider/integerRange</TokenIdentifier>
-			<Abstract type="html">Boolean value indicating if the range of the slider is a integer (1-10) or float (0.0-1.0) range.</Abstract>
-			<DeclaredIn>SGAccessibleSlider.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readwrite, getter=usesIntegerRange) IBInspectable BOOL integerRange</Declaration>
-			
-			
-			<Anchor>//api/name/integerRange</Anchor>
-            <NodeRef refid="31"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SGAccessibleSlider/setAmount:</TokenIdentifier>
-			<Abstract type="html">The amount to increment or decrement the value.</Abstract>
-			<DeclaredIn>SGAccessibleSlider.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readwrite) IBInspectable NSUInteger amount</Declaration>
-			
-			
-			<Anchor>//api/name/amount</Anchor>
-            <NodeRef refid="31"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SGAccessibleSlider/amount</TokenIdentifier>
-			<Abstract type="html">The amount to increment or decrement the value.</Abstract>
-			<DeclaredIn>SGAccessibleSlider.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readwrite) IBInspectable NSUInteger amount</Declaration>
-			
-			
-			<Anchor>//api/name/amount</Anchor>
-            <NodeRef refid="31"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/SGAccessibleSlider/amount</TokenIdentifier>
-			<Abstract type="html">The amount to increment or decrement the value.</Abstract>
-			<DeclaredIn>SGAccessibleSlider.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readwrite) IBInspectable NSUInteger amount</Declaration>
-			
-			
-			<Anchor>//api/name/amount</Anchor>
+			<Anchor>//api/name/course</Anchor>
             <NodeRef refid="31"/>
 		</Token>
 		

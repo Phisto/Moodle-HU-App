@@ -1,16 +1,196 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MOODLECourseSearchViewController.html">
+	<File path="Classes/MOODLEChatMessage.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MOODLECourseSearchViewController</TokenIdentifier>
-			<Abstract type="html">The MOODLECourseSearchViewController is responsible for presenting a search bar to search for MOODLE courses and displaying the results.</Abstract>
-			<DeclaredIn>MOODLECourseSearchViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLEChatMessage</TokenIdentifier>
+			<Abstract type="html">A MOODLEChat object represents a chat with another Moodle user.</Abstract>
+			<DeclaredIn>MOODLEChatMessage.h</DeclaredIn>
             
 			
 			<NodeRef refid="9"/>
 		</Token>
 		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEChatMessage/setDate:</TokenIdentifier>
+			<Abstract type="html">The date the message was registered.</Abstract>
+			<DeclaredIn>MOODLEChatMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *date</Declaration>
+			
+			
+			<Anchor>//api/name/date</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEChatMessage/date</TokenIdentifier>
+			<Abstract type="html">The date the message was registered.</Abstract>
+			<DeclaredIn>MOODLEChatMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *date</Declaration>
+			
+			
+			<Anchor>//api/name/date</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEChatMessage/date</TokenIdentifier>
+			<Abstract type="html">The date the message was registered.</Abstract>
+			<DeclaredIn>MOODLEChatMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *date</Declaration>
+			
+			
+			<Anchor>//api/name/date</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEChatMessage/setTime:</TokenIdentifier>
+			<Abstract type="html">The time the message was registered.</Abstract>
+			<DeclaredIn>MOODLEChatMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *time</Declaration>
+			
+			
+			<Anchor>//api/name/time</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEChatMessage/time</TokenIdentifier>
+			<Abstract type="html">The time the message was registered.</Abstract>
+			<DeclaredIn>MOODLEChatMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *time</Declaration>
+			
+			
+			<Anchor>//api/name/time</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEChatMessage/time</TokenIdentifier>
+			<Abstract type="html">The time the message was registered.</Abstract>
+			<DeclaredIn>MOODLEChatMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *time</Declaration>
+			
+			
+			<Anchor>//api/name/time</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEChatMessage/setAttributedMessage:</TokenIdentifier>
+			<Abstract type="html">The message.</Abstract>
+			<DeclaredIn>MOODLEChatMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSAttributedString *attributedMessage</Declaration>
+			
+			
+			<Anchor>//api/name/attributedMessage</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEChatMessage/attributedMessage</TokenIdentifier>
+			<Abstract type="html">The message.</Abstract>
+			<DeclaredIn>MOODLEChatMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSAttributedString *attributedMessage</Declaration>
+			
+			
+			<Anchor>//api/name/attributedMessage</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEChatMessage/attributedMessage</TokenIdentifier>
+			<Abstract type="html">The message.</Abstract>
+			<DeclaredIn>MOODLEChatMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSAttributedString *attributedMessage</Declaration>
+			
+			
+			<Anchor>//api/name/attributedMessage</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEChatMessage/setRawMessage:</TokenIdentifier>
+			<Abstract type="html">The raw message.</Abstract>
+			<DeclaredIn>MOODLEChatMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *rawMessage</Declaration>
+			
+			
+			<Anchor>//api/name/rawMessage</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEChatMessage/rawMessage</TokenIdentifier>
+			<Abstract type="html">The raw message.</Abstract>
+			<DeclaredIn>MOODLEChatMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *rawMessage</Declaration>
+			
+			
+			<Anchor>//api/name/rawMessage</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEChatMessage/rawMessage</TokenIdentifier>
+			<Abstract type="html">The raw message.</Abstract>
+			<DeclaredIn>MOODLEChatMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *rawMessage</Declaration>
+			
+			
+			<Anchor>//api/name/rawMessage</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEChatMessage/setIsFromSelf:</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the message is from the currently logged in user.</Abstract>
+			<DeclaredIn>MOODLEChatMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL isFromSelf</Declaration>
+			
+			
+			<Anchor>//api/name/isFromSelf</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEChatMessage/isFromSelf</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the message is from the currently logged in user.</Abstract>
+			<DeclaredIn>MOODLEChatMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL isFromSelf</Declaration>
+			
+			
+			<Anchor>//api/name/isFromSelf</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEChatMessage/isFromSelf</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the message is from the currently logged in user.</Abstract>
+			<DeclaredIn>MOODLEChatMessage.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL isFromSelf</Declaration>
+			
+			
+			<Anchor>//api/name/isFromSelf</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
 		
         
         

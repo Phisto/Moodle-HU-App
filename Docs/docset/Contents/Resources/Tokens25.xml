@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MOODLESearchResultTableViewCell.html">
+	<File path="Classes/MOODLEForum.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MOODLESearchResultTableViewCell</TokenIdentifier>
-			<Abstract type="html">This class is a custom UITableViewCell subclass, which is designed to show all relevant information about a MOODLE search result.</Abstract>
-			<DeclaredIn>MOODLESearchResultTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLEForum</TokenIdentifier>
+			<Abstract type="html">A MOODLEForum object represents a forum associated with a MOODLE course.</Abstract>
+			<DeclaredIn>MOODLEForum.h</DeclaredIn>
             
 			
 			<NodeRef refid="25"/>
@@ -13,74 +13,110 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLESearchResultTableViewCell/setTitleLabel:</TokenIdentifier>
-			<Abstract type="html">The label to display the search result title.</Abstract>
-			<DeclaredIn>MOODLESearchResultTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForum/setForumURL:</TokenIdentifier>
+			<Abstract type="html">The url to the forum.</Abstract>
+			<DeclaredIn>MOODLEForum.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *titleLabel</Declaration>
+			<Declaration>@property (nonatomic, strong) NSURL *forumURL</Declaration>
 			
 			
-			<Anchor>//api/name/titleLabel</Anchor>
+			<Anchor>//api/name/forumURL</Anchor>
             <NodeRef refid="25"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLESearchResultTableViewCell/titleLabel</TokenIdentifier>
-			<Abstract type="html">The label to display the search result title.</Abstract>
-			<DeclaredIn>MOODLESearchResultTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForum/forumURL</TokenIdentifier>
+			<Abstract type="html">The url to the forum.</Abstract>
+			<DeclaredIn>MOODLEForum.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *titleLabel</Declaration>
+			<Declaration>@property (nonatomic, strong) NSURL *forumURL</Declaration>
 			
 			
-			<Anchor>//api/name/titleLabel</Anchor>
+			<Anchor>//api/name/forumURL</Anchor>
             <NodeRef refid="25"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MOODLESearchResultTableViewCell/titleLabel</TokenIdentifier>
-			<Abstract type="html">The label to display the search result title.</Abstract>
-			<DeclaredIn>MOODLESearchResultTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForum/forumURL</TokenIdentifier>
+			<Abstract type="html">The url to the forum.</Abstract>
+			<DeclaredIn>MOODLEForum.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) IBOutlet UILabel *titleLabel</Declaration>
+			<Declaration>@property (nonatomic, strong) NSURL *forumURL</Declaration>
 			
 			
-			<Anchor>//api/name/titleLabel</Anchor>
+			<Anchor>//api/name/forumURL</Anchor>
             <NodeRef refid="25"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLESearchResultTableViewCell/setSubscribeImageIcon:</TokenIdentifier>
-			<Abstract type="html">The image view to indicate if the user can subsribe to the course.</Abstract>
-			<DeclaredIn>MOODLESearchResultTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForum/setEntries:</TokenIdentifier>
+			<Abstract type="html">The threads of the forum.</Abstract>
+			<DeclaredIn>MOODLEForum.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) IBOutlet UIImageView *subscribeImageIcon</Declaration>
+			<Declaration>@property (nonatomic, strong) NSArray&lt;MOODLEForumEntry*&gt; *entries</Declaration>
 			
 			
-			<Anchor>//api/name/subscribeImageIcon</Anchor>
+			<Anchor>//api/name/entries</Anchor>
             <NodeRef refid="25"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MOODLESearchResultTableViewCell/subscribeImageIcon</TokenIdentifier>
-			<Abstract type="html">The image view to indicate if the user can subsribe to the course.</Abstract>
-			<DeclaredIn>MOODLESearchResultTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForum/entries</TokenIdentifier>
+			<Abstract type="html">The threads of the forum.</Abstract>
+			<DeclaredIn>MOODLEForum.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) IBOutlet UIImageView *subscribeImageIcon</Declaration>
+			<Declaration>@property (nonatomic, strong) NSArray&lt;MOODLEForumEntry*&gt; *entries</Declaration>
 			
 			
-			<Anchor>//api/name/subscribeImageIcon</Anchor>
+			<Anchor>//api/name/entries</Anchor>
             <NodeRef refid="25"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MOODLESearchResultTableViewCell/subscribeImageIcon</TokenIdentifier>
-			<Abstract type="html">The image view to indicate if the user can subsribe to the course.</Abstract>
-			<DeclaredIn>MOODLESearchResultTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForum/entries</TokenIdentifier>
+			<Abstract type="html">The threads of the forum.</Abstract>
+			<DeclaredIn>MOODLEForum.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) IBOutlet UIImageView *subscribeImageIcon</Declaration>
+			<Declaration>@property (nonatomic, strong) NSArray&lt;MOODLEForumEntry*&gt; *entries</Declaration>
 			
 			
-			<Anchor>//api/name/subscribeImageIcon</Anchor>
+			<Anchor>//api/name/entries</Anchor>
+            <NodeRef refid="25"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForum/setHasEntries:</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the forum has any threads.</Abstract>
+			<DeclaredIn>MOODLEForum.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL hasEntries</Declaration>
+			
+			
+			<Anchor>//api/name/hasEntries</Anchor>
+            <NodeRef refid="25"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEForum/hasEntries</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the forum has any threads.</Abstract>
+			<DeclaredIn>MOODLEForum.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL hasEntries</Declaration>
+			
+			
+			<Anchor>//api/name/hasEntries</Anchor>
+            <NodeRef refid="25"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEForum/hasEntries</TokenIdentifier>
+			<Abstract type="html">Boolean indicating if the forum has any threads.</Abstract>
+			<DeclaredIn>MOODLEForum.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL hasEntries</Declaration>
+			
+			
+			<Anchor>//api/name/hasEntries</Anchor>
             <NodeRef refid="25"/>
 		</Token>
 		

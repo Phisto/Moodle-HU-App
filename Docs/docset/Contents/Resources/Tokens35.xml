@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/NSURLRequest+Moodle.html">
+	<File path="Classes/MOODLEPersistentStoreCoordinator.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/NSURLRequest(Moodle)</TokenIdentifier>
-			<Abstract type="html">This category is a convenient categorie to create spezific NSURLRequests to send to the MOODLE server.</Abstract>
-			<DeclaredIn>NSURLRequest+Moodle.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MOODLEPersistentStoreCoordinator</TokenIdentifier>
+			<Abstract type="html">The MOODLEPersistentStoreCoordinator class is used to coordinate the persistently stored values for the app.</Abstract>
+			<DeclaredIn>MOODLEPersistentStoreCoordinator.h</DeclaredIn>
             
 			
 			<NodeRef refid="35"/>
@@ -13,56 +13,38 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSURLRequest/moodle_loginRequestWithUsername:andPassword:</TokenIdentifier>
-			<Abstract type="html">Creates and returns a NSURLRequest object configured to perform a login request.</Abstract>
-			<DeclaredIn>NSURLRequest+Moodle.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEPersistentStoreCoordinator/setDocumentCacheSize:</TokenIdentifier>
+			<Abstract type="html">The size of the document cache in Megabytes.</Abstract>
+			<DeclaredIn>MOODLEPersistentStoreCoordinator.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)moodle_loginRequestWithUsername:(NSString *)username andPassword:(NSString *)password</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>username</Name>
-					<Abstract type="html">The username to use for login.</Abstract>
-				</Parameter><Parameter>
-					<Name>password</Name>
-					<Abstract type="html">The password to use for login.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">An initialized NSURLRequest object.</Abstract></ReturnValue>
-			<Anchor>//api/name/moodle_loginRequestWithUsername:andPassword:</Anchor>
+			<Declaration>@property (nonatomic, readwrite) NSUInteger documentCacheSize</Declaration>
+			
+			
+			<Anchor>//api/name/documentCacheSize</Anchor>
             <NodeRef refid="35"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSURLRequest/moodle_searchRequestWithSearchString:</TokenIdentifier>
-			<Abstract type="html">Creates and returns a NSURLRequest object configured to perform a search request.</Abstract>
-			<DeclaredIn>NSURLRequest+Moodle.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MOODLEPersistentStoreCoordinator/documentCacheSize</TokenIdentifier>
+			<Abstract type="html">The size of the document cache in Megabytes.</Abstract>
+			<DeclaredIn>MOODLEPersistentStoreCoordinator.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)moodle_searchRequestWithSearchString:(NSString *)searchString</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>searchString</Name>
-					<Abstract type="html">The search query string to use for the search.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">An initialized NSURLRequest object.</Abstract></ReturnValue>
-			<Anchor>//api/name/moodle_searchRequestWithSearchString:</Anchor>
+			<Declaration>@property (nonatomic, readwrite) NSUInteger documentCacheSize</Declaration>
+			
+			
+			<Anchor>//api/name/documentCacheSize</Anchor>
             <NodeRef refid="35"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSURLRequest/moodle_logoutRequestWithSessionKey:</TokenIdentifier>
-			<Abstract type="html">Creates and returns a NSURLRequest object configured to perform a logout request.</Abstract>
-			<DeclaredIn>NSURLRequest+Moodle.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/MOODLEPersistentStoreCoordinator/documentCacheSize</TokenIdentifier>
+			<Abstract type="html">The size of the document cache in Megabytes.</Abstract>
+			<DeclaredIn>MOODLEPersistentStoreCoordinator.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)moodle_logoutRequestWithSessionKey:(NSString *)sessionKey</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>sessionKey</Name>
-					<Abstract type="html">The sessionkey of the MOODLE session we want to logout.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, readwrite) NSUInteger documentCacheSize</Declaration>
 			
-			<Anchor>//api/name/moodle_logoutRequestWithSessionKey:</Anchor>
+			
+			<Anchor>//api/name/documentCacheSize</Anchor>
             <NodeRef refid="35"/>
 		</Token>
 		
